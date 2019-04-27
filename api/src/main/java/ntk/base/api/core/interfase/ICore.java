@@ -7,7 +7,7 @@ import ntk.base.api.core.model.CoreAboutUsResponse;
 import ntk.base.api.core.model.ButtonResponse;
 import ntk.base.api.core.model.CoreLocationRequest;
 import ntk.base.api.core.model.CoreLocationResponse;
-import ntk.base.api.core.model.CoreResponse;
+import ntk.base.api.core.model.CoreUserResponse;
 import ntk.base.api.core.model.CoreUserChangePasswordRequest;
 import ntk.base.api.core.model.CoreUserEmailConfirmRequest;
 import ntk.base.api.core.model.CoreUserConfirmResponse;
@@ -49,7 +49,7 @@ public interface ICore {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: CoreUserRegisterByMobile"})
-    Observable<CoreResponse> RegisterWithMobile(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterByMobileRequest request);
+    Observable<CoreUserResponse> RegisterWithMobile(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterByMobileRequest request);
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: CoreLocation"})
@@ -57,7 +57,7 @@ public interface ICore {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: CoreUserChangePassword"})
-    Observable<CoreResponse> SetUserNewPassword(@HeaderMap Map<String, String> headers, @Body CoreUserChangePasswordRequest request);
+    Observable<CoreUserResponse> SetUserNewPassword(@HeaderMap Map<String, String> headers, @Body CoreUserChangePasswordRequest request);
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: CoreUserEmailConfirm"})
@@ -65,15 +65,15 @@ public interface ICore {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: CoreUserForgetPassword"})
-    Observable<CoreResponse> userForgetPassword(@HeaderMap Map<String, String> headers, @Body CoreUserForgetPasswordRequest request);
+    Observable<CoreUserResponse> userForgetPassword(@HeaderMap Map<String, String> headers, @Body CoreUserForgetPasswordRequest request);
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: CoreUserLogin"})
-    Observable<CoreResponse> userLogin(@HeaderMap Map<String, String> headers, @Body CoreUserLoginRequest request);
+    Observable<CoreUserResponse> userLogin(@HeaderMap Map<String, String> headers, @Body CoreUserLoginRequest request);
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: CoreUserLoginByMobile"})
-    Observable<CoreResponse> userLoginByMobile(@HeaderMap Map<String, String> headers, @Body CoreUserLoginByMobileRequest request);
+    Observable<CoreUserResponse> userLoginByMobile(@HeaderMap Map<String, String> headers, @Body CoreUserLoginByMobileRequest request);
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: CoreUserMobileConfirm"})
@@ -81,6 +81,6 @@ public interface ICore {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: CoreUserRegister"})
-    Observable<CoreResponse> setUserRegister(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterRequest request);
+    Observable<CoreUserResponse> setUserRegister(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterRequest request);
 
 }

@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import ntk.base.api.model.ErrorException;
 
-public class CoreResponse extends ErrorException {
+public class CoreUserResponse extends ErrorException {
 
     @SerializedName("ExpireDate")
     public String ExpireDate;
