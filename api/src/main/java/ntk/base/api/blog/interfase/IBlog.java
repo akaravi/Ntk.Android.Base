@@ -21,7 +21,13 @@ import ntk.base.api.blog.model.BlogContentFavoriteRemoveRequest;
 import ntk.base.api.blog.model.BlogContentFavoriteRemoveResponse;
 import ntk.base.api.blog.model.BlogContentListRequest;
 import ntk.base.api.blog.model.BlogContentListResponse;
+import ntk.base.api.blog.model.BlogContentOtherInfoListRequest;
+import ntk.base.api.blog.model.BlogContentOtherInfoListResponse;
 import ntk.base.api.blog.model.BlogContentResponse;
+import ntk.base.api.blog.model.BlogContentSimilarListRequest;
+import ntk.base.api.blog.model.BlogContentViewRequest;
+import ntk.base.api.blog.model.BlogTagRequest;
+import ntk.base.api.blog.model.BlogTagResponse;
 import retrofit2.http.Body;
 import retrofit2.http.HeaderMap;
 import retrofit2.http.Headers;
@@ -69,4 +75,19 @@ public interface IBlog {
     @Headers({"content-type: application/json", "layout: BlogContentList"})
     Observable<BlogContentListResponse> GetContentList(@HeaderMap Map<String, String> headers, @Body BlogContentListRequest request);
 
+    @POST("api/app/")
+    @Headers({"content-type: application/json", "layout: BlogContentOtherInfoList"})
+    Observable<BlogContentOtherInfoListResponse> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body BlogContentOtherInfoListRequest request);
+
+    @POST("api/app")
+    @Headers({"content-type: application/json", "layout: BlogContentSimilarList"})
+    Observable<BlogContentResponse> GetContentSimilarList(@HeaderMap Map<String, String> headers, @Body BlogContentSimilarListRequest request);
+
+    @POST("api/app/")
+    @Headers({"content-type: application/json", "layout: BlogContentView"})
+    Observable<BlogContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body BlogContentViewRequest request);
+
+    @POST("api/app/")
+    @Headers({"content-type: application/json", "layout : BlogTagList"})
+    Observable<BlogTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body BlogTagRequest request);
 }
