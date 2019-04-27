@@ -28,4 +28,6 @@ public class ArticleCategory  extends BaseEntity {
 
     @SerializedName("Children")
     public List<ArticleCategory> Children;
+
+//
 }
