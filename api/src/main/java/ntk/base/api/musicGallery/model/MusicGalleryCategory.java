@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.model.BaseEntity;
+import ntk.base.api.movieGallery.model.MovieGalleryCategory;
 
 public class MusicGalleryCategory extends BaseEntity {
 
@@ -27,5 +28,5 @@ public class MusicGalleryCategory extends BaseEntity {
     public String LinkMainImageSrc;
 
     @SerializedName("Children")
-    public List<ntk.base.api.imageGallery.model.MovieGalleryCategory> Children;
+    public List<MovieGalleryCategory> Children;
 }

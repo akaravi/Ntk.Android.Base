@@ -5,12 +5,13 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.model.ErrorException;
+import ntk.base.api.movieGallery.model.MovieGalleryTag;
 
 public class ImageGalleryTagResponse extends ErrorException {
 
     @SerializedName("ListItems")
-    public List<ntk.base.api.imageGallery.model.MovieGalleryTag> ListItems;
+    public List<MovieGalleryTag> ListItems;
 
     @SerializedName("Item")
-    public ntk.base.api.imageGallery.model.MovieGalleryTag Item;
+    public MovieGalleryTag Item;
 }
