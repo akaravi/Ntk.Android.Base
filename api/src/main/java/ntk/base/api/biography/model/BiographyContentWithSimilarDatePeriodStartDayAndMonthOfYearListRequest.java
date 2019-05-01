@@ -11,8 +11,8 @@ public class BiographyContentWithSimilarDatePeriodStartDayAndMonthOfYearListRequ
     @SerializedName("TagIds")
     public List<Long> TagIds;
 
-    @SerializedName("MountOfYear")
-    public int MountOfYear;
+    @SerializedName("MonthOfYear")
+    public int MonthOfYear;
 
     @SerializedName("DayOfMonth")
     public int DayOfMonth;
