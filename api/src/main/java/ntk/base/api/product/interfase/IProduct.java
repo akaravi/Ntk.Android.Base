@@ -1,6 +1,6 @@
 package ntk.base.api.product.interfase;
 
-import android.database.Observable;
+import io.reactivex.Observable;
 
 import java.util.Map;
 
