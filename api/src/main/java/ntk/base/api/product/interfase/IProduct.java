@@ -76,7 +76,7 @@ public interface IProduct {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ProductContentOtherInfoList"})
-    Observable<ProductContentOtherInfoRequest> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body ProductContentOtherInfoResponse request);
+    Observable<ProductContentOtherInfoResponse> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body ProductContentOtherInfoRequest request);
 
     @POST("api/app")
     @Headers({"content-type: application/json", "layout: ProductContentSimilarList"})

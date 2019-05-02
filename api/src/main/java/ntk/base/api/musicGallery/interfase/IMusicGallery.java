@@ -76,7 +76,7 @@ public interface IMusicGallery {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: MusicGalleryContentOtherInfoList"})
-    Observable<MusicGalleryContentOtherInfoRequest> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body MusicGalleryContentOtherInfoResponse request);
+    Observable<MusicGalleryContentOtherInfoResponse> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body MusicGalleryContentOtherInfoRequest request);
 
     @POST("api/app")
     @Headers({"content-type: application/json", "layout: MusicGalleryContentSimilarList"})

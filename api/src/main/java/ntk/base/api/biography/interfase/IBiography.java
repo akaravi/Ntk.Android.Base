@@ -33,6 +33,9 @@ import ntk.base.api.biography.model.BiographyContentWithSimilarDatePeriodStartLi
 import ntk.base.api.biography.model.BiographyContentWithSimilarDatePeriodStartMonthOfYearListRequest;
 import ntk.base.api.biography.model.BiographyTagRequest;
 import ntk.base.api.biography.model.BiographyTagResponse;
+import ntk.base.api.biography.model.BiographyContentWithSimilarLocationPeriodEndRequest;
+import ntk.base.api.biography.model.BiographyContentWithSimilarLocationPeriodStartRequest;
+import ntk.base.api.biography.model.BiographyContentWithSimilarLocationResponse;
 import retrofit2.http.Body;
 import retrofit2.http.HeaderMap;
 import retrofit2.http.Headers;
@@ -123,4 +126,12 @@ public interface IBiography {
     @POST("api/app")
     @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarDatePeriodStartMonthOfYearList"})
     Observable<BiographyContentResponse> GetContentWithSimilarDatePeriodStartMonthOfYearList(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarDatePeriodStartMonthOfYearListRequest request);
+
+    @POST("api/app")
+    @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarLocationPeriodStart"})
+    Observable<BiographyContentWithSimilarLocationResponse> GetContentWithSimilarLocationPeriodStart(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarLocationPeriodStartRequest request);
+
+    @POST("api/app")
+    @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarLocationPeriodEnd"})
+    Observable<BiographyContentWithSimilarLocationResponse> GetContentWithSimilarLocationPeriodEnd(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarLocationPeriodEndRequest request);
 }

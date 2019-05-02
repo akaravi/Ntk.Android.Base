@@ -76,7 +76,7 @@ public interface IMovieGallery {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: MovieGalleryContentOtherInfoList"})
-    Observable<MovieGalleryContentOtherInfoRequest> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body MovieGalleryContentOtherInfoResponse request);
+    Observable<MovieGalleryContentOtherInfoResponse> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body MovieGalleryContentOtherInfoRequest request);
 
     @POST("api/app")
     @Headers({"content-type: application/json", "layout: MovieGalleryContentSimilarList"})
