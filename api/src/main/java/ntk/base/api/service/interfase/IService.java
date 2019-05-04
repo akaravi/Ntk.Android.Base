@@ -1,6 +1,6 @@
 package ntk.base.api.service.interfase;
 
-import android.database.Observable;
+import io.reactivex.Observable;
 
 import java.util.Map;
 
@@ -75,7 +75,7 @@ public interface IService {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ServiceContentOtherInfoList"})
-    Observable<ServiceContentOtherInfoRequest> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body ServiceContentOtherInfoResponse request);
+    Observable<ServiceContentOtherInfoResponse> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body ServiceContentOtherInfoRequest request);
 
     @POST("api/app")
     @Headers({"content-type: application/json", "layout: ServiceContentSimilarList"})

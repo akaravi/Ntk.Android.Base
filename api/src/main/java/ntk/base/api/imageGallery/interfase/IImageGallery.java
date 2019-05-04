@@ -1,6 +1,6 @@
 package ntk.base.api.imageGallery.interfase;
 
-import android.database.Observable;
+import io.reactivex.Observable;
 
 import java.util.Map;
 
@@ -76,7 +76,7 @@ public interface IImageGallery {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ImageGalleryContentOtherInfoList"})
-    Observable<ImageGalleryContentOtherInfoRequest> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body ImageGalleryContentOtherInfoResponse request);
+    Observable<ImageGalleryContentOtherInfoResponse> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body ImageGalleryContentOtherInfoRequest request);
 
     @POST("api/app")
     @Headers({"content-type: application/json", "layout: ImageGalleryContentSimilarList"})

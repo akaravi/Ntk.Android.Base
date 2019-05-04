@@ -11,9 +11,9 @@ public class BiographyContentWithSimilarDatePeriodStartListRequest extends Filte
     @SerializedName("TagIds")
     public List<Long> TagIds;
 
-    @SerializedName("SearchDateMin")
-    public String SearchDateMin;
+    @SerializedName("SearchDayMin")
+    public int SearchDayMin;
 
-    @SerializedName("SearchDateMax")
-    public String SearchDateMax;
+    @SerializedName("SearchDayMax")
+    public int SearchDayMax;
 }
