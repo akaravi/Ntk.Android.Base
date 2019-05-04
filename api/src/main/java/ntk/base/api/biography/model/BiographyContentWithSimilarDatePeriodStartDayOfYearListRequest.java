@@ -11,6 +11,9 @@ public class BiographyContentWithSimilarDatePeriodStartDayOfYearListRequest exte
     @SerializedName("TagIds")
     public List<Long> TagIds;
 
-    @SerializedName("DayOfYear")
-    public int DayOfYear;
+    @SerializedName("DayOfYearMin")
+    public int DayOfYearMin;
+
+    @SerializedName("DayOfYearMax")
+    public int DayOfYearMax;
 }

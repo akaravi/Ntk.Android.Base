@@ -114,7 +114,7 @@ public interface IBiography {
 
     @POST("api/app")
     @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarDatePeriodStartDayOfYearList"})
-    Observable<BiographyContentResponse> GetContentWithSimilarDatePeriodStartDayAndMonthOfYearList(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarDatePeriodStartDayOfYearListRequest request);
+    Observable<BiographyContentResponse> GetContentWithSimilarDatePeriodStartDayOfYearList(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarDatePeriodStartDayOfYearListRequest request);
 
     @POST("api/app")
     @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarDatePeriodStartList"})
