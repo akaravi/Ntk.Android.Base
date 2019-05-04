@@ -10,6 +10,6 @@ public class ApplicationIntroResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<ApplicationIntro> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public ApplicationIntro Item;
 }

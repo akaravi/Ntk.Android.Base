@@ -29,6 +29,9 @@ public class BlogContent extends BaseEntity {
     @SerializedName("Body")
     public String Body;
 
+    @SerializedName("Source")
+    public String Source;
+
     @SerializedName("Favorited")
     public Boolean Favorited;
 

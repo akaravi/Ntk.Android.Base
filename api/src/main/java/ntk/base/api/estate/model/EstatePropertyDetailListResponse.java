@@ -11,6 +11,6 @@ public class EstatePropertyDetailListResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<EstatePropertyDetail> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public EstatePropertyDetail Item;
 }

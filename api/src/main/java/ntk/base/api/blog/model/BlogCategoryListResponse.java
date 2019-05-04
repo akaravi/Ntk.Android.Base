@@ -11,6 +11,6 @@ public class BlogCategoryListResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<BlogCategory> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public BlogCategory Item;
 }

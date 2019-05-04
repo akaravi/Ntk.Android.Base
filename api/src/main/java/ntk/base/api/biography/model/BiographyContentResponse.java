@@ -12,6 +12,6 @@ public class BiographyContentResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<BiographyContent> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public BiographyContent Item;
 }

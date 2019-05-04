@@ -11,6 +11,6 @@ public class ArticleTagResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<ArticleTag> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public ArticleTag Item;
 }

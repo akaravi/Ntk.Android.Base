@@ -11,6 +11,6 @@ public class TicketingSubmitResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<TicketingTask> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public TicketingTask Item;
 }

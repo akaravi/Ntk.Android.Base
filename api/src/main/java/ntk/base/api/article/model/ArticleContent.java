@@ -7,7 +7,7 @@ import java.util.List;
 import ntk.base.api.news.model.NewsCategory;
 import ntk.base.api.model.BaseEntity;
 
-public class ArticleContent  extends BaseEntity {
+public class ArticleContent extends BaseEntity {
 
     @SerializedName("Id")
     public long Id;
@@ -66,6 +66,9 @@ public class ArticleContent  extends BaseEntity {
 
     @SerializedName("Geolocationlongitude")
     public double Geolocationlongitude;
+
+    @SerializedName("Source")
+    public String Source;
 
 
 }

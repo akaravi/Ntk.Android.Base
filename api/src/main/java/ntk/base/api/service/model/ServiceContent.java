@@ -36,6 +36,9 @@ public class ServiceContent extends BaseEntity {
     @SerializedName("ViewCount")
     public int viewCount;
 
+    @SerializedName("Source")
+    public String Source;
+
     @SerializedName("ScoreSumPercent")
     public int ScoreSumPercent;
 

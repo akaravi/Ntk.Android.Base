@@ -11,6 +11,6 @@ public class ProductContentOtherInfoResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<ProductContentOtherInfo> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public ProductContentOtherInfo Item;
 }

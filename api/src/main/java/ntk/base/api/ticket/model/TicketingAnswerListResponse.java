@@ -10,7 +10,7 @@ public class TicketingAnswerListResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<TicketingAnswer> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public TicketingAnswer Item;
 
 }

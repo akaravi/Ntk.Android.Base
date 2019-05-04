@@ -11,6 +11,6 @@ public class ArticleContentFavoriteListResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<ArticleContent> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public ArticleContent Item;
 }

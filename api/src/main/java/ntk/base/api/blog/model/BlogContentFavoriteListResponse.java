@@ -11,6 +11,6 @@ public class BlogContentFavoriteListResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<BlogContent> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public BlogContent Item;
 }

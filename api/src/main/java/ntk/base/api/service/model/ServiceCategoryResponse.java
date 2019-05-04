@@ -11,6 +11,6 @@ public class ServiceCategoryResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<ServiceCategory> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public ServiceCategory Item;
 }

@@ -11,6 +11,6 @@ public class BiographyContentWithSimilarLocationResponse extends ErrorException 
     @SerializedName("ListItems")
     public List<BiographyContentWithSimilarLocation> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public BiographyContentWithSimilarLocation Item;
 }

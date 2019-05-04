@@ -8,6 +8,6 @@ public class CoreLocationResponse {
     @SerializedName("ListItems")
     public List<CoreLocation> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public CoreLocation Item;
 }

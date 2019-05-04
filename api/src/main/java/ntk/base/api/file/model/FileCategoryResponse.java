@@ -12,6 +12,6 @@ public class FileCategoryResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<FileCategory> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public FileCategory Item;
 }

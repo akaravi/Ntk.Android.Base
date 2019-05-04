@@ -11,6 +11,6 @@ public class ArticleCommentResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<ArticleComment> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public ArticleComment Item;
 }

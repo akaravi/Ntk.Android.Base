@@ -11,6 +11,6 @@ public class EstateContractTypeResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<EstateContractType> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public EstateContractType Item;
 }

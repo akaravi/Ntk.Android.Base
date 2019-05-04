@@ -11,6 +11,6 @@ public class NewsContentOtherInfoResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<NewsContentOtherInfo> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public NewsContentOtherInfo Item;
 }

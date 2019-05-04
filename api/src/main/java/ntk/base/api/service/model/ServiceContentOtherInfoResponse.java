@@ -11,6 +11,6 @@ public class ServiceContentOtherInfoResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<ServiceContentOtherInfo> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public ServiceContentOtherInfo Item;
 }

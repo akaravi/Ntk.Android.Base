@@ -11,6 +11,6 @@ public class BiographyCommentResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<BiographyComment> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public BiographyComment Item;
 }

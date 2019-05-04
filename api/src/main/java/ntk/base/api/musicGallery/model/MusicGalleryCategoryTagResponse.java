@@ -12,6 +12,6 @@ public class MusicGalleryCategoryTagResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<MovieGalleryCategoryTag> ListItems;
 
-    @SerializedName("Item")
+    @SerializedName("Main")
     public MovieGalleryCategoryTag Item;
 }
