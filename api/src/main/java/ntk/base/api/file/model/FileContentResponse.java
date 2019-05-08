@@ -12,6 +12,6 @@ public class FileContentResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<FileContent> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public FileContent Item;
 }

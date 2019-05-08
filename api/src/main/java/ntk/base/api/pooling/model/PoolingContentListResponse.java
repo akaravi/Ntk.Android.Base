@@ -11,6 +11,6 @@ public class PoolingContentListResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<PoolingContent> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public PoolingContent Item;
 }

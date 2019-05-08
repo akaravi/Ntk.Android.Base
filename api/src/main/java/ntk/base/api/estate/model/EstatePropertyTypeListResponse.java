@@ -6,11 +6,11 @@ import java.util.List;
 
 import ntk.base.api.model.ErrorException;
 
-public class EstatePropertyTypeResponse extends ErrorException {
+public class EstatePropertyTypeListResponse extends ErrorException {
 
     @SerializedName("ListItems")
     public List<EstateProperty> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public EstateProperty Item;
 }

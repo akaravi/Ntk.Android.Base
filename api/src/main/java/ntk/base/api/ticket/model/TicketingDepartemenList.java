@@ -11,6 +11,6 @@ public class TicketingDepartemenList extends ErrorException {
     @SerializedName("ListItems")
     public List<TicketingDepartemen> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public TicketingDepartemen Item;
 }

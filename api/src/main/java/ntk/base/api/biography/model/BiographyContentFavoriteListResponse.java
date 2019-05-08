@@ -11,6 +11,6 @@ public class BiographyContentFavoriteListResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<BiographyContent> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public BiographyContent Item;
 }

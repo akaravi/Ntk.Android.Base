@@ -11,6 +11,6 @@ public class ServiceTagResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<ServiceTag> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public ServiceTag Item;
 }

@@ -7,5 +7,5 @@ import ntk.base.api.model.ErrorException;
 public class MainCoreResponse extends ErrorException {
 
     @SerializedName("Item")
-    public Main Item;
+    public CoreMain Item;
 }

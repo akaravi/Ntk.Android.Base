@@ -10,6 +10,6 @@ public class BlogContentListResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<BlogContent> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public BlogContent Item;
 }

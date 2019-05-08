@@ -11,6 +11,6 @@ public class NewsCategoryTagResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<NewsCategoryTag> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public NewsCategoryTag Item;
 }

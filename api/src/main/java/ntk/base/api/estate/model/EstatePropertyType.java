@@ -43,7 +43,5 @@ public class EstatePropertyType extends BaseEntity {
     public Long DataMemoId;
 
     @SerializedName("RecordStatus")
-    public EnumRecordStatus RecordStatus;
-
-
+    public int RecordStatus;
 }

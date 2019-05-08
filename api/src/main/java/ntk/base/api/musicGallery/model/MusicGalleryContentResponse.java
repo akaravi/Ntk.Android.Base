@@ -12,6 +12,6 @@ public class MusicGalleryContentResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<MovieGalleryContent> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public MovieGalleryContent Item;
 }

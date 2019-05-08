@@ -11,6 +11,6 @@ public class BlogTagResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<BlogTag> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public BlogTag Item;
 }
