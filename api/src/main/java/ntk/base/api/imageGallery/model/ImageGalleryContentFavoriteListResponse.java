@@ -10,8 +10,8 @@ import ntk.base.api.movieGallery.model.MovieGalleryContent;
 public class ImageGalleryContentFavoriteListResponse extends ErrorException {
 
     @SerializedName("ListItems")
-    public List<MovieGalleryContent> ListItems;
+    public List<ImageGalleryContent> ListItems;
 
     @SerializedName("Item")
-    public MovieGalleryContent Item;
+    public ImageGalleryContent Item;
 }
