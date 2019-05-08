@@ -4,9 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.model.BaseEntity;
-import ntk.base.api.movieGallery.model.MovieGalleryCategoryTag;
-
 public class ImageGalleryCategoryTag {
 
     @SerializedName("Id")
@@ -28,5 +25,5 @@ public class ImageGalleryCategoryTag {
     public String LinkMainImageSrc;
 
     @SerializedName("Children")
-    public List<MovieGalleryCategoryTag> Children;
+    public List<ImageGalleryCategoryTag> Children;
 }

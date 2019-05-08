@@ -4,7 +4,6 @@ import io.reactivex.Observable;
 
 import java.util.Map;
 
-import ntk.base.api.estate.model.EstateContractTypeListRequest;
 import ntk.base.api.estate.model.EstateContractTypeListResponse;
 import ntk.base.api.estate.model.EstatePropertyAddRequest;
 import ntk.base.api.estate.model.EstatePropertyAddResponse;
@@ -33,7 +32,7 @@ public interface IEstate {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: EstateContractTypeList"})
-    Observable<EstateContractTypeListResponse> GetContractType(@HeaderMap Map<String, String> headers, @Body EstateContractTypeListRequest request);
+    Observable<EstateContractTypeListResponse> GetContractType(@HeaderMap Map<String, String> headers);
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: EstatePropertyAdd"})
