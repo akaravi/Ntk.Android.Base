@@ -35,11 +35,11 @@ import retrofit2.http.POST;
 public interface IMusicGallery {
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : MusicGalleryCategoryList"})
+    @Headers({"content-type: application/json", "layout: MusicGalleryCategoryList"})
     Observable<MusicGalleryCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body MusicGalleryCategoryRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : MusicGalleryCategoryTagList"})
+    @Headers({"content-type: application/json", "layout: MusicGalleryCategoryTagList"})
     Observable<MusicGalleryCategoryTagResponse> GetCategoryTagList(@HeaderMap Map<String, String> headers, @Body MusicGalleryCategoryTagRequest request);
 
     @POST("api/app")

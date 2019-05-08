@@ -40,7 +40,7 @@ public interface IBlog {
     Observable<BlogCategoryListResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body BlogCategoryListRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : BlogCategoryTagList"})
+    @Headers({"content-type: application/json", "layout: BlogCategoryTagList"})
     Observable<BlogCategoryTagListResponse> GetCategoryTagList(@HeaderMap Map<String, String> headers, @Body BlogCategoryTagListRequest request);
 
     @POST("api/app")

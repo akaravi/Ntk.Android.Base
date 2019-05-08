@@ -35,11 +35,11 @@ import retrofit2.http.POST;
 public interface IMovieGallery {
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : MovieGalleryCategoryList"})
+    @Headers({"content-type: application/json", "layout: MovieGalleryCategoryList"})
     Observable<MovieGalleryCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body MovieGalleryCategoryRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : MovieGalleryCategoryTagList"})
+    @Headers({"content-type: application/json", "layout: MovieGalleryCategoryTagList"})
     Observable<MovieGalleryCategoryTagResponse> GetCategoryTagList(@HeaderMap Map<String, String> headers, @Body MovieGalleryCategoryTagRequest request);
 
     @POST("api/app")

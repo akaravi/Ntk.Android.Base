@@ -16,8 +16,8 @@ public class EstatePropertyType {
     @SerializedName("LinkMainImageId")
     public int LinkMainImageId;
 
-//    @SerializedName("PropertyDetails")
-//    public EstatePropertyDetail PropertyDetails;
+    @SerializedName("PropertyDetails")
+    public EstatePropertyDetail PropertyDetails;
 
     @SerializedName("LinkSiteId")
     public int LinkSiteId;
