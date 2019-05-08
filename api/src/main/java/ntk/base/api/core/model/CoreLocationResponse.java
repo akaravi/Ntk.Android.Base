@@ -4,7 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class CoreLocationResponse {
+import ntk.base.api.model.ErrorException;
+
+public class CoreLocationResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<CoreLocation> ListItems;
 
