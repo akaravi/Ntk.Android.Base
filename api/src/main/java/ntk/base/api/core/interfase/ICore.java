@@ -28,11 +28,11 @@ import retrofit2.http.POST;
 public interface ICore {
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout: CoreMain"})
+    @Headers({"content-type: application/json", "layout: Main"})
     Observable<MainCoreResponse> GetResponseMain(@HeaderMap Map<String, String> headers);
 
     @GET("api/app/")
-    @Headers({"content-type: application/json", "layout: CoreMain"})
+    @Headers({"content-type: application/json", "layout: Main"})
     Observable<MainCoreResponse> GET_GetResponseMain(@HeaderMap Map<String, String> headers);
 
     @POST("api/app/")
