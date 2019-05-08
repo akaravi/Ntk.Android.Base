@@ -24,6 +24,6 @@ public class BlogCategoryTag {
     @SerializedName("LinkMainImageSrc")
     public String LinkMainImageSrc;
 
-//    @SerializedName("Children")
-//    public List<BlogCategoryTag> Children;
+    @SerializedName("Children")
+    public List<BlogCategoryTag> Children;
 }

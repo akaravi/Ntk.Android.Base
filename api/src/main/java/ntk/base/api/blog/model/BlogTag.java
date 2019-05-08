@@ -2,7 +2,9 @@ package ntk.base.api.blog.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class BlogTag {
+import ntk.base.api.model.BaseEntity;
+
+public class BlogTag extends BaseEntity {
 
     @SerializedName("Id")
     public long Id;
