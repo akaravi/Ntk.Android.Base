@@ -52,7 +52,7 @@ public interface ICore {
     Observable<CoreUserResponse> RegisterWithMobile(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterByMobileRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout: CoreLocation"})
+    @Headers({"content-type: application/json", "layout: CoreLocationList"})
     Observable<CoreLocationResponse> GetLocation(@HeaderMap Map<String, String> headers, @Body CoreLocationRequest request);
 
     @POST("api/app/")
