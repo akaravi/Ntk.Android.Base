@@ -87,6 +87,6 @@ public interface IImageGallery {
     Observable<ImageGalleryContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body ImageGalleryContentViewRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : ImageGalleryTagList"})
+    @Headers({"content-type: application/json", "layout: ImageGalleryTagList"})
     Observable<ImageGalleryTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body ImageGalleryTagRequest request);
 }

@@ -87,7 +87,7 @@ public interface IMovieGallery {
     Observable<MovieGalleryContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body MovieGalleryContentViewRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : MovieGalleryTagList"})
+    @Headers({"content-type: application/json", "layout: MovieGalleryTagList"})
     Observable<MovieGalleryTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body MovieGalleryTagRequest request);
 
 }

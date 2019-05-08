@@ -87,6 +87,6 @@ public interface IMusicGallery {
     Observable<MusicGalleryContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body MusicGalleryContentViewRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : MusicGalleryTagList"})
+    @Headers({"content-type: application/json", "layout: MusicGalleryTagList"})
     Observable<MusicGalleryTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body MusicGalleryTagRequest request);
 }
