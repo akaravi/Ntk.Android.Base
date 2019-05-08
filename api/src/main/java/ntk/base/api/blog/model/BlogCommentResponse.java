@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.model.ErrorException;
-import ntk.base.api.news.model.NewsComment;
 
 public class BlogCommentResponse extends ErrorException {
 
@@ -13,5 +12,5 @@ public class BlogCommentResponse extends ErrorException {
     public List<BlogComment> ListItems;
 
     @SerializedName("Item")
-    public NewsComment Item;
+    public BlogComment Item;
 }
