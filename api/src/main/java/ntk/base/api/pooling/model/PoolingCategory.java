@@ -5,9 +5,8 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.news.model.NewsCategory;
-import ntk.base.api.model.BaseEntity;
 
-public class PoolingCategory  extends BaseEntity {
+public class PoolingCategory  {
 
     @SerializedName("Id")
     public long Id;

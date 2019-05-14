@@ -4,8 +4,7 @@ import io.reactivex.Observable;
 
 import java.util.Map;
 
-import ntk.base.api.estate.model.EstateContractTypeRequest;
-import ntk.base.api.estate.model.EstateContractTypeResponse;
+import ntk.base.api.estate.model.EstateContractTypeListResponse;
 import ntk.base.api.estate.model.EstatePropertyAddRequest;
 import ntk.base.api.estate.model.EstatePropertyAddResponse;
 import ntk.base.api.estate.model.EstatePropertyDetailGroupListRequest;
@@ -20,8 +19,8 @@ import ntk.base.api.estate.model.EstatePropertyFavoriteRemoveRequest;
 import ntk.base.api.estate.model.EstatePropertyFavoriteRemoveResponse;
 import ntk.base.api.estate.model.EstatePropertyListRequest;
 import ntk.base.api.estate.model.EstatePropertyListResponse;
-import ntk.base.api.estate.model.EstatePropertyTypeRequest;
-import ntk.base.api.estate.model.EstatePropertyTypeResponse;
+import ntk.base.api.estate.model.EstatePropertyTypeListRequest;
+import ntk.base.api.estate.model.EstatePropertyTypeListResponse;
 import ntk.base.api.estate.model.EstatePropertyViewRequest;
 import ntk.base.api.estate.model.EstatePropertyViewResponse;
 import retrofit2.http.Body;
@@ -32,11 +31,11 @@ import retrofit2.http.POST;
 public interface IEstate {
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : EstateContractType"})
-    Observable<EstateContractTypeResponse> GetContractType(@HeaderMap Map<String, String> headers, @Body EstateContractTypeRequest request);
+    @Headers({"content-type: application/json", "layout: EstateContractTypeList"})
+    Observable<EstateContractTypeListResponse> GetContractType(@HeaderMap Map<String, String> headers);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : EstatePropertyAdd"})
+    @Headers({"content-type: application/json", "layout: EstatePropertyAdd"})
     Observable<EstatePropertyAddResponse> SetPropertyAdd(@HeaderMap Map<String, String> headers, @Body EstatePropertyAddRequest request);
 
     @POST("api/app")
@@ -64,8 +63,8 @@ public interface IEstate {
     Observable<EstatePropertyListResponse> GetPropertyList(@HeaderMap Map<String, String> headers, @Body EstatePropertyListRequest request);
 
     @POST("api/app")
-    @Headers({"content-type: application/json", "layout: EstatePropertyType"})
-    Observable<EstatePropertyTypeResponse> GetPropertyType(@HeaderMap Map<String, String> headers, @Body EstatePropertyTypeRequest request);
+    @Headers({"content-type: application/json", "layout: EstatePropertyTypeList"})
+    Observable<EstatePropertyTypeListResponse> GetPropertyType(@HeaderMap Map<String, String> headers, @Body EstatePropertyTypeListRequest request);
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: EstatePropertyView"})

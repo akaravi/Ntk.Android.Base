@@ -11,6 +11,6 @@ public class ProductCategoryTagResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<ProductCategoryTag> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public ProductCategoryTag Item;
 }

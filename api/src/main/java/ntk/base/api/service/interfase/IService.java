@@ -34,11 +34,11 @@ import retrofit2.http.POST;
 public interface IService {
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : ServiceCategoryList"})
+    @Headers({"content-type: application/json", "layout: ServiceCategoryList"})
     Observable<ServiceCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body ServiceCategoryRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : ServiceCategoryTagList"})
+    @Headers({"content-type: application/json", "layout: ServiceCategoryTagList"})
     Observable<ServiceCategoryTagResponse> GetCategoryTagList(@HeaderMap Map<String, String> headers, @Body ServiceCategoryTagRequest request);
 
     @POST("api/app")
@@ -86,6 +86,6 @@ public interface IService {
     Observable<ServiceContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body ServiceContentViewRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : ServiceTagList"})
+    @Headers({"content-type: application/json", "layout: ServiceTagList"})
     Observable<ServiceTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body ServiceTagRequest request);
 }

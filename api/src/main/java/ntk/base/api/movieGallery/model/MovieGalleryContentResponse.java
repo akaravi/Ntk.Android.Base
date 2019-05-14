@@ -11,6 +11,6 @@ public class MovieGalleryContentResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<MovieGalleryContent> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public MovieGalleryContent Item;
 }

@@ -11,6 +11,6 @@ public class EstatePropertyFavoriteListResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<EstateProperty> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public EstateProperty Item;
 }

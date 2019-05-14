@@ -11,6 +11,6 @@ public class BiographyCategoryTagResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<BiographyCategoryTag> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public BiographyCategoryTag Item;
 }

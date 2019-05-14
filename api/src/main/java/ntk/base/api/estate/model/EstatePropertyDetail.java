@@ -2,9 +2,7 @@ package ntk.base.api.estate.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.base.api.model.BaseEntity;
-
-public class EstatePropertyDetail extends BaseEntity{
+public class EstatePropertyDetail {
 
     @SerializedName("Title")
     public String Title;

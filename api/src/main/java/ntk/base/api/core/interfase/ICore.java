@@ -36,11 +36,11 @@ public interface ICore {
     Observable<MainCoreResponse> GET_GetResponseMain(@HeaderMap Map<String, String> headers);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : CoreBotton"})
+    @Headers({"content-type: application/json", "layout: CoreBotton"})
     Observable<ButtonResponse> GetButtons(@HeaderMap Map<String, String> headers);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : CoreImage"})
+    @Headers({"content-type: application/json", "layout: CoreImage"})
     Observable<ImageResponse> GetImage(@HeaderMap Map<String, String> headers);
 
     @POST("api/app/")
@@ -52,7 +52,7 @@ public interface ICore {
     Observable<CoreUserResponse> RegisterWithMobile(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterByMobileRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout: CoreLocation"})
+    @Headers({"content-type: application/json", "layout: CoreLocationList"})
     Observable<CoreLocationResponse> GetLocation(@HeaderMap Map<String, String> headers, @Body CoreLocationRequest request);
 
     @POST("api/app/")

@@ -2,7 +2,7 @@ package ntk.base.api.core.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Main {
+public class CoreMain {
 
     @SerializedName("AppTitle")
     public String AppTitle;

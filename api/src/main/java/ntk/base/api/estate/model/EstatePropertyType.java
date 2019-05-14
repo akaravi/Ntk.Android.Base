@@ -2,9 +2,7 @@ package ntk.base.api.estate.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.base.api.model.BaseEntity;
-
-public class EstatePropertyType extends BaseEntity {
+public class EstatePropertyType {
 
     @SerializedName("Title")
     public String Title;
@@ -43,7 +41,5 @@ public class EstatePropertyType extends BaseEntity {
     public Long DataMemoId;
 
     @SerializedName("RecordStatus")
-    public EnumRecordStatus RecordStatus;
-
-
+    public int RecordStatus;
 }

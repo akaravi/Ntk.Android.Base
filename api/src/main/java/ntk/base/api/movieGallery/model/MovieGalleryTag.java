@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import ntk.base.api.model.BaseEntity;
 
-public class MovieGalleryTag extends BaseEntity {
+public class MovieGalleryTag {
 
     @SerializedName("Id")
     public long Id;

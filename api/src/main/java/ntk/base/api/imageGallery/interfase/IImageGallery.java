@@ -35,11 +35,11 @@ import retrofit2.http.POST;
 public interface IImageGallery {
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : ImageGalleryCategoryList"})
+    @Headers({"content-type: application/json", "layout: ImageGalleryCategoryList"})
     Observable<ImageGalleryCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body ImageGalleryCategoryRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : ImageGalleryCategoryTagList"})
+    @Headers({"content-type: application/json", "layout: ImageGalleryCategoryTagList"})
     Observable<ImageGalleryCategoryTagResponse> GetCategoryTagList(@HeaderMap Map<String, String> headers, @Body ImageGalleryCategoryTagRequest request);
 
     @POST("api/app")
@@ -87,6 +87,6 @@ public interface IImageGallery {
     Observable<ImageGalleryContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body ImageGalleryContentViewRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : ImageGalleryTagList"})
+    @Headers({"content-type: application/json", "layout: ImageGalleryTagList"})
     Observable<ImageGalleryTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body ImageGalleryTagRequest request);
 }

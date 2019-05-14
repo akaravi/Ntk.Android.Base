@@ -11,6 +11,6 @@ public class ProductCommentResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<ProductComment> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public ProductComment Item;
 }

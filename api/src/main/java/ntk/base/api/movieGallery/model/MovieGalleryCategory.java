@@ -6,7 +6,7 @@ import java.util.List;
 
 import ntk.base.api.model.BaseEntity;
 
-public class MovieGalleryCategory extends BaseEntity {
+public class MovieGalleryCategory {
 
     @SerializedName("Id")
     public long Id;

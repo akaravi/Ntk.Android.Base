@@ -11,6 +11,6 @@ public class PoolingCategoryResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<PoolingCategory> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public PoolingCategory Item;
 }

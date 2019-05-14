@@ -11,6 +11,6 @@ public class ServiceCategoryTagResponse extends ErrorException {
     @SerializedName("ListItems")
     public List<ServiceCategoryTag> ListItems;
 
-    @SerializedName("Main")
+    @SerializedName("Item")
     public ServiceCategoryTag Item;
 }

@@ -44,15 +44,15 @@ public interface INews {
     Observable<NewsContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body NewsContentViewRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : NewsTagList"})
+    @Headers({"content-type: application/json", "layout: NewsTagList"})
     Observable<NewsTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body NewsTagRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : NewsCategoryList"})
+    @Headers({"content-type: application/json", "layout: NewsCategoryList"})
     Observable<NewsCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body NewsCategoryRequest request);
 
     @POST("api/app/")
-    @Headers({"content-type: application/json", "layout : NewsCategoryTagList"})
+    @Headers({"content-type: application/json", "layout: NewsCategoryTagList"})
     Observable<NewsCategoryTagResponse> GetCategoryTagList(@HeaderMap Map<String, String> headers, @Body NewsCategoryTagRequest request);
 
     @POST("api/app/")
