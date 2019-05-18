@@ -28,5 +28,5 @@ public class Theme {
     public List<ThemeConfigLayout> ThemeConfigLayout;
 
     @SerializedName("ThemeConfigJson")
-    public Theme ThemeConfigJson;
+    public ntk.base.api.model.theme.Theme ThemeConfigJson;
 }
