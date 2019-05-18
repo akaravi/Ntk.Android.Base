@@ -28,5 +28,5 @@ public class Theme {
     public List<ThemeConfigLayout> ThemeConfigLayout;
 
     @SerializedName("ThemeConfigJson")
-    public String ThemeConfigJson;
+    public Theme ThemeConfigJson;
 }
