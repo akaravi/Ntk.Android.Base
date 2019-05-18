@@ -12,17 +12,17 @@ public class Theme {
     @SerializedName("AppThemeTypeId")
     public String AppThemeTypeId;
 
-    @SerializedName("RuntimeConfigTheme")
-    public String RuntimeConfigTheme;
-
-    @SerializedName("BuilderConfigTheme")
-    public String BuilderConfigTheme;
-
-    @SerializedName("RuntimeConfigSiteAdmin")
-    public String RuntimeConfigSiteAdmin;
-
-    @SerializedName("RuntimeConfigMainAdmin")
-    public String RuntimeConfigMainAdmin;
+//    @SerializedName("RuntimeConfigTheme")
+//    public String RuntimeConfigTheme;
+//
+//    @SerializedName("BuilderConfigTheme")
+//    public String BuilderConfigTheme;
+//
+//    @SerializedName("RuntimeConfigSiteAdmin")
+//    public String RuntimeConfigSiteAdmin;
+//
+//    @SerializedName("RuntimeConfigMainAdmin")
+//    public String RuntimeConfigMainAdmin;
 
     @SerializedName("ThemeConfigLayout")
     public List<ThemeConfigLayout> ThemeConfigLayout;
