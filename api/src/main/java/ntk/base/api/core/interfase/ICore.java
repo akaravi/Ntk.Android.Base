@@ -7,6 +7,7 @@ import ntk.base.api.core.model.CoreAboutUsResponse;
 import ntk.base.api.core.model.ButtonResponse;
 import ntk.base.api.core.model.CoreLocationRequest;
 import ntk.base.api.core.model.CoreLocationResponse;
+import ntk.base.api.core.model.CoreTheme;
 import ntk.base.api.core.model.CoreUserResponse;
 import ntk.base.api.core.model.CoreUserChangePasswordRequest;
 import ntk.base.api.core.model.CoreUserEmailConfirmRequest;
@@ -82,5 +83,9 @@ public interface ICore {
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: CoreUserRegister"})
     Observable<CoreUserResponse> setUserRegister(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterRequest request);
+
+    @POST("api/app/")
+    @Headers({"content-type: application/json", "layout: Theme"})
+    Observable<CoreTheme> GetThemeCore(@HeaderMap Map<String, String> headers);
 
 }

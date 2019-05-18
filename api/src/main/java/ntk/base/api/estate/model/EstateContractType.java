@@ -3,6 +3,7 @@ package ntk.base.api.estate.model;
 import com.google.gson.annotations.SerializedName;
 
 public class EstateContractType {
+//    نوع معامله (اجاره رهن فروش)
 
     @SerializedName("Title")
     public String Title;

@@ -4,6 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class EstatePropertyType {
 
+//    نوع ملک
+
     @SerializedName("Title")
     public String Title;
 
