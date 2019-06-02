@@ -4,7 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.news.model.NewsCategory;
 import ntk.base.api.model.BaseEntity;
 
 public class BiographyContent  extends BaseEntity {
@@ -19,7 +18,7 @@ public class BiographyContent  extends BaseEntity {
     public Long linkCategoryId;
 
     @SerializedName("virtual_Category")
-    public NewsCategory virtualCategory;
+    public BiographyCategory virtualCategory;
 
     @SerializedName("Title")
     public String Title;

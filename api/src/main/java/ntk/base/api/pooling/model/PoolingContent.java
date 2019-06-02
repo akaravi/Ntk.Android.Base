@@ -4,7 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.news.model.NewsCategory;
 import ntk.base.api.model.BaseEntity;
 
 public class PoolingContent  extends BaseEntity {
@@ -37,7 +36,7 @@ public class PoolingContent  extends BaseEntity {
     public Boolean ViewStatisticsAfterVote;
 
     @SerializedName("virtual_Category")
-    public NewsCategory virtual_Category;
+    public PoolingCategory virtual_Category;
 
     @SerializedName("LinkMainImageId")
     public Long LinkMainImageId;

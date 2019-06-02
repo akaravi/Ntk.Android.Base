@@ -4,9 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.news.model.NewsCategory;
-
-public class PoolingCategory  {
+public class PoolingCategory {
 
     @SerializedName("Id")
     public long Id;
@@ -24,8 +22,8 @@ public class PoolingCategory  {
     public int creatorId;
 
     @SerializedName("virtual_Category")
-    public NewsCategory virtualCategory;
+    public PoolingCategory virtualCategory;
 
     @SerializedName("Children")
-    public List<NewsCategory> children;
+    public List<PoolingCategory> children;
 }
