@@ -21,6 +21,9 @@ public class PoolingCategory {
     @SerializedName("CreatorId")
     public int creatorId;
 
+    @SerializedName("LinkMainImageId")
+    public String imageSrc;
+
     @SerializedName("virtual_Category")
     public PoolingCategory virtualCategory;
 
