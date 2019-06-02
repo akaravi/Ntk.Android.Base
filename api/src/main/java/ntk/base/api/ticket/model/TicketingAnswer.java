@@ -14,19 +14,6 @@ public class TicketingAnswer extends BaseEntity {
     @SerializedName("HtmlBody")
     public String HtmlBody;
 
-    @SerializedName("LinkTicketingDepartemenId")
-    public Long LinkTicketingDepartemenId;
-
-    @SerializedName("LinkTypeOperatorId")
-    public Long LinkTypeOperatorId;
-
     @SerializedName("LinkFileIds")
     public String LinkFileIds;
-
-    @SerializedName("LinkFileIdsSrc")
-    public List<String> LinkFileIdsSrc;
-
-    @SerializedName("Id")
-    public Long Id;
-
 }
