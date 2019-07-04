@@ -23,4 +23,7 @@ public class TicketingSubmitRequest extends TicketingTask {
 
     @SerializedName("uploadName")
     public List<String> uploadName;
+
+    @SerializedName("LinkFileIds")
+    public String LinkFileIds;
 }
