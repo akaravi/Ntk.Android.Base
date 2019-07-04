@@ -10,12 +10,12 @@ import retrofit2.http.Headers;
 
 public interface INewsGet {
 
-    @GET("api/app/")
-    @Headers({"content-type: application/json", "layout: NewsContentSimilarList"})
-    Observable<NewsContentResponse> GetContentSimilarList(@HeaderMap Map<String, String> headers);
-
-
-    @GET("api/app/")
-    @Headers({"content-type: application/json", "layout: NewsContentCategoryList"})
-    Observable<NewsContentResponse> GetContentCategoryList(@HeaderMap Map<String, String> headers);
+//    @GET("api/app/")
+//    @Headers({"content-type: application/json", "layout: NewsContentSimilarList"})
+//    Observable<NewsContentResponse> GetContentSimilarList(@HeaderMap Map<String, String> headers);
+//
+//
+//    @GET("api/app/")
+//    @Headers({"content-type: application/json", "layout: NewsContentCategoryList"})
+//    Observable<NewsContentResponse> GetContentCategoryList(@HeaderMap Map<String, String> headers);
 }
