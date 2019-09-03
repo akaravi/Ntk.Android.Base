@@ -2,10 +2,15 @@ package ntk.base.api.core.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import ntk.base.api.article.model.ArticleContent;
 import ntk.base.api.model.ErrorException;
 
 public class CoreAboutUsResponse extends ErrorException {
 
+    @SerializedName("Item")
+    public About Item;
+}
+class About {
     @SerializedName("Id")
     public long Id;
 
@@ -41,7 +46,4 @@ public class CoreAboutUsResponse extends ErrorException {
 
     @SerializedName("Address")
     public String Address;
-
-
-//
 }
