@@ -2,7 +2,7 @@ package ntk.base.api.article.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.base.api.model.FilterModel;
+import ntk.base.api.baseModel.FilterModel;
 
 public class ArticleContentSimilarListRequest extends FilterModel {
 

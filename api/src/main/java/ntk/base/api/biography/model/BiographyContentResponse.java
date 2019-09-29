@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.biography.model.BiographyContent;
-import ntk.base.api.model.ErrorException;
+import ntk.base.api.baseModel.ErrorException;
+import ntk.base.api.biography.viewModel.BiographyContent;
 
 public class BiographyContentResponse extends ErrorException {
 

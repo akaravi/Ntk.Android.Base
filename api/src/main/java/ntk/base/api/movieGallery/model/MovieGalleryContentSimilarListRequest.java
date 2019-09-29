@@ -2,7 +2,7 @@ package ntk.base.api.movieGallery.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.base.api.model.FilterModel;
+import ntk.base.api.baseModel.FilterModel;
 
 public class MovieGalleryContentSimilarListRequest extends FilterModel {
 

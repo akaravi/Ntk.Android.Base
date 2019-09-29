@@ -2,8 +2,8 @@ package ntk.base.api.core.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.base.api.article.model.ArticleContent;
-import ntk.base.api.model.ErrorException;
+import ntk.base.api.baseModel.ErrorException;
+import ntk.base.api.core.viewModel.CoreAbout;
 
 public class CoreAboutUsResponse extends ErrorException {
 

@@ -4,7 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.model.ErrorException;
+import ntk.base.api.baseModel.ErrorException;
+import ntk.base.api.estate.viewModel.EstateContractType;
 
 public class EstateContractTypeListResponse extends ErrorException {
 

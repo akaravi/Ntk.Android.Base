@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.article.model.ArticleCategory;
-import ntk.base.api.model.ErrorException;
+import ntk.base.api.baseModel.ErrorException;
+import ntk.base.api.file.viewModel.FileCategory;
 
 public class FileCategoryResponse extends ErrorException {
 

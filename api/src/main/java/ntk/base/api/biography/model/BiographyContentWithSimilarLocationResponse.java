@@ -4,13 +4,14 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.model.ErrorException;
+import ntk.base.api.baseModel.ErrorException;
+import ntk.base.api.biography.viewModel.BiographyContent;
 
 public class BiographyContentWithSimilarLocationResponse extends ErrorException {
 
     @SerializedName("ListItems")
-    public List<BiographyContentWithSimilarLocation> ListItems;
+    public List<BiographyContent> ListItems;
 
     @SerializedName("Item")
-    public BiographyContentWithSimilarLocation Item;
+    public BiographyContent Item;
 }

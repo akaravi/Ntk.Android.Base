@@ -1,6 +1,6 @@
 package ntk.base.api.service.model;
 
-import ntk.base.api.model.FilterModel;
+import ntk.base.api.baseModel.FilterModel;
 
 public class ServiceContentOtherInfoRequest extends FilterModel {
 }

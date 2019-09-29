@@ -4,8 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.model.FilterModel;
-import retrofit2.http.PUT;
+import ntk.base.api.baseModel.FilterModel;
 
 public class BiographyContentWithSimilarLocationPeriodStartRequest extends FilterModel {
 
