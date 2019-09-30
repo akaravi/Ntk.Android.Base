@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.ticket.viewModel.TicketingDepartemen;
+import ntk.base.api.ticket.entity.TicketingDepartemen;
 
 public class TicketingDepartemenList extends ErrorException {
 

@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.ticket.viewModel.TicketingTask;
+import ntk.base.api.ticket.entity.TicketingTask;
 
 public class TicketingSubmitRequest extends TicketingTask {
 

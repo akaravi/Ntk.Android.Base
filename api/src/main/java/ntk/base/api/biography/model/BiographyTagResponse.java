@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.biography.viewModel.BiographyTag;
+import ntk.base.api.biography.entity.BiographyTag;
 
 public class BiographyTagResponse extends ErrorException {
 

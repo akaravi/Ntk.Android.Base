@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.musicGallery.viewModel.MusicGalleryCategory;
+import ntk.base.api.musicGallery.entity.MusicGalleryCategory;
 
 public class MusicGalleryCategoryResponse extends ErrorException {
 

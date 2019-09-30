@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.movieGallery.viewModel.MovieGalleryCategoryTag;
+import ntk.base.api.movieGallery.entity.MovieGalleryCategoryTag;
 
 public class MovieGalleryCategoryTagResponse extends ErrorException {
 

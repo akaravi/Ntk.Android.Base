@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.service.viewModel.ServiceContent;
+import ntk.base.api.service.entity.ServiceContent;
 
 public class ServiceContentFavoriteListResponse extends ErrorException {
 

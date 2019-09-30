@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.article.viewModel.ArticleCategoryTag;
+import ntk.base.api.article.entity.ArticleCategoryTag;
 import ntk.base.api.baseModel.ErrorException;
 
 public class ArticleCategoryTagResponse extends ErrorException {

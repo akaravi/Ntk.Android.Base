@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.application.viewModel.ApplicationIntro;
+import ntk.base.api.application.entity.ApplicationIntro;
 import ntk.base.api.baseModel.ErrorException;
 
 public class ApplicationIntroResponse extends ErrorException {

@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.base.api.pooling.viewModel.PoolingVote;
+import ntk.base.api.pooling.entity.PoolingVote;
 
 public class PoolingSubmitRequest {
 

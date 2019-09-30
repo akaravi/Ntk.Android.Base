@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.news.viewModel.NewsContentOtherInfo;
+import ntk.base.api.news.entity.NewsContentOtherInfo;
 
 public class NewsContentOtherInfoResponse extends ErrorException {
 

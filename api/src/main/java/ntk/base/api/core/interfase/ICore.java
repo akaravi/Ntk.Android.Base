@@ -7,7 +7,7 @@ import ntk.base.api.core.model.CoreAboutUsResponse;
 import ntk.base.api.core.model.ButtonResponse;
 import ntk.base.api.core.model.CoreLocationRequest;
 import ntk.base.api.core.model.CoreLocationResponse;
-import ntk.base.api.core.viewModel.CoreTheme;
+import ntk.base.api.core.entity.CoreTheme;
 import ntk.base.api.core.model.CoreUserResponse;
 import ntk.base.api.core.model.CoreUserChangePasswordRequest;
 import ntk.base.api.core.model.CoreUserEmailConfirmRequest;

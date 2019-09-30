@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.blog.viewModel.BlogContent;
+import ntk.base.api.blog.entity.BlogContent;
 
 public class BlogContentListResponse extends ErrorException {
     @SerializedName("ListItems")

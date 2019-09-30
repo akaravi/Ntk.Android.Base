@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.imageGallery.viewModel.ImageGalleryContent;
+import ntk.base.api.imageGallery.entity.ImageGalleryContent;
 
 public class ImageGalleryContentResponse extends ErrorException {
 

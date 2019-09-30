@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.estate.viewModel.EstateProperty;
+import ntk.base.api.estate.entity.EstateProperty;
 
 public class EstatePropertyFavoriteListResponse extends ErrorException {
 

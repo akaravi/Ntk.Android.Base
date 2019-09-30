@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.object.viewModel.ObjectGroup;
+import ntk.base.api.object.entity.ObjectGroup;
 
 public class ObjectGroupResonse  extends ErrorException {
     @SerializedName("ListItems")

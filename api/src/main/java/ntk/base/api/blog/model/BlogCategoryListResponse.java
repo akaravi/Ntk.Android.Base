@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.blog.viewModel.BlogCategory;
+import ntk.base.api.blog.entity.BlogCategory;
 
 public class BlogCategoryListResponse extends ErrorException {
 

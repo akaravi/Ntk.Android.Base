@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import ntk.base.api.file.interfase.IFile;
-import ntk.base.api.file.viewModel.FileUploadModel;
+import ntk.base.api.file.entity.FileUploadModel;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
 import okhttp3.Interceptor;
