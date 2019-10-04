@@ -39,51 +39,51 @@ import retrofit2.http.POST;
 public interface IObject {
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectGroupActList"})
-    Observable<ObjectGroupResonse> GetMemberGroupActList(@HeaderMap Map<String, String> headers, @Body ObjectGroupRequest request);
+    Observable<ObjectGroupResonse> GetGroupActList(@HeaderMap Map<String, String> headers, @Body ObjectGroupRequest request);
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectHistoryActAdd"})
-    Observable<ObjectHistoryResonse> GetObjectHistoryActAdd(@HeaderMap Map<String, String> headers, @Body ObjectHistoryActAddRequest request);
+    Observable<ObjectHistoryResonse> GetHistoryActAdd(@HeaderMap Map<String, String> headers, @Body ObjectHistoryActAddRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectHistoryActList"})
-    Observable<ObjectHistoryResonse> GetObjectHistoryActList(@HeaderMap Map<String, String> headers, @Body ObjectHistoryRequest request);
+    Observable<ObjectHistoryResonse> GetHistoryActList(@HeaderMap Map<String, String> headers, @Body ObjectHistoryRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectHistoryActView"})
-    Observable<ObjectHistoryResonse> GetObjectHistoryActView(@HeaderMap Map<String, String> headers, @Body ObjectHistoryActViewRequest request);
+    Observable<ObjectHistoryResonse> GetHistoryActView(@HeaderMap Map<String, String> headers, @Body ObjectHistoryActViewRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectPropertyActAdd"})
-    Observable<ObjectPropertyResonse> SetObjectPropertyActAdd(@HeaderMap Map<String, String> headers, @Body ObjectPropertyActAddRequest request);
+    Observable<ObjectPropertyResonse> SetPropertyActAdd(@HeaderMap Map<String, String> headers, @Body ObjectPropertyActAddRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectPropertyActList"})
-    Observable<ObjectPropertyResonse> GetObjectPropertyActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyRequest request);
+    Observable<ObjectPropertyResonse> GetPropertyActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectPropertyActView"})
-    Observable<ObjectPropertyResonse> GetObjectPropertyActView(@HeaderMap Map<String, String> headers, @Body ObjectPropertyActViewRequest request);
+    Observable<ObjectPropertyResonse> GetPropertyActView(@HeaderMap Map<String, String> headers, @Body ObjectPropertyActViewRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectPropertyActViewByJoinId"})
-    Observable<ObjectPropertyResonse> GetObjectPropertyActViewByJoinId(@HeaderMap Map<String, String> headers, @Body ObjectPropertyActViewByJoinIdRequest request);
+    Observable<ObjectPropertyResonse> GetPropertyActViewByJoinId(@HeaderMap Map<String, String> headers, @Body ObjectPropertyActViewByJoinIdRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectPropertyDetailActList"})
-    Observable<ObjectPropertyDetailResonse> GetObjectPropertyDetailActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyDetailRequest request);
+    Observable<ObjectPropertyDetailResonse> GetPropertyDetailActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyDetailRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectPropertyDetailGroupActList"})
-    Observable<ObjectPropertyDetailGroupResonse> GetObjectPropertyDetailGroupActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyDetailGroupRequest request);
+    Observable<ObjectPropertyDetailGroupResonse> GePropertyDetailGroupActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyDetailGroupRequest request);
 
 
     @POST("api/app/")
