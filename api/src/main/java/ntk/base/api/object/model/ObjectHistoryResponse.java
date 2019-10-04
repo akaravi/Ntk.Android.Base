@@ -6,12 +6,12 @@ import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
 import ntk.base.api.object.entity.ObjectGroup;
-import ntk.base.api.object.entity.ObjectUser;
+import ntk.base.api.object.entity.ObjectHistory;
 
-public class ObjectUserResonse extends ErrorException {
+public class ObjectHistoryResponse extends ErrorException {
     @SerializedName("ListItems")
-    public List<ObjectUser> ListItems;
+    public List<ObjectHistory> ListItems;
 
     @SerializedName("Item")
-    public ObjectUser Item;
+    public ObjectHistory Item;
 }

@@ -6,12 +6,12 @@ import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
 import ntk.base.api.object.entity.ObjectProperty;
-import ntk.base.api.object.entity.ObjectPropertyType;
+import ntk.base.api.object.entity.ObjectPropertySite;
 
-public class ObjectPropertyTypeResonse extends ErrorException {
+public class ObjectPropertySiteResponse extends ErrorException {
     @SerializedName("ListItems")
-    public List<ObjectPropertyType> ListItems;
+    public List<ObjectPropertySite> ListItems;
 
     @SerializedName("Item")
-    public ObjectPropertyType Item;
+    public ObjectPropertySite Item;
 }
