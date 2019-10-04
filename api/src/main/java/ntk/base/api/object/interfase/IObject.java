@@ -88,36 +88,36 @@ public interface IObject {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectPropertyDetailValueActList"})
-    Observable<ObjectPropertyDetailValueResonse> GetObjectPropertyDetailValueActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyDetailValueRequest request);
+    Observable<ObjectPropertyDetailValueResonse> GetPropertyDetailValueActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyDetailValueRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectPropertySiteActList"})
-    Observable<ObjectPropertySiteResonse> GetObjectPropertySiteActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertySiteRequest request);
+    Observable<ObjectPropertySiteResonse> GetPropertySiteActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertySiteRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectPropertyTypeActList"})
-    Observable<ObjectPropertyTypeResonse> GetObjectPropertyTypeActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyTypeRequest request);
+    Observable<ObjectPropertyTypeResonse> GetPropertyTypeActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyTypeRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectUserActList"})
-    Observable<ObjectUserResonse> GetObjectUserActList(@HeaderMap Map<String, String> headers, @Body ObjectUserRequest request);
+    Observable<ObjectUserResonse> GetUserActList(@HeaderMap Map<String, String> headers, @Body ObjectUserRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectUserGroupActList"})
-    Observable<ObjectUserGroupResonse> GetObjectUserGroupActList(@HeaderMap Map<String, String> headers, @Body ObjectUserGroupRequest request);
+    Observable<ObjectUserGroupResonse> GetUserGroupActList(@HeaderMap Map<String, String> headers, @Body ObjectUserGroupRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectUserSiteActAddeByJoinId"})
-    Observable<ObjectUserSiteResonse> SetObjectUserSiteActAddeByJoinId(@HeaderMap Map<String, String> headers, @Body ObjectUserSiteActAddeByJoinIdRequest request);
+    Observable<ObjectUserSiteResonse> SetUserSiteActAddeByJoinId(@HeaderMap Map<String, String> headers, @Body ObjectUserSiteActAddeByJoinIdRequest request);
 
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectUserSiteActList"})
-    Observable<ObjectUserSiteResonse> GetObjectUserSiteActList(@HeaderMap Map<String, String> headers, @Body ObjectUserSiteRequest request);
+    Observable<ObjectUserSiteResonse> GetUserSiteActList(@HeaderMap Map<String, String> headers, @Body ObjectUserSiteRequest request);
 
 }
