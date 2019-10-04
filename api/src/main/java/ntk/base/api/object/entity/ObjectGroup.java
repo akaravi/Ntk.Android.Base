@@ -16,7 +16,7 @@ public class ObjectGroup extends BaseEntity {
     @SerializedName("LinkPropertyTypeId")
     public long LinkPropertyTypeId;
 
-    @SerializedName("LinkPropertyTypeId")
+    @SerializedName("PropertyType")
     public ObjectPropertyType PropertyType ;
 
 
