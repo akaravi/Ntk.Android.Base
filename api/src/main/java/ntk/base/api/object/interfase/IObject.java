@@ -83,7 +83,7 @@ public interface IObject {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: ObjectPropertyDetailGroupActList"})
-    Observable<ObjectPropertyDetailGroupResponse> GePropertyDetailGroupActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyDetailGroupRequest request);
+    Observable<ObjectPropertyDetailGroupResponse> GetPropertyDetailGroupActList(@HeaderMap Map<String, String> headers, @Body ObjectPropertyDetailGroupRequest request);
 
 
     @POST("api/app/")
