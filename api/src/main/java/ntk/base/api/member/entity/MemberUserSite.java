@@ -1,4 +1,4 @@
-package ntk.base.api.object.entity;
+package ntk.base.api.member.entity;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -6,11 +6,12 @@ import java.lang.reflect.Member;
 
 import ntk.base.api.baseModel.BaseEntity;
 
-public class ObjectUserSite extends BaseEntity {
+public class MemberUserSite extends BaseEntity {
     @SerializedName("LinkCmsSiteId")
     public Long LinkCmsSiteId;
     @SerializedName("LinkMemberUserId")
-    public Long LinkObjectUserId;
-    @SerializedName("object")
-    public Object object;
+    public Long LinkMemberUserId;
+    @SerializedName("member")
+    public Member member;
+
 }
