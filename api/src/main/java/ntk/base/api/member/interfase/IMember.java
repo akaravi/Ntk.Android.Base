@@ -23,6 +23,7 @@ import ntk.base.api.member.model.MemberPropertySiteRequest;
 import ntk.base.api.member.model.MemberPropertySiteResponse;
 import ntk.base.api.member.model.MemberPropertyTypeRequest;
 import ntk.base.api.member.model.MemberPropertyTypeResponse;
+import ntk.base.api.member.model.MemberUserActAddRequest;
 import ntk.base.api.member.model.MemberUserGroupRequest;
 import ntk.base.api.member.model.MemberUserGroupResponse;
 import ntk.base.api.member.model.MemberUserRequest;
@@ -123,6 +124,6 @@ public interface IMember {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: MemberUserActAdd"})
-    Observable<MemberUserResponse> GetUserUseActAdd(@HeaderMap Map<String, String> headers, @Body MemberUserRequest request);
+    Observable<MemberUserResponse> GetUserUseActAdd(@HeaderMap Map<String, String> headers, @Body MemberUserActAddRequest request);
 
 }
