@@ -120,4 +120,9 @@ public interface IMember {
     @Headers({"content-type: application/json", "layout: MemberUserSiteActList"})
     Observable<MemberUserSiteResponse> GetUserSiteActList(@HeaderMap Map<String, String> headers, @Body MemberUserSiteRequest request);
 
+
+    @POST("api/app/")
+    @Headers({"content-type: application/json", "layout: MemberUserActAdd"})
+    Observable<MemberUserResponse> GetUserUseActAdd(@HeaderMap Map<String, String> headers, @Body MemberUserRequest request);
+
 }
