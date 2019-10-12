@@ -124,6 +124,6 @@ public interface IMember {
 
     @POST("api/app/")
     @Headers({"content-type: application/json", "layout: MemberUserActAdd"})
-    Observable<MemberUserResponse> GetUserUseActAdd(@HeaderMap Map<String, String> headers, @Body MemberUserActAddRequest request);
+    Observable<MemberUserResponse> SetUserActAdd(@HeaderMap Map<String, String> headers, @Body MemberUserActAddRequest request);
 
 }
