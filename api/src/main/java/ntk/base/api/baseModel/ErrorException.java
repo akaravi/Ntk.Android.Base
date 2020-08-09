@@ -2,12 +2,17 @@ package ntk.base.api.baseModel;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class ErrorException {
 
     @SerializedName("IsSuccess")
     public boolean IsSuccess;
+
+    @SerializedName("Status")
+    public int Status;
 
     @SerializedName("ErrorMessage")
     public String ErrorMessage;
@@ -24,17 +29,9 @@ public class ErrorException {
     @SerializedName("RowPerPage")
     public int RowPerPage;
 
-    @SerializedName("UserTicketToken")
-    public String UserTicketToken;
+    @SerializedName("token")
+    public String token;
 
     @SerializedName("Errors")
-    public List<ErrorInfo> Errors;
-}
-
-class ErrorInfo {
-    @SerializedName("ErrorMessage")
-    public String ErrorMessage;
-
-    @SerializedName("ErrorType")
-    public int ErrorType;
+    public Map<String, ArrayList<String>> Errors;
 }
