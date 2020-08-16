@@ -34,59 +34,59 @@ import retrofit2.http.POST;
 
 public interface IProduct {
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductCategoryList"})
     Observable<ProductCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body ProductCategoryRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductCategoryTagList"})
     Observable<ProductCategoryTagResponse> GetCategoryTagList(@HeaderMap Map<String, String> headers, @Body ProductCategoryTagRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductCommentAdd"})
     Observable<ProductCommentResponse> SetComment(@HeaderMap Map<String, String> headers, @Body ProductCommentAddRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductCommentList"})
     Observable<ProductCommentResponse> GetCommentList(@HeaderMap Map<String, String> headers, @Body ProductCommentListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductCommentView"})
     Observable<ProductCommentResponse> GetCommentView(@HeaderMap Map<String, String> headers, @Body ProductCommentViewRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductContentCategoryList"})
     Observable<ProductContentResponse> GetContentCategoryList(@HeaderMap Map<String, String> headers, @Body ProductContentCategoryListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductContentFavoriteAdd"})
     Observable<ProductContentFavoriteAddResponse> SetContentFavoriteAdd(@HeaderMap Map<String, String> headers, @Body ProductContentFavoriteAddRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductContentFavoriteList"})
     Observable<ProductContentFavoriteListResponse> GetContentFavoriteList(@HeaderMap Map<String, String> headers, @Body ProductContentFavoriteListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductContentFavoriteList"})
     Observable<ProductContentFavoriteRemoveResponse> SetContentFavoriteRemove(@HeaderMap Map<String, String> headers, @Body ProductContentFavoriteRemoveRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductContentList"})
     Observable<ProductContentResponse> GetContentList(@HeaderMap Map<String, String> headers, @Body ProductContentListRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductContentOtherInfoList"})
     Observable<ProductContentOtherInfoResponse> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body ProductContentOtherInfoRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductContentSimilarList"})
     Observable<ProductContentResponse> GetContentSimilarList(@HeaderMap Map<String, String> headers, @Body ProductContentSimilarListRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductContentView"})
     Observable<ProductContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body ProductContentViewRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ProductTagList"})
     Observable<ProductTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body ProductTagRequest request);
 }

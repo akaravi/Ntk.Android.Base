@@ -43,95 +43,95 @@ import retrofit2.http.POST;
 
 public interface IBiography {
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: biographyContentList"})
     Observable<BiographyContentResponse> GetContentList(@HeaderMap Map<String, String> headers, @Body BiographyContentListRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: biographyContentView"})
     Observable<BiographyContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body BiographyContentViewRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: biographyTagList"})
     Observable<BiographyTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body BiographyTagRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: biographyCategoryList"})
     Observable<BiographyCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body BiographyCategoryRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: biographyCategoryTagList"})
     Observable<BiographyCategoryTagResponse> GetCategoryTagList(@HeaderMap Map<String, String> headers, @Body BiographyCategoryTagRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: biographyContentOtherInfoList"})
     Observable<BiographyContentOtherInfoResponse> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body BiographyContentOtherInfoRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: biographyCommentList"})
     Observable<BiographyCommentResponse> GetCommentList(@HeaderMap Map<String, String> headers, @Body BiographyCommentListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyCommentAdd"})
     Observable<BiographyCommentResponse> SetComment(@HeaderMap Map<String, String> headers, @Body BiographyCommentAddRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: biographyCommentView"})
     Observable<BiographyCommentResponse> GetCommentView(@HeaderMap Map<String, String> headers, @Body BiographyCommentViewRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: biographyContentFavoriteAdd"})
     Observable<BiographyContentFavoriteAddResponse> SetContentFavoriteAdd(@HeaderMap Map<String, String> headers, @Body BiographyContentFavoriteAddRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: biographyContentFavoriteRemove"})
     Observable<BiographyContentFavoriteRemoveResponse> SetContentFavoriteRemove(@HeaderMap Map<String, String> headers, @Body BiographyContentFavoriteRemoveRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: biographyContentFavoriteList"})
     Observable<BiographyContentFavoriteListResponse> GetContentFavoriteList(@HeaderMap Map<String, String> headers, @Body BiographyContentFavoriteListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyContentCategoryList"})
     Observable<BiographyContentResponse> GetContentCategoryList(@HeaderMap Map<String, String> headers, @Body BiographyContentCategoryListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyContentSimilarList"})
     Observable<BiographyContentResponse> GetContentSimilarList(@HeaderMap Map<String, String> headers, @Body BiographyContentSimilarListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyContentWithDatePeriodEndList"})
     Observable<BiographyContentResponse> GetContentWithDatePeriodEndList(@HeaderMap Map<String, String> headers, @Body BiographyContentWithDatePeriodEndListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyContentWithDatePeriodStartList"})
     Observable<BiographyContentResponse> GetContentWithDatePeriodStartList(@HeaderMap Map<String, String> headers, @Body BiographyContentWithDatePeriodStartListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarDatePeriodEndList"})
     Observable<BiographyContentResponse> GetContentWithSimilarDatePeriodEndList(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarDatePeriodEndListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarDatePeriodStartDayAndMonthOfYearList"})
     Observable<BiographyContentResponse> GetContentWithSimilarDatePeriodStartDayAndMonthOfYearList(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarDatePeriodStartDayAndMonthOfYearListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarDatePeriodStartDayOfYearList"})
     Observable<BiographyContentResponse> GetContentWithSimilarDatePeriodStartDayOfYearList(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarDatePeriodStartDayOfYearListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarDatePeriodStartList"})
     Observable<BiographyContentResponse> GetContentWithSimilarDatePeriodStartList(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarDatePeriodStartListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarDatePeriodStartMonthOfYearList"})
     Observable<BiographyContentResponse> GetContentWithSimilarDatePeriodStartMonthOfYearList(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarDatePeriodStartMonthOfYearListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarLocationPeriodStart"})
     Observable<BiographyContentWithSimilarLocationResponse> GetContentWithSimilarLocationPeriodStart(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarLocationPeriodStartRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BiographyContentWithSimilarLocationPeriodEnd"})
     Observable<BiographyContentWithSimilarLocationResponse> GetContentWithSimilarLocationPeriodEnd(@HeaderMap Map<String, String> headers, @Body BiographyContentWithSimilarLocationPeriodEndRequest request);
 }

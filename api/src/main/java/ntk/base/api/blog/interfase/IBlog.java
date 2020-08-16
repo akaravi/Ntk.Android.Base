@@ -35,59 +35,59 @@ import retrofit2.http.POST;
 
 public interface IBlog {
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogCategoryList"})
     Observable<BlogCategoryListResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body BlogCategoryListRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogCategoryTagList"})
     Observable<BlogCategoryTagListResponse> GetCategoryTagList(@HeaderMap Map<String, String> headers, @Body BlogCategoryTagListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogCommentAdd"})
     Observable<BlogCommentResponse> SetComment(@HeaderMap Map<String, String> headers, @Body BlogCommentAddRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogCommentList"})
     Observable<BlogCommentResponse> GetCommentList(@HeaderMap Map<String, String> headers, @Body BlogCommentListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogCommentView"})
     Observable<BlogCommentResponse> GetCommentView(@HeaderMap Map<String, String> headers, @Body BlogCommentViewRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogContentCategoryList"})
     Observable<BlogContentResponse> GetContentCategoryList(@HeaderMap Map<String, String> headers, @Body BlogContentCategoryListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogContentFavoriteAdd"})
     Observable<BlogContentFavoriteAddResponse> SetContentFavoriteAdd(@HeaderMap Map<String, String> headers, @Body BlogContentFavoriteAddRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogContentFavoriteList"})
     Observable<BlogContentFavoriteListResponse> GetContentFavoriteList(@HeaderMap Map<String, String> headers, @Body BlogContentFavoriteListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogContentFavoriteRemove"})
     Observable<BlogContentFavoriteRemoveResponse> SetContentFavoriteRemove(@HeaderMap Map<String, String> headers, @Body BlogContentFavoriteRemoveRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogContentList"})
     Observable<BlogContentListResponse> GetContentList(@HeaderMap Map<String, String> headers, @Body BlogContentListRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogContentOtherInfoList"})
     Observable<BlogContentOtherInfoListResponse> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body BlogContentOtherInfoListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogContentSimilarList"})
     Observable<BlogContentResponse> GetContentSimilarList(@HeaderMap Map<String, String> headers, @Body BlogContentSimilarListRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogContentView"})
     Observable<BlogContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body BlogContentViewRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: BlogTagList"})
     Observable<BlogTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body BlogTagRequest request);
 }

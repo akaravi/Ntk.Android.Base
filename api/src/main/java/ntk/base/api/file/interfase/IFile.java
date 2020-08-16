@@ -31,15 +31,15 @@ public interface IFile {
     Observable<String> uploadFileWithPartMap(@HeaderMap Map<String, String> headers, @PartMap() Map<String, RequestBody> partMap, @Part MultipartBody.Part file);
 
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: "})
     Observable<FileContentResponse> GetContentList(@HeaderMap Map<String, String> headers, @Body FileContentRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: "})
     Observable<FileContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body FileContentRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: "})
     Observable<FileCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body FileCategoryRequest request);
 }

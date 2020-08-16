@@ -33,59 +33,59 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 public interface IService {
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceCategoryList"})
     Observable<ServiceCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body ServiceCategoryRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceCategoryTagList"})
     Observable<ServiceCategoryTagResponse> GetCategoryTagList(@HeaderMap Map<String, String> headers, @Body ServiceCategoryTagRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceCommentAdd"})
     Observable<ServiceCommentResponse> SetComment(@HeaderMap Map<String, String> headers, @Body ServiceCommentAddRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceCommentList"})
     Observable<ServiceCommentResponse> GetCommentList(@HeaderMap Map<String, String> headers, @Body ServiceCommentListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceCommentView"})
     Observable<ServiceCommentResponse> GetCommentView(@HeaderMap Map<String, String> headers, @Body ServiceCommentViewRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceContentCategoryList"})
     Observable<ServiceContentResponse> GetContentCategoryList(@HeaderMap Map<String, String> headers, @Body ServiceContentCategoryListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceContentFavoriteAdd"})
     Observable<ServiceContentFavoriteAddResponse> SetContentFavoriteAdd(@HeaderMap Map<String, String> headers, @Body ServiceContentFavoriteAddRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceContentFavoriteList"})
     Observable<ServiceContentFavoriteListResponse> GetContentFavoriteList(@HeaderMap Map<String, String> headers, @Body ServiceContentFavoriteListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceContentFavoriteList"})
     Observable<ServiceContentFavoriteRemoveResponse> SetContentFavoriteRemove(@HeaderMap Map<String, String> headers, @Body ServiceContentFavoriteRemoveRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceContentList"})
     Observable<ServiceContentResponse> GetContentList(@HeaderMap Map<String, String> headers, @Body ServiceContentListRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceContentOtherInfoList"})
     Observable<ServiceContentOtherInfoResponse> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body ServiceContentOtherInfoRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceContentSimilarList"})
     Observable<ServiceContentResponse> GetContentSimilarList(@HeaderMap Map<String, String> headers, @Body ServiceContentSimilarListRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceContentView"})
     Observable<ServiceContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body ServiceContentViewRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ServiceTagList"})
     Observable<ServiceTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body ServiceTagRequest request);
 }

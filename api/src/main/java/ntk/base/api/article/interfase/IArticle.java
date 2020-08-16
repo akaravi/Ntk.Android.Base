@@ -33,60 +33,60 @@ import retrofit2.http.POST;
 
 public interface IArticle {
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ArticleContentList"})
     Observable<ArticleContentResponse> GetContentList(@HeaderMap Map<String, String> headers, @Body ArticleContentListRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ArticleContentView"})
     Observable<ArticleContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body ArticleContentViewRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ArticleTagList"})
     Observable<ArticleTagResponse> GetTagList(@HeaderMap Map<String, String> headers, @Body ArticleTagRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json" , "layout: ArticleCategoryList"})
     Observable<ArticleCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body ArticleCategoryRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json" , "layout: ArticleCategoryTagList"})
     Observable<ArticleCategoryTagResponse> GetCategoryTagList(@HeaderMap Map<String, String> headers, @Body ArticleCategoryTagRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json" , "layout: ArticleContentOtherInfoList"})
     Observable<ArticleContentOtherInfoResponse> GetContentOtherInfoList(@HeaderMap Map<String, String> headers, @Body ArticleContentOtherInfoRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json" , "layout: ArticleCommentList"})
     Observable<ArticleCommentResponse> GetCommentList(@HeaderMap Map<String, String> headers, @Body ArticleCommentListRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json" , "layout: ArticleCommentAdd"})
     Observable<ArticleCommentResponse> SetComment(@HeaderMap Map<String, String> headers, @Body ArticleCommentAddRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json" , "layout: ArticleCommentView"})
     Observable<ArticleCommentResponse> GetCommentView(@HeaderMap Map<String, String> headers, @Body ArticleCommentViewRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json" , "layout: ArticleContentFavoriteAdd"})
     Observable<ArticleContentFavoriteAddResponse> SetContentFavoriteAdd(@HeaderMap Map<String, String> headers, @Body ArticleContentFavoriteAddRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json" , "layout: ArticleContentFavoriteRemove"})
     Observable<ArticleContentFavoriteRemoveResponse> SetContentFavoriteRemove(@HeaderMap Map<String, String> headers, @Body ArticleContentFavoriteRemoveRequest request);
 
-    @POST("api/app")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json" , "layout: ArticleContentFavoriteList"})
     Observable<ArticleContentFavoriteListResponse> GetContentFavoriteList(@HeaderMap Map<String, String> headers, @Body ArticleContentFavoriteListRequest request);
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ArticleContentSimilarList"})
     Observable<ArticleContentResponse> GetContentSimilarList(@HeaderMap Map<String, String> headers , @Body ArticleContentSimilarListRequest request);
 
 
-    @POST("api/app/")
+    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ArticleContentCategoryList"})
     Observable<ArticleContentResponse> GetContentCategoryList(@HeaderMap Map<String, String> headers  , @Body ArticleContentCategoryListRequest request);
 }
