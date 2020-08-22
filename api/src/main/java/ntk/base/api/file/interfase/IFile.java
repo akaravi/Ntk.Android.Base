@@ -27,7 +27,7 @@ public interface IFile {
 
 
     @Multipart
-    @POST("api/upload/")
+    @POST("api/v1/FileContent/upload/")
     Observable<String> uploadFileWithPartMap(@HeaderMap Map<String, String> headers, @PartMap() Map<String, RequestBody> partMap, @Part MultipartBody.Part file);
 
 
