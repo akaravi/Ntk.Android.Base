@@ -30,8 +30,8 @@ public class Filters {
     @SerializedName("SearchType")
     public int SearchType;
 
-    @SerializedName("StringValue1")
-    public String StringValue1;
+    @SerializedName("StringValue")
+    public String StringValue;
 
     @SerializedName("StringContainValues")
     public List<String> StringContainValues;
@@ -51,11 +51,14 @@ public class Filters {
     @SerializedName("DateTimeValue2")
     public String  DateTimeValue2;
 
-    @SerializedName("BooleanValue1")
-    public Boolean BooleanValue1 = null;
+    @SerializedName("BooleanValue")
+    public Boolean BooleanValue = null;
 
-    @SerializedName("EnumValue1")
+    @SerializedName("EnumValue")
     public String EnumValue1;
+
+    @SerializedName("ObjectIdValue")
+    public String ObjectIdValue;
 
     @SerializedName("SingleValue1")
     public Float SingleValue1 = null;
@@ -69,11 +72,11 @@ public class Filters {
     @SerializedName("DecimalValue2")
     public Integer DecimalValue2 = null;
 
-    @SerializedName("LatitudeValue1")
-    public Double LatitudeValue1 = null;
+    @SerializedName("LatitudeValue")
+    public Double LatitudeValue = null;
 
-    @SerializedName("LongitudeValue1")
-    public Double LongitudeValue1 = null;
+    @SerializedName("LongitudeValue")
+    public Double LongitudeValue = null;
 
     @SerializedName("LatitudeLongitudeDistanceValue1")
     public Double LatitudeLongitudeDistanceValue1 = null;
