@@ -22,26 +22,26 @@ import retrofit2.http.POST;
 public interface ITicket {
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: TicketingTaskList"})
+    @Headers({"content-type: application/json", "layout: TicketingTaskActList"})
     Observable<TicketingListResponse> GetTicketList(@HeaderMap Map<String, String> headers, @Body TicketingListRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: TicketingFaqList"})
+    @Headers({"content-type: application/json", "layout: TicketingFaqActList"})
     Observable<TicketingFaqListResponse> GetTicketFaqList(@HeaderMap Map<String, String> headers, @Body TicketingFaqListRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: TicketingTaskSubmit"})
+    @Headers({"content-type: application/json", "layout: TicketingTaskActSubmit"})
     Observable<TicketingSubmitResponse> SetTicketSubmit(@HeaderMap Map<String, String> headers, @Body TicketingSubmitRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: TicketingAnswerSubmit"})
+    @Headers({"content-type: application/json", "layout: TicketingAnswerActSubmit"})
     Observable<TicketingAnswerSubmitResponse> GetTicketAnswerSubmit(@HeaderMap Map<String, String> headers, @Body TicketingAnswerSubmitRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: TicketingAnswerList"})
+    @Headers({"content-type: application/json", "layout: TicketingAnswerActList"})
     Observable<TicketingAnswerListResponse> GetTicketAnswerList(@HeaderMap Map<String, String> headers, @Body TicketingAnswerListRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: TicketingDepartemenList"})
+    @Headers({"content-type: application/json", "layout: TicketingDepartemenActList"})
     Observable<TicketingDepartemenList> GetTicketDepartman(@HeaderMap Map<String, String> headers);
 }

@@ -15,16 +15,16 @@ import retrofit2.http.POST;
 
 public interface IHyperShop {
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: HyperShopCategoryList"})
+    @Headers({"content-type: application/json", "layout: HyperShopCategoryActList"})
     Observable<HyperShopCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body HyperShopCategoryListRequest request);
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: HyperShopContentList"})
+    @Headers({"content-type: application/json", "layout: HyperShopContentActList"})
     Observable<HyperShopContentResponse> GetContentList(@HeaderMap Map<String, String> headers, @Body HyperShopContentListRequest request);
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: HyperShopContentView"})
+    @Headers({"content-type: application/json", "layout: HyperShopContentActView"})
     Observable<HyperShopContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body HyperShopContentViewRequest request);
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: HyperShopOrderAdd"})
+    @Headers({"content-type: application/json", "layout: HyperShopOrderActAdd"})
     Observable<HyperShopOrderAddResponse> SetOrderAdd(@HeaderMap Map<String, String> headers, @Body HyperShopOrderAddRequest request);
 
 }

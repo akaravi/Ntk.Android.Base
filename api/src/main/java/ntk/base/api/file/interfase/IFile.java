@@ -32,14 +32,14 @@ public interface IFile {
 
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: "})
+    @Headers({"content-type: application/json", "layout: FileContentActList"})
     Observable<FileContentResponse> GetContentList(@HeaderMap Map<String, String> headers, @Body FileContentRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: "})
+    @Headers({"content-type: application/json", "layout: FileContentActView"})
     Observable<FileContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body FileContentRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: "})
+    @Headers({"content-type: application/json", "layout: FileCategoryActList"})
     Observable<FileCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body FileCategoryRequest request);
 }

@@ -18,19 +18,19 @@ import retrofit2.http.POST;
 public interface IPooling {
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json" , "layout: PollingContentList"})
+    @Headers({"content-type: application/json" , "layout: PollingContentActList"})
     Observable<PoolingContentListResponse> GetContentList(@HeaderMap Map<String, String> headers, @Body PoolingContentListRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json" , "layout: PollingContentView"})
+    @Headers({"content-type: application/json" , "layout: PollingContentActView"})
     Observable<PoolingContentViewResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body PoolingContentViewRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json" , "layout: PollingCategoryList"})
+    @Headers({"content-type: application/json" , "layout: PollingCategoryActList"})
     Observable<PoolingCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json" , "layout: PollingVoteSubmit"})
+    @Headers({"content-type: application/json" , "layout: PollingVoteActSubmit"})
     Observable<PoolingSubmitResponse> SetSubmitPooling(@HeaderMap Map<String, String> headers, @Body PoolingSubmitRequest request);
 
 }

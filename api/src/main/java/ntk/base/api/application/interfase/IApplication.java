@@ -15,10 +15,10 @@ import retrofit2.http.POST;
 public interface IApplication {
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: ApplicationScoreSubmit"})
+    @Headers({"content-type: application/json", "layout: ApplicationScoreActSubmit"})
     Observable<ApplicationScoreResponse> SetScoreApplication(@HeaderMap Map<String, String> headers, @Body ApplicationScoreRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: ApplicationIntro"})
+    @Headers({"content-type: application/json", "layout: ApplicationIntroActList"})
     Observable<ApplicationIntroResponse> GetApplicationIntro(@HeaderMap Map<String, String> headers, @Body ApplicationIntroRequest request);
 }

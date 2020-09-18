@@ -44,39 +44,39 @@ public interface ICore {
     Observable<CoreAboutUsResponse> GetAbout(@HeaderMap Map<String, String> headers);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: CoreUserRegisterByMobile"})
+    @Headers({"content-type: application/json", "layout: CoreUserActRegisterByMobile"})
     Observable<CoreUserResponse> RegisterWithMobile(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterByMobileRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: CoreLocationList"})
+    @Headers({"content-type: application/json", "layout: CoreLocationActList"})
     Observable<CoreLocationResponse> GetLocation(@HeaderMap Map<String, String> headers, @Body CoreLocationRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: CoreUserChangePassword"})
+    @Headers({"content-type: application/json", "layout: CoreUserActChangePassword"})
     Observable<CoreUserResponse> SetUserNewPassword(@HeaderMap Map<String, String> headers, @Body CoreUserChangePasswordRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: CoreUserEmailConfirm"})
+    @Headers({"content-type: application/json", "layout: CoreUserActEmailConfirm"})
     Observable<CoreUserConfirmResponse> userEmailConfirm(@HeaderMap Map<String, String> headers, @Body CoreUserEmailConfirmRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: CoreUserForgetPassword"})
+    @Headers({"content-type: application/json", "layout: CoreUserActForgetPassword"})
     Observable<CoreUserResponse> userForgetPassword(@HeaderMap Map<String, String> headers, @Body CoreUserForgetPasswordRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: CoreUserLogin"})
+    @Headers({"content-type: application/json", "layout: CoreUserActLogin"})
     Observable<CoreUserResponse> userLogin(@HeaderMap Map<String, String> headers, @Body CoreUserLoginRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: CoreUserLoginByMobile"})
+    @Headers({"content-type: application/json", "layout: CoreUserActLoginByMobile"})
     Observable<CoreUserResponse> userLoginByMobile(@HeaderMap Map<String, String> headers, @Body CoreUserLoginByMobileRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: CoreUserMobileConfirm"})
+    @Headers({"content-type: application/json", "layout: CoreUserActMobileConfirm"})
     Observable<CoreUserConfirmResponse> userMobileConfirm(@HeaderMap Map<String, String> headers, @Body CoreUserMobileConfirmRequest request);
 
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: CoreUserRegister"})
+    @Headers({"content-type: application/json", "layout: CoreUserActRegister"})
     Observable<CoreUserResponse> setUserRegister(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterRequest request);
 
     @POST("api/v1/app/")
