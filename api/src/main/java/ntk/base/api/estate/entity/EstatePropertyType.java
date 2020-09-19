@@ -2,12 +2,24 @@ package ntk.base.api.estate.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-public class EstatePropertyType {
+import java.util.List;
 
-//    نوع ملک
+import ntk.base.api.baseModel.BaseEntity;
+
+public class EstatePropertyType extends BaseEntity {
+
+    //    نوع ملک
+    @SerializedName("Id")
+    public String Id;
 
     @SerializedName("Title")
     public String Title;
+
+    @SerializedName("TitleCreatedYaer")
+    public String TitleCreatedYaer;
+
+    @SerializedName("TitlePartition")
+    public String TitlePartition;
 
     @SerializedName("LinkLocationId")
     public String LinkLocationId;
@@ -19,29 +31,6 @@ public class EstatePropertyType {
     public int LinkMainImageId;
 
     @SerializedName("PropertyDetails")
-    public EstatePropertyDetail PropertyDetails;
+    public List<EstatePropertyDetail> PropertyDetails;
 
-    @SerializedName("LinkSiteId")
-    public int LinkSiteId;
-
-    @SerializedName("Id")
-    public int Id;
-
-    @SerializedName("CreatedDate")
-    public String CreatedDate;
-
-    @SerializedName("CreatedBy")
-    public int CreatedBy;
-
-    @SerializedName("UpdatedDate")
-    public String UpdatedDate;
-
-    @SerializedName("UpdatedBy")
-    public Long UpdatedBy;
-
-    @SerializedName("DataMemoId")
-    public Long DataMemoId;
-
-    @SerializedName("RecordStatus")
-    public int RecordStatus;
 }

@@ -4,13 +4,11 @@ import io.reactivex.Observable;
 
 import java.util.Map;
 
+import ntk.base.api.estate.model.EstateContractTypeListRequest;
 import ntk.base.api.estate.model.EstateContractTypeListResponse;
 import ntk.base.api.estate.model.EstatePropertyAddRequest;
 import ntk.base.api.estate.model.EstatePropertyAddResponse;
-import ntk.base.api.estate.model.EstatePropertyDetailGroupListRequest;
-import ntk.base.api.estate.model.EstatePropertyDetailGroupListResponse;
-import ntk.base.api.estate.model.EstatePropertyDetailListRequest;
-import ntk.base.api.estate.model.EstatePropertyDetailListResponse;
+
 import ntk.base.api.estate.model.EstatePropertyFavoriteAddRequest;
 import ntk.base.api.estate.model.EstatePropertyFavoriteAddResponse;
 import ntk.base.api.estate.model.EstatePropertyFavoriteListRequest;
@@ -32,41 +30,37 @@ public interface IEstate {
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: EstateContractTypeActList"})
-    Observable<EstateContractTypeListResponse> GetContractType(@HeaderMap Map<String, String> headers);
+    Observable<EstateContractTypeListResponse> GetEstateContractTypeActList(@HeaderMap Map<String, String> headers, @Body EstateContractTypeListRequest request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: EstatePropertyActAdd"})
-    Observable<EstatePropertyAddResponse> SetPropertyAdd(@HeaderMap Map<String, String> headers, @Body EstatePropertyAddRequest request);
+    Observable<EstatePropertyAddResponse> SetEstatePropertyActAdd(@HeaderMap Map<String, String> headers, @Body EstatePropertyAddRequest request);
 
-    //@POST("api/v1/app/")
-    //@Headers({"content-type: application/json", "layout: EstatePropertyDetailGroupList"})
-    //Observable<EstatePropertyDetailGroupListResponse> GetPropertyDetailGroupList(@HeaderMap Map<String, String> headers, @Body EstatePropertyDetailGroupListRequest request);
-
-    @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: EstatePropertyDetailActList"})
-    Observable<EstatePropertyDetailListResponse> GetPropertyDetailList(@HeaderMap Map<String, String> headers, @Body EstatePropertyDetailListRequest request);
-
-    @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: EstatePropertyFavoriteActAdd"})
-    Observable<EstatePropertyFavoriteAddResponse> SetPropertyFavoriteAdd(@HeaderMap Map<String, String> headers, @Body EstatePropertyFavoriteAddRequest request);
-
-    @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: EstatePropertyFavoriteActList"})
-    Observable<EstatePropertyFavoriteListResponse> GetPropertyFavoriteList(@HeaderMap Map<String, String> headers, @Body EstatePropertyFavoriteListRequest request);
-
-    @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: EstatePropertyFavoriteActRemove"})
-    Observable<EstatePropertyFavoriteRemoveResponse> SetPropertyFavoriteRemove(@HeaderMap Map<String, String> headers, @Body EstatePropertyFavoriteRemoveRequest request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: EstatePropertyActList"})
-    Observable<EstatePropertyListResponse> GetPropertyList(@HeaderMap Map<String, String> headers, @Body EstatePropertyListRequest request);
+    Observable<EstatePropertyListResponse> GetEstatePropertyActList(@HeaderMap Map<String, String> headers, @Body EstatePropertyListRequest request);
 
-    @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: EstatePropertyTypeActList"})
-    Observable<EstatePropertyTypeListResponse> GetPropertyType(@HeaderMap Map<String, String> headers, @Body EstatePropertyTypeListRequest request);
+
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: EstatePropertyActView"})
-    Observable<EstatePropertyViewResponse> GetPropertyView(@HeaderMap Map<String, String> headers, @Body EstatePropertyViewRequest request);
+    Observable<EstatePropertyViewResponse> GetEstatePropertyActView(@HeaderMap Map<String, String> headers, @Body EstatePropertyViewRequest request);
+
+    @POST("api/v1/app/")
+    @Headers({"content-type: application/json", "layout: EstatePropertyFavoriteActAdd"})
+    Observable<EstatePropertyFavoriteAddResponse> SetEstatePropertyFavoriteActAdd(@HeaderMap Map<String, String> headers, @Body EstatePropertyFavoriteAddRequest request);
+
+    @POST("api/v1/app/")
+    @Headers({"content-type: application/json", "layout: EstatePropertyFavoriteActList"})
+    Observable<EstatePropertyFavoriteListResponse> GetEstatePropertyFavoriteActList(@HeaderMap Map<String, String> headers, @Body EstatePropertyFavoriteListRequest request);
+
+    @POST("api/v1/app/")
+    @Headers({"content-type: application/json", "layout: EstatePropertyFavoriteActRemove"})
+    Observable<EstatePropertyFavoriteRemoveResponse> SetEstatePropertyFavoriteActRemove(@HeaderMap Map<String, String> headers, @Body EstatePropertyFavoriteRemoveRequest request);
+
+    @POST("api/v1/app/")
+    @Headers({"content-type: application/json", "layout: EstatePropertyTypeActList"})
+    Observable<EstatePropertyTypeListResponse> GetEstatePropertyTypeActList(@HeaderMap Map<String, String> headers, @Body EstatePropertyTypeListRequest request);
+
 }

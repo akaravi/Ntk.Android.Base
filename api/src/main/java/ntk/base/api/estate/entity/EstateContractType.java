@@ -2,8 +2,13 @@ package ntk.base.api.estate.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-public class EstateContractType {
+import ntk.base.api.baseModel.BaseEntity;
+
+public class EstateContractType extends BaseEntity {
 //    نوع معامله (اجاره رهن فروش)
+
+    @SerializedName("Id")
+    public String Id;
 
     @SerializedName("Title")
     public String Title;
@@ -11,15 +16,35 @@ public class EstateContractType {
     @SerializedName("HasSalePrice")
     public Boolean HasSalePrice;
 
-    @SerializedName("HasPresalePrice")
-    public Boolean HasPresalePrice;
-
     @SerializedName("HasRentPrice")
     public Boolean HasRentPrice;
 
     @SerializedName("HasDepositPrice")
     public Boolean HasDepositPrice;
 
+
     @SerializedName("UnitSalePrice")
-    public String UnitSalePrice;
+    public Boolean UnitSalePrice;
+
+    @SerializedName("UnitRentPrice")
+    public Boolean UnitRentPrice;
+
+    @SerializedName("UnitDepositPrice")
+    public Boolean UnitDepositPrice;
+
+
+    @SerializedName("SalePriceMin")
+    public int SalePriceMin;
+    @SerializedName("SalePriceMax")
+    public int SalePriceMax;
+
+    @SerializedName("RentPriceMin")
+    public int RentPriceMin;
+    @SerializedName("RentPriceMax")
+    public int RentPriceMax;
+
+    @SerializedName("DepositPriceMin")
+    public int DepositPriceMin;
+    @SerializedName("SalePriceMax")
+    public int DepositPriceMax;
 }

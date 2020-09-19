@@ -2,10 +2,31 @@ package ntk.base.api.estate.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-public class EstateProperty {
+import java.util.List;
+
+import ntk.base.api.baseModel.BaseEntity;
+
+public class EstateProperty extends BaseEntity {
 //لیست املاک
+
+    @SerializedName("Id")
+    public String Id;
+
+
     @SerializedName("Title")
     public String Title;
+
+
+    @SerializedName("CreatedYaer")
+    public int CreatedYaer;
+    @SerializedName("Partition")
+    public int Partition;
+
+    @SerializedName("Area")
+    public double Area;
+
+    @SerializedName("LinkEstateUserId")
+    public int LinkEstateUserId;
 
     @SerializedName("LinkLocationId")
     public int LinkLocationId;
@@ -17,10 +38,8 @@ public class EstateProperty {
     public Long LinkCmsUserId;
 
     @SerializedName("LinkPropertyTypeId")
-    public Long LinkPropertyTypeId;
+    public String LinkPropertyTypeId;
 
-    @SerializedName("virtual_PropertyType")
-    public EstatePropertyType virtual_PropertyType;
 
     @SerializedName("PropertyType")
     public EstatePropertyType PropertyType;
@@ -28,6 +47,40 @@ public class EstateProperty {
     @SerializedName("LinkSiteId")
     public int LinkSiteId;
 
-     @SerializedName("Geolocationlatitude")
-    public Long Geolocationlatitude;
+    @SerializedName("Geolocationlatitude")
+    public double Geolocationlatitude;
+
+    @SerializedName("Geolocationlongitude")
+    public double Geolocationlongitude;
+
+    @SerializedName("Address")
+    public String Address;
+
+    @SerializedName("LinkMainImageId")
+    public int LinkMainImageId;
+    @SerializedName("LinkExtraImageIds")
+    public String LinkExtraImageIds;
+    @SerializedName("LinkFileIds")
+    public String LinkFileIds;
+    @SerializedName("ScoreClick")
+    public int ScoreClick;
+
+    @SerializedName("ScoreSumPercent")
+    public int ScoreSumPercent;
+
+    @SerializedName("ViewCount")
+    public int ViewCount;
+
+    @SerializedName("MainImageSrc")
+    public String MainImageSrc;
+    @SerializedName("LinkExtraImageIdsSrc")
+    public List<String> LinkExtraImageIdsSrc;
+    @SerializedName("LinkFileIdsSrc")
+    public List<String> LinkFileIdsSrc;
+
+    @SerializedName("Contracts")
+    public List<EstateContract> Contracts;
+
+    @SerializedName("PropertyDetailValues")
+    public  List<EstatePropertyDetailValue>  PropertyDetailValues;
 }
