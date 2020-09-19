@@ -83,4 +83,7 @@ public class EstateProperty extends BaseEntity {
 
     @SerializedName("PropertyDetailValues")
     public  List<EstatePropertyDetailValue>  PropertyDetailValues;
+
+    @SerializedName("PropertyDetailGroups")
+    public  List<EstatePropertyDetailGroup>  PropertyDetailGroups;
 }
