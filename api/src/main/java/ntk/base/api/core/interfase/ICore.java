@@ -29,7 +29,9 @@ public interface ICore {
 
 
 
-
+    @POST("api/v1/app/")
+    @Headers({"content-type: application/json", "layout: Main"})
+    Observable<MainCoreResponse> GetResponseMain(@HeaderMap Map<String, String> headers);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreBotton"})
