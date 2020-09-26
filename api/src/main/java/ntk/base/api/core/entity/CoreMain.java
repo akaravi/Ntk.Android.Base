@@ -20,6 +20,24 @@ public class CoreMain {
     public boolean AppForceUpdate;
 
     @SerializedName("AppThemeId")
-    public int AppThemeId;
+    public long AppThemeId;
+
+
+    @SerializedName("UserId")
+    public long UserId;
+    @SerializedName("MemberUserId")
+    public long MemberUserId ;
+    @SerializedName("SiteId")
+    public long SiteId ;
+
+
+
+    @SerializedName("LastUpdateSource")
+    public String LastUpdateSource ;
+    @SerializedName("LastUpdateTheme")
+    public String LastUpdateTheme ;
+    @SerializedName("LastUpdateApp")
+    public String LastUpdateApp ;
+
 
 }
