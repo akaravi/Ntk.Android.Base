@@ -3,24 +3,11 @@ package ntk.base.api.core.model;
 import com.google.gson.annotations.SerializedName;
 
 import ntk.base.api.baseModel.ErrorException;
+import ntk.base.api.core.entity.CoreMain;
+import ntk.base.api.core.entity.TokenInfoModel;
 
-public class CoreUserRegisterByMobileResponse extends ErrorException {
+public class CoreUserRegisterByMobileResponse  extends ErrorException{
 
-    @SerializedName("ExpireDate")
-    public String ExpireDate;
-
-    @SerializedName("Username")
-    public String Username;
-
-    @SerializedName("Gender")
-    public int Gender;
-
-    @SerializedName("Email")
-    public String Email;
-
-    @SerializedName("Mobile")
-    public String Mobile;
-
-    @SerializedName("EmailConfirmed")
-    public Boolean EmailConfirmed;
+    @SerializedName("Item")
+    public TokenInfoModel Item;
 }

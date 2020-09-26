@@ -3,6 +3,11 @@ package ntk.base.api.core.model;
 import com.google.gson.annotations.SerializedName;
 
 public class CoreUserChangePasswordRequest {
+    @SerializedName("CaptchaKey")
+    public String CaptchaKey ;
+    @SerializedName("CaptchaText")
+    public String CaptchaText ;
+
     @SerializedName("OldPassword")
     public String OldPassword;
 

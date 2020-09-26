@@ -8,14 +8,13 @@ import ntk.base.api.core.model.ButtonResponse;
 import ntk.base.api.core.model.CoreLocationRequest;
 import ntk.base.api.core.model.CoreLocationResponse;
 import ntk.base.api.core.entity.CoreTheme;
+import ntk.base.api.core.model.CoreUserConfirmResponse;
+import ntk.base.api.core.model.CoreUserConfirmMobileRequest;
 import ntk.base.api.core.model.CoreUserResponse;
 import ntk.base.api.core.model.CoreUserChangePasswordRequest;
-import ntk.base.api.core.model.CoreUserEmailConfirmRequest;
-import ntk.base.api.core.model.CoreUserConfirmResponse;
+import ntk.base.api.core.model.CoreUserConfirmEmailRequest;
 import ntk.base.api.core.model.CoreUserForgetPasswordRequest;
-import ntk.base.api.core.model.CoreUserLoginByMobileRequest;
 import ntk.base.api.core.model.CoreUserLoginRequest;
-import ntk.base.api.core.model.CoreUserMobileConfirmRequest;
 import ntk.base.api.core.model.CoreUserRegisterByMobileRequest;
 import ntk.base.api.core.model.CoreUserRegisterRequest;
 import ntk.base.api.core.model.ImageResponse;
@@ -59,7 +58,7 @@ public interface ICore {
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActEmailConfirm"})
-    Observable<CoreUserConfirmResponse> userEmailConfirm(@HeaderMap Map<String, String> headers, @Body CoreUserEmailConfirmRequest request);
+    Observable<CoreUserConfirmResponse> userEmailConfirm(@HeaderMap Map<String, String> headers, @Body CoreUserConfirmEmailRequest request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActForgetPassword"})
@@ -69,13 +68,13 @@ public interface ICore {
     @Headers({"content-type: application/json", "layout: CoreUserActLogin"})
     Observable<CoreUserResponse> userLogin(@HeaderMap Map<String, String> headers, @Body CoreUserLoginRequest request);
 
-    @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: CoreUserActLoginByMobile"})
-    Observable<CoreUserResponse> userLoginByMobile(@HeaderMap Map<String, String> headers, @Body CoreUserLoginByMobileRequest request);
-
+//    @POST("api/v1/app/")
+//    @Headers({"content-type: application/json", "layout: CoreUserActLoginByMobile"})
+//    Observable<CoreUserResponse> userLoginByMobile(@HeaderMap Map<String, String> headers, @Body CoreUserLoginByMobileRequest request);
+//
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActMobileConfirm"})
-    Observable<CoreUserConfirmResponse> userMobileConfirm(@HeaderMap Map<String, String> headers, @Body CoreUserMobileConfirmRequest request);
+    Observable<CoreUserConfirmResponse> userMobileConfirm(@HeaderMap Map<String, String> headers, @Body CoreUserConfirmMobileRequest request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActRegister"})

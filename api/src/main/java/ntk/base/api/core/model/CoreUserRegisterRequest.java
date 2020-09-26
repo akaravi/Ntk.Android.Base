@@ -4,6 +4,11 @@ import com.google.gson.annotations.SerializedName;
 
 public class CoreUserRegisterRequest {
 
+    @SerializedName("CaptchaKey")
+    public String CaptchaKey ;
+    @SerializedName("CaptchaText")
+    public String CaptchaText ;
+
     @SerializedName("Username")
     public String Username;
 

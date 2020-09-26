@@ -3,6 +3,10 @@ package ntk.base.api.core.model;
 import com.google.gson.annotations.SerializedName;
 
 public class CoreUserForgetPasswordRequest {
+    @SerializedName("CaptchaKey")
+    public String CaptchaKey ;
+    @SerializedName("CaptchaText")
+    public String CaptchaText ;
 
     @SerializedName("ActionOrder") //TODO >>>
     public int ActionOrder;

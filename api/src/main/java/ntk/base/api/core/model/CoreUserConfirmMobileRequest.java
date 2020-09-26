@@ -2,19 +2,18 @@ package ntk.base.api.core.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class CoreUserLoginRequest {
+import ntk.base.api.core.entity.ActivateCodeModel;
 
+public class CoreUserConfirmMobileRequest {
     @SerializedName("CaptchaKey")
     public String CaptchaKey ;
     @SerializedName("CaptchaText")
     public String CaptchaText ;
 
-    @SerializedName("Username")
-    public String Username;
+    @SerializedName("Mobile")
+    public String Mobile;
 
-    @SerializedName("Password")
-    public String Password;
+    @SerializedName("Code")
+    public String Code;
 
-    @SerializedName("lang")
-    public String lang;
 }
