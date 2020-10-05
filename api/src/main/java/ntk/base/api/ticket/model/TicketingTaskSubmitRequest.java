@@ -6,7 +6,7 @@ import java.util.List;
 
 import ntk.base.api.ticket.entity.TicketingTask;
 
-public class TicketingSubmitRequest extends TicketingTask {
+public class TicketingTaskSubmitRequest extends TicketingTask {
 
     @SerializedName("Name")
     public String Name;

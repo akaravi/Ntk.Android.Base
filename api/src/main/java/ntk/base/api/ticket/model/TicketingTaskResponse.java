@@ -7,7 +7,7 @@ import java.util.List;
 import ntk.base.api.baseModel.ErrorException;
 import ntk.base.api.ticket.entity.TicketingTask;
 
-public class TicketingResponse extends ErrorException {
+public class TicketingTaskResponse extends ErrorException {
 
     @SerializedName("ListItems")
     public List<TicketingTask> ListItems;
