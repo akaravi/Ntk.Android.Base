@@ -23,11 +23,11 @@ public interface ITicket {
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: TicketingTaskActList"})
-    Observable<TicketingResponse> GetTicketActList(@HeaderMap Map<String, String> headers, @Body TicketingListRequest request);
+    Observable<TicketingResponse> GetTicketTaskActList(@HeaderMap Map<String, String> headers, @Body TicketingListRequest request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: TicketingTaskActSubmit"})
-    Observable<TicketingResponse> SetTicketActSubmit(@HeaderMap Map<String, String> headers, @Body TicketingSubmitRequest request);
+    Observable<TicketingResponse> SetTicketTaskActSubmit(@HeaderMap Map<String, String> headers, @Body TicketingSubmitRequest request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: TicketingAnswerActSubmit"})
