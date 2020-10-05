@@ -21,6 +21,5 @@ public class BaseEntity {
     @SerializedName("UpdatedBy")
     public Long UpdatedBy;
 
-    @SerializedName("DataMemoId")
-    public Long DataMemoId;
+
 }

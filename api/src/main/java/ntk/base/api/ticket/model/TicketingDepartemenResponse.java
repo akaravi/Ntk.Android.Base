@@ -5,13 +5,13 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.ticket.entity.TicketingTask;
+import ntk.base.api.ticket.entity.TicketingDepartemen;
 
-public class TicketingSubmitResponse extends ErrorException {
+public class TicketingDepartemenResponse extends ErrorException {
 
     @SerializedName("ListItems")
-    public List<TicketingTask> ListItems;
+    public List<TicketingDepartemen> ListItems;
 
     @SerializedName("Item")
-    public TicketingTask Item;
+    public TicketingDepartemen Item;
 }

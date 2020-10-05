@@ -7,7 +7,7 @@ import ntk.base.api.baseModel.BaseEntity;
 public class TicketingDepartemen  extends BaseEntity {
 
     @SerializedName("Id")
-    public int Id;
+    public long Id;
 
     @SerializedName("Title")
     public String Title;

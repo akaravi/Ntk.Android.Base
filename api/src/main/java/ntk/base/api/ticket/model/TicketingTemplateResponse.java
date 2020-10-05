@@ -6,12 +6,13 @@ import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
 import ntk.base.api.ticket.entity.TicketingTask;
+import ntk.base.api.ticket.entity.TicketingTemplate;
 
-public class TicketingListResponse extends ErrorException {
+public class TicketingTemplateResponse extends ErrorException {
 
     @SerializedName("ListItems")
-    public List<TicketingTask> ListItems;
+    public List<TicketingTemplate> ListItems;
 
     @SerializedName("Item")
-    public TicketingTask Item;
+    public TicketingTemplate Item;
 }
