@@ -17,6 +17,14 @@ public class TicketingTask extends BaseEntity {
     @SerializedName("Title")
     public String Title;
 
+    @SerializedName("Name")
+    public String Name;
+
+    @SerializedName("Email")
+    public String Email;
+
+    @SerializedName("PhoneNo")
+    public String PhoneNo;
     @SerializedName("HtmlBody")
     public String HtmlBody;
 

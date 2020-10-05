@@ -4,6 +4,7 @@ import java.util.Map;
 
 import io.reactivex.Observable;
 import ntk.base.api.baseModel.FilterModel;
+import ntk.base.api.ticket.entity.TicketingTask;
 import ntk.base.api.ticket.model.TicketingAnswerListRequest;
 import ntk.base.api.ticket.model.TicketingAnswerResponse;
 import ntk.base.api.ticket.model.TicketingAnswerSubmitRequest;
@@ -12,7 +13,6 @@ import ntk.base.api.ticket.model.TicketingFaqRequest;
 import ntk.base.api.ticket.model.TicketingFaqResponse;
 import ntk.base.api.ticket.model.TicketingListRequest;
 import ntk.base.api.ticket.model.TicketingTaskResponse;
-import ntk.base.api.ticket.model.TicketingTaskSubmitRequest;
 import ntk.base.api.ticket.model.TicketingTemplateResponse;
 import retrofit2.http.Body;
 import retrofit2.http.HeaderMap;
@@ -27,7 +27,7 @@ public interface ITicket {
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: TicketingTaskActSubmit"})
-    Observable<TicketingTaskResponse> SetTicketTaskActSubmit(@HeaderMap Map<String, String> headers, @Body TicketingTaskSubmitRequest request);
+    Observable<TicketingTaskResponse> SetTicketTaskActSubmit(@HeaderMap Map<String, String> headers, @Body TicketingTask request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: TicketingAnswerActSubmit"})
