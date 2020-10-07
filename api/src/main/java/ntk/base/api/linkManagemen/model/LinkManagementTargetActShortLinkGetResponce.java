@@ -2,6 +2,8 @@ package ntk.base.api.linkManagemen.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class LinkManagementTargetActShortLinkGetResponce {
     @SerializedName("Id")
     public long Id;
@@ -13,5 +15,11 @@ public class LinkManagementTargetActShortLinkGetResponce {
     public String Description;
 
     @SerializedName("FileSrc")
-    public String FileSrc;
+    public List<String> FilesSrc;
+
+    @SerializedName("ShareExpireDate")
+    public String ShareExpireDate ;
+
+    @SerializedName("ShortLinkUrl")
+    public String ShortLinkUrl ;
 }

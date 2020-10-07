@@ -8,4 +8,8 @@ public class LinkManagementTargetActShortLinkSetResponce {
     public long Id;
     @SerializedName("Key")
     public String Key;
+    @SerializedName("ShareExpireDate")
+    public String ShareExpireDate ;
+    @SerializedName("ShortLinkUrl")
+    public String ShortLinkUrl ;
 }
