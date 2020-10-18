@@ -8,8 +8,7 @@ public class LinkManagementTargetActShortLinkGetRequest {
     @SerializedName("CaptchaText")
     public String CaptchaText ;
 
-    @SerializedName("Id")
-    public long Id;
+
     @SerializedName("Key")
     public String Key;
 }

@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class LinkManagementTargetActShortLinkGetResponce {
-    @SerializedName("Id")
-    public long Id;
+    @SerializedName("Key")
+    public String Key;
 
     @SerializedName("UrlAddress")
     public String UrlAddress;
@@ -22,4 +22,7 @@ public class LinkManagementTargetActShortLinkGetResponce {
 
     @SerializedName("ShortLinkUrl")
     public String ShortLinkUrl ;
+
+    @SerializedName("ShortLinkQRCodeBase64")
+    public String ShortLinkQRCodeBase64 ;
 }
