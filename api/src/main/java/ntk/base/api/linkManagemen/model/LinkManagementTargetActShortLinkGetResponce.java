@@ -4,25 +4,14 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class LinkManagementTargetActShortLinkGetResponce {
-    @SerializedName("Key")
-    public String Key;
+import ntk.base.api.baseModel.ErrorException;
+import ntk.base.api.linkManagemen.entity.LinkManagementTargetActShortLinkGet;
 
-    @SerializedName("UrlAddress")
-    public String UrlAddress;
 
-    @SerializedName("Description")
-    public String Description;
+public class LinkManagementTargetActShortLinkGetResponce extends ErrorException {
+    @SerializedName("ListItems")
+    public List<LinkManagementTargetActShortLinkGet> ListItems;
 
-    @SerializedName("FileSrc")
-    public List<String> FilesSrc;
-
-    @SerializedName("ShareExpireDate")
-    public String ShareExpireDate ;
-
-    @SerializedName("ShortLinkUrl")
-    public String ShortLinkUrl ;
-
-    @SerializedName("ShortLinkQRCodeBase64")
-    public String ShortLinkQRCodeBase64 ;
+    @SerializedName("Item")
+    public LinkManagementTargetActShortLinkGet Item;
 }

@@ -9,7 +9,6 @@ public class TicketingTemplate extends BaseEntity {
     @SerializedName("Id")
     public Long Id;
 
-
     @SerializedName("Title")
     public String Title;
 

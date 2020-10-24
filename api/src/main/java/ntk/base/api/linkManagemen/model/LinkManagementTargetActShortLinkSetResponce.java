@@ -2,15 +2,16 @@ package ntk.base.api.linkManagemen.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class LinkManagementTargetActShortLinkSetResponce {
+import java.util.List;
 
-    @SerializedName("Key")
-    public String Key;
-    @SerializedName("ShareExpireDate")
-    public String ShareExpireDate ;
-    @SerializedName("ShortLinkUrl")
-    public String ShortLinkUrl ;
+import ntk.base.api.baseModel.ErrorException;
+import ntk.base.api.linkManagemen.entity.LinkManagementTargetActShortLinkSet;
 
-    @SerializedName("ShortLinkQRCodeBase64")
-    public String ShortLinkQRCodeBase64 ;
+public class LinkManagementTargetActShortLinkSetResponce extends ErrorException {
+    @SerializedName("ListItems")
+    public List<LinkManagementTargetActShortLinkSet> ListItems;
+
+    @SerializedName("Item")
+    public LinkManagementTargetActShortLinkSet Item;
+
 }
