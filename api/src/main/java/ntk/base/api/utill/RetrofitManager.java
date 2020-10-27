@@ -24,6 +24,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -119,7 +120,7 @@ public class RetrofitManager {
         return mRetrofit;
     }
 
-    public Observable<String> FileUpload( String Url, String fileUri , Map<String, String> headers) {
+    public Observable<ResponseBody> FileUpload(String Url, String fileUri , Map<String, String> headers) {
         File file = new File(fileUri);
         String MULTIPART_FORM_DATA = "multipart/form-data";
         // create RequestBody instance from file

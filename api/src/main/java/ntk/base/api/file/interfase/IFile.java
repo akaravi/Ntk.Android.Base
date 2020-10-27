@@ -9,6 +9,7 @@ import ntk.base.api.file.model.FileContentRequest;
 import ntk.base.api.file.model.FileContentResponse;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
 import retrofit2.http.Body;
 import retrofit2.http.HeaderMap;
 import retrofit2.http.Headers;
@@ -26,9 +27,12 @@ public interface IFile {
 //    Observable<String> Upload(@PartMap Map<String, RequestBody> map);
 
 
+    //    @Multipart version 1
+//    @POST("api/v1/FileContent/upload/")
+//    Observable<String> uploadFileWithPartMap(@HeaderMap Map<String, String> headers, @PartMap() Map<String, RequestBody> partMap, @Part MultipartBody.Part file);
     @Multipart
-    @POST("api/v1/FileContent/upload/")
-    Observable<String> uploadFileWithPartMap(@HeaderMap Map<String, String> headers, @PartMap() Map<String, RequestBody> partMap, @Part MultipartBody.Part file);
+    @POST("api/v1/FileContent/fileUpload/")
+    Observable<ResponseBody> uploadFileWithPartMap(@HeaderMap Map<String, String> headers, @PartMap() Map<String, RequestBody> partMap, @Part MultipartBody.Part file);
 
 
     @POST("api/v1/app/")
