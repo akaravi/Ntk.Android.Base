@@ -18,7 +18,7 @@ public interface ILinkManagement {
     @Headers({"content-type: application/json", "layout: LinkManagementTargetActShortLinkSet"})
     Observable<LinkManagementTargetActShortLinkSetResponce> LinkManagementTargetActShortLinkSet(@HeaderMap Map<String, String> headers, @Body LinkManagementTargetActShortLinkSetRequest request);
 
-    @POST("api/v1/app/")
+    @POST("/api/v1/LinkManagementTarget/ShortLinkGet")
     @Headers({"content-type: application/json", "layout: LinkManagementTargetActShortLinkGet "})
     Observable<LinkManagementTargetActShortLinkGetResponce> LinkManagementTargetActShortLinkGet(@HeaderMap Map<String, String> headers, @Body LinkManagementTargetActShortLinkGetRequest request);
 }
