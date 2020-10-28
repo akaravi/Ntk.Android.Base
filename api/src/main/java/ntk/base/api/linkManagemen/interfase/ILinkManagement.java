@@ -14,7 +14,7 @@ import retrofit2.http.POST;
 
 public interface ILinkManagement {
 
-    @POST("api/v1/app/")
+    @POST("/api/v1/LinkManagementTarget/ShortLinkSet")
     @Headers({"content-type: application/json", "layout: LinkManagementTargetActShortLinkSet"})
     Observable<LinkManagementTargetActShortLinkSetResponce> LinkManagementTargetActShortLinkSet(@HeaderMap Map<String, String> headers, @Body LinkManagementTargetActShortLinkSetRequest request);
 
