@@ -18,43 +18,43 @@ import retrofit2.http.Path;
 
 public interface ICmsApiServerBase<TEntity, TKey> {
 
-    @GET("/")
+    @GET("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> getViewModel(@Path("") String layout, @HeaderMap Map<String, String> headers, @Body TEntity request);
+    Observable<ErrorException<TEntity>> getViewModel(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
 
-    @POST("/")
+    @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> getAll(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorException<TEntity>> getAll(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
-    @GET("/")
+    @GET("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> getViewModel(@Path("layout") String layout, @HeaderMap Map<String, String> headers);
+    Observable<ErrorException<TEntity>> getViewModel(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
 
-    @POST("/")
+    @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> Exist(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorExceptionBase> Exist(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
-    @POST("/")
+    @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> Count(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorExceptionBase> Count(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
-    @POST("/")
+    @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> ExportFile(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorExceptionBase> ExportFile(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
-    @POST("/")
+    @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> Add(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body TEntity request);
+    Observable<ErrorException<TEntity>> Add(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
 
-    @PUT("/")
+    @PUT("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> Edit(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body TEntity request);
+    Observable<ErrorException<TEntity>> Edit(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
 
-    @DELETE("/")
+    @DELETE("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> Delete(@Path("layout") String layout, @HeaderMap Map<String, String> headers);
+    Observable<ErrorException<TEntity>> Delete(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
 
-    @POST("/")
+    @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> Delete(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body List<TKey> request);
+    Observable<ErrorException<TEntity>> Delete(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body List<TKey> request);
 }
