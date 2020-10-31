@@ -68,10 +68,7 @@ public interface ICore {
     @Headers({"content-type: application/json", "layout: CoreUserActLogin"})
     Observable<CoreUserResponse> userLogin(@HeaderMap Map<String, String> headers, @Body CoreUserLoginRequest request);
 
-//    @POST("api/v1/app/")
-//    @Headers({"content-type: application/json", "layout: CoreUserActLoginByMobile"})
-//    Observable<CoreUserResponse> userLoginByMobile(@HeaderMap Map<String, String> headers, @Body CoreUserLoginByMobileRequest request);
-//
+
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActMobileConfirm"})
     Observable<CoreUserConfirmResponse> userMobileConfirm(@HeaderMap Map<String, String> headers, @Body CoreUserConfirmMobileRequest request);
