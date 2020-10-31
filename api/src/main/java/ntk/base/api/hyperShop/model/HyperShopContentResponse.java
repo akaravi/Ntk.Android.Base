@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.hyperShop.entity.HyperShopCategory;
 import ntk.base.api.hyperShop.entity.HyperShopContent;
 
 public class HyperShopContentResponse extends ErrorException {

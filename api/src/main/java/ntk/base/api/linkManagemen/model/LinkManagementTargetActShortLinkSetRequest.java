@@ -2,8 +2,6 @@ package ntk.base.api.linkManagemen.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.base.api.baseModel.FilterModel;
-
 public class LinkManagementTargetActShortLinkSetRequest {
     @SerializedName("CaptchaKey")
     public String CaptchaKey ;

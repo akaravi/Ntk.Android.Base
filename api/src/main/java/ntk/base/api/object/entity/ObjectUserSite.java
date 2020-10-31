@@ -2,8 +2,6 @@ package ntk.base.api.object.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.lang.reflect.Member;
-
 import ntk.base.api.baseModel.BaseEntity;
 
 public class ObjectUserSite extends BaseEntity {

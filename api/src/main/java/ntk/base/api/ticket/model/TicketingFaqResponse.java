@@ -6,7 +6,6 @@ import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
 import ntk.base.api.ticket.entity.TicketingFaq;
-import ntk.base.api.ticket.entity.TicketingTask;
 
 public class TicketingFaqResponse extends ErrorException {
 

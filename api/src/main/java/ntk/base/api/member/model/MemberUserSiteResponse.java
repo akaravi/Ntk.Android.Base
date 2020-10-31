@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.base.api.baseModel.ErrorException;
-import ntk.base.api.member.entity.MemberUser;
 import ntk.base.api.member.entity.MemberUserSite;
 
 public class MemberUserSiteResponse extends ErrorException {

@@ -1,15 +1,5 @@
 package ntk.base.api.article.interfase;
 
-import java.util.Map;
-
-import io.reactivex.Observable;
-import ntk.base.api.article.model.ArticleCategoryTagResponse;
-import ntk.base.api.article.model.ArticleContentResponse;
-import ntk.base.api.article.model.ArticleTagResponse;
-import retrofit2.http.GET;
-import retrofit2.http.HeaderMap;
-import retrofit2.http.Headers;
-
 public interface IArticleGET {
 
 //    @GET("api/v1/app/")
