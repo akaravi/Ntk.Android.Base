@@ -11,9 +11,9 @@ import ntk.base.entityModel.base.ErrorException;
 import ntk.base.entityModel.base.ErrorExceptionBase;
 import ntk.base.entityModel.base.FilterModel;
 
-public class CmsApiServerBase <TEntity, TKey> {
-    String baseUrl = "https://apicms.ir/api/v1/";
-    String controlerUrl;
+public class CmsApiServerBase<TEntity, TKey> {
+    String baseUrl = "/api/v1/";
+    String controlerUrl = "";
     Context context;
     Map<String, String> headers;
 
