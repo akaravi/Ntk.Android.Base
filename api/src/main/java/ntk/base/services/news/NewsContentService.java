@@ -5,10 +5,10 @@ import ntk.base.api.news.entity.NewsContent;
 import ntk.base.services.base.CmsApiServerBase;
 
 
-public class NewsService extends CmsApiServerBase<NewsContent, Long> {
+public class NewsContentService extends CmsApiServerBase<NewsContent, Long> {
 
 
-    public NewsService(Context context, Map<String, String> headers) {
+    public NewsContentService(Context context, Map<String, String> headers) {
         super(context, headers, "NewsContent");
     }
 
