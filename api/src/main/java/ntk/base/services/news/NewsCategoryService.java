@@ -1,12 +1,13 @@
-package ntk.base.network;
+package ntk.base.services.news;
 
 import android.content.Context;
 
 import java.util.Map;
 
 import ntk.base.api.news.entity.NewsCategory;
+import ntk.base.services.base.CmsApiServerBase;
 
-public class NewsCategoryService extends BaseService<NewsCategory, Long> {
+public class NewsCategoryService extends CmsApiServerBase<NewsCategory, Long> {
     public NewsCategoryService(Context context, Map<String, String> headers) {
         super(context,headers, "NewsCategory");
     }

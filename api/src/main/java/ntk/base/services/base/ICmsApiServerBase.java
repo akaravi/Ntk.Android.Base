@@ -18,43 +18,43 @@ import retrofit2.http.Path;
 
 public interface ICmsApiServerBase<TEntity, TKey> {
 
-    @GET("api/v1/{layout}/getViewModel")
+    @GET()
     @Headers({"content-type: application/json"})
     Observable<ErrorException<TEntity>> getViewModel(@Path("") String layout, @HeaderMap Map<String, String> headers, @Body TEntity request);
 
-    @POST("api/v1/{layout}/getAll")
+    @POST()
     @Headers({"content-type: application/json"})
     Observable<ErrorException<TEntity>> getAll(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
-    @GET("api/v1/{layout}/1")
+    @GET()
     @Headers({"content-type: application/json"})
     Observable<ErrorException<TEntity>> getViewModel(@Path("layout") String layout, @HeaderMap Map<String, String> headers);
 
-    @POST("api/v1/{layout}/Exist")
+    @POST()
     @Headers({"content-type: application/json"})
     Observable<ErrorExceptionBase> Exist(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
-    @POST("api/v1/{layout}/Count")
+    @POST()
     @Headers({"content-type: application/json"})
     Observable<ErrorExceptionBase> Count(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
-    @POST("api/v1/{layout}/ExportFile")
+    @POST()
     @Headers({"content-type: application/json"})
     Observable<ErrorExceptionBase> ExportFile(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
-    @POST("api/v1/{layout}")
+    @POST()
     @Headers({"content-type: application/json"})
     Observable<ErrorException<TEntity>> Add(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body TEntity request);
 
-    @PUT("api/v1/{layout}/1")
+    @PUT()
     @Headers({"content-type: application/json"})
     Observable<ErrorException<TEntity>> Edit(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body TEntity request);
 
-    @DELETE("api/v1/{layout}/1")
+    @DELETE()
     @Headers({"content-type: application/json"})
     Observable<ErrorException<TEntity>> Delete(@Path("layout") String layout, @HeaderMap Map<String, String> headers);
 
-    @POST("api/v1/{layout}/DeleteList")
+    @POST()
     @Headers({"content-type: application/json"})
     Observable<ErrorException<TEntity>> Delete(@Path("layout") String layout, @HeaderMap Map<String, String> headers, @Body List<TKey> request);
 }
