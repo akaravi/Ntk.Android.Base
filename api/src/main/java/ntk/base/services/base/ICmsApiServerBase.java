@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import io.reactivex.Observable;
+import ntk.base.dtoModel.news.NewsContentResponceModel;
 import ntk.base.entityModel.base.ErrorException;
 import ntk.base.entityModel.base.ErrorExceptionBase;
 import ntk.base.entityModel.base.FilterModel;
@@ -15,8 +16,8 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
+public interface ICmsApiServerBase<TEntity,TKey> {
 
-public interface ICmsApiServerBase<TEntity, TKey> {
 
     @GET("{cpath}")
     @Headers({"content-type: application/json"})
@@ -24,6 +25,7 @@ public interface ICmsApiServerBase<TEntity, TKey> {
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
+
     Observable<ErrorException<TEntity>> getAll(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
     @GET("{cpath}")

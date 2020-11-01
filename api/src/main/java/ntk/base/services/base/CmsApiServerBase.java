@@ -7,6 +7,7 @@ import java.util.Map;
 
 import io.reactivex.Observable;
 import ntk.base.config.RetrofitManager;
+import ntk.base.dtoModel.news.NewsContentResponceModel;
 import ntk.base.entityModel.base.ErrorException;
 import ntk.base.entityModel.base.ErrorExceptionBase;
 import ntk.base.entityModel.base.FilterModel;
@@ -23,12 +24,14 @@ public class CmsApiServerBase<TEntity, TKey> {
         this.headers = headers;
     }
 
+
+
     ICmsApiServerBase ICmsApiServerBase() {
         return new RetrofitManager(context).getRetrofitUnCached().create(ICmsApiServerBase.class);
     }
 
     public Observable<ErrorException<TEntity>> getAll(FilterModel request) {
-        return ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/getAll", headers, request);
+        return ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/getAll", headers, request );
 
     }
 

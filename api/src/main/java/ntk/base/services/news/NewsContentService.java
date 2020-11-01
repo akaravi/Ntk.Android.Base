@@ -2,6 +2,8 @@ package ntk.base.services.news;
 import android.content.Context;
 import java.util.Map;
 import ntk.base.api.news.entity.NewsContent;
+import ntk.base.api.news.model.NewsContentResponse;
+import ntk.base.dtoModel.news.NewsContentResponceModel;
 import ntk.base.services.base.CmsApiServerBase;
 
 
