@@ -5,5 +5,4 @@ import ntk.android.base.services.base.ICmsApiServerBase;
 public interface INewsContent extends ICmsApiServerBase {
 
 
-
 }
