@@ -1,10 +1,12 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-class AuthUserSignOutModel {
-    @SerializedName("")  List<String> Tokens;
-    @SerializedName("")   boolean AllToken = false;
+public class AuthUserSignOutModel {
+    @SerializedName("Tokens")
+    List<String> Tokens;
+    @SerializedName("AllToken")
+    boolean AllToken = false;
 }

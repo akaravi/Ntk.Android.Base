@@ -1,4 +1,4 @@
-package ntk.android.base.services.linkManagement;
+package ntk.android.base.services.linkmanagement;
 
 import ntk.android.base.services.base.ICmsApiServerBase;
 

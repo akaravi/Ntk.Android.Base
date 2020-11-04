@@ -1,8 +1,10 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
 import com.google.gson.annotations.SerializedName;
 
-class AuthUserChangePasswordModel {
-    @SerializedName("")String OldPassword;
-    @SerializedName("")String NewPassword;
+public class AuthUserChangePasswordModel {
+    @SerializedName("OldPassword")
+    String OldPassword;
+    @SerializedName("NewPassword")
+    String NewPassword;
 }

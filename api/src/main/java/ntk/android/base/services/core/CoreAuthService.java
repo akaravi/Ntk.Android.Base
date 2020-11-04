@@ -14,8 +14,8 @@ import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.api.core.entity.TokenInfoModel;
 import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.RetrofitManager;
-import ntk.android.base.dtoModel.core.TokenDeviceClientInfoDtoModel;
-import ntk.android.base.entityModel.base.ErrorException;
+import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
+import ntk.android.base.entitymodel.base.ErrorException;
 
 public class CoreAuthService {
     private final Map<String, String> headers;

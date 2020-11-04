@@ -18,9 +18,9 @@ import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.ListOfJson;
 import ntk.android.base.config.RetrofitManager;
-import ntk.android.base.entityModel.base.ErrorException;
-import ntk.android.base.entityModel.base.ErrorExceptionBase;
-import ntk.android.base.entityModel.base.FilterModel;
+import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.base.ErrorExceptionBase;
+import ntk.android.base.entitymodel.base.FilterDataModel;
 
 public class CmsApiServerBase<TEntity, TKey> {
     String baseUrl = "api/v1/";
@@ -41,7 +41,7 @@ public class CmsApiServerBase<TEntity, TKey> {
 
     }
 
-    public Observable<ErrorException<TEntity>> getAll(FilterModel request) {
+    public Observable<ErrorException<TEntity>> getAll(FilterDataModel request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
         Observable<ErrorException> all = ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/getAll", headers, request);
         all.observeOn(AndroidSchedulers.mainThread())
@@ -84,17 +84,17 @@ public class CmsApiServerBase<TEntity, TKey> {
 
     }
 
-    public Observable<ErrorExceptionBase> Exist(FilterModel request) {
+    public Observable<ErrorExceptionBase> Exist(FilterDataModel request) {
         return ICmsApiServerBase().Exist(baseUrl + controlerUrl + "/Exist", headers, request);
 
     }
 
-    public Observable<ErrorExceptionBase> Count(FilterModel request) {
+    public Observable<ErrorExceptionBase> Count(FilterDataModel request) {
         return ICmsApiServerBase().Count(baseUrl + controlerUrl + "/Count", headers, request);
 
     }
 
-    public Observable<ErrorExceptionBase> ExportFile(FilterModel request) {
+    public Observable<ErrorExceptionBase> ExportFile(FilterDataModel request) {
         return ICmsApiServerBase().ExportFile(baseUrl + controlerUrl + "/ExportFile", headers, request);
 
     }

@@ -1,6 +1,6 @@
-package ntk.android.base.entityModel.linkManagement;
+package ntk.android.base.entitymodel.linkmanagement;
 
-import ntk.android.base.entityModel.base.BaseModuleEntity;
+import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class LinkManagementTargetModel extends BaseModuleEntity<Long> {
 }

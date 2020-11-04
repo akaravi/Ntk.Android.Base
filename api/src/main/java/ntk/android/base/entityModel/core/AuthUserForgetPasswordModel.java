@@ -1,9 +1,12 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
 import com.google.gson.annotations.SerializedName;
 
-class AuthUserForgetPasswordModel {
-    @SerializedName("") String captchaKey;
-    @SerializedName("")   String captchaText;
-    @SerializedName("")    String email;
+public class AuthUserForgetPasswordModel {
+    @SerializedName("captchaKey")
+    String captchaKey;
+    @SerializedName("captchaText")
+    String captchaText;
+    @SerializedName("email")
+    String email;
 }

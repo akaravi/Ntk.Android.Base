@@ -1,24 +1,40 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.enums.EnumMenuPlaceType;
+import ntk.android.base.entitymodel.enums.EnumMenuPlaceType;
 
 class CoreCpMainMenuModel {
-    @SerializedName("") String Title;
-    @SerializedName("")  String TitleML;
-    @SerializedName("")  String TitleResourceLanguage;
-    @SerializedName("")  String Color;
-    @SerializedName("")   String TitleEn;
-    @SerializedName("")   String Icon;
-    @SerializedName("")    String AddressLink;
-    @SerializedName("")    String RouteAddressLink;
-    @SerializedName("")    int LinkParentId;
-    @SerializedName("")    int LinkModuleId;
-    @SerializedName("")   String Description;
-    @SerializedName("")   int ShowInMenu;
-    @SerializedName("")    int ShowInMenuOrder;
-    @SerializedName("")    boolean ShowInAccessAdminAllowToProfessionalData;
-    @SerializedName("")    EnumMenuPlaceType MenuPlaceType;
-    @SerializedName("")    CoreCpMainMenuModel[] Children;
+    @SerializedName("Title")
+    String Title;
+    @SerializedName("TitleML")
+    String TitleML;
+    @SerializedName("TitleResourceLanguage")
+    String TitleResourceLanguage;
+    @SerializedName("Color")
+    String Color;
+    @SerializedName("TitleEn")
+    String TitleEn;
+    @SerializedName("Icon")
+    String Icon;
+    @SerializedName("AddressLink")
+    String AddressLink;
+    @SerializedName("RouteAddressLink")
+    String RouteAddressLink;
+    @SerializedName("LinkParentId")
+    int LinkParentId;
+    @SerializedName("LinkModuleId")
+    int LinkModuleId;
+    @SerializedName("Description")
+    String Description;
+    @SerializedName("ShowInMenu")
+    int ShowInMenu;
+    @SerializedName("ShowInMenuOrder")
+    int ShowInMenuOrder;
+    @SerializedName("ShowInAccessAdminAllowToProfessionalData")
+    boolean ShowInAccessAdminAllowToProfessionalData;
+    @SerializedName("MenuPlaceType")
+    EnumMenuPlaceType MenuPlaceType;
+    @SerializedName("Children")
+    CoreCpMainMenuModel[] Children;
 }

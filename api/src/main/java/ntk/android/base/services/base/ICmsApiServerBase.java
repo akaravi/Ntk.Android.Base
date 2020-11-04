@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Map;
 
 import io.reactivex.Observable;
-import ntk.android.base.entityModel.base.ErrorException;
-import ntk.android.base.entityModel.base.ErrorExceptionBase;
-import ntk.android.base.entityModel.base.FilterModel;
+import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.base.ErrorExceptionBase;
+import ntk.android.base.entitymodel.base.FilterDataModel;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
@@ -25,7 +25,7 @@ public interface ICmsApiServerBase<TEntity,TKey> {
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
 
-    Observable<ErrorException> getAll(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorException> getAll(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @GET("{cpath}")
     @Headers({"content-type: application/json"})
@@ -33,15 +33,15 @@ public interface ICmsApiServerBase<TEntity,TKey> {
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> Exist(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorExceptionBase> Exist(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> Count(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorExceptionBase> Count(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> ExportFile(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorExceptionBase> ExportFile(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})

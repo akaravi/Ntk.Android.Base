@@ -1,4 +1,4 @@
-package ntk.android.base.enums;
+package ntk.android.base.entitymodel.enums;
 
 public enum  EnumMenuPlaceType {
     All ,

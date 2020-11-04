@@ -1,15 +1,24 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
 import com.google.gson.annotations.SerializedName;
 
 class CoreLocationModel {
-    @SerializedName("")  String title;
-    @SerializedName("")  Integer linkParentId;
-    @SerializedName("")  Long linkParentIdNode;
-    @SerializedName("")   Long geoLocationLatitude;
-    @SerializedName("")  Long geoLocationLongitude;
-    @SerializedName("")   Integer locationType;
-    @SerializedName("")   Object virtual_Parent;
-    @SerializedName("")    Object parent;
-    @SerializedName("")  Object children;
+    @SerializedName("title")
+    String title;
+    @SerializedName("linkParentId")
+    Integer linkParentId;
+    @SerializedName("linkParentIdNode")
+    Long linkParentIdNode;
+    @SerializedName("geoLocationLatitude")
+    Long geoLocationLatitude;
+    @SerializedName("geoLocationLongitude")
+    Long geoLocationLongitude;
+    @SerializedName("locationType")
+    Integer locationType;
+    @SerializedName("virtual_Parent")
+    Object virtual_Parent;
+    @SerializedName("parent")
+    Object parent;
+    @SerializedName("children")
+    Object children;
 }

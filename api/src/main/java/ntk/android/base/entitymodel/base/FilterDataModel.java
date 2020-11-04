@@ -1,10 +1,10 @@
-package ntk.android.base.entityModel.base;
+package ntk.android.base.entitymodel.base;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class FilterModel {
+public class FilterDataModel {
 
     @SerializedName("Count")
     public boolean Count;

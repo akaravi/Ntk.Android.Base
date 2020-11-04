@@ -1,8 +1,8 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
 import com.google.gson.annotations.SerializedName;
 
-class AuthRenewTokenModel {
+public class AuthRenewTokenModel {
     @SerializedName("SiteId")
     int SiteId;
     @SerializedName("UserId")
