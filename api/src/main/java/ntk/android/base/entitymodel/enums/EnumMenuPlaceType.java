@@ -1,6 +1,6 @@
 package ntk.android.base.entitymodel.enums;
 
-public enum  EnumMenuPlaceType {
+public  enum  EnumMenuPlaceType {
     All ,
     MenuUp ,
     MenuDown,

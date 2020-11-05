@@ -1,4 +1,4 @@
 package ntk.android.base.services.news;
 
-class NewsShareServerCategoryService {
+public class NewsShareServerCategoryService {
 }

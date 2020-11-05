@@ -1,4 +1,4 @@
 package ntk.android.base.entitymodel.enums;
 
-class EnumApiSendVoiceMethod {
+public enum  EnumApiSendVoiceMethod {
 }

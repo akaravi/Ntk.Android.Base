@@ -1,6 +1,6 @@
 package ntk.android.base.entitymodel.enums;
 
-public enum EnumDeviceType {
+public  enum EnumDeviceType {
     none,
     WebSite,
     Windows,

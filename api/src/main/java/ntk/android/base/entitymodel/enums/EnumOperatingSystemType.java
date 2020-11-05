@@ -1,6 +1,6 @@
 package ntk.android.base.entitymodel.enums;
 
-public enum EnumOperatingSystemType {
+public  enum EnumOperatingSystemType {
     none,
     Windows,
     AppleMacOS,

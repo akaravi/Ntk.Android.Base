@@ -9,7 +9,7 @@ import ntk.android.base.entitymodel.base.feildinfo.GetPropertiesInfoModel;
 import ntk.android.base.entitymodel.enums.EnumTransactionBankStatus;
 import ntk.android.base.entitymodel.enums.EnumTransactionRecordStatus;
 
-class BankPaymentTransactionModel extends BaseEntity<Long> {
+public class BankPaymentTransactionModel extends BaseEntity<Long> {
     @SerializedName("TransactionStatus")
     EnumTransactionRecordStatus TransactionStatus;
     @SerializedName("BankStatus")

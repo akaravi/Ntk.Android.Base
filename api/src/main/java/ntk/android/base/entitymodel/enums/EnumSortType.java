@@ -1,4 +1,4 @@
 package ntk.android.base.entitymodel.enums;
 
-class EnumSortType {
+public enum  EnumSortType {
 }

@@ -6,7 +6,7 @@ import java.util.List;
 
 import ntk.android.base.entitymodel.base.BaseEntity;
 
-class BankPaymentPublicConfigModel extends BaseEntity<Long> {
+public class BankPaymentPublicConfigModel extends BaseEntity<Long> {
     @SerializedName("Title")
     String Title;
     @SerializedName("ClassName")

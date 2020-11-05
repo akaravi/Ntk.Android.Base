@@ -1,4 +1,4 @@
 package ntk.android.base.entitymodel.enums;
 
-class EnumRecordStatus {
+public enum  EnumRecordStatus {
 }

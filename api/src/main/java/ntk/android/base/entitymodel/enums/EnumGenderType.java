@@ -1,4 +1,4 @@
 package ntk.android.base.entitymodel.enums;
 
-public class EnumGenderType {
+public enum  EnumGenderType {
 }
