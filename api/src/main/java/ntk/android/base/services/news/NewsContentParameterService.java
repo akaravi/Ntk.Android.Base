@@ -1,5 +1,5 @@
 package ntk.android.base.services.news;
 
-class NewsContentParameterService {
+public class NewsContentParameterService {
 
 }

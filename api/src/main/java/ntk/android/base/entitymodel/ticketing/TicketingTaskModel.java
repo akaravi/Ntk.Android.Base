@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
+import ntk.android.base.entitymodel.enums.EnumTicketStatus;
+import ntk.android.base.entitymodel.enums.EnumTicketingDepartemenPriority;
 
 public class TicketingTaskModel extends BaseModuleEntity<Long> {
     @SerializedName("expireDate")

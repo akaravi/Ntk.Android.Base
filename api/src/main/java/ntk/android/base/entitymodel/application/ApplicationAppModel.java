@@ -6,6 +6,7 @@ import java.util.List;
 
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 import ntk.android.base.entitymodel.base.feildinfo.GetPropertiesInfoModel;
+import ntk.android.base.entitymodel.enums.EnumBuildStatusType;
 
 public class ApplicationAppModel extends BaseModuleEntity<Long> {
 

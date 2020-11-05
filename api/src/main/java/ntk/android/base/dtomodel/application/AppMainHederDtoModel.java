@@ -1,5 +1,7 @@
 package ntk.android.base.dtomodel.application;
 
+import ntk.android.base.entitymodel.enums.EnumDeviceStatus;
+
 class AppMainHederDtoModel {
 
     String deviceId;

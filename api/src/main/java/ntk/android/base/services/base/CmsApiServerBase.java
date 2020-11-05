@@ -54,9 +54,6 @@ public class CmsApiServerBase<TEntity, TKey> {
             @Override
             public void onNext(@NonNull ErrorException o) {
                 Gson gson = new GsonBuilder()
-                        //not get response from this design code think About this
-//                          .registerTypeAdapter(tOutputclass, new InputTypeAdapter(tOutputclass))
-//                            .registerTypeAdapter(new InputListType(tOutputclass), new InputListTypeAdapter(tOutputclass))
                         .enableComplexMapKeySerialization()
                         .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
                         .create();

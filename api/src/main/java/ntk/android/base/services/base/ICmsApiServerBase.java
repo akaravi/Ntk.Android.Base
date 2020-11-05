@@ -20,7 +20,7 @@ public interface ICmsApiServerBase<TEntity,TKey> {
 
     @GET("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> getViewModel(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
+    Observable<ErrorException> getViewModel(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
@@ -29,33 +29,33 @@ public interface ICmsApiServerBase<TEntity,TKey> {
 
     @GET("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> getViewModel(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
+    Observable<ErrorException> getViewModel(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> Exist(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
+    Observable<ErrorException> Exist(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> Count(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
+    Observable<ErrorException> Count(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> ExportFile(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
+    Observable<ErrorException> ExportFile(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> Add(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
+    Observable<ErrorException> Add(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
 
     @PUT("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> Edit(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
+    Observable<ErrorException> Edit(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
 
     @DELETE("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> Delete(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
+    Observable<ErrorException> Delete(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TEntity>> Delete(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body List<TKey> request);
+    Observable<ErrorException> Delete(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body List<TKey> request);
 }

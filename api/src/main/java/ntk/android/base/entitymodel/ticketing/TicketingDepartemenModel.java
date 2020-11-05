@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
+import ntk.android.base.entitymodel.enums.EnumTicketAccessStatus;
+import ntk.android.base.entitymodel.enums.EnumTicketingDepartemenPriority;
 
 public class TicketingDepartemenModel extends BaseModuleEntity<Long> {
     @SerializedName("title")

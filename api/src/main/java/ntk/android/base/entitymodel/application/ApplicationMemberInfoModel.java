@@ -3,6 +3,7 @@ package ntk.android.base.entitymodel.application;
 import com.google.gson.annotations.SerializedName;
 
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
+import ntk.android.base.entitymodel.enums.EnumDeviceStatus;
 
 class ApplicationMemberInfoModel extends BaseModuleEntity<Long> {
 
