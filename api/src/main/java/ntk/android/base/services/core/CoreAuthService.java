@@ -19,6 +19,7 @@ import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.enums.EnumDeviceType;
 import ntk.android.base.entitymodel.enums.EnumOperatingSystemType;
+import ntk.android.base.utill.EasyPreference;
 
 public class CoreAuthService {
     private final Map<String, String> headers;
@@ -49,7 +50,11 @@ public class CoreAuthService {
 
             @Override
             public void onNext(@NonNull ErrorException<TokenInfoModel> o) {
-                mMovieCache.onNext(o);
+                if (o.IsSuccess){
+                    new ConfigRestHeader().replaceToken(context,o.token);
+                }else
+
+                mMovieCache.onError(new Exception("Ntk Exepction:"+o.ErrorMessage));
             }
 
             @Override

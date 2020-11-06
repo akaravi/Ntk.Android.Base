@@ -4,17 +4,17 @@ import java.util.Map;
 
 import io.reactivex.Observable;
 import ntk.android.base.api.baseModel.FilterModel;
-import ntk.android.base.api.core.entity.CaptchaModel;
+
 import ntk.android.base.api.core.entity.TokenInfoModel;
-import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
-import ntk.android.base.entitymodel.base.ErrorException;
-import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.dtomodel.core.AuthRenewTokenModel;
 import ntk.android.base.dtomodel.core.AuthUserChangePasswordModel;
 import ntk.android.base.dtomodel.core.AuthUserForgetPasswordModel;
 import ntk.android.base.dtomodel.core.AuthUserSignInModel;
 import ntk.android.base.dtomodel.core.AuthUserSignOutModel;
 import ntk.android.base.dtomodel.core.AuthUserSignUpModel;
+import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
+import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import retrofit2.http.Body;
 import retrofit2.http.HeaderMap;
 import retrofit2.http.Headers;
@@ -22,7 +22,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 interface Icore {
-    Observable<ErrorException<CaptchaModel>> Captcha();
+    Observable<ErrorException<TokenInfoModel>> Captcha();
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})

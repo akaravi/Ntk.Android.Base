@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import ntk.android.base.entitymodel.enums.EnumManageUserAccessAreaTypes;
 import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
 
-class TokenInfoModel {
+public class TokenInfoModel {
     @SerializedName("Token")
     String Token;
     @SerializedName("DeviceToken")
