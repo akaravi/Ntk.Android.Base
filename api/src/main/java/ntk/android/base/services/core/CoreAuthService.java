@@ -11,11 +11,14 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
+import ntk.android.base.BaseNtkApplication;
 import ntk.android.base.api.core.entity.TokenInfoModel;
 import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.RetrofitManager;
 import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.enums.EnumDeviceType;
+import ntk.android.base.entitymodel.enums.EnumOperatingSystemType;
 
 public class CoreAuthService {
     private final Map<String, String> headers;
@@ -35,7 +38,12 @@ public class CoreAuthService {
 
     }
 
-    public Observable<ErrorException<TokenInfoModel>> getTokenDevice(TokenDeviceClientInfoDtoModel request) {
+    public Observable<ErrorException<TokenInfoModel>> getTokenDevice() {
+        TokenDeviceClientInfoDtoModel request = new TokenDeviceClientInfoDtoModel();
+        request.OSType = EnumOperatingSystemType.GoogleAndroid.index();
+        request.DeviceType = EnumDeviceType.Android.index();
+        request.PackageName = BaseNtkApplication.get().getPackageName();
+        request.SecurityKey="123";
         BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
         Observable<ErrorException<TokenInfoModel>> tokenDevice = Icore().getTokenDevice(baseUrl + controlerUrl + "/GetTokenDevice", headers, request);
         tokenDevice.observeOn(AndroidSchedulers.mainThread())

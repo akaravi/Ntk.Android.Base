@@ -11,9 +11,9 @@ public class TokenDeviceClientInfoDtoModel {
     @SerializedName("ClientMACAddress")
     public String ClientMACAddress;
     @SerializedName("OSType")
-    public   EnumOperatingSystemType OSType;
+    public   int OSType;
     @SerializedName("DeviceType")
-    public    EnumDeviceType DeviceType;
+    public    int DeviceType;
     @SerializedName("PackageName")
     public   String PackageName;
 }
