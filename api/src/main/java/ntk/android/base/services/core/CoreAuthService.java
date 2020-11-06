@@ -38,12 +38,7 @@ public class CoreAuthService {
 
     }
 
-    public Observable<ErrorException<TokenInfoModel>> getTokenDevice() {
-        TokenDeviceClientInfoDtoModel request = new TokenDeviceClientInfoDtoModel();
-        request.OSType = EnumOperatingSystemType.GoogleAndroid.index();
-        request.DeviceType = EnumDeviceType.Android.index();
-        request.PackageName = BaseNtkApplication.get().getPackageName();
-        request.SecurityKey="123";
+    public Observable<ErrorException<TokenInfoModel>> getTokenDevice(TokenDeviceClientInfoDtoModel request) {
         BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
         Observable<ErrorException<TokenInfoModel>> tokenDevice = Icore().getTokenDevice(baseUrl + controlerUrl + "/GetTokenDevice", headers, request);
         tokenDevice.observeOn(AndroidSchedulers.mainThread())
@@ -67,5 +62,14 @@ public class CoreAuthService {
             }
         });
         return mMovieCache;
+    }
+
+    public Observable<ErrorException<TokenInfoModel>> getTokenDevice() {
+        TokenDeviceClientInfoDtoModel request = new TokenDeviceClientInfoDtoModel();
+        request.OSType = EnumOperatingSystemType.GoogleAndroid.index();
+        request.DeviceType = EnumDeviceType.Android.index();
+        request.PackageName = BaseNtkApplication.get().getPackageName();
+        request.SecurityKey = "123";
+        return getTokenDevice(request);
     }
 }
