@@ -78,7 +78,10 @@ public class CmsApiServerBase<TEntity, TKey> {
 
     public Observable<ErrorException<TEntity>> getViewModel() {
         return ICmsApiServerBase().getViewModel(baseUrl + controlerUrl + "/getViewModel", headers);
+    }
 
+    public Observable<ErrorException<TEntity>> getOne(TKey Id) {
+        return ICmsApiServerBase().getViewModel(baseUrl + controlerUrl + "/" + Id, headers);
     }
 
     public Observable<ErrorExceptionBase> Exist(FilterDataModel request) {
