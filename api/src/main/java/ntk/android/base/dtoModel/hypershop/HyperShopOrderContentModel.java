@@ -1,9 +1,16 @@
-package ntk.android.base.dtoModel.hypershop;
+package ntk.android.base.dtomodel.hypershop;
+
+import com.google.gson.annotations.SerializedName;
 
 public class HyperShopOrderContentModel {
-    public String code ;
-    public String name ;
-    public String memo ;
-    public float price ;
-    public int count ;
+    @SerializedName("code")
+    public String code;
+    @SerializedName("name")
+    public String name;
+    @SerializedName("memo")
+    public String memo;
+    @SerializedName("price")
+    public float price;
+    @SerializedName("count")
+    public int count;
 }

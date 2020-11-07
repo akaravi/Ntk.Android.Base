@@ -5,7 +5,6 @@ import java.util.Map;
 
 import io.reactivex.Observable;
 import ntk.android.base.entitymodel.base.ErrorException;
-import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.entitymodel.base.FilterDataModel;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;

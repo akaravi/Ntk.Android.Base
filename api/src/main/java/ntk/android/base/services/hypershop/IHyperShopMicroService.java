@@ -1,11 +1,14 @@
 package ntk.android.base.services.hypershop;
-import android.database.Observable;
+
 
 import java.util.Map;
 
-import ntk.android.base.dtoModel.hypershop.HyperShopCategoryModel;
-import ntk.android.base.dtoModel.hypershop.HyperShopContentModel;
-import ntk.android.base.dtoModel.hypershop.HyperShopOrderModel;
+import io.reactivex.Observable;
+import ntk.android.base.dtomodel.hypershop.HyperShopCategoryModel;
+import ntk.android.base.dtomodel.hypershop.HyperShopContentModel;
+import ntk.android.base.dtomodel.hypershop.HyperShopOrderModel;
+import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.base.FilterDataModel;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.HeaderMap;
@@ -17,26 +20,24 @@ public interface IHyperShopMicroService {
 
     @POST("{cpath}")//ContentGetAll
     @Headers({"content-type: application/json"})
-    Observable<ntk.android.base.entitymodel.base.ErrorException<HyperShopContentModel>> ContentGetAll(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body ntk.android.base.entitymodel.base.FilterDataModel request);
+    Observable<ErrorException<HyperShopContentModel>> ContentGetAll(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @GET("{cpath}")//ContentGetOne/id
     @Headers({"content-type: application/json"})
-    Observable<ntk.android.base.entitymodel.base.ErrorException<HyperShopContentModel>> ContentGetOne(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body String Id);
-
+    Observable<ErrorException<HyperShopContentModel>> ContentGetOne(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
 
 
     @POST("{cpath}")//CategoryGetAll
     @Headers({"content-type: application/json"})
-    Observable<ntk.android.base.entitymodel.base.ErrorException<HyperShopCategoryModel>> CategoryGetAll(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body ntk.android.base.entitymodel.base.FilterDataModel request);
+    Observable<ErrorException<HyperShopCategoryModel>> CategoryGetAll(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @GET("{cpath}")//CategoryGetOne/id
     @Headers({"content-type: application/json"})
-    Observable<ntk.android.base.entitymodel.base.ErrorException<HyperShopCategoryModel>> CategoryGetOne(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body String Id);
-
+    Observable<ErrorException<HyperShopCategoryModel>> CategoryGetOne(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
 
 
     @POST("{cpath}")//OrderAdd
     @Headers({"content-type: application/json"})
-    Observable<ntk.android.base.entitymodel.base.ErrorException<HyperShopOrderModel>> OrderAdd(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body ntk.android.base.entitymodel.base.FilterDataModel request);
+    Observable<ErrorException<HyperShopOrderModel>> OrderAdd(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
 }

@@ -1,14 +1,24 @@
-package ntk.android.base.dtoModel.hypershop;
+package ntk.android.base.dtomodel.hypershop;
+
+import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 public class HyperShopOrderModel {
-    public String OrderId ;
-    public Boolean AcceptSystem ;
-    public String name ;
-    public String family ;
-    public String mobile ;
-    public String address ;
-    public float amount ;
-    public List<HyperShopOrderContentModel> Products ;
+    @SerializedName("OrderId")
+    public String OrderId;
+    @SerializedName("AcceptSystem")
+    public Boolean AcceptSystem;
+    @SerializedName("name")
+    public String name;
+    @SerializedName("family")
+    public String family;
+    @SerializedName("mobile")
+    public String mobile;
+    @SerializedName("address")
+    public String address;
+    @SerializedName("amount")
+    public float amount;
+    @SerializedName("Products")
+    public List<HyperShopOrderContentModel> Products;
 }
