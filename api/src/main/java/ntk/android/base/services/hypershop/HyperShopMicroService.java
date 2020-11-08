@@ -24,12 +24,12 @@ public class HyperShopMicroService {
     String controlerUrl;
     Context context;
     Map<String, String> headers;
-    Class<HyperShopContentModel> teClass;
 
-    public HyperShopMicroService(Context context, String controlerUrl, Class<HyperShopContentModel> teClass) {
-        this.controlerUrl = controlerUrl;
+
+    public HyperShopMicroService(Context context) {
+        this.controlerUrl = "HyperShop";
         headers = new ConfigRestHeader().GetHeaders(context);
-        this.teClass = teClass;
+
     }
 
     IHyperShopMicroService IHyperShopMicroService() {
@@ -150,7 +150,7 @@ public class HyperShopMicroService {
         return mMovieCache;
     }
 
-    public Observable<ErrorException<HyperShopOrderModel>> OrderAdd(FilterDataModel request) {
+    public Observable<ErrorException<HyperShopOrderModel>> orderAdd(FilterDataModel request) {
         BehaviorSubject<ErrorException<HyperShopOrderModel>> mMovieCache = BehaviorSubject.create();
         Observable<ErrorException<HyperShopOrderModel>> all = IHyperShopMicroService().OrderAdd(baseUrl + controlerUrl + "/OrderAdd/", headers, request);
         all.observeOn(AndroidSchedulers.mainThread())
