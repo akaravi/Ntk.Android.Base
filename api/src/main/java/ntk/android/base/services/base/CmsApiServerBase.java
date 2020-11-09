@@ -77,46 +77,298 @@ public class CmsApiServerBase<TEntity, TKey> {
 
 
     public Observable<ErrorException<TEntity>> getViewModel() {
-        return ICmsApiServerBase().getViewModel(baseUrl + controlerUrl + "/getViewModel", headers);
+        BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
+        Observable<ErrorException> ViewModel = ICmsApiServerBase().getViewModel(baseUrl + controlerUrl + "/getViewModel", headers);
+        ViewModel.observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException o) {
+                Gson gson = new GsonBuilder()
+                        .enableComplexMapKeySerialization()
+                        .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .create();
+                o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
+                o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
     }
 
     public Observable<ErrorException<TEntity>> getOne(TKey Id) {
-        return ICmsApiServerBase().getViewModel(baseUrl + controlerUrl + "/" + Id, headers);
+        BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
+        Observable<ErrorException> getone = ICmsApiServerBase().getViewModel(baseUrl + controlerUrl + "/" + Id, headers);
+        getone.observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException o) {
+                Gson gson = new GsonBuilder()
+                        .enableComplexMapKeySerialization()
+                        .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .create();
+                o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
+                o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
     }
 
     public Observable<ErrorExceptionBase> Exist(FilterDataModel request) {
-        return ICmsApiServerBase().Exist(baseUrl + controlerUrl + "/Exist", headers, request);
+        BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
+        ICmsApiServerBase().Exist(baseUrl + controlerUrl + "/Exist", headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorExceptionBase>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
 
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorExceptionBase o) {
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
     }
 
     public Observable<ErrorExceptionBase> Count(FilterDataModel request) {
-        return ICmsApiServerBase().Count(baseUrl + controlerUrl + "/Count", headers, request);
+        BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
+        ICmsApiServerBase().Count(baseUrl + controlerUrl + "/Count", headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorExceptionBase>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
 
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorExceptionBase o) {
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
     }
 
     public Observable<ErrorExceptionBase> ExportFile(FilterDataModel request) {
-        return ICmsApiServerBase().ExportFile(baseUrl + controlerUrl + "/ExportFile", headers, request);
+        BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
+        ICmsApiServerBase().ExportFile(baseUrl + controlerUrl + "/ExportFile", headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorExceptionBase>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
 
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorExceptionBase o) {
+
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+
+        return mMovieCache;
     }
 
-    public Observable<ErrorExceptionBase> Add(TEntity request) {
-        return ICmsApiServerBase().Add(baseUrl + controlerUrl + "/", headers, request);
+    public Observable<ErrorException<TEntity>> Add(TEntity request) {
+        BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
 
+        ICmsApiServerBase().Add(baseUrl + controlerUrl + "/", headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException o) {
+                Gson gson = new GsonBuilder()
+                        .enableComplexMapKeySerialization()
+                        .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .create();
+                o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
+                o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+
+        return mMovieCache;
     }
 
-    public Observable<ErrorExceptionBase> Edit(TEntity request) {
-        return ICmsApiServerBase().Edit(baseUrl + controlerUrl + "/1", headers, request);
+    public Observable<ErrorException<TEntity>> Edit(TEntity request) {
+        BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
+        ICmsApiServerBase().Edit(baseUrl + controlerUrl + "/1", headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
 
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException o) {
+                Gson gson = new GsonBuilder()
+                        .enableComplexMapKeySerialization()
+                        .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .create();
+                o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
+                o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+
+        return mMovieCache;
     }
 
-    public Observable<ErrorExceptionBase> Delete(TKey id) {
-        return ICmsApiServerBase().Delete(baseUrl + controlerUrl + "/" + id, headers);
+    public Observable<ErrorException<TEntity>> Delete(TKey id) {
+        BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
+        ICmsApiServerBase().Delete(baseUrl + controlerUrl + "/" + id, headers)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
 
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException o) {
+                Gson gson = new GsonBuilder()
+                        .enableComplexMapKeySerialization()
+                        .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .create();
+                o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
+                o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+
+        return mMovieCache;
     }
 
-    public Observable<ErrorExceptionBase> Delete(List<TKey> request) {
-        return ICmsApiServerBase().Delete(baseUrl + controlerUrl + "/DeleteList", headers, request);
+    public Observable<ErrorException<TEntity>> Delete(List<TKey> request) {
+        BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
+        ICmsApiServerBase().Delete(baseUrl + controlerUrl + "/DeleteList", headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
 
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException o) {
+                Gson gson = new GsonBuilder()
+                        .enableComplexMapKeySerialization()
+                        .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .create();
+                o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
+                o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+
+        return mMovieCache;
     }
 
 

@@ -12,7 +12,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.BaseNtkApplication;
-import ntk.android.base.api.core.entity.TokenInfoModel;
+import ntk.android.base.entitymodel.base.TokenInfoModel;
 import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.RetrofitManager;
 import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
@@ -51,7 +51,8 @@ public class CoreAuthService {
             @Override
             public void onNext(@NonNull ErrorException<TokenInfoModel> o) {
                 if (o.IsSuccess){
-                    new ConfigRestHeader().replaceToken(context,o.token);
+                    new ConfigRestHeader().replaceToken(context,o.Item.DeviceToken);
+                    mMovieCache.onNext(o);
                 }else
 
                 mMovieCache.onError(new Exception("Ntk Exepction:"+o.ErrorMessage));
@@ -74,7 +75,7 @@ public class CoreAuthService {
         request.OSType = EnumOperatingSystemType.GoogleAndroid.index();
         request.DeviceType = EnumDeviceType.Android.index();
         request.PackageName = BaseNtkApplication.get().getPackageName();
-        request.SecurityKey = "123";
+        request.SecurityKey = "123456789";
         return getTokenDevice(request);
     }
 }

@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
+import ntk.android.base.BaseNtkApplication;
 import ntk.android.base.api.file.entity.FileUploadModel;
 import ntk.android.base.api.file.interfase.IFile;
 import ntk.android.base.api.utill.NTKUtill;
@@ -46,6 +47,9 @@ public class RetrofitManager {
 
     public RetrofitManager(Context context) {
         mContext = context;
+        String staticUrl = BaseNtkApplication.get().staticConfig().URL;
+        if(!staticUrl.equalsIgnoreCase(""))
+            BASE_URL= staticUrl;
     }
 
     public Retrofit getRetrofit() {

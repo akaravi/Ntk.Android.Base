@@ -5,6 +5,7 @@ import java.util.Map;
 
 import io.reactivex.Observable;
 import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.entitymodel.base.FilterDataModel;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
@@ -32,11 +33,11 @@ public interface ICmsApiServerBase<TEntity,TKey> {
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> Exist(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
+    Observable<ErrorExceptionBase> Exist(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> Count(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
+    Observable<ErrorExceptionBase> Count(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})

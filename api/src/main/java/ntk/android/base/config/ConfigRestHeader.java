@@ -13,16 +13,26 @@ import ntk.android.base.utill.AppUtill;
 import ntk.android.base.utill.EasyPreference;
 
 public class ConfigRestHeader {
-    final String tokenKey="DeviceToken";
+    final String tokenKey = "DeviceToken";
+
     @SuppressLint("HardwareIds")
     public Map<String, String> GetHeaders(Context context) {
 
         TelephonyManager manager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         Map<String, String> headers = new HashMap<>();
-        headers.put("Token", "");
-        String prevToken = EasyPreference.with(context).getString(tokenKey, "");
-        if (!prevToken.equals(""))
-            headers.put("", prevToken);
+        String staticToken = BaseNtkApplication.get().staticConfig().TONEN;
+        if (!staticToken.equalsIgnoreCase(""))
+            headers.put("Token", staticToken);
+        else
+            headers.put("Token", "");
+        String staticDevice_token = BaseNtkApplication.get().staticConfig().DEVICE_TOKEN;
+        if (!staticDevice_token.equalsIgnoreCase(""))
+            headers.put("DeviceToken", staticDevice_token);
+        else {
+            String prevToken = EasyPreference.with(context).getString(tokenKey, "");
+            if (!prevToken.equalsIgnoreCase(""))
+                headers.put("DeviceToken", prevToken);
+        }
         headers.put("LocationLong", "0");
         headers.put("LocationLat", "0");
         headers.put("DeviceId", Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID));
@@ -42,7 +52,7 @@ public class ConfigRestHeader {
         return headers;
     }
 
-    public void replaceToken( Context context,String token){
-       EasyPreference.with(context).addString(tokenKey, token);
+    public void replaceToken(Context context, String token) {
+        EasyPreference.with(context).addString(tokenKey, token);
     }
 }

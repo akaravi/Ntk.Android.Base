@@ -35,12 +35,29 @@ public abstract class BaseNtkApplication extends MultiDexApplication implements 
 
     @Override
     public void onCreate() {
-        instance=this;
+        instance = this;
         super.onCreate();
         if (!new File(getCacheDir(), "image").exists()) {
             new File(getCacheDir(), "image").mkdirs();
         }
     }
 
+    protected ApplicationStaticParameter getConfig() {
+        return null;
+    }
+
     public abstract void bindFireBase();
+
+    public ApplicationStaticParameter staticConfig() {
+        ApplicationStaticParameter config = getConfig();
+        if (config == null)
+            config = new ApplicationStaticParameter();
+        if (config.TONEN == null)
+            config.TONEN = "";
+        if (config.DEVICE_TOKEN == null)
+            config.DEVICE_TOKEN = "";
+        if (config.URL == null)
+            config.URL = "";
+        return config;
+    }
 }
