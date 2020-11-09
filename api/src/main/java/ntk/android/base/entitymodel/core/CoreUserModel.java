@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import ntk.android.base.entitymodel.base.BaseEntity;
 import ntk.android.base.entitymodel.enums.EnumGenderType;
 
-class CoreUserModel extends BaseEntity<Long> {
+public class CoreUserModel extends BaseEntity<Long> {
     @SerializedName("Username")
     String Username;
     @SerializedName("ExpireDate")
