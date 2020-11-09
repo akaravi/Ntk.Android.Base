@@ -21,8 +21,8 @@ public class ConfigRestHeader {
         Map<String, String> headers = new HashMap<>();
         headers.put("Token", "");
         String prevToken = EasyPreference.with(context).getString(tokenKey, "");
-        if (!prevToken.equals(""))
-            headers.put("", prevToken);
+        if (!prevToken.equalsIgnoreCase(""))
+            headers.put("DeviceToken", prevToken);
         headers.put("LocationLong", "0");
         headers.put("LocationLat", "0");
         headers.put("DeviceId", Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID));

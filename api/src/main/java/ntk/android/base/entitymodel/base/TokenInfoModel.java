@@ -7,44 +7,44 @@ import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
 
 public class TokenInfoModel {
     @SerializedName("Token")
-    String Token;
+  public   String Token;
     @SerializedName("DeviceToken")
-    String DeviceToken;
+    public String DeviceToken;
     @SerializedName("RefreshToken")
-    String RefreshToken;
+    public  String RefreshToken;
 
     @SerializedName("UserId")
-    long UserId;
+    public    long UserId;
     @SerializedName("SiteId")
-    long SiteId;
+    public    long SiteId;
     @SerializedName("UserGroupId")
-    long UserGroupId;
+    public    long UserGroupId;
     @SerializedName("UserTypeTitle")
-    String UserTypeTitle;
+    public    String UserTypeTitle;
     @SerializedName("UserAccessAdminAllowToProfessionalData")
-    boolean UserAccessAdminAllowToProfessionalData;
+    public   boolean UserAccessAdminAllowToProfessionalData;
     @SerializedName("UserAccessAdminAllowToAllData")
-    boolean UserAccessAdminAllowToAllData;
+    public    boolean UserAccessAdminAllowToAllData;
     @SerializedName("UserType")
-    EnumManageUserAccessControllerTypes UserType;
+    public    EnumManageUserAccessControllerTypes UserType;
     @SerializedName("UserAccessAreaType")
-    EnumManageUserAccessAreaTypes UserAccessAreaType;
+    public    EnumManageUserAccessAreaTypes UserAccessAreaType;
     @SerializedName("Username")
-    String Username;
+    public    String Username;
     @SerializedName("Name")
-    String Name;
+    public   String Name;
     @SerializedName("LastName")
-    String LastName;
+    public    String LastName;
     @SerializedName("FullName")
-    String FullName;
+    public   String FullName;
     @SerializedName("Language")
-    String Language;
+    public    String Language;
     @SerializedName("Domain")
-    String Domain;
+    public    String Domain;
     @SerializedName("SubDomain")
-    String SubDomain;
+    public    String SubDomain;
     @SerializedName("Title")
-    String Title;
+    public    String Title;
     @SerializedName("PhotoUrl")
-    String PhotoUrl;
+    public    String PhotoUrl;
 }
