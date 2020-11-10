@@ -2,14 +2,14 @@ package ntk.android.base.services.ticketing;
 
 import android.content.Context;
 
-import ntk.android.base.entitymodel.ticketing.TicketingAnswerModel;
+import ntk.android.base.entitymodel.ticketing.TicketingFaqModel;
 import ntk.android.base.services.base.CmsApiServerBase;
 
-public class TicketingFaqService  extends CmsApiServerBase<TicketingAnswerModel, Long> {
+public class TicketingFaqService extends CmsApiServerBase<TicketingFaqModel, Long> {
 
 
-    TicketingFaqService(Context context) {
-        super(context, "TicketingAnswer", TicketingAnswerModel.class);
+    public TicketingFaqService(Context context) {
+        super(context, "TicketingFaq", TicketingFaqModel.class);
     }
 
 
