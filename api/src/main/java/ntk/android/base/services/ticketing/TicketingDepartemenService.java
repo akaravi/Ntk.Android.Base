@@ -9,7 +9,7 @@ import ntk.android.base.services.base.CmsApiServerBase;
 public class TicketingDepartemenService extends CmsApiServerBase<TicketingDepartemenModel, Long> {
 
 
-    TicketingDepartemenService(Context context) {
+    public TicketingDepartemenService(Context context) {
         super(context, "TicketingDepartemen", TicketingDepartemenModel.class);
     }
 

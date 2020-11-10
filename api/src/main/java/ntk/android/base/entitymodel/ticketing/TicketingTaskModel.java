@@ -6,7 +6,6 @@ import java.util.List;
 
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 import ntk.android.base.entitymodel.enums.EnumTicketStatus;
-import ntk.android.base.entitymodel.enums.EnumTicketingDepartemenPriority;
 
 public class TicketingTaskModel extends BaseModuleEntity<Long> {
     @SerializedName("expireDate")
@@ -15,8 +14,14 @@ public class TicketingTaskModel extends BaseModuleEntity<Long> {
     public String title;
     @SerializedName("htmlBody")
     public String htmlBody;
+    @SerializedName("FullName")
+    public String FullName;
+    @SerializedName("PhoneNo")
+    public String PhoneNo;
+    @SerializedName("Email")
+    public String Email;
     @SerializedName("priority")
-    public EnumTicketingDepartemenPriority priority;
+    public int priority;//as EnumTicketingDepartemenPriority
     @SerializedName("linkCmsUserId")
     public Long linkCmsUserId;
     @SerializedName("linkMemberUserId")
@@ -24,7 +29,7 @@ public class TicketingTaskModel extends BaseModuleEntity<Long> {
     @SerializedName("linkTicketingDepartemenId")
     public Long linkTicketingDepartemenId;
     @SerializedName("ticketStatus")
-    public EnumTicketStatus ticketStatus;
+    public int ticketStatus;// same as EnumTicketStatus
     @SerializedName("userIpAddress")
     public String userIpAddress;
     @SerializedName("deviceInformation")

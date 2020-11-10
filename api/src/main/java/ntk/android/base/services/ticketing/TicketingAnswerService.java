@@ -8,7 +8,7 @@ import ntk.android.base.services.base.CmsApiServerBase;
 public class TicketingAnswerService extends CmsApiServerBase<TicketingAnswerModel, Long> {
 
 
-    TicketingAnswerService(Context context) {
+    public TicketingAnswerService(Context context) {
         super(context, "TicketingAnswer", TicketingAnswerModel.class);
     }
 
