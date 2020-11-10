@@ -13,8 +13,5 @@ public class BlogContentTagModel extends BaseModuleEntity<Long> {
     public BlogContentModel virtual_ModuleContent;
     @SerializedName("moduleContent")
     public BlogContentModel moduleContent;
-    @SerializedName("virtual_ModuleTag")
-    public BlogTagModel virtual_ModuleTag;
-    @SerializedName("moduleTag")
-    public BlogTagModel moduleTag;
+
 }

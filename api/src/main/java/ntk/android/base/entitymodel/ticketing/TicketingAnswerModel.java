@@ -9,7 +9,7 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 public class TicketingAnswerModel extends BaseModuleEntity<Long> {
 
     @SerializedName("linkTicketId")
-    public    long linkTicketId;
+    public long linkTicketId;
     @SerializedName("htmlBody")
     public String htmlBody;
     @SerializedName("virtual_Ticket")

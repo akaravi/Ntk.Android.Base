@@ -13,8 +13,5 @@ public class NewsContentTagModel extends BaseModuleEntity<Long> {
     public NewsContentModel virtual_ModuleContent;
     @SerializedName("moduleContent")
     public NewsContentModel moduleContent;
-    @SerializedName("virtual_ModuleTag")
-    public NewsTagModel virtual_ModuleTag;
-    @SerializedName("moduleTag")
-    public NewsTagModel moduleTag;
+
 }

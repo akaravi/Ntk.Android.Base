@@ -24,7 +24,7 @@ import ntk.android.base.utill.EasyPreference;
 public class CoreAuthService {
     private final Map<String, String> headers;
     String baseUrl = "api/v1/";
-    String controlerUrl = "Auth";
+    String controlerUrl = "auth";
     Context context;
 
     public CoreAuthService(Context context) {
