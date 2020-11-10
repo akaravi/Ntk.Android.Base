@@ -1,15 +1,21 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
-import { BaseEntity } from '../base/baseEntity';
-import { CoreSiteModel } from './coreSiteModel';
+import com.google.gson.annotations.SerializedName;
 
-export class CoreSiteCategoryModel extends BaseEntity<number>  {
+import java.util.List;
 
-    TitleML: string;
+import ntk.android.base.entitymodel.base.BaseEntity;
 
-    Title: string;
-    titleResourceLanguage: string;
-    description: string;
-    sites: CoreSiteModel[];
+public class CoreSiteCategoryModel extends BaseEntity<Long> {
+    public @SerializedName("")
+    String TitleML;
+    public @SerializedName("")
+    String Title;
+    public @SerializedName("")
+    String titleResourceLanguage;
+    public @SerializedName("")
+    String description;
+    public @SerializedName("")
+    List<CoreSiteModel> sites;
 
 }

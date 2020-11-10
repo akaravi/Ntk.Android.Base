@@ -1,21 +1,21 @@
 package ntk.android.base.entitymodel.core;
 
-class CoreModuleModel {
-    Title: string;
-    TitleML: string;
-    TitleResourceLanguage?: any;
-    ClassName: string;
-    Description: string;
-    AdministratorIsActivate: boolean;
-    ModuleConfigAdminMainJson?: any;
-    ModuleConfigAdminMainJsonForm?: any;
-    ModuleConfigSiteAccessDefaultJson?: any;
-    ModuleConfigSiteAccessJsonFrom?: any;
-    ModuleConfigSiteDefaultJson?: any;
-    ModuleConfigSiteJsonForm?: any;
-    ModuleSiteStorageValuesJsonForm?: any;
-    ModuleSites?: any;
-    CmsCpMainMenu?: any;
-    CmsModuleProcess?: any;
-    CmsSiteCategoryCmsModule?: any;
+public class CoreModuleModel {
+    String Title;
+    String TitleML;
+    String TitleResourceLanguage;
+    String ClassName;
+    String Description;
+    boolean AdministratorIsActivate;
+    String ModuleConfigAdminMainJson;
+    String ModuleConfigAdminMainJsonForm;
+    String ModuleConfigSiteAccessDefaultJson;
+    String ModuleConfigSiteAccessJsonFrom;
+    String ModuleConfigSiteDefaultJson;
+    String ModuleConfigSiteJsonForm;
+    String ModuleSiteStorageValuesJsonForm;
+    String ModuleSites;
+    String CmsCpMainMenu;
+    String CmsModuleProcess;
+    String CmsSiteCategoryCmsModule;
 }

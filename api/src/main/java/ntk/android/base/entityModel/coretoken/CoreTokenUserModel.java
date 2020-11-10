@@ -1,4 +1,6 @@
-import { BaseEntity } from '../base/baseEntity';
+package ntk.android.base.entitymodel.coretoken;
 
-export class CoreTokenUserModel  extends BaseEntity<string>   {
+import ntk.android.base.entitymodel.base.BaseEntity;
+
+public class CoreTokenUserModel  extends BaseEntity<String> {
 }

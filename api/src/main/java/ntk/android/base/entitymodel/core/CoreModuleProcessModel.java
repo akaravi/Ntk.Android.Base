@@ -1,15 +1,28 @@
 package ntk.android.base.entitymodel.core;
 
-class CoreModuleProcessModel {
-    TitleML: string;
-    Title: string;
-    titleResourceLanguage: string;
-    titleEn: string;
-    processName: string;
-    description: string;
-    linkModuleId?: number;
-    // tslint:disable-next-line: variable-name
-    virtual_CmsModule: CoreModuleModel;
-    cmsModule: CoreModuleModel;
-    cmsModuleProcessCustomize: CoreModuleProcessCustomizeModel[];
+import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
+public class CoreModuleProcessModel {
+    @SerializedName("TitleML")
+    public String TitleML;
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("titleResourceLanguage")
+    public String titleResourceLanguage;
+    @SerializedName("titleEn")
+    public String titleEn;
+    @SerializedName("processName")
+    public String processName;
+    @SerializedName("description")
+    public String description;
+    @SerializedName("linkModuleId")
+    public Long linkModuleId;
+    @SerializedName("virtual_CmsModule")
+    public CoreModuleModel virtual_CmsModule;
+    @SerializedName("cmsModule")
+    public CoreModuleModel cmsModule;
+    @SerializedName("cmsModuleProcessCustomize")
+    public List<CoreModuleProcessCustomizeModel> cmsModuleProcessCustomize;
 }

@@ -1,10 +1,14 @@
-public  class CoreLogErrorModel extends  BaseEntity<string> {
+package ntk.android.base.entitymodel.corelog;
 
-    moduleName: string;
-    moduleEntityName: string;
-    linkUserId?: number;
-    linkMemberUserId?: number;
-    entityId: number;
-    description: string;
+import ntk.android.base.entitymodel.base.BaseEntity;
+
+public  class CoreLogErrorModel extends BaseEntity<String> {
+
+  String  moduleName;
+    String   moduleEntityName;
+    Long   linkUserId;
+    Long linkMemberUserId;
+  long  entityId;
+    String    description;
 
 }

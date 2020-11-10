@@ -1,23 +1,31 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
-import { EnumOperatingSystemType } from '../../Enums/enumOperatingSystemType';
-import { EnumDeviceType } from '../../Enums/enumDeviceType';
-import { CoreSiteModel } from './coreSiteModel';
-import { BaseEntity } from '../base/baseEntity';
+import com.google.gson.annotations.SerializedName;
 
+import ntk.android.base.entitymodel.base.BaseEntity;
 
-export class CoreDeviceModel extends BaseEntity<number>  {
-    securityKey: string;
-    expireDate?: string;
-    description: string;
-    oSType: EnumOperatingSystemType;
-    deviceType: EnumDeviceType;
-    packageName: string;
-    deviceIPsAllow: string;
-    linkApplicationId?: number;
-    linkSiteId: number;
-    // tslint:disable-next-line: variable-name
-    virtual_CmsSite: CoreSiteModel;
-    cmsSite: CoreSiteModel;
+public class CoreDeviceModel extends BaseEntity<Long> {
+    @SerializedName("securityKey")
+    public String securityKey;
+    @SerializedName("expireDate")
+    public String expireDate;
+    @SerializedName("description")
+    public String description;
+    @SerializedName("oSType")
+    public int oSType;//as EnumOperatingSystemType
+    @SerializedName("deviceType")
+    public int deviceType;//as EnumDeviceType
+    @SerializedName("packageName")
+    public String packageName;
+    @SerializedName("deviceIPsAllow")
+    public String deviceIPsAllow;
+    @SerializedName("linkApplicationId")
+    public long linkApplicationId;
+    @SerializedName("linkSiteId")
+    public long linkSiteId;// tslint:disable-next-line: variable-name
+    @SerializedName("virtual_CmsSite")
+    public CoreSiteModel virtual_CmsSite;
+    @SerializedName("cmsSite")
+    public CoreSiteModel cmsSite;
 }
 

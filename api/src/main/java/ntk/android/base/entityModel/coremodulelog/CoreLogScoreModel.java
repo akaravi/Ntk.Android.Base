@@ -1,13 +1,15 @@
-package ntk.android.base.entityModel.coremodulelog;
+package ntk.android.base.entitymodel.coremodulelog;
 
-public  class CoreLogScoreModel BaseModuleEntity<String>  {
+import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
-    moduleName: string;
-    moduleEntityName: string;
-    linkUserId?: number;
-    linkMemberUserId?: number;
-    entityId: number;
-    scorePercent: number;
+public  class CoreLogScoreModel extends BaseModuleEntity<String> {
+
+ String   moduleName;
+ String   moduleEntityName;
+ Long   linkUserId;
+ Long   linkMemberUserId;
+ long   entityId;
+ long   scorePercent;
 
 }
 

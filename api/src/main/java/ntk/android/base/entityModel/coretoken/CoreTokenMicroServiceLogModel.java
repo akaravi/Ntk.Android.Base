@@ -1,5 +1,4 @@
-import { CoreTokenMicroServiceModel } from './coreTokenMicroServiceModel';
-
-export class CoreTokenMicroServiceLogModel extends CoreTokenMicroServiceModel {
-  Action: string;
+package ntk.android.base.entitymodel.coretoken;
+public class CoreTokenMicroServiceLogModel extends CoreTokenMicroServiceModel {
+ String Action;
 }

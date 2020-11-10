@@ -1,9 +1,13 @@
-public  class CoreLogAvoidDuplicateDataEntryModel  extends ntk.android.base.entitymodel.base.BaseEntity<string> {
+package ntk.android.base.entitymodel.corelog;
 
-    moduleName: string;
-    moduleEntityName: string;
-    linkUserId?: number;
-    linkMemberUserId?: number;
-    entityId: number;
+import ntk.android.base.entitymodel.base.BaseEntity;
+
+public  class CoreLogAvoidDuplicateDataEntryModel  extends BaseEntity<String> {
+
+   String moduleName;
+    String moduleEntityName;
+   Long linkUserId;
+   Long linkMemberUserId;
+    long entityId;
 }
 

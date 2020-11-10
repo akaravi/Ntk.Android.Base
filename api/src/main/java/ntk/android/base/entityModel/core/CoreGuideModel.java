@@ -1,18 +1,29 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
-import { BaseEntity } from '../base/baseEntity';
+import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
 
-export class CoreGuideModel  extends BaseEntity<number> {
-     Title: string;
-    bodyFa: string;
-    bodyEn: string;
-    bodyAr: string;
-    linkFileIds: string;
-    linkParentId?: number;
-    // tslint:disable-next-line: variable-name
-    virtual_Parent: CoreGuideModel;
-    parent: CoreGuideModel;
-    children: CoreGuideModel[];
+import ntk.android.base.entitymodel.base.BaseEntity;
+
+public class CoreGuideModel extends BaseEntity<Long> {
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("bodyFa")
+    public String bodyFa;
+    @SerializedName("bodyEn")
+    public String bodyEn;
+    @SerializedName("bodyAr")
+    public String bodyAr;
+    @SerializedName("linkFileIds")
+    public String linkFileIds;
+    @SerializedName("linkParentId")
+    public Long linkParentId;
+    @SerializedName("virtual_Parent")
+    public CoreGuideModel virtual_Parent;
+    @SerializedName("parent")
+    public CoreGuideModel parent;
+    @SerializedName("children")
+    public List<CoreGuideModel> children;
 }
 

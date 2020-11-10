@@ -1,22 +1,25 @@
-import { EnumManageUserAccessControllerTypes } from '../../Enums/enumManageUserAccessControllerTypes';
-import { EnumManageUserAccessAreaTypes } from '../../Enums/enumManageUserAccessAreaTypes';
-import { BaseEntity } from '../base/baseEntity';
-export class UserTokenModel extends BaseEntity<string>   {
+package ntk.android.base.entitymodel.coretoken;
 
-    linkUserId: number;
-    linkMemberUserId: number;
-    linkSiteId: number;
-    deviceClientMAC: string;
-    linkDeviceId: number;
-    token: string;
-    expireDate: string;
-    userAccessAreaType: EnumManageUserAccessAreaTypes;
-    userType: EnumManageUserAccessControllerTypes;
-    userAccessAdminAllowToAllData: boolean;
-    userAccessAdminAllowToProfessionalData: boolean;
-    rememberOnDevice: boolean;
-    browserLanguage: string;
-    userLanguage: number;
+import ntk.android.base.entitymodel.base.BaseEntity;
+import ntk.android.base.entitymodel.enums.EnumManageUserAccessAreaTypes;
+import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
+
+public class UserTokenModel extends BaseEntity<String> {
+
+    long linkUserId;
+    long linkMemberUserId;
+    long linkSiteId;
+    String deviceClientMAC;
+    long linkDeviceId;
+    String token;
+    String expireDate;
+    EnumManageUserAccessAreaTypes userAccessAreaType;
+    EnumManageUserAccessControllerTypes userType;
+    boolean userAccessAdminAllowToAllData;
+    boolean userAccessAdminAllowToProfessionalData;
+    boolean rememberOnDevice;
+    String browserLanguage;
+    int userLanguage;
 
 
 }

@@ -1,17 +1,25 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
-import { CoreSiteCategoryModel } from './coreSiteCategoryModel';
-import { CoreModuleModel } from './coreModuleModel';
-import { BaseEntity } from '../base/baseEntity';
-export class CoreSiteCategoryCmsModuleModel  extends BaseEntity<number> {
+import com.google.gson.annotations.SerializedName;
 
-  linkCmsSiteCategoryId: number;
-  // tslint:disable-next-line: variable-name
-  virtual_CmsSiteCategory: CoreSiteCategoryModel;
-  cmsSiteCategory: CoreSiteCategoryModel;
-  linkCmsModuleId: number;
-  // tslint:disable-next-line: variable-name
-  virtual_CmsModule: CoreModuleModel;
-  cmsModule: CoreModuleModel;
-  configValuesJson: string;
+import ntk.android.base.entitymodel.base.BaseEntity;
+
+public class CoreSiteCategoryCmsModuleModel extends BaseEntity<Long> {
+
+    @SerializedName("linkCmsSiteCategoryId")
+    public long linkCmsSiteCategoryId;
+
+    @SerializedName("virtual_CmsSiteCategory")
+    public CoreSiteCategoryModel virtual_CmsSiteCategory;
+    @SerializedName("cmsSiteCategory")
+    public CoreSiteCategoryModel cmsSiteCategory;
+    @SerializedName("linkCmsModuleId")
+    public Long linkCmsModuleId;
+
+    @SerializedName("virtual_CmsModule")
+    public CoreModuleModel virtual_CmsModule;
+    @SerializedName("cmsModule")
+    public CoreModuleModel cmsModule;
+    @SerializedName("configValuesJson")
+    public String configValuesJson;
 }

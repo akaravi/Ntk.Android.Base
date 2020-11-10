@@ -1,17 +1,20 @@
-import { BaseModuleEntity } from '../base/baseModuleEntity';
-import { CoreModuleTagModel } from './coreModuleTagModel';
+package ntk.android.base.entitymodel.coremodulemain;
 
-public class CoreModuleTagCategoryModel extends BaseModuleEntity<number> {
-  Title: string;
-  TitleResourceLanguage: string;
-  Description: string;
-  FontIcon: string;
-  LinkParentIdNode: string;
-  LinkParentId: number;
-  Category: CoreModuleTagCategoryModel;
-  // tslint:disable-next-line: variable-name
-  virtual_Category: CoreModuleTagCategoryModel;
-  Children: CoreModuleTagCategoryModel[];
-  Tags: CoreModuleTagModel[];
+import java.util.List;
+
+import ntk.android.base.entitymodel.base.BaseModuleEntity;
+
+public class CoreModuleTagCategoryModel extends BaseModuleEntity<Long> {
+    String Title;
+    String TitleResourceLanguage;
+    String Description;
+    String FontIcon;
+    String LinkParentIdNode;
+    long LinkParentId;
+    CoreModuleTagCategoryModel Category;
+    // tslint:disable-next-line: variable-name
+    CoreModuleTagCategoryModel virtual_Category;
+    List<CoreModuleTagCategoryModel> Children;
+    List<CoreModuleTagModel> Tags;
 
 }

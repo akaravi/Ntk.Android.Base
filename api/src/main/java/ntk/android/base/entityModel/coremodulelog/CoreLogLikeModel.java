@@ -1,13 +1,15 @@
-package ntk.android.base.entityModel.coremodulelog;
+package ntk.android.base.entitymodel.coremodulelog;
 
-public  class CoreLogLikeModel  BaseModuleEntity<String>  {
+import ntk.android.base.entitymodel.base.BaseModuleEntity;
+
+public  class CoreLogLikeModel  extends BaseModuleEntity<String> {
 
 
-    moduleName: string;
-    moduleEntityName: string;
-    linkUserId?: number;
-    linkMemberUserId?: number;
-    entityId: number;
-    likked: boolean;
-    existBeforAndChangeNow: boolean;
+  String  moduleName;
+    String   moduleEntityName;
+ Long   linkUserId;
+  Long  linkMemberUserId;
+long    entityId;
+    boolean   likked;
+    boolean  existBeforAndChangeNow;
 }

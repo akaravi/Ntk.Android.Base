@@ -1,14 +1,20 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
-import { BaseEntity } from '../base/baseEntity';
-import { CoreSiteModel } from './coreSiteModel';
+import com.google.gson.annotations.SerializedName;
 
-export class CoreSiteDomainAliasModel extends BaseEntity<number>  {
-  CmsSite: CoreSiteModel;
-  subDomain: string;
-  domain: string;
-  redirect: string;
-  linkCmsSiteId?: number;
-  // tslint:disable-next-line: variable-name
-  virtual_CmsSite: CoreSiteModel;
+import ntk.android.base.entitymodel.base.BaseEntity;
+
+public class CoreSiteDomainAliasModel extends BaseEntity<Long> {
+    public @SerializedName("")
+    CoreSiteModel CmsSite;
+    public @SerializedName("")
+    String subDomain;
+    public @SerializedName("")
+    String domain;
+    public @SerializedName("")
+    String redirect;
+    public @SerializedName("")
+    Long linkCmsSiteId;
+    public @SerializedName("")
+    CoreSiteModel virtual_CmsSite;
 }

@@ -1,11 +1,10 @@
-import { BaseEntity } from '../base/baseEntity';
-import { BaseModuleEntity } from '../base/baseModuleEntity';
-import { CoreModuleTagCategoryModel } from './coreModuleTagCategoryModel';
+package ntk.android.base.entitymodel.coremodulemain;
 
+import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
-public class CoreModuleTagModel extends BaseModuleEntity<number> {
-  Title: string;
-  LinkCategoryId: string;
-  Category: CoreModuleTagCategoryModel;
+public class CoreModuleTagModel extends BaseModuleEntity<Long> {
+String   Title;
+  String  LinkCategoryId;
+  CoreModuleTagCategoryModel Category;
 
 }

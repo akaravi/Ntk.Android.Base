@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import ntk.android.base.entitymodel.enums.EnumMenuPlaceType;
 
-class CoreCpMainMenuModel {
+public class CoreCpMainMenuModel {
     @SerializedName("Title")
     String Title;
     @SerializedName("TitleML")

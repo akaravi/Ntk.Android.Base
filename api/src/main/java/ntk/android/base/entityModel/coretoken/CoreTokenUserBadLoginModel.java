@@ -1,9 +1,9 @@
-import { UserTokenModel } from './userTokenModel';
+package ntk.android.base.entitymodel.coretoken;
 
-export class CoreTokenUserBadLoginModel extends UserTokenModel {
-  deviceId: string;
-  requestDate: string;
-  usedUsername: string;
-  usedPwd: string;
+public class CoreTokenUserBadLoginModel extends UserTokenModel {
+String  deviceId;
+String  requestDate;
+String  usedUsername;
+String  usedPwd;
 
 }

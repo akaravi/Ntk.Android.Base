@@ -1,21 +1,33 @@
-package ntk.android.base.entityModel.core;
+package ntk.android.base.entitymodel.core;
 
-import { EnumManageUserAccessControllerTypes } from '../../Enums/enumManageUserAccessControllerTypes';
-import { CoreSiteUserModel } from './coreSiteUserModel';
-import { CoreCpMainMenuCmsUserGroupModel } from './coreCpMainMenuCmsUserGroupModel';
-import { BaseEntity } from '../base/baseEntity';
-export class CoreUserGroupModel  extends BaseEntity<number>  {
+import com.google.gson.annotations.SerializedName;
 
-    TitleML: string;
+import java.util.List;
 
-    Title: string;
-    titleResourceLanguage: string;
-    description: string;
-    userType: EnumManageUserAccessControllerTypes;
-    userTypeTitle: string;
-    userTypeDescription: string;
-    cmsSiteUsers: CoreSiteUserModel[];
-    cmsCpMainMenuCmsUserGroup: CoreCpMainMenuCmsUserGroupModel[];
+import ntk.android.base.entitymodel.base.BaseEntity;
+import ntk.android.base.entitymodel.coremodulemain.CoreCpMainMenuCmsUserGroupModel;
+import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
+
+public class CoreUserGroupModel extends BaseEntity<Long> {
+
+    public @SerializedName("")
+    String TitleML;
+    public @SerializedName("")
+    String Title;
+    public @SerializedName("")
+    String titleResourceLanguage;
+    public @SerializedName("")
+    String description;
+    public @SerializedName("")
+    EnumManageUserAccessControllerTypes userType;
+    public @SerializedName("")
+    String userTypeTitle;
+    public @SerializedName("")
+    String userTypeDescription;
+    public @SerializedName("")
+    List<CoreSiteUserModel> cmsSiteUsers;
+    public @SerializedName("")
+    List<CoreCpMainMenuCmsUserGroupModel> cmsCpMainMenuCmsUserGroup;
 }
 
 
