@@ -1,13 +1,18 @@
 package ntk.android.base.entitymodel.coremodulemain;
 
+import com.google.gson.annotations.SerializedName;
+
 import ntk.android.base.entitymodel.core.CoreCpMainMenuModel;
 import ntk.android.base.entitymodel.core.CoreUserGroupModel;
 
 public class CoreCpMainMenuCmsUserGroupModel {
-   long cmsCpMainMenu_Id;
-    // tslint:disable-next-line: variable-name
-    long cmsUserGroup_Id;
-    CoreCpMainMenuModel   cmsCpMainMenu;
-    CoreUserGroupModel    cmsUserGroup;
+    @SerializedName("cmsCpMainMenu_Id")
+    public long cmsCpMainMenu_Id;
+    @SerializedName("cmsUserGroup_Id")
+    public long cmsUserGroup_Id;
+    @SerializedName("cmsCpMainMenu")
+    public CoreCpMainMenuModel cmsCpMainMenu;
+    @SerializedName("cmsUserGroup")
+    public CoreUserGroupModel cmsUserGroup;
 
 }

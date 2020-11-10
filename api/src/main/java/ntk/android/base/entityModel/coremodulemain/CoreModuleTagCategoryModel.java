@@ -1,20 +1,32 @@
 package ntk.android.base.entitymodel.coremodulemain;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class CoreModuleTagCategoryModel extends BaseModuleEntity<Long> {
-    String Title;
-    String TitleResourceLanguage;
-    String Description;
-    String FontIcon;
-    String LinkParentIdNode;
-    long LinkParentId;
-    CoreModuleTagCategoryModel Category;
-    // tslint:disable-next-line: variable-name
-    CoreModuleTagCategoryModel virtual_Category;
-    List<CoreModuleTagCategoryModel> Children;
-    List<CoreModuleTagModel> Tags;
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("TitleResourceLanguage")
+    public String TitleResourceLanguage;
+    @SerializedName("Description")
+    public String Description;
+    @SerializedName("FontIcon")
+    public String FontIcon;
+    @SerializedName("LinkParentIdNode")
+    public String LinkParentIdNode;
+    @SerializedName("LinkParentId")
+    public long LinkParentId;
+    @SerializedName("Category")
+    public CoreModuleTagCategoryModel Category;
+
+    @SerializedName("virtual_Category")
+    public CoreModuleTagCategoryModel virtual_Category;
+    @SerializedName("Children")
+    public List<CoreModuleTagCategoryModel> Children;
+    @SerializedName("Tags")
+    public List<CoreModuleTagModel> Tags;
 
 }
