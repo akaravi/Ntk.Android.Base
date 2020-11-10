@@ -7,15 +7,15 @@ import java.util.List;
 import ntk.android.base.entitymodel.base.BaseEntity;
 
 public class CoreSiteCategoryModel extends BaseEntity<Long> {
-    public @SerializedName("")
+    public @SerializedName("TitleML")
     String TitleML;
-    public @SerializedName("")
+    public @SerializedName("Title")
     String Title;
-    public @SerializedName("")
+    public @SerializedName("titleResourceLanguage")
     String titleResourceLanguage;
-    public @SerializedName("")
+    public @SerializedName("description")
     String description;
-    public @SerializedName("")
+    public @SerializedName("sites")
     List<CoreSiteModel> sites;
 
 }

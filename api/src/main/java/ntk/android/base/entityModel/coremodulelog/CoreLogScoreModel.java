@@ -1,15 +1,23 @@
 package ntk.android.base.entitymodel.coremodulelog;
 
+import com.google.gson.annotations.SerializedName;
+
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
-public  class CoreLogScoreModel extends BaseModuleEntity<String> {
+public class CoreLogScoreModel extends BaseModuleEntity<String> {
 
- String   moduleName;
- String   moduleEntityName;
- Long   linkUserId;
- Long   linkMemberUserId;
- long   entityId;
- long   scorePercent;
+    @SerializedName("moduleName")
+    public String moduleName;
+    @SerializedName("moduleEntityName")
+    public String moduleEntityName;
+    @SerializedName("linkUserId")
+    public Long linkUserId;
+    @SerializedName("linkMemberUserId")
+    public Long linkMemberUserId;
+    @SerializedName("entityId")
+    public long entityId;
+    @SerializedName("scorePercent")
+    public long scorePercent;
 
 }
 

@@ -8,69 +8,69 @@ import ntk.android.base.entitymodel.coremodulemain.CoreModuleSiteModel;
 import ntk.android.base.entitymodel.enums.EnumSiteStatus;
 
 public class CoreSiteModel {
-    public @SerializedName("")
+    public @SerializedName("CurrentSiteDomainUrl")
     String CurrentSiteDomainUrl;
-    public @SerializedName("")
+    public @SerializedName("MainImageSrc")
     String MainImageSrc;
 
-    public @SerializedName("")
+    public @SerializedName("expireDate")
     String expireDate;
-    public @SerializedName("")
+    public @SerializedName("linkCreatedBySiteId")
     Long linkCreatedBySiteId;
     // tslint:disable-next-line: variable-name
-    public @SerializedName("")
+    public @SerializedName("virtual_ParentCreator")
     CoreSiteModel virtual_ParentCreator;
-    public @SerializedName("")
+    public @SerializedName("parentCreator")
     CoreSiteModel parentCreator;
-    public @SerializedName("")
+    public @SerializedName("Title")
     String Title;
-    public @SerializedName("")
+    public @SerializedName("ownerSiteSetStatus")
     EnumSiteStatus ownerSiteSetStatus;
-    public @SerializedName("")
+    public @SerializedName("userLanguage")
     int userLanguage;
-    public @SerializedName("")
+    public @SerializedName("subDomain")
     String subDomain;
-    public @SerializedName("")
+    public @SerializedName("domain")
     String domain;
-    public @SerializedName("")
+    public @SerializedName("redirect")
     String redirect;
-    public @SerializedName("")
+    public @SerializedName("keyword")
     String keyword;
-    public @SerializedName("")
+    public @SerializedName("description")
     String description;
-    public @SerializedName("")
+    public @SerializedName("linkFavIconId")
     Long linkFavIconId;
-    public @SerializedName("")
+    public @SerializedName("linkSiteCategoryId")
     long linkSiteCategoryId;
 
-    public @SerializedName("")
+    public @SerializedName("virtual_CmsSiteCategory")
     CoreSiteCategoryModel virtual_CmsSiteCategory;
-    public @SerializedName("")
+    public @SerializedName("cmsSiteCategory")
     CoreSiteCategoryModel cmsSiteCategory;
-    public @SerializedName("")
+    public @SerializedName("hasAccountingForm")
     boolean hasAccountingForm;
-    public @SerializedName("")
+    public @SerializedName("viewInCmsSiteLIst")
     boolean viewInCmsSiteLIst;
-    public @SerializedName("")
+    public @SerializedName("accountingFormNo")
     long accountingFormNo;
-    public @SerializedName("")
+    public @SerializedName("accountingFormCreatedDate")
     String accountingFormCreatedDate;
-    public @SerializedName("")
+    public @SerializedName("accountingFormUpdatedDate")
     String accountingFormUpdatedDate;
-    public @SerializedName("")
+    public @SerializedName("siteUsers")
     List<CoreSiteUserModel> siteUsers;
-    public @SerializedName("")
+    public @SerializedName("moduleSites")
     List<CoreModuleSiteModel> moduleSites;
-    public @SerializedName("")
+    public @SerializedName("domainAliases")
     List<CoreSiteDomainAliasModel> domainAliases;
-    public @SerializedName("")
+    public @SerializedName("childernCreateds")
     List<CoreSiteModel> childernCreateds;
-    public @SerializedName("")
+    public @SerializedName("devices")
     List<CoreDeviceModel> devices;
-    public @SerializedName("")
+    public @SerializedName("copyright")
     String copyright;
-    public @SerializedName("")
+    public @SerializedName("webMasterEmail")
     String webMasterEmail;
-    public @SerializedName("")
+    public @SerializedName("webEditorEmail")
     String webEditorEmail;
 }

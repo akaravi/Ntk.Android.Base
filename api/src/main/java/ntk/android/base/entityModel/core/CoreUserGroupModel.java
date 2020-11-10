@@ -10,23 +10,23 @@ import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
 
 public class CoreUserGroupModel extends BaseEntity<Long> {
 
-    public @SerializedName("")
+    public @SerializedName("TitleML")
     String TitleML;
-    public @SerializedName("")
+    public @SerializedName("Title")
     String Title;
-    public @SerializedName("")
+    public @SerializedName("titleResourceLanguage")
     String titleResourceLanguage;
-    public @SerializedName("")
+    public @SerializedName("description")
     String description;
-    public @SerializedName("")
+    public @SerializedName("userType")
     EnumManageUserAccessControllerTypes userType;
-    public @SerializedName("")
+    public @SerializedName("userTypeTitle")
     String userTypeTitle;
-    public @SerializedName("")
+    public @SerializedName("userTypeDescription")
     String userTypeDescription;
-    public @SerializedName("")
+    public @SerializedName("cmsSiteUsers")
     List<CoreSiteUserModel> cmsSiteUsers;
-    public @SerializedName("")
+    public @SerializedName("cmsCpMainMenuCmsUserGroup")
     List<CoreCpMainMenuCmsUserGroupModel> cmsCpMainMenuCmsUserGroup;
 }
 

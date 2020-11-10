@@ -1,12 +1,19 @@
 package ntk.android.base.entitymodel.coremodulelog;
 
+import com.google.gson.annotations.SerializedName;
+
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
-public  class CoreLogFavoriteModel extends BaseModuleEntity<String> {
+public class CoreLogFavoriteModel extends BaseModuleEntity<String> {
 
-   String moduleName;
-    String  moduleEntityName;
-Long    linkUserId;
-  Long  linkMemberUserId;
-   long entityId;
+    @SerializedName("moduleName")
+    public String moduleName;
+    @SerializedName("moduleEntityName")
+    public String moduleEntityName;
+    @SerializedName("linkUserId")
+    public Long linkUserId;
+    @SerializedName("linkMemberUserId")
+    public Long linkMemberUserId;
+    @SerializedName("entityId")
+    public long entityId;
 }

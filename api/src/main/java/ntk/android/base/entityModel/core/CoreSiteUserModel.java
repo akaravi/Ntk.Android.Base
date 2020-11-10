@@ -5,17 +5,27 @@ import com.google.gson.annotations.SerializedName;
 import ntk.android.base.entitymodel.base.BaseEntity;
 
 public class CoreSiteUserModel extends BaseEntity<Long> {
- public @SerializedName("")    String expireDate;
- public @SerializedName("")    long linkSiteId;
- public @SerializedName("")    long linkUserId;
- public @SerializedName("")    long linkUserGroupId;
+    public @SerializedName("expireDate")
+    String expireDate;
+    public @SerializedName("linkSiteId")
+    long linkSiteId;
+    public @SerializedName("linkUserId")
+    long linkUserId;
+    public @SerializedName("linkUserGroupId")
+    long linkUserGroupId;
     // tslint:disable-next-line: variable-name
-   public @SerializedName("")  CoreSiteModel virtual_CmsSite;
-   public @SerializedName("")  CoreSiteModel cmsSite;
-   
-  public @SerializedName("")   CoreUserModel virtual_CmsUser;
-  public @SerializedName("")   CoreUserModel cmsUser;
+    public @SerializedName("virtual_CmsSite")
+    CoreSiteModel virtual_CmsSite;
+    public @SerializedName("cmsSite")
+    CoreSiteModel cmsSite;
+
+    public @SerializedName("virtual_CmsUser")
+    CoreUserModel virtual_CmsUser;
+    public @SerializedName("cmsUser")
+    CoreUserModel cmsUser;
     // tslint:disable-next-line: variable-name
- public @SerializedName("")    CoreUserGroupModel virtual_CmsUserGroup;
- public @SerializedName("")    CoreUserGroupModel cmsUserGroup;
+    public @SerializedName("virtual_CmsUserGroup")
+    CoreUserGroupModel virtual_CmsUserGroup;
+    public @SerializedName("cmsUserGroup")
+    CoreUserGroupModel cmsUserGroup;
 }

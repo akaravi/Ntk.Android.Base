@@ -1,23 +1,36 @@
 package ntk.android.base.entitymodel.coremodulemain;
 
+import com.google.gson.annotations.SerializedName;
+
 import ntk.android.base.entitymodel.base.BaseEntity;
 import ntk.android.base.entitymodel.core.CoreModuleModel;
 import ntk.android.base.entitymodel.core.CoreSiteModel;
 
 public class CoreModuleSiteModel extends BaseEntity<Long> {
-    String expireDate;
-    long linkSiteId;
-    String Title;
-    long linkModuleId;
-    String renewDate;
-    boolean hasBuyed;
-
-    CoreSiteModel virtual_CmsSite;
-    CoreSiteModel cmsSite;
-   
-    CoreModuleModel virtual_CmsModule;
-    CoreModuleModel cmsModule;
-    String moduleConfigSiteAccessValuesJson;
-    String moduleConfigSiteValuesJson;
-    String moduleSiteStorageValuesJson;
+    @SerializedName("")
+    public String expireDate;
+    @SerializedName("")
+    public long linkSiteId;
+    @SerializedName("")
+    public String Title;
+    @SerializedName("")
+    public long linkModuleId;
+    @SerializedName("")
+    public String renewDate;
+    @SerializedName("")
+    public boolean hasBuyed;
+    @SerializedName("")
+    public CoreSiteModel virtual_CmsSite;
+    @SerializedName("")
+    public CoreSiteModel cmsSite;
+    @SerializedName("")
+    public CoreModuleModel virtual_CmsModule;
+    @SerializedName("")
+    public CoreModuleModel cmsModule;
+    @SerializedName("")
+    public String moduleConfigSiteAccessValuesJson;
+    @SerializedName("")
+    public String moduleConfigSiteValuesJson;
+    @SerializedName("")
+    public String moduleSiteStorageValuesJson;
 }
