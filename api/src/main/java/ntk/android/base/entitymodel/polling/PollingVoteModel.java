@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
-class PollingVoteModel extends BaseModuleEntity<Long> {
+public class PollingVoteModel extends BaseModuleEntity<Long> {
     @SerializedName("linkPollingContentId")
     public long linkPollingContentId;
     @SerializedName("linkPollingOptionId")

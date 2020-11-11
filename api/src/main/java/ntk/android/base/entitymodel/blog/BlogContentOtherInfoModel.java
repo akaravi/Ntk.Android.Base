@@ -15,7 +15,7 @@ public class BlogContentOtherInfoModel extends BaseModuleEntity<Long> {
     @SerializedName("linkContentid")
     public long linkContentid;
     @SerializedName("typeId")
-    public Long typeId;
+    public Integer typeId;
     // tslint:disable-next-line: variable-name
     @SerializedName("virtual_Content")
     public BlogContentModel virtual_Content;
