@@ -2,6 +2,7 @@ package ntk.android.base.entitymodel.base;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FilterDataModel {
@@ -29,4 +30,13 @@ public class FilterDataModel {
 
     @SerializedName("Filters")
     public List<Filters> filters;
+
+
+
+    public FilterDataModel addFilter(Filters f) {
+        if (filters == null)
+            filters = new ArrayList<>();
+        filters.add(f);
+        return this;
+    }
 }

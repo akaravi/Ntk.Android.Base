@@ -37,7 +37,7 @@ public class NewsContentModel extends BaseModuleEntity<Long> {
     @SerializedName("scoreSumPercent")
     public long scoreSumPercent;
     @SerializedName("viewCount")
-    public long viewCount;
+    public int viewCount;
     @SerializedName("favorited")
     public boolean favorited;
     @SerializedName("mainImageSrc")
