@@ -25,7 +25,7 @@ import ntk.android.base.entitymodel.base.FilterDataModel;
 public class CmsApiServerBase<TEntity, TKey> {
     String baseUrl = "api/v1/";
     String controlerUrl;
-    Context context;
+    protected Context context;
     Map<String, String> headers;
     Class<TEntity> teClass;
 
@@ -144,7 +144,7 @@ public class CmsApiServerBase<TEntity, TKey> {
         return mMovieCache;
     }
 
-    public Observable<ErrorExceptionBase> Exist(FilterDataModel request) {
+    public Observable<ErrorExceptionBase> exist(FilterDataModel request) {
         BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
         ICmsApiServerBase().Exist(baseUrl + controlerUrl + "/Exist", headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -172,7 +172,7 @@ public class CmsApiServerBase<TEntity, TKey> {
         return mMovieCache;
     }
 
-    public Observable<ErrorExceptionBase> Count(FilterDataModel request) {
+    public Observable<ErrorExceptionBase> count(FilterDataModel request) {
         BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
         ICmsApiServerBase().Count(baseUrl + controlerUrl + "/Count", headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -200,7 +200,7 @@ public class CmsApiServerBase<TEntity, TKey> {
         return mMovieCache;
     }
 
-    public Observable<ErrorExceptionBase> ExportFile(FilterDataModel request) {
+    public Observable<ErrorExceptionBase> exportFile(FilterDataModel request) {
         BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
         ICmsApiServerBase().ExportFile(baseUrl + controlerUrl + "/ExportFile", headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -230,7 +230,7 @@ public class CmsApiServerBase<TEntity, TKey> {
         return mMovieCache;
     }
 
-    public Observable<ErrorException<TEntity>> Add(TEntity request) {
+    public Observable<ErrorException<TEntity>> add(TEntity request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
 
         ICmsApiServerBase().Add(baseUrl + controlerUrl + "/", headers, request)
@@ -266,7 +266,7 @@ public class CmsApiServerBase<TEntity, TKey> {
         return mMovieCache;
     }
 
-    public Observable<ErrorException<TEntity>> Edit(TEntity request) {
+    public Observable<ErrorException<TEntity>> edit(TEntity request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
         ICmsApiServerBase().Edit(baseUrl + controlerUrl + "/1", headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -301,7 +301,7 @@ public class CmsApiServerBase<TEntity, TKey> {
         return mMovieCache;
     }
 
-    public Observable<ErrorException<TEntity>> Delete(TKey id) {
+    public Observable<ErrorException<TEntity>> delete(TKey id) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
         ICmsApiServerBase().Delete(baseUrl + controlerUrl + "/" + id, headers)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -336,7 +336,7 @@ public class CmsApiServerBase<TEntity, TKey> {
         return mMovieCache;
     }
 
-    public Observable<ErrorException<TEntity>> Delete(List<TKey> request) {
+    public Observable<ErrorException<TEntity>> delete(List<TKey> request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
         ICmsApiServerBase().Delete(baseUrl + controlerUrl + "/DeleteList", headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
