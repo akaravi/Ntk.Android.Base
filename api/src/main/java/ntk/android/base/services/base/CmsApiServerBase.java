@@ -23,10 +23,10 @@ import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.entitymodel.base.FilterDataModel;
 
 public class CmsApiServerBase<TEntity, TKey> {
-    String baseUrl = "api/v1/";
-    String controlerUrl;
+   protected final String baseUrl = "api/v1/";
+    protected final String controlerUrl;
     protected Context context;
-    Map<String, String> headers;
+    protected Map<String, String> headers;
     Class<TEntity> teClass;
 
     public CmsApiServerBase(Context context, String controlerUrl, Class<TEntity> teClass) {
@@ -37,6 +37,12 @@ public class CmsApiServerBase<TEntity, TKey> {
 
     ICmsApiServerBase ICmsApiServerBase() {
         ICmsApiServerBase iCmsApiServerBase = new RetrofitManager(context).getRetrofitUnCached().create(ICmsApiServerBase.class);
+        return iCmsApiServerBase;
+
+    }
+
+    public <K> K getRetrofit(Class<K> kClass) {
+        K iCmsApiServerBase = new RetrofitManager(context).getRetrofitUnCached().create(kClass);
         return iCmsApiServerBase;
 
     }
