@@ -1,6 +1,6 @@
 package ntk.android.base.utill;
 
-public class UtillDate {
+public class DateUtil {
     private int day, month, year;
 
     private int jY, jM, jD;

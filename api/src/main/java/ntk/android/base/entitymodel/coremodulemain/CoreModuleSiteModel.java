@@ -10,7 +10,7 @@ public class CoreModuleSiteModel extends BaseEntity<Long> {
     @SerializedName("")
     public String expireDate;
     @SerializedName("")
-    public long linkSiteId;
+    public long LinkSiteId;
     @SerializedName("")
     public String Title;
     @SerializedName("")

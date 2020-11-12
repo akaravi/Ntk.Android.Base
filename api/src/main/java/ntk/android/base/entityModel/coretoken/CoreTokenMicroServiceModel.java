@@ -14,8 +14,8 @@ public class CoreTokenMicroServiceModel extends BaseEntity<String> {
 
     @SerializedName("linkUserId")
     public Long linkUserId;
-    @SerializedName("linkSiteId")
-    public Long linkSiteId;
+    @SerializedName("LinkSiteId")
+    public Long LinkSiteId;
     @SerializedName("deviceId")
     public String deviceId;
     @SerializedName("deviceType")

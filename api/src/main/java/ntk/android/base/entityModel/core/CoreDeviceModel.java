@@ -21,8 +21,8 @@ public class CoreDeviceModel extends BaseEntity<Long> {
     public String deviceIPsAllow;
     @SerializedName("linkApplicationId")
     public long linkApplicationId;
-    @SerializedName("linkSiteId")
-    public long linkSiteId;// tslint:disable-next-line: variable-name
+    @SerializedName("LinkSiteId")
+    public long LinkSiteId;// tslint:disable-next-line: variable-name
     @SerializedName("virtual_CmsSite")
     public CoreSiteModel virtual_CmsSite;
     @SerializedName("cmsSite")

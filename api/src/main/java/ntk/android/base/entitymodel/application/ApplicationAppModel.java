@@ -11,111 +11,111 @@ import ntk.android.base.entitymodel.enums.EnumBuildStatusType;
 public class ApplicationAppModel extends BaseModuleEntity<Long> {
 
 
-    @SerializedName("linkSiteId")
-    public long linkSiteId;
-    @SerializedName("appKey")
-    public String appKey;
-    @SerializedName("expireDate")
-    public String expireDate;
-    @SerializedName("linkFileIdIcon")
-    public long linkFileIdIcon;
-    @SerializedName("linkFileIdLogo")
-    public long linkFileIdLogo;
-    @SerializedName("linkFileIdSplashScreen")
-    public long linkFileIdSplashScreen;
-    @SerializedName("title")
-    public String title;
-    @SerializedName("appVersion")
-    public int appVersion;
-    @SerializedName("isPublished")
-    public boolean isPublished;
-    @SerializedName("linkSourceId")
-    public long linkSourceId;
-    @SerializedName("virtual_Source")
-    public ApplicationSourceModel virtual_Source;
-    @SerializedName("source")
-    public ApplicationSourceModel source;
-    @SerializedName("downloadCount")
-    public int downloadCount;
-    @SerializedName("isGlobalUser")
-    public boolean isGlobalUser;
-    @SerializedName("checkUpdate")
-    public boolean checkUpdate;
-    @SerializedName("forceUpdate")
-    public boolean forceUpdate;
-    @SerializedName("qrCode")
-    public String qrCode;
-    @SerializedName("lastBuildAppKey")
-    public String lastBuildAppKey;
-    @SerializedName("lastBuildStatus")
-    public EnumBuildStatusType lastBuildStatus;
-    @SerializedName("lastNotificationOrderDate")
-    public String lastNotificationOrderDate;
-    @SerializedName("lastBuildOrderDate")
-    public String lastBuildOrderDate;
-    @SerializedName("lastBuildRunDate")
-    public String lastBuildRunDate;
-    @SerializedName("lastBuildEndDate")
-    public String lastBuildEndDate;
-    @SerializedName("lastBuildErrorMessage")
-    public String lastBuildErrorMessage;
-    @SerializedName("lastSuccessfullyBuildDate")
-    public String lastSuccessfullyBuildDate;
-    @SerializedName("layoutValues")
-    public List<ApplicationLayoutValueModel> layoutValues;
-    @SerializedName("buildCount")
-    public int buildCount;
-    @SerializedName("linkThemeConfigId")
-    public long linkThemeConfigId;
-    @SerializedName("virtual_ThemeConfig")
-    public ApplicationThemeConfigModel virtual_ThemeConfig;
-    @SerializedName("themeConfig")
-    public ApplicationThemeConfigModel themeConfig;
-    @SerializedName("configBuilderAdminJsonValues")
-    public String configBuilderAdminJsonValues;
-    @SerializedName("configRuntimeAdminJsonValues")
-    public String configRuntimeAdminJsonValues;
-    @SerializedName("configBuilderSiteJsonValues")
-    public String configBuilderSiteJsonValues;
-    @SerializedName("configRuntimeSiteJsonValues")
-    public String configRuntimeSiteJsonValues;
-    @SerializedName("scoreClick")
-    public int scoreClick;
-    @SerializedName("scoreSumPercent")
-    public long scoreSumPercent;
-    @SerializedName("adminConfigFormFormatter")
-    public List<GetPropertiesInfoModel> adminConfigFormFormatter;
+    @SerializedName("LinkSiteId")
+    public Long LinkSiteId;
+    @SerializedName("AppKey")
+    public String AppKey;
+    @SerializedName("ExpireDate")
+    public String ExpireDate;
+    @SerializedName("LinkFileIdIcon")
+    public Long LinkFileIdIcon;
+    @SerializedName("LinkFileIdLogo")
+    public Long LinkFileIdLogo;
+    @SerializedName("LinkFileIdSplashScreen")
+    public Long LinkFileIdSplashScreen;
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("AppVersion")
+    public int AppVersion;
+    @SerializedName("IsPublished")
+    public boolean IsPublished;
+    @SerializedName("LinkSourceId")
+    public Long LinkSourceId;
+    @SerializedName("Virtual_Source")
+    public ApplicationSourceModel Virtual_Source;
+    @SerializedName("Source")
+    public ApplicationSourceModel Source;
+    @SerializedName("DownloadCount")
+    public int DownloadCount;
+    @SerializedName("IsGlobalUser")
+    public boolean IsGlobalUser;
+    @SerializedName("CheckUpdate")
+    public boolean CheckUpdate;
+    @SerializedName("ForceUpdate")
+    public boolean ForceUpdate;
+    @SerializedName("QrCode")
+    public String QrCode;
+    @SerializedName("LastBuildAppKey")
+    public String LastBuildAppKey;
+    @SerializedName("LastBuildStatus")
+    public EnumBuildStatusType LastBuildStatus;
+    @SerializedName("LastNotificationOrderDate")
+    public String LastNotificationOrderDate;
+    @SerializedName("LastBuildOrderDate")
+    public String LastBuildOrderDate;
+    @SerializedName("LastBuildRunDate")
+    public String LastBuildRunDate;
+    @SerializedName("LastBuildEndDate")
+    public String LastBuildEndDate;
+    @SerializedName("LastBuildErrorMessage")
+    public String LastBuildErrorMessage;
+    @SerializedName("LastSuccessfullyBuildDate")
+    public String LastSuccessfullyBuildDate;
+    @SerializedName("LayoutValues")
+    public List<ApplicationLayoutValueModel> LayoutValues;
+    @SerializedName("BuildCount")
+    public int BuildCount;
+    @SerializedName("LinkThemeConfigId")
+    public Long LinkThemeConfigId;
+    @SerializedName("Virtual_ThemeConfig")
+    public ApplicationThemeConfigModel Virtual_ThemeConfig;
+    @SerializedName("ThemeConfig")
+    public ApplicationThemeConfigModel ThemeConfig;
+    @SerializedName("ConfigBuilderAdminJsonValues")
+    public String ConfigBuilderAdminJsonValues;
+    @SerializedName("ConfigRuntimeAdminJsonValues")
+    public String ConfigRuntimeAdminJsonValues;
+    @SerializedName("ConfigBuilderSiteJsonValues")
+    public String ConfigBuilderSiteJsonValues;
+    @SerializedName("ConfigRuntimeSiteJsonValues")
+    public String ConfigRuntimeSiteJsonValues;
+    @SerializedName("ScoreClick")
+    public int ScoreClick;
+    @SerializedName("ScoreSumPercent")
+    public Long ScoreSumPercent;
+    @SerializedName("AdminConfigFormFormatter")
+    public List<GetPropertiesInfoModel> AdminConfigFormFormatter;
     @SerializedName("userConfigFormFormatter")
-    public List<GetPropertiesInfoModel> userConfigFormFormatter;
-    @SerializedName("themeConfigJsonValues")
-    public String themeConfigJsonValues;
-    @SerializedName("buildKey1String")
-    public String buildKey1String;
-    @SerializedName("buildKey1Value")
-    public String buildKey1Value;
-    @SerializedName("buildKey2String")
-    public String buildKey2String;
-    @SerializedName("buildKey2Value")
-    public String buildKey2Value;
-    @SerializedName("buildKey3String")
-    public String buildKey3String;
-    @SerializedName("buildKey3Value")
-    public String buildKey3Value;
-    @SerializedName("buildKey4String")
-    public String buildKey4String;
-    @SerializedName("buildKey4Value")
-    public String buildKey4Value;
-    @SerializedName("buildKey5String")
-    public String buildKey5String;
-    @SerializedName("buildKey5Value")
-    public String buildKey5Value;
-    @SerializedName("downloadLinkSrcCustomize")
-    public String downloadLinkSrcCustomize;
+    public List<GetPropertiesInfoModel> UserConfigFormFormatter;
+    @SerializedName("ThemeConfigJsonValues")
+    public String ThemeConfigJsonValues;
+    @SerializedName("BuildKey1String")
+    public String BuildKey1String;
+    @SerializedName("BuildKey1Value")
+    public String BuildKey1Value;
+    @SerializedName("BuildKey2String")
+    public String BuildKey2String;
+    @SerializedName("BuildKey2Value")
+    public String BuildKey2Value;
+    @SerializedName("BuildKey3String")
+    public String BuildKey3String;
+    @SerializedName("BuildKey3Value")
+    public String BuildKey3Value;
+    @SerializedName("BuildKey4String")
+    public String BuildKey4String;
+    @SerializedName("BuildKey4Value")
+    public String BuildKey4Value;
+    @SerializedName("BuildKey5String")
+    public String BuildKey5String;
+    @SerializedName("BuildKey5Value")
+    public String BuildKey5Value;
+    @SerializedName("DownloadLinkSrcCustomize")
+    public String DownloadLinkSrcCustomize;
     @SerializedName("downloadLinksrc")
-    public String downloadLinksrc;
-    @SerializedName("downloadLinksrcByDomain")
-    public String downloadLinksrcByDomain;
-    @SerializedName("filePathOnServer")
-    public String filePathOnServer;
+    public String DownloadLinksrc;
+    @SerializedName("DownloadLinksrcByDomain")
+    public String DownloadLinksrcByDomain;
+    @SerializedName("FilePathOnServer")
+    public String FilePathOnServer;
 
 }

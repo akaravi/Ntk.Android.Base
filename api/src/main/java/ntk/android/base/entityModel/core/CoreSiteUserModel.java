@@ -7,8 +7,8 @@ import ntk.android.base.entitymodel.base.BaseEntity;
 public class CoreSiteUserModel extends BaseEntity<Long> {
     public @SerializedName("expireDate")
     String expireDate;
-    public @SerializedName("linkSiteId")
-    long linkSiteId;
+    public @SerializedName("LinkSiteId")
+    long LinkSiteId;
     public @SerializedName("linkUserId")
     long linkUserId;
     public @SerializedName("linkUserGroupId")

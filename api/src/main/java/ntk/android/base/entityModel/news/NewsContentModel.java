@@ -14,7 +14,7 @@ public class NewsContentModel extends BaseModuleEntity<Long> {
     public String Title;
     @SerializedName("Description")
     public String Description;
-    @SerializedName("body")
+    @SerializedName("Body")
     public String body;
     @SerializedName("fromDate")
     public String fromDate;

@@ -8,11 +8,11 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 import ntk.android.base.entitymodel.enums.EnumTicketStatus;
 
 public class TicketingTaskModel extends BaseModuleEntity<Long> {
-    @SerializedName("expireDate")
+    @SerializedName("ExpireDate")
     public String expireDate;
-    @SerializedName("title")
+    @SerializedName("Title")
     public String title;
-    @SerializedName("htmlBody")
+    @SerializedName("HtmlBody")
     public String htmlBody;
     @SerializedName("FullName")
     public String FullName;
@@ -20,33 +20,33 @@ public class TicketingTaskModel extends BaseModuleEntity<Long> {
     public String PhoneNo;
     @SerializedName("Email")
     public String Email;
-    @SerializedName("priority")
+    @SerializedName("Priority")
     public int priority;//as EnumTicketingDepartemenPriority
-    @SerializedName("linkCmsUserId")
+    @SerializedName("LinkCmsUserId")
     public Long linkCmsUserId;
-    @SerializedName("linkMemberUserId")
+    @SerializedName("LinkMemberUserId")
     public Long linkMemberUserId;
-    @SerializedName("linkTicketingDepartemenId")
+    @SerializedName("LinkTicketingDepartemenId")
     public Long linkTicketingDepartemenId;
-    @SerializedName("ticketStatus")
+    @SerializedName("TicketStatus")
     public int ticketStatus;// same as EnumTicketStatus
-    @SerializedName("userIpAddress")
+    @SerializedName("UserIpAddress")
     public String userIpAddress;
-    @SerializedName("deviceInformation")
+    @SerializedName("DeviceInformation")
     public String deviceInformation;
-    @SerializedName("virtual_Departemen")
+    @SerializedName("Virtual_Departemen")
     public TicketingDepartemenModel virtual_Departemen;
-    @SerializedName("departemen")
+    @SerializedName("Departemen")
     public TicketingDepartemenModel departemen;
-    @SerializedName("linkOperatorId")
+    @SerializedName("LinkOperatorId")
     public Long linkOperatorId;
-    @SerializedName("answers")
+    @SerializedName("Answers")
     public List<TicketingAnswerModel> answers;
-    @SerializedName("ticketingDepartemenDefaultAnswerBody")
+    @SerializedName("TicketingDepartemenDefaultAnswerBody")
     public String ticketingDepartemenDefaultAnswerBody;
-    @SerializedName("linkFileIds")
+    @SerializedName("LinkFileIds")
     public String linkFileIds;
-    @SerializedName("linkFileIdsSrc")
+    @SerializedName("LinkFileIdsSrc")
     public List<String> linkFileIdsSrc;
 }
 

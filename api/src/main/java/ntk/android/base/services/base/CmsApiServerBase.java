@@ -2,6 +2,7 @@ package ntk.android.base.services.base;
 
 import android.content.Context;
 
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -23,7 +24,7 @@ import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.entitymodel.base.FilterDataModel;
 
 public class CmsApiServerBase<TEntity, TKey> {
-   protected final String baseUrl = "api/v1/";
+    protected final String baseUrl = "api/v1/";
     protected final String controlerUrl;
     protected Context context;
     protected Map<String, String> headers;
@@ -62,6 +63,8 @@ public class CmsApiServerBase<TEntity, TKey> {
                 Gson gson = new GsonBuilder()
                         .enableComplexMapKeySerialization()
                         .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                        .setExclusionStrategies()
                         .create();
                 o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
                 o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
@@ -97,6 +100,8 @@ public class CmsApiServerBase<TEntity, TKey> {
                 Gson gson = new GsonBuilder()
                         .enableComplexMapKeySerialization()
                         .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                        .setExclusionStrategies()
                         .create();
                 o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
                 o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
@@ -131,6 +136,8 @@ public class CmsApiServerBase<TEntity, TKey> {
                 Gson gson = new GsonBuilder()
                         .enableComplexMapKeySerialization()
                         .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                        .setExclusionStrategies()
                         .create();
                 o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
                 o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
@@ -252,6 +259,8 @@ public class CmsApiServerBase<TEntity, TKey> {
                 Gson gson = new GsonBuilder()
                         .enableComplexMapKeySerialization()
                         .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                        .setExclusionStrategies()
                         .create();
                 o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
                 o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
@@ -287,6 +296,8 @@ public class CmsApiServerBase<TEntity, TKey> {
                 Gson gson = new GsonBuilder()
                         .enableComplexMapKeySerialization()
                         .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                        .setExclusionStrategies()
                         .create();
                 o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
                 o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
@@ -322,6 +333,8 @@ public class CmsApiServerBase<TEntity, TKey> {
                 Gson gson = new GsonBuilder()
                         .enableComplexMapKeySerialization()
                         .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                        .setExclusionStrategies()
                         .create();
                 o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
                 o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
@@ -357,6 +370,8 @@ public class CmsApiServerBase<TEntity, TKey> {
                 Gson gson = new GsonBuilder()
                         .enableComplexMapKeySerialization()
                         .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                        .setExclusionStrategies()
                         .create();
                 o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
                 o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));

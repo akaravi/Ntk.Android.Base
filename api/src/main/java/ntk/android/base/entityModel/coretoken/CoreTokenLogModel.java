@@ -15,8 +15,8 @@ public class CoreTokenLogModel extends BaseEntity<String> {
     public long linkUserId;
     @SerializedName("linkMemberUserId")
     public long linkMemberUserId;
-    @SerializedName("linkSiteId")
-    public long linkSiteId;
+    @SerializedName("LinkSiteId")
+    public long LinkSiteId;
     @SerializedName("deviceClientMAC")
     public String deviceClientMAC;
     @SerializedName("linkDeviceId")

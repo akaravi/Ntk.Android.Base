@@ -10,10 +10,13 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class AppUtill {
 
     public static boolean isNetworkAvailable(Context context) {
-        if(context == null)  return false;
+        if (context == null) return false;
 
 
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -28,13 +31,11 @@ public class AppUtill {
                         return true;
                     } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
                         return true;
-                    }  else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)){
+                    } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
                         return true;
                     }
                 }
-            }
-
-            else {
+            } else {
 
                 try {
                     NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
@@ -47,7 +48,7 @@ public class AppUtill {
                 }
             }
         }
-        Log.i("update_statut","Network is available : FALSE ");
+        Log.i("update_statut", "Network is available : FALSE ");
         return false;
     }
 
@@ -93,6 +94,10 @@ public class AppUtill {
         return version;
     }
 
+    public static String GregorianToPersian(Date d) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        return GregorianToPersian(sdf.format(d));
+    }
 
     public static String GregorianToPersian(String value) {
         String[] Value = value.split("T");
@@ -104,7 +109,7 @@ public class AppUtill {
             int m = Integer.parseInt(date[1]);
             int d = Integer.parseInt(date[2]);
             if (e != 0 || m != 0 || d != 0) {
-                UtillDate roozh = new UtillDate();
+                DateUtil roozh = new DateUtil();
                 roozh.GregorianToPersian(e, m, d);
                 result = roozh.toString();
                 result = result.replace("-", "/");
