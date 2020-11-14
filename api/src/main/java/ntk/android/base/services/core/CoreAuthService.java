@@ -12,14 +12,15 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.BaseNtkApplication;
-import ntk.android.base.entitymodel.base.TokenInfoModel;
 import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.RetrofitManager;
+import ntk.android.base.dtomodel.core.AuthUserSignUpModel;
 import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.base.TokenInfoModel;
+import ntk.android.base.entitymodel.core.CoreUserModel;
 import ntk.android.base.entitymodel.enums.EnumDeviceType;
 import ntk.android.base.entitymodel.enums.EnumOperatingSystemType;
-import ntk.android.base.utill.EasyPreference;
 
 public class CoreAuthService {
     private final Map<String, String> headers;
@@ -41,8 +42,8 @@ public class CoreAuthService {
 
     public Observable<ErrorException<TokenInfoModel>> getTokenDevice(TokenDeviceClientInfoDtoModel request) {
         BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
-        Observable<ErrorException<TokenInfoModel>> tokenDevice = Icore().getTokenDevice(baseUrl + controlerUrl + "/GetTokenDevice", headers, request);
-        tokenDevice.observeOn(AndroidSchedulers.mainThread())
+        Icore().getTokenDevice(baseUrl + controlerUrl + "/GetTokenDevice", headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<TokenInfoModel>>() {
             @Override
             public void onSubscribe(@NonNull Disposable d) {
@@ -50,12 +51,12 @@ public class CoreAuthService {
 
             @Override
             public void onNext(@NonNull ErrorException<TokenInfoModel> o) {
-                if (o.IsSuccess){
-                    new ConfigRestHeader().replaceToken(context,o.Item.DeviceToken);
+                if (o.IsSuccess) {
+                    new ConfigRestHeader().replaceToken(context, o.Item.DeviceToken);
                     mMovieCache.onNext(o);
-                }else
+                } else
 
-                mMovieCache.onError(new Exception("Ntk Exepction:"+o.ErrorMessage));
+                    mMovieCache.onError(new Exception("Ntk Exepction:" + o.ErrorMessage));
             }
 
             @Override
@@ -77,5 +78,33 @@ public class CoreAuthService {
         request.PackageName = BaseNtkApplication.get().getPackageName();
         request.SecurityKey = "123456789";
         return getTokenDevice(request);
+    }
+
+    public Observable<ErrorException<CoreUserModel>> signUpUser(AuthUserSignUpModel model) {
+        BehaviorSubject<ErrorException<CoreUserModel>> mMovieCache = BehaviorSubject.create();
+        Icore().signupUser(baseUrl + controlerUrl + "/signup", headers, model)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<CoreUserModel>>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException<CoreUserModel> tokenInfoModelErrorException) {
+                mMovieCache.onNext(tokenInfoModelErrorException);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
     }
 }

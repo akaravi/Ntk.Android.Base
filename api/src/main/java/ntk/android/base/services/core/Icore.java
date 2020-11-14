@@ -14,6 +14,7 @@ import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.entitymodel.base.TokenInfoModel;
+import ntk.android.base.entitymodel.core.CoreUserModel;
 import retrofit2.http.Body;
 import retrofit2.http.HeaderMap;
 import retrofit2.http.Headers;
@@ -26,8 +27,10 @@ interface Icore {
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
     Observable<ErrorException<TokenInfoModel>> getTokenDevice( @Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body TokenDeviceClientInfoDtoModel request);
-
-    Observable<ErrorException<TokenInfoModel>> signupUser(AuthUserSignUpModel model);
+    
+    @POST("{cpath}")
+    @Headers({"content-type: application/json"})
+    Observable<ErrorException<CoreUserModel>> signupUser(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthUserSignUpModel model);
 
     Observable<ErrorException<TokenInfoModel>> signinUser(AuthUserSignInModel model);
 
