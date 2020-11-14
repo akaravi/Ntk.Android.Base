@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
-class ApplicationIntroModel extends BaseModuleEntity<Long> {
+public class ApplicationIntroModel extends BaseModuleEntity<Long> {
     @SerializedName("title")
     public String title;
     @SerializedName("description")

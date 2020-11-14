@@ -37,8 +37,7 @@ public class CmsApiServerBase<TEntity, TKey> {
     }
 
     ICmsApiServerBase ICmsApiServerBase() {
-        ICmsApiServerBase iCmsApiServerBase = new RetrofitManager(context).getRetrofitUnCached().create(ICmsApiServerBase.class);
-        return iCmsApiServerBase;
+        return new RetrofitManager(context).getRetrofitUnCached().create(ICmsApiServerBase.class);
 
     }
 
