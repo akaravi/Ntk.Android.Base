@@ -20,24 +20,24 @@ public interface IHyperShopMicroService {
 
     @POST("{cpath}")//ContentGetAll
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<HyperShopContentModel>> ContentGetAll(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
+    Observable<ErrorException<HyperShopContentModel>> ContentGetAll(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @GET("{cpath}")//ContentGetOne/id
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<HyperShopContentModel>> ContentGetOne(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
+    Observable<ErrorException<HyperShopContentModel>> ContentGetOne(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers);
 
 
     @POST("{cpath}")//CategoryGetAll
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<HyperShopCategoryModel>> CategoryGetAll(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
+    Observable<ErrorException<HyperShopCategoryModel>> CategoryGetAll(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @GET("{cpath}")//CategoryGetOne/id
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<HyperShopCategoryModel>> CategoryGetOne(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
+    Observable<ErrorException<HyperShopCategoryModel>> CategoryGetOne(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers);
 
 
     @POST("{cpath}")//OrderAdd
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<HyperShopOrderModel>> OrderAdd(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
+    Observable<ErrorException<HyperShopOrderModel>> OrderAdd(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
 }

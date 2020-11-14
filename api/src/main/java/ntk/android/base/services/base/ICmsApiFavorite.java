@@ -18,13 +18,13 @@ interface ICmsApiFavorite<TEntity, TKey> {
 
     @GET("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> AddFavorite(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
+    Observable<ErrorExceptionBase> AddFavorite(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers);
 
     @GET("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> FavoriteRemove(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers);
+    Observable<ErrorExceptionBase> FavoriteRemove(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> GetFavoriteList(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
+    Observable<ErrorException> GetFavoriteList(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 }

@@ -15,6 +15,6 @@ interface ICmsApiScoreApi {
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> ScoreClick(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body ScoreClickDtoModel request);
+    Observable<ErrorExceptionBase> ScoreClick(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body ScoreClickDtoModel request);
 
 }

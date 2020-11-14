@@ -15,6 +15,6 @@ import retrofit2.http.Path;
 public interface ICmsApiPolling {
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<PollingVoteModel>> AddBatch(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body List<PollingVoteModel> request);
+    Observable<ErrorException<PollingVoteModel>> AddBatch(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body List<PollingVoteModel> request);
 
 }

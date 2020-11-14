@@ -18,7 +18,7 @@ import retrofit2.http.Path;
 interface ICmsApiApplication {
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    public Observable<ErrorExceptionBase> ScoreClick(@Path("cpath") String cpath, @HeaderMap Map<String, String> headers, @Body ApplicationScoreDtoModel request);
+    public Observable<ErrorExceptionBase> ScoreClick( @Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body ApplicationScoreDtoModel request);
 
     //notice : this api moved from prev api implementation
     @POST("api/v1/app/")
