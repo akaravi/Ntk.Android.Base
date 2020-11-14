@@ -20,7 +20,7 @@ public interface ICmsApiServerBase<TEntity,TKey> {
 
     @GET("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> getViewModel(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
+    Observable<ErrorException> getViewModel(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
@@ -29,7 +29,7 @@ public interface ICmsApiServerBase<TEntity,TKey> {
 
     @GET("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> getViewModel(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers);
+    Observable<ErrorException> getOne(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
@@ -45,11 +45,11 @@ public interface ICmsApiServerBase<TEntity,TKey> {
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> Add(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
+    Observable<ErrorException> Add(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body Object request);
 
     @PUT("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> Edit(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body TEntity request);
+    Observable<ErrorException> Edit(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body Object request);
 
     @DELETE("{cpath}")
     @Headers({"content-type: application/json"})
@@ -57,5 +57,5 @@ public interface ICmsApiServerBase<TEntity,TKey> {
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> Delete(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body List<TKey> request);
+    Observable<ErrorException> Delete(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body List<Object> request);
 }

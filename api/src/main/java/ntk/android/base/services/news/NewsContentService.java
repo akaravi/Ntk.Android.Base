@@ -2,11 +2,24 @@ package ntk.android.base.services.news;
 
 import android.content.Context;
 
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import io.reactivex.Observable;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
+import io.reactivex.subjects.BehaviorSubject;
+import ntk.android.base.config.ListOfJson;
+import ntk.android.base.config.NtkObserver;
 import ntk.android.base.dtomodel.core.ScoreClickDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.entitymodel.base.FilterDataModel;
+import ntk.android.base.entitymodel.news.NewsCommentModel;
 import ntk.android.base.entitymodel.news.NewsContentModel;
 import ntk.android.base.services.base.CmsApiFavoriteBase;
 import ntk.android.base.services.base.CmsApiScoreApi;
@@ -33,5 +46,43 @@ public class NewsContentService extends CmsApiServerBase<NewsContentModel, Long>
     }
     public  Observable<ErrorExceptionBase> scoreClick(ScoreClickDtoModel model){
       return new CmsApiScoreApi<NewsContentModel,Long>(context,"NewsContent", NewsContentModel.class)  .scoreClick(model);
+    }
+
+    public Observable<ErrorException<NewsContentModel>> getAllWithCategoryUsedInContent(FilterDataModel request) {
+        BehaviorSubject<ErrorException<NewsContentModel>> mMovieCache = BehaviorSubject.create();
+
+        ICmsApiServerBase().getAll(baseUrl+controlerUrl+"GetAllWithCategoryUseInContentId",headers,request)
+                 .observeOn(AndroidSchedulers.mainThread())
+                 .subscribeOn(Schedulers.io())
+                 .subscribe(new Observer<ErrorException>() {
+                     @Override
+                     public void onSubscribe(@NonNull Disposable d) {
+
+                     }
+
+                     @Override
+                     public void onNext(@NonNull ErrorException o) {
+                         Gson gson = new GsonBuilder()
+                                 .enableComplexMapKeySerialization()
+                                 .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                                 .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                                 .setExclusionStrategies()
+                                 .create();
+                         o.Item = gson.fromJson(gson.toJson(o.Item), NewsCommentModel.class);
+                         o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<NewsCommentModel>(NewsCommentModel.class));
+                         mMovieCache.onNext(o);
+                     }
+
+                     @Override
+                     public void onError(@NonNull Throwable e) {
+                         mMovieCache.onError(e);
+                     }
+
+                     @Override
+                     public void onComplete() {
+
+                     }
+                 });
+        return mMovieCache;
     }
 }

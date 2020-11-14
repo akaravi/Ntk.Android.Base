@@ -99,7 +99,7 @@ public class CmsApiFavoriteBase<TEntity, TKey> {
 
     public Observable<ErrorException<TEntity>> getFavoriteList(FilterDataModel request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
-        Observable<ErrorException> all = ICmsApiFavorite().GetFavoriteList(baseUrl + controlerUrl + "/getAll", headers, request);
+        Observable<ErrorException> all = ICmsApiFavorite().GetFavoriteList(baseUrl + controlerUrl + "/FavoriteList", headers, request);
         all.observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
             @Override

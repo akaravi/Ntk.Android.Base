@@ -32,11 +32,12 @@ public class CmsApiServerBase<TEntity, TKey> {
 
     public CmsApiServerBase(Context context, String controlerUrl, Class<TEntity> teClass) {
         this.controlerUrl = controlerUrl;
+        this.context=context;
         headers = new ConfigRestHeader().GetHeaders(context);
         this.teClass = teClass;
     }
 
-    ICmsApiServerBase ICmsApiServerBase() {
+    protected ICmsApiServerBase ICmsApiServerBase() {
         return new RetrofitManager(context).getRetrofitUnCached().create(ICmsApiServerBase.class);
 
     }
@@ -122,7 +123,7 @@ public class CmsApiServerBase<TEntity, TKey> {
 
     public Observable<ErrorException<TEntity>> getOne(TKey Id) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
-        Observable<ErrorException> getone = ICmsApiServerBase().getViewModel(baseUrl + controlerUrl + "/" + Id, headers);
+        Observable<ErrorException> getone = ICmsApiServerBase().getOne(baseUrl + controlerUrl + "/" + Id, headers);
         getone.observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
             @Override
@@ -132,11 +133,11 @@ public class CmsApiServerBase<TEntity, TKey> {
 
             @Override
             public void onNext(@NonNull ErrorException o) {
+                ErrorException a=new ErrorException();
                 Gson gson = new GsonBuilder()
                         .enableComplexMapKeySerialization()
                         .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
-                        .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
-                        .setExclusionStrategies()
+                        .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_DASHES)
                         .create();
                 o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
                 o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
