@@ -1,5 +1,7 @@
 package ntk.android.base.api.object.entity;
+
 import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 import ntk.android.base.api.baseModel.BaseEntity;

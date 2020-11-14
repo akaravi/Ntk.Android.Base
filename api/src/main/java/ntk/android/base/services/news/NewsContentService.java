@@ -3,7 +3,6 @@ package ntk.android.base.services.news;
 import android.content.Context;
 
 import io.reactivex.Observable;
-import ntk.android.base.api.news.entity.NewsContent;
 import ntk.android.base.dtomodel.core.ScoreClickDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;

@@ -2,9 +2,6 @@ package ntk.android.base.dtomodel.core;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.entitymodel.enums.EnumDeviceType;
-import ntk.android.base.entitymodel.enums.EnumOperatingSystemType;
-
 public class TokenDeviceClientInfoDtoModel {
     @SerializedName("SecurityKey")
   public   String SecurityKey;

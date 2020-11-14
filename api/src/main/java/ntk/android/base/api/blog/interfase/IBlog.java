@@ -1,9 +1,8 @@
 package ntk.android.base.api.blog.interfase;
 
-import io.reactivex.Observable;
-
 import java.util.Map;
 
+import io.reactivex.Observable;
 import ntk.android.base.api.blog.model.BlogCategoryListRequest;
 import ntk.android.base.api.blog.model.BlogCategoryListResponse;
 import ntk.android.base.api.blog.model.BlogCategoryTagListRequest;

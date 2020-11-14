@@ -4,7 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
-import ntk.android.base.entitymodel.base.BaseEntity;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 /**

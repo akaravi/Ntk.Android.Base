@@ -1,14 +1,12 @@
 package ntk.android.base.api.estate.interfase;
 
-import io.reactivex.Observable;
-
 import java.util.Map;
 
+import io.reactivex.Observable;
 import ntk.android.base.api.estate.model.EstateContractTypeListRequest;
 import ntk.android.base.api.estate.model.EstateContractTypeListResponse;
 import ntk.android.base.api.estate.model.EstatePropertyAddRequest;
 import ntk.android.base.api.estate.model.EstatePropertyAddResponse;
-
 import ntk.android.base.api.estate.model.EstatePropertyFavoriteAddRequest;
 import ntk.android.base.api.estate.model.EstatePropertyFavoriteAddResponse;
 import ntk.android.base.api.estate.model.EstatePropertyFavoriteListRequest;

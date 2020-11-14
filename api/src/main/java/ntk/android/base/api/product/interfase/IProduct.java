@@ -1,9 +1,8 @@
 package ntk.android.base.api.product.interfase;
 
-import io.reactivex.Observable;
-
 import java.util.Map;
 
+import io.reactivex.Observable;
 import ntk.android.base.api.product.model.ProductCategoryRequest;
 import ntk.android.base.api.product.model.ProductCategoryResponse;
 import ntk.android.base.api.product.model.ProductCategoryTagRequest;

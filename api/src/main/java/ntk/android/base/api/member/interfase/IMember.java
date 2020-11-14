@@ -1,6 +1,7 @@
 package ntk.android.base.api.member.interfase;
 
 import java.util.Map;
+
 import io.reactivex.Observable;
 import ntk.android.base.api.member.model.MemberGroupRequest;
 import ntk.android.base.api.member.model.MemberGroupResponse;

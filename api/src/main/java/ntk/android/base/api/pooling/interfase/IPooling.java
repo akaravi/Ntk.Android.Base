@@ -3,11 +3,11 @@ package ntk.android.base.api.pooling.interfase;
 import java.util.Map;
 
 import io.reactivex.Observable;
-import ntk.android.base.api.pooling.model.PoolingContentViewRequest;
-import ntk.android.base.api.pooling.model.PoolingContentViewResponse;
 import ntk.android.base.api.pooling.model.PoolingCategoryResponse;
 import ntk.android.base.api.pooling.model.PoolingContentListRequest;
 import ntk.android.base.api.pooling.model.PoolingContentListResponse;
+import ntk.android.base.api.pooling.model.PoolingContentViewRequest;
+import ntk.android.base.api.pooling.model.PoolingContentViewResponse;
 import ntk.android.base.api.pooling.model.PoolingSubmitRequest;
 import ntk.android.base.api.pooling.model.PoolingSubmitResponse;
 import retrofit2.http.Body;
