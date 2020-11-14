@@ -9,8 +9,14 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
+import ntk.android.base.api.core.model.MainCoreResponse;
+import ntk.android.base.config.NtkObserver;
 import ntk.android.base.dtomodel.application.ApplicationScoreDtoModel;
+import ntk.android.base.dtomodel.application.AboutUsDtoModel;
+import ntk.android.base.dtomodel.application.MainResponseDtoModel;
+import ntk.android.base.dtomodel.application.ThemeDtoModel;
 import ntk.android.base.entitymodel.application.ApplicationAppModel;
+import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.services.base.CmsApiServerBase;
 
@@ -20,7 +26,7 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
         super(context, "ApplicationApp", ApplicationAppModel.class);
     }
 
-    public Observable<ErrorExceptionBase> ServiceScoreClick(ApplicationScoreDtoModel model) {
+    public Observable<ErrorExceptionBase> submitAppScore(ApplicationScoreDtoModel model) {
         BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
 
         getRetrofit(ICmsApiApplication.class).ScoreClick(baseUrl + controlerUrl + "/ScoreClick", headers, model)
@@ -50,5 +56,92 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
         return mMovieCache;
     }
 
+    public Observable<ErrorException<ThemeDtoModel>> getAppTheme() {
+        BehaviorSubject<ErrorException<ThemeDtoModel>> mMovieCache = BehaviorSubject.create();
 
+        getRetrofit(ICmsApiApplication.class).GetThemeCore(headers)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<ThemeDtoModel>>() {
+
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException<ThemeDtoModel> errorExceptionBase) {
+                mMovieCache.onNext(errorExceptionBase);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
+    }
+
+    public  Observable<ErrorException<AboutUsDtoModel>>  getAboutUs() {
+        BehaviorSubject<ErrorException<AboutUsDtoModel>> mMovieCache = BehaviorSubject.create();
+
+        getRetrofit(ICmsApiApplication.class).GetAbout(headers)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<AboutUsDtoModel>>() {
+
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException<AboutUsDtoModel> errorExceptionBase) {
+                mMovieCache.onNext(errorExceptionBase);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
+    }
+
+    public Observable<ErrorException<MainResponseDtoModel>> getResponseMain() {
+        BehaviorSubject<ErrorException<MainResponseDtoModel>> mMovieCache = BehaviorSubject.create();
+
+        getRetrofit(ICmsApiApplication.class).GetResponseMain(headers)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<MainResponseDtoModel>>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException<MainResponseDtoModel> main) {
+                mMovieCache.onNext(main);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
+    }
 }
