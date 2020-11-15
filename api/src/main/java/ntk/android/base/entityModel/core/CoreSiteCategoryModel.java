@@ -11,11 +11,11 @@ public class CoreSiteCategoryModel extends BaseEntity<Long> {
     String TitleML;
     public @SerializedName("Title")
     String Title;
-    public @SerializedName("titleResourceLanguage")
-    String titleResourceLanguage;
-    public @SerializedName("description")
-    String description;
-    public @SerializedName("sites")
-    List<CoreSiteModel> sites;
+    public @SerializedName("TitleResourceLanguage")
+    String TitleResourceLanguage;
+    public @SerializedName("Description")
+    String Description;
+    public @SerializedName("Sites")
+    List<CoreSiteModel> Sites;
 
 }

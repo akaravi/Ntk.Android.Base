@@ -6,17 +6,17 @@ import ntk.android.base.entitymodel.base.BaseEntity;
 
 public class CoreLogErrorModel extends BaseEntity<String> {
 
-    @SerializedName("moduleName")
-    public String moduleName;
-    @SerializedName("moduleEntityName")
-    public String moduleEntityName;
-    @SerializedName("linkUserId")
-    public Long linkUserId;
-    @SerializedName("linkMemberUserId")
-    public Long linkMemberUserId;
-    @SerializedName("entityId")
-    public long entityId;
-    @SerializedName("description")
-    public String description;
+    @SerializedName("ModuleName")
+    public String ModuleName;
+    @SerializedName("ModuleEntityName")
+    public String ModuleEntityName;
+    @SerializedName("LinkUserId")
+    public Long LinkUserId;
+    @SerializedName("LinkMemberUserId")
+    public Long LinkMemberUserId;
+    @SerializedName("EntityId")
+    public long EntityId;
+    @SerializedName("Description")
+    public String Description;
 
 }

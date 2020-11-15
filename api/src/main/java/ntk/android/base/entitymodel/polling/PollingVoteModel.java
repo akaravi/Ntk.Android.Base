@@ -5,15 +5,15 @@ import com.google.gson.annotations.SerializedName;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class PollingVoteModel extends BaseModuleEntity<Long> {
-    @SerializedName("linkPollingContentId")
-    public long linkPollingContentId;
-    @SerializedName("linkPollingOptionId")
-    public long linkPollingOptionId;
-    @SerializedName("optionScore")
-    public long optionScore;
-    @SerializedName("deviceUserSerial")
-    public String deviceUserSerial;
-    @SerializedName("otherInfo")
-    public String otherInfo;
+    @SerializedName("LinkPollingContentId")
+    public long LinkPollingContentId;
+    @SerializedName("LinkPollingOptionId")
+    public long LinkPollingOptionId;
+    @SerializedName("OptionScore")
+    public long OptionScore;
+    @SerializedName("DeviceUserSerial")
+    public String DeviceUserSerial;
+    @SerializedName("OtherInfo")
+    public String OtherInfo;
 
 }

@@ -2,11 +2,11 @@ package ntk.android.base.entitymodel.base;
 
 import com.google.gson.annotations.SerializedName;
 
-class CaptchaModel {
-    @SerializedName("")
-    String Expire;
-    @SerializedName("")
-    String Key;
-    @SerializedName("")
-    String image;
+public class CaptchaModel {
+    @SerializedName("Expire")
+    public String Expire;
+    @SerializedName("Key")
+    public String Key;
+    @SerializedName("Image")
+    public String Image;
 }

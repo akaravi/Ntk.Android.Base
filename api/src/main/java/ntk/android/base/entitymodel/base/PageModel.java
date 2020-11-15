@@ -2,11 +2,11 @@ package ntk.android.base.entitymodel.base;
 
 import com.google.gson.annotations.SerializedName;
 
-class PageModel {
-    @SerializedName("pageNumber")
-    int pageNumber = 0;
-    @SerializedName("totalElements")
-    long totalElements;
-    @SerializedName("size")
-    int size = 20;
+public class PageModel {
+    @SerializedName("PageNumber")
+    public  int PageNumber = 0;
+    @SerializedName("TotalElements")
+    public  long TotalElements;
+    @SerializedName("Size")
+    public    int Size = 20;
 }

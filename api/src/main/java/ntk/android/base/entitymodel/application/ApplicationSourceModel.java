@@ -8,76 +8,76 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 class ApplicationSourceModel extends BaseModuleEntity<Long> {
 
-    @SerializedName("title")
-    public String title;
-    @SerializedName("linkMainImageId")
-    public Long linkMainImageId;
-    @SerializedName("defaultAppId")
-    public Long defaultAppId;
-    @SerializedName("className")
-    public String className;
-    @SerializedName("packageName")
-    public String packageName;
-    @SerializedName("forceUpdate")
-    public Boolean forceUpdate;
-    @SerializedName("linkLastSuccessfullyBuildFileId")
-    public Long linkLastSuccessfullyBuildFileId;
-    @SerializedName("lastSuccessfullyBuildDate")
-    public String lastSuccessfullyBuildDate;
-    @SerializedName("lastBuildCommandDate")
-    public String lastBuildCommandDate;
-    @SerializedName("lastBuildCommandBy")
-    public String lastBuildCommandBy;
-    @SerializedName("lastUnsuccessfullyBuildErrorDate")
-    public String lastUnsuccessfullyBuildErrorDate;
-    @SerializedName("lastUnsuccessfullyBuildErrorMessage")
-    public String lastUnsuccessfullyBuildErrorMessage;
-    @SerializedName("layouts")
-    public List<ApplicationLayoutModel> layouts;
-    @SerializedName("applications")
-    public List<ApplicationAppModel> applications;
-    @SerializedName("fireBaseServerKey")
-    public String fireBaseServerKey;
-    @SerializedName("defaultConfigBuilderAdminJsonValues")
-    public String defaultConfigBuilderAdminJsonValues;
-    @SerializedName("defaultConfigRuntimeAdminJsonValues")
-    public String defaultConfigRuntimeAdminJsonValues;
-    @SerializedName("defaultConfigBuilderSiteJsonValues")
-    public String defaultConfigBuilderSiteJsonValues;
-    @SerializedName("defaultConfigRuntimeSiteJsonValues")
-    public String defaultConfigRuntimeSiteJsonValues;
-    @SerializedName("buildKey1String")
-    public String buildKey1String;
-    @SerializedName("buildKey1Value")
-    public String buildKey1Value;
-    @SerializedName("buildKey2String")
-    public String buildKey2String;
-    @SerializedName("buildKey2Value")
-    public String buildKey2Value;
-    @SerializedName("buildKey3String")
-    public String buildKey3String;
-    @SerializedName("buildKey3Value")
-    public String buildKey3Value;
-    @SerializedName("buildKey4String")
-    public String buildKey4String;
-    @SerializedName("buildKey4Value")
-    public String buildKey4Value;
-    @SerializedName("buildKey5String")
-    public String buildKey5String;
-    @SerializedName("buildKey5Value")
-    public String buildKey5Value;
-    @SerializedName("isPublish")
-    public Boolean isPublish;
-    @SerializedName("sourceNameGit")
-    public String sourceNameGit;
-    @SerializedName("osType;")
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("LinkMainImageId")
+    public Long LinkMainImageId;
+    @SerializedName("DefaultAppId")
+    public Long DefaultAppId;
+    @SerializedName("ClassName")
+    public String ClassName;
+    @SerializedName("PackageName")
+    public String PackageName;
+    @SerializedName("ForceUpdate")
+    public Boolean ForceUpdate;
+    @SerializedName("LinkLastSuccessfullyBuildFileId")
+    public Long LinkLastSuccessfullyBuildFileId;
+    @SerializedName("LastSuccessfullyBuildDate")
+    public String LastSuccessfullyBuildDate;
+    @SerializedName("LastBuildCommandDate")
+    public String LastBuildCommandDate;
+    @SerializedName("LastBuildCommandBy")
+    public String LastBuildCommandBy;
+    @SerializedName("LastUnsuccessfullyBuildErrorDate")
+    public String LastUnsuccessfullyBuildErrorDate;
+    @SerializedName("LastUnsuccessfullyBuildErrorMessage")
+    public String LastUnsuccessfullyBuildErrorMessage;
+    @SerializedName("Layouts")
+    public List<ApplicationLayoutModel> Layouts;
+    @SerializedName("Applications")
+    public List<ApplicationAppModel> Applications;
+    @SerializedName("FireBaseServerKey")
+    public String FireBaseServerKey;
+    @SerializedName("DefaultConfigBuilderAdminJsonValues")
+    public String DefaultConfigBuilderAdminJsonValues;
+    @SerializedName("DefaultConfigRuntimeAdminJsonValues")
+    public String DefaultConfigRuntimeAdminJsonValues;
+    @SerializedName("DefaultConfigBuilderSiteJsonValues")
+    public String DefaultConfigBuilderSiteJsonValues;
+    @SerializedName("DefaultConfigRuntimeSiteJsonValues")
+    public String DefaultConfigRuntimeSiteJsonValues;
+    @SerializedName("BuildKey1String")
+    public String BuildKey1String;
+    @SerializedName("BuildKey1Value")
+    public String BuildKey1Value;
+    @SerializedName("BuildKey2String")
+    public String BuildKey2String;
+    @SerializedName("BuildKey2Value")
+    public String BuildKey2Value;
+    @SerializedName("BuildKey3String")
+    public String BuildKey3String;
+    @SerializedName("BuildKey3Value")
+    public String BuildKey3Value;
+    @SerializedName("BuildKey4String")
+    public String BuildKey4String;
+    @SerializedName("BuildKey4Value")
+    public String BuildKey4Value;
+    @SerializedName("BuildKey5String")
+    public String BuildKey5String;
+    @SerializedName("BuildKey5Value")
+    public String BuildKey5Value;
+    @SerializedName("IsPublish")
+    public Boolean IsPublish;
+    @SerializedName("SourceNameGit")
+    public String SourceNameGit;
+    @SerializedName("OsType;")
     public int osType;
-    @SerializedName("updateSourceByGit")
-    public Boolean updateSourceByGit;
-    @SerializedName("isAbilityGradleBuild")
-    public boolean isAbilityGradleBuild;
-    @SerializedName("filePathOnServer")
-    public String filePathOnServer;
+    @SerializedName("UpdateSourceByGit")
+    public Boolean UpdateSourceByGit;
+    @SerializedName("IsAbilityGradleBuild")
+    public boolean IsAbilityGradleBuild;
+    @SerializedName("FilePathOnServer")
+    public String FilePathOnServer;
 
 
 }

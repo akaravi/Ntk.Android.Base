@@ -7,31 +7,30 @@ import ntk.android.base.entitymodel.enums.EnumNotificationType;
 
 class ApplicationLogNotificationModel extends BaseModuleEntity<Long> {
 
-    @SerializedName("linkApplicationMemberId")
-    public
-    Long linkApplicationMemberId;
-    @SerializedName("memberInfo")
-    public ApplicationMemberInfoModel memberInfo;
-    @SerializedName("linkApplicationId")
-    public Long linkApplicationId;
-    @SerializedName("application")
-    public ApplicationAppModel application;
-    @SerializedName("title")
-    public String title;
-    @SerializedName("content")
-    public String content;
-    @SerializedName("contentType")
-    public EnumNotificationType contentType;
+    @SerializedName("LinkApplicationMemberId")
+    public Long LinkApplicationMemberId;
+    @SerializedName("MemberInfo")
+    public ApplicationMemberInfoModel MemberInfo;
+    @SerializedName("LinkApplicationId")
+    public Long LinkApplicationId;
+    @SerializedName("Application")
+    public ApplicationAppModel Application;
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("Content")
+    public String Content;
+    @SerializedName("ContentType")
+    public EnumNotificationType ContentType;
     @SerializedName("contentJson")
-    public String contentJson;
-    @SerializedName("contentJsonClass")
-    public String contentJsonClass;
-    @SerializedName("smallImageId")
-    public long smallImageId;
-    @SerializedName("bigImageId")
-    public long bigImageId;
-    @SerializedName("smallImageIdSrc")
-    public String smallImageIdSrc;
-    @SerializedName("bigImageIdSrc")
-    public String bigImageIdSrc;
+    public String ContentJson;
+    @SerializedName("ContentJsonClass")
+    public String ContentJsonClass;
+    @SerializedName("SmallImageId")
+    public long SmallImageId;
+    @SerializedName("BigImageId")
+    public long BigImageId;
+    @SerializedName("SmallImageIdSrc")
+    public String SmallImageIdSrc;
+    @SerializedName("BigImageIdSrc")
+    public String BigImageIdSrc;
 }

@@ -6,18 +6,18 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class ApplicationLayoutValueModel extends BaseModuleEntity<Long> {
 
-    @SerializedName("linkApplicationId")
-    public long linkApplicationId;
-    @SerializedName("virtual_Application")
-    public ApplicationAppModel virtual_Application;
-    @SerializedName("application")
-    public ApplicationAppModel application;
-    @SerializedName("linkLayoutId")
-    public long linkLayoutId;
-    @SerializedName("virtual_Layout")
-    public ApplicationLayoutModel virtual_Layout;
-    @SerializedName("layout")
-    public ApplicationLayoutModel layout;
-    @SerializedName("jsonFormValues")
-    public String jsonFormValues;
+    @SerializedName("LinkApplicationId")
+    public long LinkApplicationId;
+    @SerializedName("Virtual_Application")
+    public ApplicationAppModel Virtual_Application;
+    @SerializedName("Application")
+    public ApplicationAppModel Application;
+    @SerializedName("LinkLayoutId")
+    public long LinkLayoutId;
+    @SerializedName("Virtual_Layout")
+    public ApplicationLayoutModel Virtual_Layout;
+    @SerializedName("Layout")
+    public ApplicationLayoutModel Layout;
+    @SerializedName("JsonFormValues")
+    public String JsonFormValues;
 }

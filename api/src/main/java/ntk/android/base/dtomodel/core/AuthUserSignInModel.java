@@ -3,9 +3,9 @@ package ntk.android.base.dtomodel.core;
 import com.google.gson.annotations.SerializedName;
 
 public class AuthUserSignInModel {
-    @SerializedName("captchaKey")
+    @SerializedName("CaptchaKey")
     String captchaKey;
-    @SerializedName("captchaText")
+    @SerializedName("CaptchaText")
     String captchaText;
     @SerializedName("Email")
     String Email;
@@ -15,6 +15,6 @@ public class AuthUserSignInModel {
     boolean IsRemember;
     @SerializedName("SiteId")
     int SiteId;
-    @SerializedName("lang")
+    @SerializedName("Lang")
     String lang;
 }

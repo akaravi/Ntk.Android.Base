@@ -8,28 +8,28 @@ import ntk.android.base.entitymodel.base.feildinfo.DataFieldInfoModel;
 
 class AccessModel {
     @SerializedName("AccessDeleteRow")
-    boolean AccessDeleteRow = false;
+    public boolean AccessDeleteRow = false;
     @SerializedName("AccessWatchRow")
-    boolean AccessWatchRow = false;
+    public boolean AccessWatchRow = false;
     @SerializedName("AccessEditRow")
-    boolean AccessEditRow = false;
+    public boolean AccessEditRow = false;
     @SerializedName("AccessAddRow")
-    boolean AccessAddRow = false;
+    public boolean AccessAddRow = false;
     @SerializedName("AccessRowInPanelDemo")
-    boolean AccessRowInPanelDemo = false;
+    public boolean AccessRowInPanelDemo = false;
     @SerializedName("AccessRowWatchInSharingCategory")
-    boolean AccessRowWatchInSharingCategory = false;
+    public boolean AccessRowWatchInSharingCategory = false;
     @SerializedName("AccessWatchRowOtherSiteId")
-    boolean AccessWatchRowOtherSiteId = false;
+    public boolean AccessWatchRowOtherSiteId = false;
     @SerializedName("AccessWatchRowOtherCreatedBy")
-    boolean AccessWatchRowOtherCreatedBy = false;
+    public boolean AccessWatchRowOtherCreatedBy = false;
     @SerializedName("AccessEditRowOtherSiteId")
-    boolean AccessEditRowOtherSiteId = false;
+    public boolean AccessEditRowOtherSiteId = false;
     @SerializedName("AccessEditRowOtherCreatedBy")
-    boolean AccessEditRowOtherCreatedBy = false;
+    public boolean AccessEditRowOtherCreatedBy = false;
     @SerializedName("AccessDeleteRowOtherCreatedBy")
-    boolean AccessDeleteRowOtherCreatedBy = false;
+    public boolean AccessDeleteRowOtherCreatedBy = false;
 
     @SerializedName("FieldsInfo")
-    List<DataFieldInfoModel> FieldsInfo;
+    public List<DataFieldInfoModel> FieldsInfo;
 }

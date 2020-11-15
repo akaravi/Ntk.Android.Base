@@ -3,22 +3,22 @@ package ntk.android.base.entitymodel.core;
 import com.google.gson.annotations.SerializedName;
 
 public class CoreLocationModel {
-    @SerializedName("title")
-    String title;
-    @SerializedName("linkParentId")
-    Integer linkParentId;
-    @SerializedName("linkParentIdNode")
-    Long linkParentIdNode;
-    @SerializedName("geoLocationLatitude")
-    Long geoLocationLatitude;
-    @SerializedName("geoLocationLongitude")
-    Long geoLocationLongitude;
-    @SerializedName("locationType")
-    Integer locationType;
-    @SerializedName("virtual_Parent")
-    Object virtual_Parent;
-    @SerializedName("parent")
-    Object parent;
-    @SerializedName("children")
-    Object children;
+    @SerializedName("Title")
+    String Title;
+    @SerializedName("LinkParentId")
+    Integer LinkParentId;
+    @SerializedName("LinkParentIdNode")
+    Long LinkParentIdNode;
+    @SerializedName("GeoLocationLatitude")
+    Long GeoLocationLatitude;
+    @SerializedName("GeoLocationLongitude")
+    Long GeoLocationLongitude;
+    @SerializedName("LocationType")
+    Integer LocationType;
+    @SerializedName("Virtual_Parent")
+    Object Virtual_Parent;
+    @SerializedName("Prent")
+    Object Parent;
+    @SerializedName("Children")
+    Object Children;
 }

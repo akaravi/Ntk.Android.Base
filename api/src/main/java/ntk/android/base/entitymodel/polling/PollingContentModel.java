@@ -11,62 +11,62 @@ public class PollingContentModel extends BaseModuleEntity<Long> {
 
     @SerializedName("Source")
     public String Source;
-    @SerializedName("expireDate")
-    public String expireDate;
-    @SerializedName("viewStatisticsBeforeVote")
-    public boolean viewStatisticsBeforeVote;
-    @SerializedName("viewStatisticsAfterVote")
-    public boolean viewStatisticsAfterVote;
-    @SerializedName("virtual_Category")
-    public PollingCategoryModel virtual_Category;
-    @SerializedName("category")
-    public PollingCategoryModel category;
-    @SerializedName("body")
-    public String body;
-    @SerializedName("description")
-    public String description;
-    @SerializedName("fromDate")
-    public String fromDate;
-    @SerializedName("geolocationlatitude")
-    public Long geolocationlatitude;
-    @SerializedName("geolocationlongitude")
-    public Long geolocationlongitude;
-    @SerializedName("keyword")
-    public String keyword;
-    @SerializedName("linkCategoryId")
-    public Long linkCategoryId;
-    @SerializedName("linkFileIds")
-    public String linkFileIds;
-    @SerializedName("linkFilePodcastId")
-    public Long linkFilePodcastId;
-    @SerializedName("linkFileMovieId")
-    public Long linkFileMovieId;
-    @SerializedName("linkMainImageId")
-    public Long linkMainImageId;
-    @SerializedName("scoreClick")
-    public long scoreClick;
-    @SerializedName("scoreSumPercent")
-    public long scoreSumPercent;
-    @SerializedName("title")
-    public String title;
-    @SerializedName("viewCount")
-    public int viewCount;
-    @SerializedName("favorited")
-    public boolean favorited;
-    @SerializedName("mainImageSrc")
-    public String mainImageSrc;
-    @SerializedName("linkFilePodcastIdSrc")
-    public String linkFilePodcastIdSrc;
-    @SerializedName("linkFileMovieIdSrc")
-    public String linkFileMovieIdSrc;
-    @SerializedName("linkFileIdsSrc")
-    public String linkFileIdsSrc;
-    @SerializedName("question")
-    public String question;
-    @SerializedName("maxVoteForThisContent")
-    public long maxVoteForThisContent;
-    @SerializedName("maxVoteForEachOption")
-    public long maxVoteForEachOption;
-    @SerializedName("options")
-    public List<PollingOptionModel> options;
+    @SerializedName("ExpireDate")
+    public String ExpireDate;
+    @SerializedName("ViewStatisticsBeforeVote")
+    public boolean ViewStatisticsBeforeVote;
+    @SerializedName("ViewStatisticsAfterVote")
+    public boolean ViewStatisticsAfterVote;
+    @SerializedName("Virtual_Category")
+    public PollingCategoryModel Virtual_Category;
+    @SerializedName("Category")
+    public PollingCategoryModel Category;
+    @SerializedName("Body")
+    public String Body;
+    @SerializedName("Description")
+    public String Description;
+    @SerializedName("FromDate")
+    public String FromDate;
+    @SerializedName("Geolocationlatitude")
+    public Long Geolocationlatitude;
+    @SerializedName("Geolocationlongitude")
+    public Long Geolocationlongitude;
+    @SerializedName("Keyword")
+    public String Keyword;
+    @SerializedName("LinkCategoryId")
+    public Long LinkCategoryId;
+    @SerializedName("LinkFileIds")
+    public String LinkFileIds;
+    @SerializedName("LinkFilePodcastId")
+    public Long LinkFilePodcastId;
+    @SerializedName("LinkFileMovieId")
+    public Long LinkFileMovieId;
+    @SerializedName("LinkMainImageId")
+    public Long LinkMainImageId;
+    @SerializedName("ScoreClick")
+    public long ScoreClick;
+    @SerializedName("ScoreSumPercent")
+    public long ScoreSumPercent;
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("ViewCount")
+    public int ViewCount;
+    @SerializedName("Favorited")
+    public boolean Favorited;
+    @SerializedName("MainImageSrc")
+    public String MainImageSrc;
+    @SerializedName("LinkFilePodcastIdSrc")
+    public String LinkFilePodcastIdSrc;
+    @SerializedName("LinkFileMovieIdSrc")
+    public String LinkFileMovieIdSrc;
+    @SerializedName("LinkFileIdsSrc")
+    public String LinkFileIdsSrc;
+    @SerializedName("Question")
+    public String Question;
+    @SerializedName("MaxVoteForThisContent")
+    public long MaxVoteForThisContent;
+    @SerializedName("MaxVoteForEachOption")
+    public long MaxVoteForEachOption;
+    @SerializedName("Options")
+    public List<PollingOptionModel> Options;
 }

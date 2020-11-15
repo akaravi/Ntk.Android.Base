@@ -9,21 +9,21 @@ import ntk.android.base.entitymodel.base.BaseEntity;
 public class CoreGuideModel extends BaseEntity<Long> {
     @SerializedName("Title")
     public String Title;
-    @SerializedName("bodyFa")
-    public String bodyFa;
-    @SerializedName("bodyEn")
-    public String bodyEn;
-    @SerializedName("bodyAr")
-    public String bodyAr;
-    @SerializedName("linkFileIds")
-    public String linkFileIds;
-    @SerializedName("linkParentId")
-    public Long linkParentId;
-    @SerializedName("virtual_Parent")
-    public CoreGuideModel virtual_Parent;
-    @SerializedName("parent")
-    public CoreGuideModel parent;
-    @SerializedName("children")
-    public List<CoreGuideModel> children;
+    @SerializedName("BodyFa")
+    public String BodyFa;
+    @SerializedName("BodyEn")
+    public String BodyEn;
+    @SerializedName("BodyAr")
+    public String BodyAr;
+    @SerializedName("LinkFileIds")
+    public String LinkFileIds;
+    @SerializedName("LinkParentId")
+    public Long LinkParentId;
+    @SerializedName("Virtual_Parent")
+    public CoreGuideModel Virtual_Parent;
+    @SerializedName("Parent")
+    public CoreGuideModel Parent;
+    @SerializedName("Children")
+    public List<CoreGuideModel> Children;
 }
 

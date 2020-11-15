@@ -8,40 +8,40 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class NewsContentModel extends BaseModuleEntity<Long> {
 
-    @SerializedName("linkCategoryId")
-    public long linkCategoryId;
+    @SerializedName("LinkCategoryId")
+    public long LinkCategoryId;
     @SerializedName("Title")
     public String Title;
     @SerializedName("Description")
     public String Description;
     @SerializedName("Body")
     public String body;
-    @SerializedName("fromDate")
-    public String fromDate;
-    @SerializedName("geolocationlatitude")
-    public long geolocationlatitude;
-    @SerializedName("geolocationlongitude")
-    public long geolocationlongitude;
-    @SerializedName("keyword")
-    public String keyword;
-    @SerializedName("linkFileIds")
-    public String linkFileIds;
-    @SerializedName("linkFilePodcastId")
-    public long linkFilePodcastId;
-    @SerializedName("linkFileMovieId")
-    public long linkFileMovieId;
-    @SerializedName("linkMainImageId")
-    public long linkMainImageId;
-    @SerializedName("scoreClick")
-    public long scoreClick;
-    @SerializedName("scoreSumPercent")
-    public long scoreSumPercent;
-    @SerializedName("viewCount")
-    public int viewCount;
-    @SerializedName("favorited")
-    public boolean favorited;
-    @SerializedName("mainImageSrc")
-    public String mainImageSrc;
+    @SerializedName("FromDate")
+    public String FromDate;
+    @SerializedName("Geolocationlatitude")
+    public long Geolocationlatitude;
+    @SerializedName("Geolocationlongitude")
+    public long Geolocationlongitude;
+    @SerializedName("Keyword")
+    public String Keyword;
+    @SerializedName("LinkFileIds")
+    public String LinkFileIds;
+    @SerializedName("LinkFilePodcastId")
+    public long LinkFilePodcastId;
+    @SerializedName("LinkFileMovieId")
+    public long LinkFileMovieId;
+    @SerializedName("LinkMainImageId")
+    public long LinkMainImageId;
+    @SerializedName("ScoreClick")
+    public long ScoreClick;
+    @SerializedName("ScoreSumPercent")
+    public long ScoreSumPercent;
+    @SerializedName("ViewCount")
+    public int ViewCount;
+    @SerializedName("Favorited")
+    public boolean Favorited;
+    @SerializedName("MainImageSrc")
+    public String MainImageSrc;
     @SerializedName("ExpireDate")
     public String ExpireDate;
     @SerializedName("ModuleCoreCreatedBy")
@@ -64,16 +64,6 @@ public class NewsContentModel extends BaseModuleEntity<Long> {
     public String OtherInfos;
     @SerializedName("ContentAndParameterValues")
     public Object ContentAndParameterValues;
-    @SerializedName("LinkFileIds")
-    public String LinkFileIds;
-    @SerializedName("LinkFilePodcastId")
-    public long LinkFilePodcastId;
-    @SerializedName("LinkFileMovieId")
-    public long LinkFileMovieId;
-    @SerializedName("ScoreSumPercent")
-    public long ScoreSumPercent;
-    @SerializedName("ViewCount")
-    public long ViewCount;
     @SerializedName("LinkFilePodcastIdSrc")
     public String LinkFilePodcastIdSrc;
     @SerializedName("LinkFileMovieIdSrc")

@@ -22,8 +22,8 @@ public class CoreModuleTagCategoryModel extends BaseModuleEntity<Long> {
     @SerializedName("Category")
     public CoreModuleTagCategoryModel Category;
 
-    @SerializedName("virtual_Category")
-    public CoreModuleTagCategoryModel virtual_Category;
+    @SerializedName("Virtual_Category")
+    public CoreModuleTagCategoryModel Virtual_Category;
     @SerializedName("Children")
     public List<CoreModuleTagCategoryModel> Children;
     @SerializedName("Tags")

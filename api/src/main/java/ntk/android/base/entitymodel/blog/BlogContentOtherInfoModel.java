@@ -6,19 +6,19 @@ import ntk.android.base.api.blog.entity.BlogContent;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class BlogContentOtherInfoModel extends BaseModuleEntity<Long> {
-    @SerializedName("title")
-    public String title;
-    @SerializedName("htmlBody")
-    public String htmlBody;
-    @SerializedName("source")
-    public String source;
-    @SerializedName("linkContentid")
-    public long linkContentid;
-    @SerializedName("typeId")
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("HtmlBody")
+    public String HtmlBody;
+    @SerializedName("Source")
+    public String Source;
+    @SerializedName("LinkContentid")
+    public long LinkContentid;
+    @SerializedName("TypeId")
     public Integer typeId;
     // tslint:disable-next-line: variable-name
-    @SerializedName("virtual_Content")
-    public BlogContentModel virtual_Content;
+    @SerializedName("Virtual_Content")
+    public BlogContentModel Virtual_Content;
     @SerializedName("Content")
     public BlogContent Content;
 }

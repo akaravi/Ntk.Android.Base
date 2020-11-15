@@ -7,44 +7,44 @@ import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
 
 public class TokenInfoModel {
     @SerializedName("Token")
-  public   String Token;
+    public String Token;
     @SerializedName("DeviceToken")
     public String DeviceToken;
     @SerializedName("RefreshToken")
-    public  String RefreshToken;
+    public String RefreshToken;
 
     @SerializedName("UserId")
-    public    long UserId;
+    public long UserId;
     @SerializedName("SiteId")
-    public    long SiteId;
+    public long SiteId;
     @SerializedName("UserGroupId")
-    public    long UserGroupId;
+    public long UserGroupId;
     @SerializedName("UserTypeTitle")
-    public    String UserTypeTitle;
+    public String UserTypeTitle;
     @SerializedName("UserAccessAdminAllowToProfessionalData")
-    public   boolean UserAccessAdminAllowToProfessionalData;
+    public boolean UserAccessAdminAllowToProfessionalData;
     @SerializedName("UserAccessAdminAllowToAllData")
-    public    boolean UserAccessAdminAllowToAllData;
+    public boolean UserAccessAdminAllowToAllData;
     @SerializedName("UserType")
-    public    EnumManageUserAccessControllerTypes UserType;
+    public EnumManageUserAccessControllerTypes UserType;
     @SerializedName("UserAccessAreaType")
-    public    EnumManageUserAccessAreaTypes UserAccessAreaType;
+    public EnumManageUserAccessAreaTypes UserAccessAreaType;
     @SerializedName("Username")
-    public    String Username;
+    public String Username;
     @SerializedName("Name")
-    public   String Name;
+    public String Name;
     @SerializedName("LastName")
-    public    String LastName;
+    public String LastName;
     @SerializedName("FullName")
-    public   String FullName;
+    public String FullName;
     @SerializedName("Language")
-    public    String Language;
+    public String Language;
     @SerializedName("Domain")
-    public    String Domain;
+    public String Domain;
     @SerializedName("SubDomain")
-    public    String SubDomain;
+    public String SubDomain;
     @SerializedName("Title")
-    public    String Title;
+    public String Title;
     @SerializedName("PhotoUrl")
-    public    String PhotoUrl;
+    public String PhotoUrl;
 }

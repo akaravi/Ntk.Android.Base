@@ -5,16 +5,16 @@ import com.google.gson.annotations.SerializedName;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class TicketingFaqModel extends BaseModuleEntity<Long> {
-    @SerializedName("question")
-    public String question;
-    @SerializedName("answer")
-    public String answer;
-    @SerializedName("linkTicketingDepartemenId")
-    public Long linkTicketingDepartemenId;
+    @SerializedName("Question")
+    public String Question;
+    @SerializedName("Answer")
+    public String Answer;
+    @SerializedName("LinkTicketingDepartemenId")
+    public Long LinkTicketingDepartemenId;
     @SerializedName("virtual_TicketingDepartemen")
     public TicketingDepartemenModel virtual_TicketingDepartemen;
-    @SerializedName("ticketingDepartemen")
-    public TicketingDepartemenModel ticketingDepartemen;
-    @SerializedName("linkFileIds")
-    public String linkFileIds;
+    @SerializedName("TicketingDepartemen")
+    public TicketingDepartemenModel TicketingDepartemen;
+    @SerializedName("LinkFileIds")
+    public String LinkFileIds;
 }

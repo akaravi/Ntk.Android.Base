@@ -14,20 +14,20 @@ public class CoreUserGroupModel extends BaseEntity<Long> {
     String TitleML;
     public @SerializedName("Title")
     String Title;
-    public @SerializedName("titleResourceLanguage")
-    String titleResourceLanguage;
-    public @SerializedName("description")
-    String description;
-    public @SerializedName("userType")
-    EnumManageUserAccessControllerTypes userType;
-    public @SerializedName("userTypeTitle")
-    String userTypeTitle;
-    public @SerializedName("userTypeDescription")
-    String userTypeDescription;
-    public @SerializedName("cmsSiteUsers")
-    List<CoreSiteUserModel> cmsSiteUsers;
-    public @SerializedName("cmsCpMainMenuCmsUserGroup")
-    List<CoreCpMainMenuCmsUserGroupModel> cmsCpMainMenuCmsUserGroup;
+    public @SerializedName("TitleResourceLanguage")
+    String TitleResourceLanguage;
+    public @SerializedName("Description")
+    String Description;
+    public @SerializedName("UserType")
+    EnumManageUserAccessControllerTypes UserType;
+    public @SerializedName("UserTypeTitle")
+    String UserTypeTitle;
+    public @SerializedName("UserTypeDescription")
+    String UserTypeDescription;
+    public @SerializedName("CmsSiteUsers")
+    List<CoreSiteUserModel> CmsSiteUsers;
+    public @SerializedName("CmsCpMainMenuCmsUserGroup")
+    List<CoreCpMainMenuCmsUserGroupModel> CmsCpMainMenuCmsUserGroup;
 }
 
 

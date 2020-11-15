@@ -4,7 +4,10 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class ThemeDtoModel {
+import ntk.android.base.dtomodel.theme.ThemeConfigDtoModel;
+import ntk.android.base.dtomodel.theme.ThemeDtoModel;
+
+public class AppThemeDtoModel {
 
     @SerializedName("AppThemeId")
     public int AppThemeId;
@@ -13,8 +16,8 @@ public class ThemeDtoModel {
     public String AppThemeTypeId;
 
     @SerializedName("ThemeConfigLayout")
-    public List<ntk.android.base.api.core.entity.ThemeConfigLayout> ThemeConfigLayout;
+    public List<ThemeConfigDtoModel> ThemeConfigLayout;
 
     @SerializedName("ThemeConfigJson")
-    public ntk.android.base.api.baseModel.theme.Theme ThemeConfigJson;
+    public ThemeDtoModel ThemeConfigJson;
 }

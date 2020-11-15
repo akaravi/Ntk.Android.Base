@@ -6,7 +6,7 @@ import io.reactivex.Observable;
 import ntk.android.base.dtomodel.application.AboutUsDtoModel;
 import ntk.android.base.dtomodel.application.ApplicationScoreDtoModel;
 import ntk.android.base.dtomodel.application.MainResponseDtoModel;
-import ntk.android.base.dtomodel.application.ThemeDtoModel;
+import ntk.android.base.dtomodel.application.AppThemeDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import retrofit2.http.Body;
@@ -23,7 +23,7 @@ interface ICmsApiApplication {
     //notice : this api moved from prev api implementation
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: Theme"})
-    Observable<ErrorException<ThemeDtoModel>> GetThemeCore(@HeaderMap Map<String, String> headers);
+    Observable<ErrorException<AppThemeDtoModel>> GetThemeCore(@HeaderMap Map<String, String> headers);
 
     //notice : this api moved from prev api implementation
     @POST("api/v1/app/")

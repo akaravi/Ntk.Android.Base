@@ -5,22 +5,22 @@ import com.google.gson.annotations.SerializedName;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class BlogCommentModel extends BaseModuleEntity<Long> {
-    @SerializedName("linkContentid")
-    public long linkContentid;
+    @SerializedName("LinkContentid")
+    public long LinkContentid;
     @SerializedName("linkParentId")
-    public Long linkParentId;
+    public Long LinkParentId;
     @SerializedName("writer")
-    public String writer;
+    public String Writer;
     @SerializedName("comment")
-    public String comment;
+    public String Comment;
     @SerializedName("registerDate")
-    public String registerDate;
-    @SerializedName("sumLikeClick")
-    public long sumLikeClick;
-    @SerializedName("sumDisLikeClick")
-    public long sumDisLikeClick;
-    @SerializedName("virtual_Content")
-    public BlogContentModel virtual_Content;
+    public String RegisterDate;
+    @SerializedName("SumLikeClick")
+    public long SumLikeClick;
+    @SerializedName("SumDisLikeClick")
+    public long SumDisLikeClick;
+    @SerializedName("Virtual_Content")
+    public BlogContentModel Virtual_Content;
     @SerializedName("Content")
     public BlogContentModel Content;
 }

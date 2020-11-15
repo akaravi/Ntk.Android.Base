@@ -9,20 +9,20 @@ public class CoreModuleProcessModel {
     public String TitleML;
     @SerializedName("Title")
     public String Title;
-    @SerializedName("titleResourceLanguage")
-    public String titleResourceLanguage;
-    @SerializedName("titleEn")
-    public String titleEn;
-    @SerializedName("processName")
-    public String processName;
-    @SerializedName("description")
-    public String description;
-    @SerializedName("linkModuleId")
-    public Long linkModuleId;
-    @SerializedName("virtual_CmsModule")
-    public CoreModuleModel virtual_CmsModule;
-    @SerializedName("cmsModule")
-    public CoreModuleModel cmsModule;
-    @SerializedName("cmsModuleProcessCustomize")
-    public List<CoreModuleProcessCustomizeModel> cmsModuleProcessCustomize;
+    @SerializedName("TitleResourceLanguage")
+    public String TitleResourceLanguage;
+    @SerializedName("TitleEn")
+    public String TitleEn;
+    @SerializedName("ProcessName")
+    public String ProcessName;
+    @SerializedName("Description")
+    public String Description;
+    @SerializedName("LinkModuleId")
+    public Long LinkModuleId;
+    @SerializedName("Virtual_CmsModule")
+    public CoreModuleModel Virtual_CmsModule;
+    @SerializedName("CmsModule")
+    public CoreModuleModel CmsModule;
+    @SerializedName("CmsModuleProcessCustomize")
+    public List<CoreModuleProcessCustomizeModel> CmsModuleProcessCustomize;
 }

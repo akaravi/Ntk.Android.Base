@@ -12,26 +12,26 @@ import ntk.android.base.entitymodel.enums.EnumMicroServiceType;
 public class CoreTokenMicroServiceModel extends BaseEntity<String> {
 
 
-    @SerializedName("linkUserId")
-    public Long linkUserId;
+    @SerializedName("LinkUserId")
+    public Long LinkUserId;
     @SerializedName("LinkSiteId")
     public Long LinkSiteId;
-    @SerializedName("deviceId")
-    public String deviceId;
-    @SerializedName("deviceType")
-    public EnumMicroServiceType deviceType;
-    @SerializedName("userType")
-    public EnumManageUserAccessControllerTypes userType;
-    @SerializedName("deviceConnectionType")
-    public EnumMicroServiceConnectionType deviceConnectionType;
-    @SerializedName("deviceConnectionState")
-    public EnumMicroServiceConnectionStatus deviceConnectionState;
-    @SerializedName("requestDate")
-    public String requestDate;
-    @SerializedName("usedUsername")
-    public String usedUsername;
-    @SerializedName("iP")
-    public String iP;
-    @SerializedName("description")
-    public String description;
+    @SerializedName("DeviceId")
+    public String DeviceId;
+    @SerializedName("DeviceType")
+    public EnumMicroServiceType DeviceType;
+    @SerializedName("UserType")
+    public EnumManageUserAccessControllerTypes UserType;
+    @SerializedName("DeviceConnectionType")
+    public EnumMicroServiceConnectionType DeviceConnectionType;
+    @SerializedName("DeviceConnectionState")
+    public EnumMicroServiceConnectionStatus DeviceConnectionState;
+    @SerializedName("RequestDate")
+    public String RequestDate;
+    @SerializedName("UsedUsername")
+    public String UsedUsername;
+    @SerializedName("IP")
+    public String IP;
+    @SerializedName("Description")
+    public String Description;
 }

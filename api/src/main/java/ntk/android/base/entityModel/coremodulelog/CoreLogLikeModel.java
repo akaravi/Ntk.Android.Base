@@ -7,18 +7,18 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 public class CoreLogLikeModel extends BaseModuleEntity<String> {
 
 
-    @SerializedName("moduleName")
-    public String moduleName;
-    @SerializedName("moduleEntityName")
-    public String moduleEntityName;
-    @SerializedName("linkUserId")
-    public Long linkUserId;
-    @SerializedName("linkMemberUserId")
-    public Long linkMemberUserId;
-    @SerializedName("entityId")
-    public long entityId;
-    @SerializedName("likked")
-    public boolean likked;
-    @SerializedName("existBeforAndChangeNow")
-    public boolean existBeforAndChangeNow;
+    @SerializedName("ModuleName")
+    public String ModuleName;
+    @SerializedName("ModuleEntityName")
+    public String ModuleEntityName;
+    @SerializedName("LinkUserId")
+    public Long LinkUserId;
+    @SerializedName("LinkMemberUserId")
+    public Long LinkMemberUserId;
+    @SerializedName("EntityId")
+    public long EntityId;
+    @SerializedName("Likked")
+    public boolean Likked;
+    @SerializedName("ExistBeforAndChangeNow")
+    public boolean ExistBeforAndChangeNow;
 }

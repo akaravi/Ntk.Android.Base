@@ -14,38 +14,38 @@ public class ShopInvoiceSaleDetail extends BaseModuleEntity<Long> {
     @SerializedName("LinkInvoiceSaleId")
     public Long LinkInvoiceSaleId;
 
-    @SerializedName("virtual_InvoiceSale")
-    public ShopInvoiceSale virtual_InvoiceSale;
+    @SerializedName("Virtual_InvoiceSale")
+    public ShopInvoiceSale Virtual_InvoiceSale;
     @SerializedName("LinkParentId")
     public Long LinkParentId;
 
     @SerializedName("LinkContentId")
     public Long LinkContentId;
-    @SerializedName("virtual_Content")
-    public ShopContent virtual_Content;
+    @SerializedName("Virtual_Content")
+    public ShopContent Virtual_Content;
 //    @SerializedName("Content")
     public ShopContent Content;
     @SerializedName("LinkProductItemId")
     public Long LinkProductItemId;
-    @SerializedName("virtual_ProductItem")
-    public ShopProductItem virtual_ProductItem;
+    @SerializedName("Virtual_ProductItem")
+    public ShopProductItem Virtual_ProductItem;
     @SerializedName("LinkProductCombineId")
     public Long LinkProductCombineId;
-    @SerializedName("virtual_ProductCombine")
-    public ShopProductCombine virtual_ProductCombine;
+    @SerializedName("Virtual_ProductCombine")
+    public ShopProductCombine Virtual_ProductCombine;
 
     @SerializedName("ProductProcessInputFormEndUserClassJsonFormValues")
     public String ProductProcessInputFormEndUserClassJsonFormValues;
 
     @SerializedName("LinkProductProcessId")
     public Long LinkProductProcessId;
-    @SerializedName("virtual_ProductProcess")
-    public ShopProductProcess virtual_ProductProcess;
+    @SerializedName("Virtual_ProductProcess")
+    public ShopProductProcess Virtual_ProductProcess;
 
     @SerializedName("LinkProductServiceId")
     public Long LinkProductServiceId;
-    @SerializedName("virtual_ProductService")
-    public ShopProductService virtual_ProductService;
+    @SerializedName("Virtual_ProductService")
+    public ShopProductService Virtual_ProductService;
 
     @SerializedName("Quantity")
     public float Quantity;

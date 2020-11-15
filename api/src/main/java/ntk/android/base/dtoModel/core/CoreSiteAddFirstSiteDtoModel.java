@@ -3,10 +3,10 @@ package ntk.android.base.dtomodel.core;
 import com.google.gson.annotations.SerializedName;
 
 public class CoreSiteAddFirstSiteDtoModel {
-    @SerializedName("captchaKey")
-    String captchaKey;
-    @SerializedName("captchaText")
-    String captchaText;
+    @SerializedName("CaptchaKey")
+    String CaptchaKey;
+    @SerializedName("CaptchaText")
+    String CaptchaText;
     @SerializedName("Domain")
     String Domain;
     @SerializedName("Description")

@@ -3,24 +3,24 @@ package ntk.android.base.dtomodel.core;
 import com.google.gson.annotations.SerializedName;
 
 public class AuthUserSignUpModel {
-    @SerializedName("captchaKey")
-    public String captchaKey;
-    @SerializedName("captchaText")
-    public String captchaText;
-    @SerializedName("email")
-    public String email;
-    @SerializedName("mobile")
-    public String mobile;
+    @SerializedName("CaptchaKey")
+    public String CaptchaKey;
+    @SerializedName("CaptchaText")
+    public String CaptchaText;
+    @SerializedName("Email")
+    public String Email;
+    @SerializedName("Mobile")
+    public String Mobile;
     @SerializedName("Password")
     public String Password;
-    @SerializedName("rePassword")
-    public String rePassword;
-    @SerializedName("name")
-    public String name;
-    @SerializedName("family")
+    @SerializedName("RePassword")
+    public String RePassword;
+    @SerializedName("Name")
+    public String Name;
+    @SerializedName("Family")
     public String family;
     @SerializedName("SiteId")
     public int SiteId;
-    @SerializedName("roulaccespt")
-    public boolean roulaccespt;
+    @SerializedName("Roulaccespt")
+    public boolean Roulaccespt;
 }

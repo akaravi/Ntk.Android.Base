@@ -3,10 +3,10 @@ package ntk.android.base.dtomodel.core;
 import com.google.gson.annotations.SerializedName;
 
 public class AuthUserForgetPasswordModel {
-    @SerializedName("captchaKey")
-    String captchaKey;
-    @SerializedName("captchaText")
-    String captchaText;
-    @SerializedName("email")
-    String email;
+    @SerializedName("CaptchaKey")
+    public String CaptchaKey;
+    @SerializedName("CaptchaText")
+    public  String CaptchaText;
+    @SerializedName("Email")
+    public   String Email;
 }

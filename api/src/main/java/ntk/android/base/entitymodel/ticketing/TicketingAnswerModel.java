@@ -8,28 +8,28 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class TicketingAnswerModel extends BaseModuleEntity<Long> {
 
-    @SerializedName("linkTicketId")
-    public long linkTicketId;
-    @SerializedName("htmlBody")
-    public String htmlBody;
+    @SerializedName("LinkTicketId")
+    public long LinkTicketId;
+    @SerializedName("HtmlBody")
+    public String HtmlBody;
     @SerializedName("virtual_Ticket")
     public TicketingTaskModel virtual_Ticket;
-    @SerializedName("ticket")
-    public TicketingTaskModel ticket;
-    @SerializedName("linkTicketingDepartemenId")
-    public Long linkTicketingDepartemenId;
+    @SerializedName("Ticket")
+    public TicketingTaskModel Ticket;
+    @SerializedName("LinkTicketingDepartemenId")
+    public Long LinkTicketingDepartemenId;
     @SerializedName("virtual_Departemen")
     public TicketingDepartemenModel virtual_Departemen;
-    @SerializedName("departemen")
-    public TicketingDepartemenModel departemen;
-    @SerializedName("linkTypeOperatorId")
-    public Long linkTypeOperatorId;
+    @SerializedName("Departemen")
+    public TicketingDepartemenModel Departemen;
+    @SerializedName("LinkTypeOperatorId")
+    public Long LinkTypeOperatorId;
     @SerializedName("virtual_DepartemenOperator")
     public TicketingDepartemenOperatorModel virtual_DepartemenOperator;
-    @SerializedName("departemenOperator")
-    public TicketingDepartemenOperatorModel departemenOperator;
-    @SerializedName("linkFileIds")
-    public String linkFileIds;
-    @SerializedName("linkFileIdsSrc")
-    public List<String> linkFileIdsSrc;
+    @SerializedName("DepartemenOperator")
+    public TicketingDepartemenOperatorModel DepartemenOperator;
+    @SerializedName("LinkFileIds")
+    public String LinkFileIds;
+    @SerializedName("LinkFileIdsSrc")
+    public List<String> LinkFileIdsSrc;
 }

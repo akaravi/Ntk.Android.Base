@@ -6,20 +6,20 @@ import ntk.android.base.entitymodel.base.BaseEntity;
 
 public class CoreSiteCategoryCmsModuleModel extends BaseEntity<Long> {
 
-    @SerializedName("linkCmsSiteCategoryId")
-    public long linkCmsSiteCategoryId;
+    @SerializedName("LinkCmsSiteCategoryId")
+    public long LinkCmsSiteCategoryId;
 
-    @SerializedName("virtual_CmsSiteCategory")
-    public CoreSiteCategoryModel virtual_CmsSiteCategory;
-    @SerializedName("cmsSiteCategory")
-    public CoreSiteCategoryModel cmsSiteCategory;
-    @SerializedName("linkCmsModuleId")
-    public Long linkCmsModuleId;
+    @SerializedName("Virtual_CmsSiteCategory")
+    public CoreSiteCategoryModel Virtual_CmsSiteCategory;
+    @SerializedName("CmsSiteCategory")
+    public CoreSiteCategoryModel CmsSiteCategory;
+    @SerializedName("LinkCmsModuleId")
+    public Long LinkCmsModuleId;
 
-    @SerializedName("virtual_CmsModule")
-    public CoreModuleModel virtual_CmsModule;
-    @SerializedName("cmsModule")
-    public CoreModuleModel cmsModule;
-    @SerializedName("configValuesJson")
-    public String configValuesJson;
+    @SerializedName("Virtual_CmsModule")
+    public CoreModuleModel Virtual_CmsModule;
+    @SerializedName("CmsModule")
+    public CoreModuleModel CmsModule;
+    @SerializedName("ConfigValuesJson")
+    public String ConfigValuesJson;
 }

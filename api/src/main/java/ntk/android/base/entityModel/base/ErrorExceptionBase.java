@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class ErrorExceptionBase{
+public class ErrorExceptionBase {
 
 
     @SerializedName("IsSuccess")

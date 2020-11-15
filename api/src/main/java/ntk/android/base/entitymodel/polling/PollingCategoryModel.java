@@ -10,31 +10,31 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class PollingCategoryModel extends BaseModuleEntity<Long> {
 
-    @SerializedName("title")
-    public String title;
-    @SerializedName("currencyUnitRatioByShop")
-    public long currencyUnitRatioByShop;
-    @SerializedName("maxTransactionAmount")
-    public long maxTransactionAmount;
-    @SerializedName("minTransactionAmount")
-    public long minTransactionAmount;
-    @SerializedName("fixFeeTransactionAmount")
-    public long fixFeeTransactionAmount;
-    @SerializedName("percentFeeTransactionAmount")
-    public long percentFeeTransactionAmount;
-    @SerializedName("linkPublicConfigId")
-    public Long linkPublicConfigId;
-    @SerializedName("virtual_PublicConfig")
-    public BankPaymentPublicConfigModel virtual_PublicConfig;
-    @SerializedName("publicConfig")
-    public BankPaymentPublicConfigModel publicConfig;
-    @SerializedName("privateConfigJsonValues")
-    public String privateConfigJsonValues;
-    @SerializedName("memo")
-    public String memo;
-    @SerializedName("transactions")
-    public List<BankPaymentTransactionModel> transactions;
-    @SerializedName("linkModuleFileLogoIdSrc")
-    public String linkModuleFileLogoIdSrc;
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("CurrencyUnitRatioByShop")
+    public long CurrencyUnitRatioByShop;
+    @SerializedName("MaxTransactionAmount")
+    public long MaxTransactionAmount;
+    @SerializedName("MinTransactionAmount")
+    public long MinTransactionAmount;
+    @SerializedName("FixFeeTransactionAmount")
+    public long FixFeeTransactionAmount;
+    @SerializedName("PercentFeeTransactionAmount")
+    public long PercentFeeTransactionAmount;
+    @SerializedName("LinkPublicConfigId")
+    public Long LinkPublicConfigId;
+    @SerializedName("Virtual_PublicConfig")
+    public BankPaymentPublicConfigModel Virtual_PublicConfig;
+    @SerializedName("PublicConfig")
+    public BankPaymentPublicConfigModel PublicConfig;
+    @SerializedName("PrivateConfigJsonValues")
+    public String PrivateConfigJsonValues;
+    @SerializedName("Memo")
+    public String Memo;
+    @SerializedName("Transactions")
+    public List<BankPaymentTransactionModel> Transactions;
+    @SerializedName("LinkModuleFileLogoIdSrc")
+    public String LinkModuleFileLogoIdSrc;
 
 }

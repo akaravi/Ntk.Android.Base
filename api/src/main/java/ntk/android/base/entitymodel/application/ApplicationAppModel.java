@@ -111,7 +111,7 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public String BuildKey5Value;
     @SerializedName("DownloadLinkSrcCustomize")
     public String DownloadLinkSrcCustomize;
-    @SerializedName("downloadLinksrc")
+    @SerializedName("DownloadLinksrc")
     public String DownloadLinksrc;
     @SerializedName("DownloadLinksrcByDomain")
     public String DownloadLinksrcByDomain;

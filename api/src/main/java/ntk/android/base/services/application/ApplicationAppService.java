@@ -9,12 +9,10 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
-import ntk.android.base.api.core.model.MainCoreResponse;
-import ntk.android.base.config.NtkObserver;
 import ntk.android.base.dtomodel.application.ApplicationScoreDtoModel;
 import ntk.android.base.dtomodel.application.AboutUsDtoModel;
 import ntk.android.base.dtomodel.application.MainResponseDtoModel;
-import ntk.android.base.dtomodel.application.ThemeDtoModel;
+import ntk.android.base.dtomodel.application.AppThemeDtoModel;
 import ntk.android.base.entitymodel.application.ApplicationAppModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
@@ -56,12 +54,12 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
         return mMovieCache;
     }
 
-    public Observable<ErrorException<ThemeDtoModel>> getAppTheme() {
-        BehaviorSubject<ErrorException<ThemeDtoModel>> mMovieCache = BehaviorSubject.create();
+    public Observable<ErrorException<AppThemeDtoModel>> getAppTheme() {
+        BehaviorSubject<ErrorException<AppThemeDtoModel>> mMovieCache = BehaviorSubject.create();
 
         getRetrofit(ICmsApiApplication.class).GetThemeCore(headers)
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<ThemeDtoModel>>() {
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<AppThemeDtoModel>>() {
 
             @Override
             public void onSubscribe(@NonNull Disposable d) {
@@ -69,7 +67,7 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
             }
 
             @Override
-            public void onNext(@NonNull ErrorException<ThemeDtoModel> errorExceptionBase) {
+            public void onNext(@NonNull ErrorException<AppThemeDtoModel> errorExceptionBase) {
                 mMovieCache.onNext(errorExceptionBase);
             }
 

@@ -6,15 +6,15 @@ import ntk.android.base.entitymodel.base.BaseEntity;
 
 public class CoreLogAvoidDuplicateDataEntryModel extends BaseEntity<String> {
 
-    @SerializedName("moduleName")
-    public String moduleName;
-    @SerializedName("moduleEntityName")
-    public String moduleEntityName;
-    @SerializedName("linkUserId")
-    public Long linkUserId;
-    @SerializedName("linkMemberUserId")
-    public Long linkMemberUserId;
-    @SerializedName("entityId")
-    public long entityId;
+    @SerializedName("ModuleName")
+    public String ModuleName;
+    @SerializedName("ModuleEntityName")
+    public String ModuleEntityName;
+    @SerializedName("LinkUserId")
+    public Long LinkUserId;
+    @SerializedName("LinkMemberUserId")
+    public Long LinkMemberUserId;
+    @SerializedName("EntityId")
+    public long EntityId;
 }
 

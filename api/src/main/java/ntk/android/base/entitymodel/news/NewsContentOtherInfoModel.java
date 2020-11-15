@@ -6,19 +6,19 @@ import ntk.android.base.api.news.entity.NewsContent;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class NewsContentOtherInfoModel extends BaseModuleEntity<Long> {
-    @SerializedName("title")
-    public String title;
-    @SerializedName("htmlBody")
-    public String htmlBody;
-    @SerializedName("source")
-    public String source;
-    @SerializedName("linkContentid")
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("HtmlBody")
+    public String HtmlBody;
+    @SerializedName("Source")
+    public String Source;
+    @SerializedName("LinkContentid")
     public long linkContentid;
-    @SerializedName("typeId")
+    @SerializedName("TypeId")
     public Integer typeId;
     // tslint:disable-next-line: variable-name
-    @SerializedName("virtual_Content")
-    public NewsContentModel virtual_Content;
+    @SerializedName("Virtual_Content")
+    public NewsContentModel vVirtual_Content;
     @SerializedName("Content")
     public NewsContentModel Content;
 }

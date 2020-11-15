@@ -4,14 +4,14 @@ import com.google.gson.annotations.SerializedName;
 
 public class AuthRenewTokenModel {
     @SerializedName("SiteId")
-    int SiteId;
+    public   int SiteId;
     @SerializedName("UserId")
-    int UserId;
+    public   int UserId;
     @SerializedName("UserAccessAdminAllowToAllData")
-    boolean UserAccessAdminAllowToAllData;
+    public    boolean UserAccessAdminAllowToAllData;
     @SerializedName("UserAccessAdminAllowToProfessionalData")
-    boolean UserAccessAdminAllowToProfessionalData;
-    @SerializedName("lang")
-    String lang;
+    public    boolean UserAccessAdminAllowToProfessionalData;
+    @SerializedName("Lang")
+    String Lang;
 
 }

@@ -7,22 +7,22 @@ import ntk.android.base.entitymodel.base.BaseEntity;
 public class CoreModuleProcessCustomizeModel extends BaseEntity<Long> {
     @SerializedName("Title")
     public String Title;
-    @SerializedName("titleEn")
-    public String titleEn;
-    @SerializedName("description")
-    public String description;
-    @SerializedName("linkModuleProcessId")
-    public Long linkModuleProcessId;
+    @SerializedName("TitleEn")
+    public String TitleEn;
+    @SerializedName("Description")
+    public String Description;
+    @SerializedName("LinkModuleProcessId")
+    public Long LinkModuleProcessId;
 
-    @SerializedName("virtual_CmsModuleProcess")
-    public CoreModuleProcessModel virtual_CmsModuleProcess;
-    @SerializedName("cmsModuleProcess")
-    public CoreModuleProcessModel cmsModuleProcess;
-    @SerializedName("processInputCustomizeValue")
-    public String processInputCustomizeValue;
-    @SerializedName("processInputValueForm")
-    public String processInputValueForm;
-    @SerializedName("linkProcessCustomizeDependenceBeforRunId")
-    public Long linkProcessCustomizeDependenceBeforRunId;
+    @SerializedName("Virtual_CmsModuleProcess")
+    public CoreModuleProcessModel Virtual_CmsModuleProcess;
+    @SerializedName("CmsModuleProcess")
+    public CoreModuleProcessModel CmsModuleProcess;
+    @SerializedName("ProcessInputCustomizeValue")
+    public String ProcessInputCustomizeValue;
+    @SerializedName("ProcessInputValueForm")
+    public String ProcessInputValueForm;
+    @SerializedName("LinkProcessCustomizeDependenceBeforRunId")
+    public Long LinkProcessCustomizeDependenceBeforRunId;
 }
 

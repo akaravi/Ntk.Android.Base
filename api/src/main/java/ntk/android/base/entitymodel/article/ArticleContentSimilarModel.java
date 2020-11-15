@@ -7,16 +7,16 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 public class ArticleContentSimilarModel extends BaseModuleEntity<Long> {
     @SerializedName("Title")
     public String Title;
-    @SerializedName("linkSourceid")
-    public String linkSourceid;
-    @SerializedName("linkDestinationid")
-    public String linkDestinationid;
-    @SerializedName("virtual_Source")
-    public String virtual_Source;
-    @SerializedName("source")
-    public String source;
-    @SerializedName("virtual_Destination")
-    public String virtual_Destination;
-    @SerializedName("destination")
-    public String destination;
+    @SerializedName("LinkSourceid")
+    public String LinkSourceid;
+    @SerializedName("LinkDestinationid")
+    public String LinkDestinationid;
+    @SerializedName("Virtual_Source")
+    public String Virtual_Source;
+    @SerializedName("Source")
+    public String Source;
+    @SerializedName("Virtual_Destination")
+    public String Virtual_Destination;
+    @SerializedName("Destination")
+    public String Destination;
 }

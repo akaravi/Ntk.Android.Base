@@ -29,14 +29,14 @@ public class FilterDataModel {
     public String SortColumn;
 
     @SerializedName("Filters")
-    public List<Filters> filters;
+    public List<Filters> Filters;
 
 
 
     public FilterDataModel addFilter(Filters f) {
-        if (filters == null)
-            filters = new ArrayList<>();
-        filters.add(f);
+        if (Filters == null)
+            Filters = new ArrayList<>();
+        Filters.add(f);
         return this;
     }
 }

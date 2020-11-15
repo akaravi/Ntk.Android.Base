@@ -5,13 +5,13 @@ import com.google.gson.annotations.SerializedName;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class ArticleContentTagModel extends BaseModuleEntity<Long> {
-    @SerializedName("linkContentid")
-    public String linkContentid;
-    @SerializedName("linkTagid")
-    public long linkTagid;
-    @SerializedName("virtual_ModuleContent")
-    public ArticleContentModel virtual_ModuleContent;
-    @SerializedName("moduleContent")
-    public ArticleContentModel moduleContent;
+    @SerializedName("LinkContentid")
+    public String LinkContentid;
+    @SerializedName("LinkTagid")
+    public long LinkTagid;
+    @SerializedName("Virtual_ModuleContent")
+    public ArticleContentModel Virtual_ModuleContent;
+    @SerializedName("ModuleContent")
+    public ArticleContentModel ModuleContent;
 
 }

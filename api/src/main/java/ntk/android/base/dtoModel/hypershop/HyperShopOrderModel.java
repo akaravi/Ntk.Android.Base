@@ -9,16 +9,16 @@ public class HyperShopOrderModel {
     public String OrderId;
     @SerializedName("AcceptSystem")
     public Boolean AcceptSystem;
-    @SerializedName("name")
-    public String name;
-    @SerializedName("family")
-    public String family;
-    @SerializedName("mobile")
-    public String mobile;
-    @SerializedName("address")
-    public String address;
-    @SerializedName("amount")
-    public float amount;
+    @SerializedName("Name")
+    public String Name;
+    @SerializedName("Family")
+    public String Family;
+    @SerializedName("Mobile")
+    public String Mobile;
+    @SerializedName("Address")
+    public String Address;
+    @SerializedName("Amount")
+    public float Amount;
     @SerializedName("Products")
     public List<HyperShopOrderContentModel> Products;
 }

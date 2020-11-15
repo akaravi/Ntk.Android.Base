@@ -9,29 +9,29 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class ApplicationThemeConfigModel extends BaseModuleEntity<Long> {
 
-    @SerializedName("title")
-    public String title;
-    @SerializedName("typeId")
-    public String typeId;
-    @SerializedName("linkMainImageId")
-    public Long linkMainImageId;
-    @SerializedName("linkSourceId")
-    public Long linkSourceId;
-    @SerializedName("virtual_Source")
-    public ApplicationSourceModel virtual_Source;
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("TypeId")
+    public String TypeId;
+    @SerializedName("LinkMainImageId")
+    public Long LinkMainImageId;
+    @SerializedName("LinkSourceId")
+    public Long LinkSourceId;
+    @SerializedName("Virtual_Source")
+    public ApplicationSourceModel Virtual_Source;
     @SerializedName("source")
-    public ApplicationSourceModel source;
-    @SerializedName("themeConfigBuilderJsonValues")
-    public String themeConfigBuilderJsonValues;
-    @SerializedName("themeConfigRuntimeJsonValues")
-    public String themeConfigRuntimeJsonValues;
-    @SerializedName("themeConfigLayoutJsonValues")
-    public String themeConfigLayoutJsonValues;
-    @SerializedName("themeConfigJsonValues")
-    public String themeConfigJsonValues;
-    @SerializedName("themeConfigLayouts")
-    public List<ThemeConfigLayoutModel> themeConfigLayouts;
-    @SerializedName("applications")
-    public List<ApplicationAppModel> applications;
+    public ApplicationSourceModel Source;
+    @SerializedName("ThemeConfigBuilderJsonValues")
+    public String ThemeConfigBuilderJsonValues;
+    @SerializedName("ThemeConfigRuntimeJsonValues")
+    public String ThemeConfigRuntimeJsonValues;
+    @SerializedName("ThemeConfigLayoutJsonValues")
+    public String ThemeConfigLayoutJsonValues;
+    @SerializedName("ThemeConfigJsonValues")
+    public String ThemeConfigJsonValues;
+    @SerializedName("ThemeConfigLayouts")
+    public List<ThemeConfigLayoutModel> ThemeConfigLayouts;
+    @SerializedName("Applications")
+    public List<ApplicationAppModel> Applications;
 
 }

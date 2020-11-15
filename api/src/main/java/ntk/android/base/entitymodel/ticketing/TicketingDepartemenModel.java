@@ -9,20 +9,20 @@ import ntk.android.base.entitymodel.enums.EnumTicketAccessStatus;
 import ntk.android.base.entitymodel.enums.EnumTicketingDepartemenPriority;
 
 public class TicketingDepartemenModel extends BaseModuleEntity<Long> {
-    @SerializedName("title")
-    public String title;
-    @SerializedName("defaultAnswerBody")
-    public String defaultAnswerBody;
-    @SerializedName("priority")
-    public EnumTicketingDepartemenPriority priority;
-    @SerializedName("accessToChangeType")
-    public EnumTicketAccessStatus accessToChangeType;
-    @SerializedName("tickets")
-    public List<TicketingTaskModel> tickets;
-    @SerializedName("ticketAnswers")
-    public List<TicketingAnswerModel> ticketAnswers;
-    @SerializedName("faqs")
-    public List<TicketingFaqModel> faqs;
-    @SerializedName("operators")
-    public List<TicketingDepartemenOperatorModel> operators;
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("DefaultAnswerBody")
+    public String DefaultAnswerBody;
+    @SerializedName("Priority")
+    public EnumTicketingDepartemenPriority Priority;
+    @SerializedName("AccessToChangeType")
+    public EnumTicketAccessStatus AccessToChangeType;
+    @SerializedName("Tickets")
+    public List<TicketingTaskModel> Tickets;
+    @SerializedName("TicketAnswers")
+    public List<TicketingAnswerModel> TicketAnswers;
+    @SerializedName("Faqs")
+    public List<TicketingFaqModel> Faqs;
+    @SerializedName("Operators")
+    public List<TicketingDepartemenOperatorModel> Operators;
 }

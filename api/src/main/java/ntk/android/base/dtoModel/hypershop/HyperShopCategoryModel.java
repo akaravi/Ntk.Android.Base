@@ -3,12 +3,12 @@ package ntk.android.base.dtomodel.hypershop;
 import com.google.gson.annotations.SerializedName;
 
 public class HyperShopCategoryModel {
-    @SerializedName("code")
-    public String code;
-    @SerializedName("name")
+    @SerializedName("Code")
+    public String Code;
+    @SerializedName("Name")
     public String name;
-    @SerializedName("image")
-    public String image;
-    @SerializedName("memo")
-    public String memo;
+    @SerializedName("Image")
+    public String Image;
+    @SerializedName("Memo")
+    public String Memo;
 }

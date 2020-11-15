@@ -2,15 +2,15 @@ package ntk.android.base.entitymodel.base.feildinfo;
 
 import com.google.gson.annotations.SerializedName;
 
-class FieldInputDataSourceModel {
+public class FieldInputDataSourceModel {
     @SerializedName("InputFixed")
-    String InputFixed;
+    public String InputFixed;
     @SerializedName("InputForm")
-    String InputForm;
+    public String InputForm;
     @SerializedName("InputRequest")
-    String InputRequest;
+    public String InputRequest;
     @SerializedName("InputBeforProcess")
-    String InputBeforProcess;
+    public String InputBeforProcess;
     @SerializedName("InputControler")
-    String InputControler;
+    public String InputControler;
 }

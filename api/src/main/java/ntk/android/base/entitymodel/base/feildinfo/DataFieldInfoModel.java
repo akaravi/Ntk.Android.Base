@@ -8,31 +8,31 @@ import ntk.android.base.api.baseModel.FieldInfoModel;
 
 public class DataFieldInfoModel {
     @SerializedName("FieldName")
-    String FieldName;
+    public    String FieldName;
     @SerializedName("FieldType")
-    String FieldType;
+    public    String FieldType;
     @SerializedName("FieldTypeClass")
-    String FieldTypeClass;
+    public    String FieldTypeClass;
     @SerializedName("FieldTitle")
-    String FieldTitle;
+    public   String FieldTitle;
     @SerializedName("FieldDescription")
-    String FieldDescription;
+    public   String FieldDescription;
     @SerializedName("FieldScriptDescription")
-    String FieldScriptDescription;
+    public   String FieldScriptDescription;
     @SerializedName("FieldDefaultValue")
-    String FieldDefaultValue;
+    public   String FieldDefaultValue;
     @SerializedName("FieldValue")
-    String FieldValue;
+    public    String FieldValue;
     @SerializedName("FieldTypeFullName")
-    String FieldTypeFullName;
+    public    String FieldTypeFullName;
     @SerializedName("AccessSearchField")
-    boolean AccessSearchField = false;
+    public    boolean AccessSearchField = false;
     @SerializedName("AccessWatchField")
-    boolean AccessWatchField = false;
+    public    boolean AccessWatchField = false;
     @SerializedName("AccessEditField")
-    boolean AccessEditField = false;
+    public    boolean AccessEditField = false;
     @SerializedName("AccessAddField")
-    boolean AccessAddField = false;
+    public    boolean AccessAddField = false;
     @SerializedName("fieldsInfo")
-    List<FieldInfoModel> fieldsInfo;
+    public  List<FieldInfoModel> fieldsInfo;
 }

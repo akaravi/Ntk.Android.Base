@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class AuthUserChangePasswordModel {
     @SerializedName("OldPassword")
-    String OldPassword;
+    public  String OldPassword;
     @SerializedName("NewPassword")
-    String NewPassword;
+    public  String NewPassword;
 }
