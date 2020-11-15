@@ -18,8 +18,8 @@ public class CoreSiteModel {
     public @SerializedName("LinkCreatedBySiteId")
     Long LinkCreatedBySiteId;
     // tslint:disable-next-line: variable-name
-    public @SerializedName("Virtual_ParentCreator")
-    CoreSiteModel Virtual_ParentCreator;
+    public @SerializedName(" virtual_ParentCreator")
+    CoreSiteModel  virtual_ParentCreator;
     public @SerializedName("ParentCreator")
     CoreSiteModel ParentCreator;
     public @SerializedName("Title")
@@ -43,8 +43,8 @@ public class CoreSiteModel {
     public @SerializedName("LinkSiteCategoryId")
     long LinkSiteCategoryId;
 
-    public @SerializedName("Virtual_CmsSiteCategory")
-    CoreSiteCategoryModel Virtual_CmsSiteCategory;
+    public @SerializedName(" virtual_CmsSiteCategory")
+    CoreSiteCategoryModel  virtual_CmsSiteCategory;
     public @SerializedName("CmsSiteCategory")
     CoreSiteCategoryModel CmsSiteCategory;
     public @SerializedName("HasAccountingForm")

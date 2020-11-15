@@ -31,8 +31,8 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public boolean IsPublished;
     @SerializedName("LinkSourceId")
     public Long LinkSourceId;
-    @SerializedName("Virtual_Source")
-    public ApplicationSourceModel Virtual_Source;
+    @SerializedName(" virtual_Source")
+    public ApplicationSourceModel  virtual_Source;
     @SerializedName("Source")
     public ApplicationSourceModel Source;
     @SerializedName("DownloadCount")
@@ -67,8 +67,8 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public int BuildCount;
     @SerializedName("LinkThemeConfigId")
     public Long LinkThemeConfigId;
-    @SerializedName("Virtual_ThemeConfig")
-    public ApplicationThemeConfigModel Virtual_ThemeConfig;
+    @SerializedName(" virtual_ThemeConfig")
+    public ApplicationThemeConfigModel  virtual_ThemeConfig;
     @SerializedName("ThemeConfig")
     public ApplicationThemeConfigModel ThemeConfig;
     @SerializedName("ConfigBuilderAdminJsonValues")

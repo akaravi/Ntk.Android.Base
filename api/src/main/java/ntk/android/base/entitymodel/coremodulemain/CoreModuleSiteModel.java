@@ -19,12 +19,12 @@ public class CoreModuleSiteModel extends BaseEntity<Long> {
     public String ReNewDate;
     @SerializedName("HasBuyed")
     public boolean HasBuyed;
-    @SerializedName("Virtual_CmsSite")
-    public CoreSiteModel Virtual_CmsSite;
+    @SerializedName(" virtual_CmsSite")
+    public CoreSiteModel  virtual_CmsSite;
     @SerializedName("CmsSite")
     public CoreSiteModel CmsSite;
-    @SerializedName("Virtual_CmsModule")
-    public CoreModuleModel Virtual_CmsModule;
+    @SerializedName(" virtual_CmsModule")
+    public CoreModuleModel  virtual_CmsModule;
     @SerializedName("CmsModule")
     public CoreModuleModel CmsModule;
     @SerializedName("ModuleConfigSiteAccessValuesJson")

@@ -22,8 +22,8 @@ class BankPaymentPrivateSiteConfigModel extends BaseEntity<Long> {
     @SerializedName("LinkPublicConfigId")
     long LinkPublicConfigId;
     // tslint:disable-next-line: variable-name
-    @SerializedName("Virtual_PublicConfig")
-    BankPaymentPublicConfigModel Virtual_PublicConfig;
+    @SerializedName(" virtual_PublicConfig")
+    BankPaymentPublicConfigModel  virtual_PublicConfig;
     @SerializedName("PublicConfig")
     BankPaymentPublicConfigModel PublicConfig;
 

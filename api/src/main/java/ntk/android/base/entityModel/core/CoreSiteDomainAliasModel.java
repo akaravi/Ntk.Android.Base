@@ -15,6 +15,6 @@ public class CoreSiteDomainAliasModel extends BaseEntity<Long> {
     String Redirect;
     public @SerializedName("LinkCmsSiteId")
     Long LinkCmsSiteId;
-    public @SerializedName("Virtual_CmsSite")
-    CoreSiteModel Virtual_CmsSite;
+    public @SerializedName(" virtual_CmsSite")
+    CoreSiteModel  virtual_CmsSite;
 }

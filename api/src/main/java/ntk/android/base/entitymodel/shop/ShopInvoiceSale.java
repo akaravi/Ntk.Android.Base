@@ -41,8 +41,8 @@ public class ShopInvoiceSale extends BaseModuleEntity<Long> {
 
     @SerializedName("LinkExternalModuleDeliveryInvoiceId")
     public Long LinkExternalModuleDeliveryInvoiceId;
-    @SerializedName("virtual_ShopInvoiceSaleWorkFlow")
-    public ShopInvoiceSaleWorkFlow virtual_ShopInvoiceSaleWorkFlow;
+    @SerializedName(" virtual_ShopInvoiceSaleWorkFlow")
+    public ShopInvoiceSaleWorkFlow  virtual_ShopInvoiceSaleWorkFlow;
     @SerializedName("PaymentStatus")
     public int PaymentStatus;
     @SerializedName("InvoiceStatus")

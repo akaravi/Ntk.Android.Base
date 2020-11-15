@@ -52,8 +52,8 @@ public class BlogContentModel extends BaseModuleEntity<Long> {
     public String Source;
     @SerializedName("Comments")
     public String Comments;
-    @SerializedName("Virtual_Category")
-    public BlogCategoryModel Virtual_Category;
+    @SerializedName(" virtual_Category")
+    public BlogCategoryModel  virtual_Category;
     @SerializedName("Category")
     public BlogCategoryModel Category;
     @SerializedName("ContentTags")

@@ -12,8 +12,8 @@ public class BlogCategoryModel extends BaseEntityCategory<Long> {
     public List<BlogCategoryModel> Children;
     @SerializedName("Category")
     public BlogCategoryModel Category;
-    @SerializedName("Virtual_Category")
-    public BlogCategoryModel Virtual_Category;
+    @SerializedName(" virtual_Category")
+    public BlogCategoryModel  virtual_Category;
     @SerializedName("Contents")
     public List<BlogContentModel> Contents;
 }

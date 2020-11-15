@@ -12,20 +12,20 @@ public class TicketingAnswerModel extends BaseModuleEntity<Long> {
     public long LinkTicketId;
     @SerializedName("HtmlBody")
     public String HtmlBody;
-    @SerializedName("virtual_Ticket")
-    public TicketingTaskModel virtual_Ticket;
+    @SerializedName(" virtual_Ticket")
+    public TicketingTaskModel  virtual_Ticket;
     @SerializedName("Ticket")
     public TicketingTaskModel Ticket;
     @SerializedName("LinkTicketingDepartemenId")
     public Long LinkTicketingDepartemenId;
-    @SerializedName("virtual_Departemen")
-    public TicketingDepartemenModel virtual_Departemen;
+    @SerializedName(" virtual_Departemen")
+    public TicketingDepartemenModel  virtual_Departemen;
     @SerializedName("Departemen")
     public TicketingDepartemenModel Departemen;
     @SerializedName("LinkTypeOperatorId")
     public Long LinkTypeOperatorId;
-    @SerializedName("virtual_DepartemenOperator")
-    public TicketingDepartemenOperatorModel virtual_DepartemenOperator;
+    @SerializedName(" virtual_DepartemenOperator")
+    public TicketingDepartemenOperatorModel  virtual_DepartemenOperator;
     @SerializedName("DepartemenOperator")
     public TicketingDepartemenOperatorModel DepartemenOperator;
     @SerializedName("LinkFileIds")

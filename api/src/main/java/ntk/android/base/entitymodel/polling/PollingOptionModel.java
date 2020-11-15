@@ -19,8 +19,8 @@ public class PollingOptionModel extends BaseModuleEntity<Long> {
     public long ScoreOfVotes;
     @SerializedName("LinkPollingContentId")
     public long LinkPollingContentId;
-    @SerializedName("Virtual_PollingContent")
-    public PollingContentModel Virtual_PollingContent;
+    @SerializedName(" virtual_PollingContent")
+    public PollingContentModel  virtual_PollingContent;
     @SerializedName("PollingContent")
     public PollingContentModel PollingContent;
 }

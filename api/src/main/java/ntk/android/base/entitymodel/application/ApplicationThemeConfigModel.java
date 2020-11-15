@@ -17,8 +17,8 @@ public class ApplicationThemeConfigModel extends BaseModuleEntity<Long> {
     public Long LinkMainImageId;
     @SerializedName("LinkSourceId")
     public Long LinkSourceId;
-    @SerializedName("Virtual_Source")
-    public ApplicationSourceModel Virtual_Source;
+    @SerializedName(" virtual_Source")
+    public ApplicationSourceModel  virtual_Source;
     @SerializedName("source")
     public ApplicationSourceModel Source;
     @SerializedName("ThemeConfigBuilderJsonValues")

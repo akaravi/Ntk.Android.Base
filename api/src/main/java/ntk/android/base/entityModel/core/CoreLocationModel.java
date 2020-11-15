@@ -15,8 +15,8 @@ public class CoreLocationModel {
     Long GeoLocationLongitude;
     @SerializedName("LocationType")
     Integer LocationType;
-    @SerializedName("Virtual_Parent")
-    Object Virtual_Parent;
+    @SerializedName(" virtual_Parent")
+    Object  virtual_Parent;
     @SerializedName("Prent")
     Object Parent;
     @SerializedName("Children")

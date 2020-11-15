@@ -17,8 +17,8 @@ public class PollingContentModel extends BaseModuleEntity<Long> {
     public boolean ViewStatisticsBeforeVote;
     @SerializedName("ViewStatisticsAfterVote")
     public boolean ViewStatisticsAfterVote;
-    @SerializedName("Virtual_Category")
-    public PollingCategoryModel Virtual_Category;
+    @SerializedName(" virtual_Category")
+    public PollingCategoryModel  virtual_Category;
     @SerializedName("Category")
     public PollingCategoryModel Category;
     @SerializedName("Body")

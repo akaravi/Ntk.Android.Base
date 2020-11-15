@@ -11,8 +11,8 @@ public class TicketingFaqModel extends BaseModuleEntity<Long> {
     public String Answer;
     @SerializedName("LinkTicketingDepartemenId")
     public Long LinkTicketingDepartemenId;
-    @SerializedName("virtual_TicketingDepartemen")
-    public TicketingDepartemenModel virtual_TicketingDepartemen;
+    @SerializedName(" virtual_TicketingDepartemen")
+    public TicketingDepartemenModel  virtual_TicketingDepartemen;
     @SerializedName("TicketingDepartemen")
     public TicketingDepartemenModel TicketingDepartemen;
     @SerializedName("LinkFileIds")

@@ -19,8 +19,8 @@ public class CoreModuleProcessModel {
     public String Description;
     @SerializedName("LinkModuleId")
     public Long LinkModuleId;
-    @SerializedName("Virtual_CmsModule")
-    public CoreModuleModel Virtual_CmsModule;
+    @SerializedName(" virtual_CmsModule")
+    public CoreModuleModel  virtual_CmsModule;
     @SerializedName("CmsModule")
     public CoreModuleModel CmsModule;
     @SerializedName("CmsModuleProcessCustomize")

@@ -19,8 +19,8 @@ public class CoreGuideModel extends BaseEntity<Long> {
     public String LinkFileIds;
     @SerializedName("LinkParentId")
     public Long LinkParentId;
-    @SerializedName("Virtual_Parent")
-    public CoreGuideModel Virtual_Parent;
+    @SerializedName(" virtual_Parent")
+    public CoreGuideModel  virtual_Parent;
     @SerializedName("Parent")
     public CoreGuideModel Parent;
     @SerializedName("Children")

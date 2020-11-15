@@ -52,8 +52,8 @@ public class NewsContentModel extends BaseModuleEntity<Long> {
     public String Source;
     @SerializedName("Comments")
     public String Comments;
-    @SerializedName("virtual_Category")
-    public NewsCategoryModel virtual_Category;
+    @SerializedName(" virtual_Category")
+    public NewsCategoryModel  virtual_Category;
     @SerializedName("Category")
     public NewsCategoryModel Category;
     @SerializedName("ContentTags")

@@ -11,12 +11,12 @@ public class BlogContentSimilarModel extends BaseModuleEntity<Long> {
     public String LinkSourceid;
     @SerializedName("LinkDestinationid")
     public String LinkDestinationid;
-    @SerializedName("Virtual_Source")
-    public String Virtual_Source;
+    @SerializedName(" virtual_Source")
+    public String  virtual_Source;
     @SerializedName("Source")
     public String Source;
-    @SerializedName("Virtual_Destination")
-    public String Virtual_Destination;
+    @SerializedName(" virtual_Destination")
+    public String  virtual_Destination;
     @SerializedName("Destination")
     public String Destination;
 }

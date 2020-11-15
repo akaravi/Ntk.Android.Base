@@ -12,8 +12,8 @@ class BankPaymentTransactionLogModel extends BaseEntity<Long> {
     long LinkTransactionId;
 
     // tslint:disable-next-line: variable-name
-    @SerializedName("Virtual_Transaction")
-    BankPaymentTransactionModel Virtual_Transaction;
+    @SerializedName(" virtual_Transaction")
+    BankPaymentTransactionModel  virtual_Transaction;
     @SerializedName("Transaction")
     BankPaymentTransactionModel Transaction;
 }

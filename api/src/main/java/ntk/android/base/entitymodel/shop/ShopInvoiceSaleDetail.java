@@ -14,38 +14,38 @@ public class ShopInvoiceSaleDetail extends BaseModuleEntity<Long> {
     @SerializedName("LinkInvoiceSaleId")
     public Long LinkInvoiceSaleId;
 
-    @SerializedName("Virtual_InvoiceSale")
-    public ShopInvoiceSale Virtual_InvoiceSale;
+    @SerializedName(" virtual_InvoiceSale")
+    public ShopInvoiceSale  virtual_InvoiceSale;
     @SerializedName("LinkParentId")
     public Long LinkParentId;
 
     @SerializedName("LinkContentId")
     public Long LinkContentId;
-    @SerializedName("Virtual_Content")
-    public ShopContent Virtual_Content;
+    @SerializedName(" virtual_Content")
+    public ShopContent  virtual_Content;
 //    @SerializedName("Content")
     public ShopContent Content;
     @SerializedName("LinkProductItemId")
     public Long LinkProductItemId;
-    @SerializedName("Virtual_ProductItem")
-    public ShopProductItem Virtual_ProductItem;
+    @SerializedName(" virtual_ProductItem")
+    public ShopProductItem  virtual_ProductItem;
     @SerializedName("LinkProductCombineId")
     public Long LinkProductCombineId;
-    @SerializedName("Virtual_ProductCombine")
-    public ShopProductCombine Virtual_ProductCombine;
+    @SerializedName(" virtual_ProductCombine")
+    public ShopProductCombine  virtual_ProductCombine;
 
     @SerializedName("ProductProcessInputFormEndUserClassJsonFormValues")
     public String ProductProcessInputFormEndUserClassJsonFormValues;
 
     @SerializedName("LinkProductProcessId")
     public Long LinkProductProcessId;
-    @SerializedName("Virtual_ProductProcess")
-    public ShopProductProcess Virtual_ProductProcess;
+    @SerializedName(" virtual_ProductProcess")
+    public ShopProductProcess  virtual_ProductProcess;
 
     @SerializedName("LinkProductServiceId")
     public Long LinkProductServiceId;
-    @SerializedName("Virtual_ProductService")
-    public ShopProductService Virtual_ProductService;
+    @SerializedName(" virtual_ProductService")
+    public ShopProductService  virtual_ProductService;
 
     @SerializedName("Quantity")
     public float Quantity;

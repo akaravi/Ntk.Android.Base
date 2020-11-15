@@ -24,8 +24,8 @@ public class PollingCategoryModel extends BaseModuleEntity<Long> {
     public long PercentFeeTransactionAmount;
     @SerializedName("LinkPublicConfigId")
     public Long LinkPublicConfigId;
-    @SerializedName("Virtual_PublicConfig")
-    public BankPaymentPublicConfigModel Virtual_PublicConfig;
+    @SerializedName(" virtual_PublicConfig")
+    public BankPaymentPublicConfigModel  virtual_PublicConfig;
     @SerializedName("PublicConfig")
     public BankPaymentPublicConfigModel PublicConfig;
     @SerializedName("PrivateConfigJsonValues")

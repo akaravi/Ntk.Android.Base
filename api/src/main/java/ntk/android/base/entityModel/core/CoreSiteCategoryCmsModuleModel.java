@@ -9,15 +9,15 @@ public class CoreSiteCategoryCmsModuleModel extends BaseEntity<Long> {
     @SerializedName("LinkCmsSiteCategoryId")
     public long LinkCmsSiteCategoryId;
 
-    @SerializedName("Virtual_CmsSiteCategory")
-    public CoreSiteCategoryModel Virtual_CmsSiteCategory;
+    @SerializedName(" virtual_CmsSiteCategory")
+    public CoreSiteCategoryModel  virtual_CmsSiteCategory;
     @SerializedName("CmsSiteCategory")
     public CoreSiteCategoryModel CmsSiteCategory;
     @SerializedName("LinkCmsModuleId")
     public Long LinkCmsModuleId;
 
-    @SerializedName("Virtual_CmsModule")
-    public CoreModuleModel Virtual_CmsModule;
+    @SerializedName(" virtual_CmsModule")
+    public CoreModuleModel  virtual_CmsModule;
     @SerializedName("CmsModule")
     public CoreModuleModel CmsModule;
     @SerializedName("ConfigValuesJson")

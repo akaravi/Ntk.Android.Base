@@ -9,8 +9,8 @@ public class ArticleContentTagModel extends BaseModuleEntity<Long> {
     public String LinkContentid;
     @SerializedName("LinkTagid")
     public long LinkTagid;
-    @SerializedName("Virtual_ModuleContent")
-    public ArticleContentModel Virtual_ModuleContent;
+    @SerializedName(" virtual_ModuleContent")
+    public ArticleContentModel  virtual_ModuleContent;
     @SerializedName("ModuleContent")
     public ArticleContentModel ModuleContent;
 

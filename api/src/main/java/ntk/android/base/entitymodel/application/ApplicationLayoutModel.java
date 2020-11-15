@@ -15,8 +15,8 @@ class ApplicationLayoutModel extends BaseModuleEntity<Long> {
     public String ClassName;
     @SerializedName("LinkSourceId")
     public long LinkSourceId;
-    @SerializedName("Virtual_Source")
-    public ApplicationSourceModel Virtual_Source;
+    @SerializedName(" virtual_Source")
+    public ApplicationSourceModel  virtual_Source;
     @SerializedName("Source")
     public ApplicationSourceModel Source;
     @SerializedName("JsonFormDefaultValue")

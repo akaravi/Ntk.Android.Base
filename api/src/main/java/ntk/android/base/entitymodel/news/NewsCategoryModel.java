@@ -12,8 +12,8 @@ public class NewsCategoryModel extends BaseEntityCategory<Long> {
     public List<NewsCategoryModel> Children;
     @SerializedName("Category")
     public NewsCategoryModel Category;
-    @SerializedName("Virtual_Category")
-    public NewsCategoryModel Virtual_Category;
+    @SerializedName(" virtual_Category")
+    public NewsCategoryModel  virtual_Category;
     @SerializedName("Contents")
     public List<NewsContentModel> Contents;
 }

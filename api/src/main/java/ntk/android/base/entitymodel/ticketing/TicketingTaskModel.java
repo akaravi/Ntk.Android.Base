@@ -33,8 +33,8 @@ public class TicketingTaskModel extends BaseModuleEntity<Long> {
     public String UserIpAddress;
     @SerializedName("DeviceInformation")
     public String DeviceInformation;
-    @SerializedName("Virtual_Departemen")
-    public TicketingDepartemenModel Virtual_Departemen;
+    @SerializedName(" virtual_Departemen")
+    public TicketingDepartemenModel  virtual_Departemen;
     @SerializedName("Departemen")
     public TicketingDepartemenModel Departemen;
     @SerializedName("LinkOperatorId")

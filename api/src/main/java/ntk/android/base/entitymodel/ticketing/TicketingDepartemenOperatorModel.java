@@ -11,8 +11,8 @@ public class TicketingDepartemenOperatorModel extends BaseModuleEntity<Long> {
     public long LinkDepartemenId;
     @SerializedName("LinkUserId")
     public long LinkUserId;
-    @SerializedName("virtual_Departemen")
-    public TicketingDepartemenModel virtual_Departemen;
+    @SerializedName(" virtual_Departemen")
+    public TicketingDepartemenModel  virtual_Departemen;
     @SerializedName("Departemen")
     public TicketingDepartemenModel Departemen;
     @SerializedName("Answers")

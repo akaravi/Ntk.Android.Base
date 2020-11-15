@@ -50,8 +50,8 @@ public class BankPaymentTransactionModel extends BaseEntity<Long> {
     @SerializedName("LastUrlAddressInUse")
     String LastUrlAddressInUse;
     // tslintdisable-next-line variable-name
-    @SerializedName("Virtual_PrivateSiteConfig")
-    BankPaymentPrivateSiteConfigModel Virtual_PrivateSiteConfig;
+    @SerializedName(" virtual_PrivateSiteConfig")
+    BankPaymentPrivateSiteConfigModel  virtual_PrivateSiteConfig;
     @SerializedName("PrivateSiteConfig")
     BankPaymentPrivateSiteConfigModel PrivateSiteConfig;
 

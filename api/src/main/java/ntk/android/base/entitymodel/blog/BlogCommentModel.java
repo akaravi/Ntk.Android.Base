@@ -19,8 +19,8 @@ public class BlogCommentModel extends BaseModuleEntity<Long> {
     public long SumLikeClick;
     @SerializedName("SumDisLikeClick")
     public long SumDisLikeClick;
-    @SerializedName("Virtual_Content")
-    public BlogContentModel Virtual_Content;
+    @SerializedName(" virtual_Content")
+    public BlogContentModel  virtual_Content;
     @SerializedName("Content")
     public BlogContentModel Content;
 }

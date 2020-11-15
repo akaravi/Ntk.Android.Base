@@ -14,8 +14,8 @@ public class CoreModuleProcessCustomizeModel extends BaseEntity<Long> {
     @SerializedName("LinkModuleProcessId")
     public Long LinkModuleProcessId;
 
-    @SerializedName("Virtual_CmsModuleProcess")
-    public CoreModuleProcessModel Virtual_CmsModuleProcess;
+    @SerializedName(" virtual_CmsModuleProcess")
+    public CoreModuleProcessModel  virtual_CmsModuleProcess;
     @SerializedName("CmsModuleProcess")
     public CoreModuleProcessModel CmsModuleProcess;
     @SerializedName("ProcessInputCustomizeValue")

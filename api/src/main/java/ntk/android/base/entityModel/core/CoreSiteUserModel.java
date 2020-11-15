@@ -14,18 +14,18 @@ public class CoreSiteUserModel extends BaseEntity<Long> {
     public @SerializedName("LinkUserGroupId")
     long LinkUserGroupId;
     // tslint:disable-next-line: variable-name
-    public @SerializedName("Virtual_CmsSite")
-    CoreSiteModel Virtual_CmsSite;
+    public @SerializedName(" virtual_CmsSite")
+    CoreSiteModel  virtual_CmsSite;
     public @SerializedName("CmsSite")
     CoreSiteModel CmsSite;
 
-    public @SerializedName("Virtual_CmsUser")
-    CoreUserModel Virtual_CmsUser;
+    public @SerializedName(" virtual_CmsUser")
+    CoreUserModel  virtual_CmsUser;
     public @SerializedName("CmsUser")
     CoreUserModel CmsUser;
     // tslint:disable-next-line: variable-name
-    public @SerializedName("Virtual_CmsUserGroup")
-    CoreUserGroupModel Virtual_CmsUserGroup;
+    public @SerializedName(" virtual_CmsUserGroup")
+    CoreUserGroupModel  virtual_CmsUserGroup;
     public @SerializedName("CmsUserGroup")
     CoreUserGroupModel CmsUserGroup;
 }

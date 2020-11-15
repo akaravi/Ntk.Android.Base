@@ -11,8 +11,8 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 public class ShopProductSalePrice extends BaseModuleEntity<Long> {
      @SerializedName("LinkProductId")
     public Long LinkProductId ;
-     @SerializedName("Virtual_Product")
-    public ShopContent Virtual_Product ;
+     @SerializedName(" virtual_Product")
+    public ShopContent  virtual_Product ;
      @SerializedName("SalePrice")
     public float SalePrice ;
      @SerializedName("LinkPersonGroupId")

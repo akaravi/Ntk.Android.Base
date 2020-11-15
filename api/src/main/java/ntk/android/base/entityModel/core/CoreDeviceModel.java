@@ -23,8 +23,8 @@ public class CoreDeviceModel extends BaseEntity<Long> {
     public long LinkApplicationId;
     @SerializedName("LinkSiteId")
     public long LinkSiteId;// tslint:disable-next-line: variable-name
-    @SerializedName("Virtual_CmsSite")
-    public CoreSiteModel Virtual_CmsSite;
+    @SerializedName(" virtual_CmsSite")
+    public CoreSiteModel  virtual_CmsSite;
     @SerializedName("CmsSite")
     public CoreSiteModel CmsSite;
 }
