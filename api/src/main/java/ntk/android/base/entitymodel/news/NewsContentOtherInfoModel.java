@@ -18,7 +18,7 @@ public class NewsContentOtherInfoModel extends BaseModuleEntity<Long> {
     public Integer typeId;
     // tslint:disable-next-line: variable-name
     @SerializedName(" virtual_Content")
-    public NewsContentModel v virtual_Content;
+    public NewsContentModel virtual_Content;
     @SerializedName("Content")
     public NewsContentModel Content;
 }
