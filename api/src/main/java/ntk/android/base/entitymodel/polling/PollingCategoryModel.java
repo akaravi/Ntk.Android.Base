@@ -25,7 +25,7 @@ public class PollingCategoryModel extends BaseModuleEntity<Long> {
     @SerializedName("LinkPublicConfigId")
     public Long LinkPublicConfigId;
     @SerializedName(" virtual_PublicConfig")
-    public BankPaymentPublicConfigModel  virtual_PublicConfig;
+    public BankPaymentPublicConfigModel virtual_PublicConfig;
     @SerializedName("PublicConfig")
     public BankPaymentPublicConfigModel PublicConfig;
     @SerializedName("PrivateConfigJsonValues")
@@ -36,5 +36,8 @@ public class PollingCategoryModel extends BaseModuleEntity<Long> {
     public List<BankPaymentTransactionModel> Transactions;
     @SerializedName("LinkModuleFileLogoIdSrc")
     public String LinkModuleFileLogoIdSrc;
-
+    @SerializedName("LinkMainImageId")
+    public Long LinkMainImageId;
+    @SerializedName("LinkMainImageIdSrc")
+    public String LinkMainImageIdSrc;
 }
