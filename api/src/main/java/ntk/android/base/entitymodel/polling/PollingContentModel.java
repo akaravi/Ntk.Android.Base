@@ -28,9 +28,9 @@ public class PollingContentModel extends BaseModuleEntity<Long> {
     @SerializedName("FromDate")
     public String FromDate;
     @SerializedName("Geolocationlatitude")
-    public Long Geolocationlatitude;
+    public Double Geolocationlatitude;
     @SerializedName("Geolocationlongitude")
-    public Long Geolocationlongitude;
+    public Double Geolocationlongitude;
     @SerializedName("Keyword")
     public String Keyword;
     @SerializedName("LinkCategoryId")

@@ -33,7 +33,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitManager {
     public static final String TAG = "RetrofitManager";
-
     public static String BASE_URL = "https://apicms.ir/";
     public static final String HEADER_CACHE_CONTROL = "Cache-Control";
     public static final String HEADER_PRAGMA = "Pragma";

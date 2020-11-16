@@ -6,6 +6,8 @@ import androidx.multidex.MultiDexApplication;
 
 import java.io.File;
 
+import ntk.android.base.utill.EasyPreference;
+
 
 /**
  *
@@ -52,12 +54,24 @@ public abstract class BaseNtkApplication extends MultiDexApplication implements 
         ApplicationStaticParameter config = getConfig();
         if (config == null)
             config = new ApplicationStaticParameter();
-        if (config.TONEN == null)
-            config.TONEN = "";
-        if (config.DEVICE_TOKEN == null)
-            config.DEVICE_TOKEN = "";
-        if (config.URL == null)
-            config.URL = "";
+        if (ApplicationStaticParameter.TONEN == null)
+            ApplicationStaticParameter.TONEN = "";
+        if (ApplicationStaticParameter.DEVICE_TOKEN == null)
+            ApplicationStaticParameter.DEVICE_TOKEN = "";
+        if (ApplicationStaticParameter.URL == null) {
+            ApplicationStaticParameter.URL = "";
+            int ntk_url_count = EasyPreference.with(this).getInt("NTK_TEST_COUNT", 0);
+            if (ntk_url_count > 0) {
+                ApplicationStaticParameter.URL = EasyPreference.with(this).getString("NTK_TEST_URL", "");
+                EasyPreference.with(this).addInt("NTK_TEST_COUNT", --ntk_url_count);
+            }
+        }
+        if (ApplicationStaticParameter.PACKAGE_NAME == null)
+            ApplicationStaticParameter.PACKAGE_NAME = "";
+        int ntk_url_count = EasyPreference.with(this).getInt("NTK_TEST_COUNT", 0);
+        if (ntk_url_count > 0)
+            ApplicationStaticParameter.PACKAGE_NAME = EasyPreference.with(this).getString("NTK_TEST_PACKAGENAME", "");
+
         return config;
     }
 }

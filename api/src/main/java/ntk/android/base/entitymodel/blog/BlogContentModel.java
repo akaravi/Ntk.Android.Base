@@ -19,9 +19,9 @@ public class BlogContentModel extends BaseModuleEntity<Long> {
     @SerializedName("FromDate")
     public String FromDate;
     @SerializedName("Geolocationlatitude")
-    public long Golocationlatitude;
+    public Double Golocationlatitude;
     @SerializedName("Geolocationlongitude")
-    public long Geolocationlongitude;
+    public Double Geolocationlongitude;
     @SerializedName("Keyword")
     public String Keyword;
     @SerializedName("LinkFileIds")

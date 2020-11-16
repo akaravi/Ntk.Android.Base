@@ -48,10 +48,10 @@ public class EstateProperty extends BaseEntity {
     public int LinkSiteId;
 
     @SerializedName("Geolocationlatitude")
-    public double Geolocationlatitude;
+    public Double Geolocationlatitude;
 
     @SerializedName("Geolocationlongitude")
-    public double Geolocationlongitude;
+    public Double Geolocationlongitude;
 
     @SerializedName("Address")
     public String Address;

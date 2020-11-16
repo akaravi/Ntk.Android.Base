@@ -10,9 +10,6 @@ import ntk.android.base.entitymodel.enums.EnumBuildStatusType;
 
 public class ApplicationAppModel extends BaseModuleEntity<Long> {
 
-
-    @SerializedName("LinkSiteId")
-    public Long LinkSiteId;
     @SerializedName("AppKey")
     public String AppKey;
     @SerializedName("ExpireDate")

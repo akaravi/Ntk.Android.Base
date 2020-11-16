@@ -19,9 +19,9 @@ public class NewsContentModel extends BaseModuleEntity<Long> {
     @SerializedName("FromDate")
     public String FromDate;
     @SerializedName("Geolocationlatitude")
-    public long Geolocationlatitude;
+    public Double Geolocationlatitude;
     @SerializedName("Geolocationlongitude")
-    public long Geolocationlongitude;
+    public Double Geolocationlongitude;
     @SerializedName("Keyword")
     public String Keyword;
     @SerializedName("LinkFileIds")

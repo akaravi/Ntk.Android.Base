@@ -10,9 +10,9 @@ public class CoreLocationModel {
     @SerializedName("LinkParentIdNode")
     Long LinkParentIdNode;
     @SerializedName("GeoLocationLatitude")
-    Long GeoLocationLatitude;
+    Double GeoLocationLatitude;
     @SerializedName("GeoLocationLongitude")
-    Long GeoLocationLongitude;
+    Double GeoLocationLongitude;
     @SerializedName("LocationType")
     Integer LocationType;
     @SerializedName(" virtual_Parent")

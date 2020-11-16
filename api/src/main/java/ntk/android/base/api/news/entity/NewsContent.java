@@ -63,10 +63,10 @@ public class NewsContent  extends BaseEntity {
     public long LinkFileMovieId;
 
     @SerializedName("Geolocationlatitude")
-    public double Geolocationlatitude;
+    public Double Geolocationlatitude;
 
     @SerializedName("Geolocationlongitude")
-    public double Geolocationlongitude;
+    public Double Geolocationlongitude;
 
 
 }
