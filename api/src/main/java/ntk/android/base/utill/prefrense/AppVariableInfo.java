@@ -43,4 +43,12 @@ public class AppVariableInfo {
     public void setConfigapp(String configApp) {
         EasyPreference.with(c).addString("configapp", configApp);
     }
+    public boolean isLogin() {
+        return EasyPreference.with(c).getBoolean("isLogin", false);
+    }
+
+    public void setIsLogin(boolean b) {
+        EasyPreference.with(c).addBoolean("isLogin", b);
+    }
+  
 }

@@ -33,7 +33,7 @@ public class UserModelPref {
     public Long siteId() {
         return EasyPreference.with(c).getLong("Ntk_siteId", 0);
     }
-    public void SiteId(long siteId) {
+    public void setSiteId(long siteId) {
         EasyPreference.with(c).addLong("Ntk_siteId", siteId);
     }
     public void setMemberUserId(long memberUserId) {

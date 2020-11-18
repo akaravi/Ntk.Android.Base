@@ -44,8 +44,9 @@ interface Icore {
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
     Observable<ErrorException<CoreUserModel>> SignUpUser(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthUserSignUpModel model);
-
-    Observable<ErrorException<TokenInfoModel>> signinUser(AuthUserSignInModel model);
+    @POST("{cpath}")
+    @Headers({"content-type: application/json"})
+    Observable<ErrorException<TokenInfoModel>> SignInUser(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthUserSignInModel model);
 
     Observable<ErrorException<TokenInfoModel>> renewToken(AuthRenewTokenModel model);
 

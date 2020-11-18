@@ -4,17 +4,19 @@ import com.google.gson.annotations.SerializedName;
 
 public class AuthUserSignInModel {
     @SerializedName("CaptchaKey")
-    String captchaKey;
+    public String captchaKey;
     @SerializedName("CaptchaText")
-    String captchaText;
+    public String captchaText;
     @SerializedName("Email")
-    String Email;
+    public String Email;  
+    @SerializedName("Mobile")
+    public String Mobile;
     @SerializedName("Password")
-    String Password;
+    public String Password;
     @SerializedName("IsRemember")
-    boolean IsRemember;
+    public boolean IsRemember;
     @SerializedName("SiteId")
-    int SiteId;
+    public long SiteId;
     @SerializedName("Lang")
-    String lang;
+    public String lang;
 }

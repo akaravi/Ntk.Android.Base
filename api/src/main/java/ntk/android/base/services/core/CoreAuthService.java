@@ -18,6 +18,7 @@ import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.RetrofitManager;
 import ntk.android.base.dtomodel.core.AuthEmailConfirmDtoModel;
 import ntk.android.base.dtomodel.core.AuthMobileConfirmDtoModel;
+import ntk.android.base.dtomodel.core.AuthUserSignInModel;
 import ntk.android.base.dtomodel.core.AuthUserSignUpModel;
 import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
 import ntk.android.base.entitymodel.base.CaptchaModel;
@@ -40,7 +41,6 @@ public class CoreAuthService {
         this.context = context;
         headers = new ConfigRestHeader().GetHeaders(context);
     }
-
 
     Icore Icore() {
         Icore iCore = new RetrofitManager(context).getRetrofitUnCached().create(Icore.class);
@@ -90,6 +90,7 @@ public class CoreAuthService {
                 if (o.IsSuccess) {
                     Preferences.with(context).tokenInfo().setDeviceToken(o.Item.DeviceToken);
                     Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
+                    Preferences.with(context).UserInfo().setSiteId(o.Item.SiteId);
                     mMovieCache.onNext(o);
                 } else
 
@@ -207,5 +208,36 @@ public class CoreAuthService {
         return mMovieCache;
     }
 
+    public Observable<ErrorException<TokenInfoModel>> signInUser(AuthUserSignInModel request) {
+        BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
+        Icore().SignInUser(baseUrl + controlerUrl + "/signin", headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<TokenInfoModel>>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+            }
 
+            @Override
+            public void onNext(@NonNull ErrorException<TokenInfoModel> o) {
+                if (o.IsSuccess) {
+                    Preferences.with(context).tokenInfo().setDeviceToken(o.Item.DeviceToken);
+                    Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
+                    Preferences.with(context).UserInfo().setSiteId(o.Item.SiteId);
+                    mMovieCache.onNext(o);
+                } else
+
+                    mMovieCache.onError(new Exception("Ntk Exepction:" + o.ErrorMessage));
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+            }
+        });
+        return mMovieCache;
+    }
 }
