@@ -1,6 +1,8 @@
 package ntk.android.base.services.core;
 
 import android.content.Context;
+import android.provider.Settings;
+import android.telephony.TelephonyManager;
 
 import java.util.Map;
 
@@ -14,13 +16,19 @@ import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.BaseNtkApplication;
 import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.RetrofitManager;
+import ntk.android.base.dtomodel.core.AuthEmailConfirmDtoModel;
+import ntk.android.base.dtomodel.core.AuthMobileConfirmDtoModel;
 import ntk.android.base.dtomodel.core.AuthUserSignUpModel;
 import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
+import ntk.android.base.entitymodel.base.CaptchaModel;
 import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.entitymodel.base.TokenInfoModel;
 import ntk.android.base.entitymodel.core.CoreUserModel;
 import ntk.android.base.entitymodel.enums.EnumDeviceType;
 import ntk.android.base.entitymodel.enums.EnumOperatingSystemType;
+import ntk.android.base.utill.AppUtill;
+import ntk.android.base.utill.prefrense.Preferences;
 
 public class CoreAuthService {
     private final Map<String, String> headers;
@@ -40,9 +48,37 @@ public class CoreAuthService {
 
     }
 
+    public Observable<ErrorException<CaptchaModel>> getCaptcha() {
+        BehaviorSubject<ErrorException<CaptchaModel>> mMovieCache = BehaviorSubject.create();
+        Icore().Captcha()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<CaptchaModel>>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException<CaptchaModel> model) {
+                mMovieCache.onNext(model);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
+    }
+
     public Observable<ErrorException<TokenInfoModel>> getTokenDevice(TokenDeviceClientInfoDtoModel request) {
         BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
-        Icore().getTokenDevice(baseUrl + controlerUrl + "/GetTokenDevice", headers, request)
+        Icore().GetTokenDevice(baseUrl + controlerUrl + "/GetTokenDevice", headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<TokenInfoModel>>() {
             @Override
@@ -52,7 +88,8 @@ public class CoreAuthService {
             @Override
             public void onNext(@NonNull ErrorException<TokenInfoModel> o) {
                 if (o.IsSuccess) {
-                    new ConfigRestHeader().replaceToken(context, o.Item.DeviceToken);
+                    Preferences.with(context).tokenInfo().setDeviceToken(o.Item.DeviceToken);
+                    Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
                     mMovieCache.onNext(o);
                 } else
 
@@ -76,13 +113,23 @@ public class CoreAuthService {
         request.OSType = EnumOperatingSystemType.GoogleAndroid.index();
         request.DeviceType = EnumDeviceType.Android.index();
         request.PackageName = BaseNtkApplication.get().getPackageName();
-        request.SecurityKey = "123456789";
+        request.SecurityKey = "";
+        request.LocationLat = "0";
+        request.LocationLong = "0";
+        request.DeviceBrand = AppUtill.GetDeviceName();
+        request.Country = "IR";
+        request.Language = "FA";
+        request.SimCard = ((TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE)).getSimOperatorName();
+        request.AppBuildVer = Integer.parseInt(String.valueOf(BaseNtkApplication.get().getApplicationParameter().VERSION_CODE()));//String.valueOf(BuildConfig.VERSION_CODE));
+        request.AppSourceVer = BaseNtkApplication.get().getApplicationParameter().VERSION_NAME();
+        request.NotificationId = Preferences.with(context).appVariableInfo().notificationId();
+        request.ClientMACAddress = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
         return getTokenDevice(request);
     }
 
     public Observable<ErrorException<CoreUserModel>> signUpUser(AuthUserSignUpModel model) {
         BehaviorSubject<ErrorException<CoreUserModel>> mMovieCache = BehaviorSubject.create();
-        Icore().signupUser(baseUrl + controlerUrl + "/signup", headers, model)
+        Icore().SignUpUser(baseUrl + controlerUrl + "/signup", headers, model)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<CoreUserModel>>() {
             @Override
@@ -107,4 +154,58 @@ public class CoreAuthService {
         });
         return mMovieCache;
     }
+
+    public Observable<ErrorExceptionBase> confirmMobile(AuthMobileConfirmDtoModel request) {
+        BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
+        Icore().MobileConfirm(baseUrl + controlerUrl + "/mobileConfirm", headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorExceptionBase>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorExceptionBase o) {
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+            }
+        });
+        return mMovieCache;
+    }
+
+    public Observable<ErrorExceptionBase> confirmEmail(AuthEmailConfirmDtoModel request) {
+        BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
+        Icore().EmailConfirm(baseUrl + controlerUrl + "/emailConfirm", headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorExceptionBase>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorExceptionBase o) {
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+            }
+        });
+        return mMovieCache;
+    }
+
+
 }

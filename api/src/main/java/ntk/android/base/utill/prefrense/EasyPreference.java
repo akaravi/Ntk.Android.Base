@@ -1,4 +1,4 @@
-package ntk.android.base.utill;
+package ntk.android.base.utill.prefrense;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -9,7 +9,10 @@ import ntk.android.base.BaseNtkApplication;
 
 //import ntk.android.base.BuildConfig;
 
-public class EasyPreference {
+  class EasyPreference {
+
+    public EasyPreference(Context context) {
+    }
 
     public static Builder with(Context context) {
         return new Builder(context);

@@ -4,6 +4,8 @@ import java.util.Map;
 
 import io.reactivex.Observable;
 import ntk.android.base.api.baseModel.FilterModel;
+import ntk.android.base.dtomodel.core.AuthEmailConfirmDtoModel;
+import ntk.android.base.dtomodel.core.AuthMobileConfirmDtoModel;
 import ntk.android.base.dtomodel.core.AuthRenewTokenModel;
 import ntk.android.base.dtomodel.core.AuthUserChangePasswordModel;
 import ntk.android.base.dtomodel.core.AuthUserForgetPasswordModel;
@@ -11,26 +13,37 @@ import ntk.android.base.dtomodel.core.AuthUserSignInModel;
 import ntk.android.base.dtomodel.core.AuthUserSignOutModel;
 import ntk.android.base.dtomodel.core.AuthUserSignUpModel;
 import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
+import ntk.android.base.entitymodel.base.CaptchaModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.entitymodel.base.TokenInfoModel;
 import ntk.android.base.entitymodel.core.CoreUserModel;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.HeaderMap;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 interface Icore {
-    Observable<ErrorException<TokenInfoModel>> Captcha();
+    @GET("api/v1/auth/captcha")
+    @Headers({"content-type: application/json"})
+    Observable<ErrorException<CaptchaModel>> Captcha();
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TokenInfoModel>> getTokenDevice( @Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body TokenDeviceClientInfoDtoModel request);
-    
+    Observable<ErrorException<TokenInfoModel>> GetTokenDevice(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body TokenDeviceClientInfoDtoModel request);
+
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<CoreUserModel>> signupUser(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthUserSignUpModel model);
+    Observable<ErrorExceptionBase> MobileConfirm(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthMobileConfirmDtoModel model);
+
+    @POST("{cpath}")
+    @Headers({"content-type: application/json"})
+    Observable<ErrorExceptionBase> EmailConfirm(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthEmailConfirmDtoModel model);
+    @POST("{cpath}")
+    @Headers({"content-type: application/json"})
+    Observable<ErrorException<CoreUserModel>> SignUpUser(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthUserSignUpModel model);
 
     Observable<ErrorException<TokenInfoModel>> signinUser(AuthUserSignInModel model);
 

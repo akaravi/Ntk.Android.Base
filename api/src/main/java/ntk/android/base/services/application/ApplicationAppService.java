@@ -43,7 +43,7 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
 
             @Override
             public void onError(@NonNull Throwable e) {
-                onError(e);
+                mMovieCache.onError(e);
             }
 
             @Override
@@ -73,7 +73,7 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
 
             @Override
             public void onError(@NonNull Throwable e) {
-                onError(e);
+                mMovieCache.onError(e);
             }
 
             @Override
@@ -103,7 +103,7 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
 
             @Override
             public void onError(@NonNull Throwable e) {
-                onError(e);
+                mMovieCache.onError(e);
             }
 
             @Override

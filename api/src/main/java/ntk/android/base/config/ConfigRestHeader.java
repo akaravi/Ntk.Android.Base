@@ -1,6 +1,5 @@
 package ntk.android.base.config;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
@@ -11,26 +10,29 @@ import java.util.Map;
 import ntk.android.base.ApplicationStaticParameter;
 import ntk.android.base.BaseNtkApplication;
 import ntk.android.base.utill.AppUtill;
-import ntk.android.base.utill.EasyPreference;
+import ntk.android.base.utill.prefrense.Preferences;
 
 public class ConfigRestHeader {
-    final String tokenKey = "DeviceToken";
 
-    @SuppressLint("HardwareIds")
     public Map<String, String> GetHeaders(Context context) {
 
         TelephonyManager manager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
         Map<String, String> headers = new HashMap<>();
         String staticToken = BaseNtkApplication.get().staticConfig().TONEN;
-        if (!staticToken.equalsIgnoreCase(""))
+        if (!staticToken.equalsIgnoreCase("")) {
             headers.put("Token", staticToken);
-        else
-            headers.put("Token", "");
+            headers.put("Authorization", staticToken);
+        } else{
+            String auth = Preferences.with(context).tokenInfo().authorizationToken();
+
+            headers.put("Token", auth);
+            headers.put("Authorization", auth);
+        }
         String staticDevice_token = ApplicationStaticParameter.DEVICE_TOKEN;
         if (!staticDevice_token.equalsIgnoreCase(""))
             headers.put("DeviceToken", staticDevice_token);
         else {
-            String prevToken = EasyPreference.with(context).getString(tokenKey, "");
+            String prevToken = Preferences.with(context).tokenInfo().deviceToken();
             if (!prevToken.equalsIgnoreCase(""))
                 headers.put("DeviceToken", prevToken);
         }
@@ -39,6 +41,7 @@ public class ConfigRestHeader {
             headers.put("PackageName", BaseNtkApplication.get().getApplicationParameter().PACKAGE_NAME());
         else
             headers.put("PackageName", staticPackageName);
+
         headers.put("LocationLong", "0");
         headers.put("LocationLat", "0");
         headers.put("DeviceId", Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID));
@@ -48,7 +51,7 @@ public class ConfigRestHeader {
         headers.put("SimCard", manager.getSimOperatorName());
         headers.put("AppBuildVer", String.valueOf(BaseNtkApplication.get().getApplicationParameter().VERSION_CODE()));//String.valueOf(BuildConfig.VERSION_CODE));
         headers.put("AppSourceVer", BaseNtkApplication.get().getApplicationParameter().VERSION_NAME());
-        String NotId = EasyPreference.with(context).getString("NotificationId", "null");
+        String NotId = Preferences.with(context).appVariableInfo().notificationId();
 
         if (NotId != null && !NotId.isEmpty() && !NotId.toLowerCase().equals("null")) {
             headers.put("NotificationId", NotId);
@@ -57,7 +60,4 @@ public class ConfigRestHeader {
         return headers;
     }
 
-    public void replaceToken(Context context, String token) {
-        EasyPreference.with(context).addString(tokenKey, token);
-    }
 }
