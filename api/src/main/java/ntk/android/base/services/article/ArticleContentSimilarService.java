@@ -2,12 +2,11 @@ package ntk.android.base.services.article;
 
 import android.content.Context;
 
-import ntk.android.base.entitymodel.article.ArticleContentModel;
-import ntk.android.base.services.base.CmsApiSimilar;
+import ntk.android.base.entitymodel.article.ArticleContentSimilarModel;
+import ntk.android.base.services.base.CmsApiServerBase;
 
-public  class ArticleContentSimilarService extends CmsApiSimilar<ArticleContentModel, Long> {
-
+public  class ArticleContentSimilarService extends CmsApiServerBase<ArticleContentSimilarModel, Long> {
     public ArticleContentSimilarService(Context context) {
-        super(context, "ArticleContent", ArticleContentModel.class);
+        super(context, "ArticleContentSimilar", ArticleContentSimilarModel.class);
     }
 }

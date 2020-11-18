@@ -23,6 +23,7 @@ import ntk.android.base.entitymodel.news.NewsContentModel;
 import ntk.android.base.services.base.CmsApiFavoriteBase;
 import ntk.android.base.services.base.CmsApiScoreApi;
 import ntk.android.base.services.base.CmsApiServerBase;
+import ntk.android.base.services.base.CmsApiSimilar;
 
 
 public class NewsContentService extends CmsApiServerBase<NewsContentModel, Long> {
@@ -48,6 +49,9 @@ public class NewsContentService extends CmsApiServerBase<NewsContentModel, Long>
         return new CmsApiScoreApi<NewsContentModel, Long>(context, "NewsContent", NewsContentModel.class).scoreClick(model);
     }
 
+    public Observable<ErrorException<NewsContentModel>> getAllWithSimilarsId(Long id, FilterDataModel filter){
+        return new CmsApiSimilar<NewsContentModel,Long>(context,"NewsContent", NewsContentModel.class).GetAllWithSimilarsId(id,filter);
+    }
     public Observable<ErrorException<NewsContentModel>> getAllWithCategoryUsedInContent(long Id, FilterDataModel request) {
         BehaviorSubject<ErrorException<NewsContentModel>> mMovieCache = BehaviorSubject.create();
 

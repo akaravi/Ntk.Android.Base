@@ -40,7 +40,7 @@ public class CmsApiSimilar<TEntity extends BaseModuleEntity<Long>, Long> {
         ICmsApiSimilar iCmsApiServerBase = new RetrofitManager(context).getRetrofitUnCached().create(ICmsApiSimilar.class);
         return iCmsApiServerBase;
     }
-    public Observable<ErrorException<TEntity>> ServiceGetAllWithSimilarsId(FilterDataModel request) {
+    public Observable<ErrorException<TEntity>> GetAllWithSimilarsId(Long id,FilterDataModel request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
         Observable<ErrorException> all = ICmsApiSimilar().GetAllSimilar(baseUrl + controlerUrl + "/GetAllWithSimilarsId", headers, request);
         all.observeOn(AndroidSchedulers.mainThread())

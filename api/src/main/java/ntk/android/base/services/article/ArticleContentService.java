@@ -20,9 +20,11 @@ import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.entitymodel.base.FilterDataModel;
 import ntk.android.base.entitymodel.news.NewsCommentModel;
+import ntk.android.base.entitymodel.news.NewsContentModel;
 import ntk.android.base.services.base.CmsApiFavoriteBase;
 import ntk.android.base.services.base.CmsApiScoreApi;
 import ntk.android.base.services.base.CmsApiServerBase;
+import ntk.android.base.services.base.CmsApiSimilar;
 
 
 public class ArticleContentService extends CmsApiServerBase<ArticleContentModel, Long> {
@@ -85,5 +87,7 @@ public class ArticleContentService extends CmsApiServerBase<ArticleContentModel,
                 });
         return mMovieCache;
     }
-
+    public Observable<ErrorException<ArticleContentModel>> getAllWithSimilarsId(Long id, FilterDataModel filter){
+        return new CmsApiSimilar<ArticleContentModel,Long>(context,"ArticleContent", ArticleContentModel.class).GetAllWithSimilarsId(id,filter);
+    }
 }
