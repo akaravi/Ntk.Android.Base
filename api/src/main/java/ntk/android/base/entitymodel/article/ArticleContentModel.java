@@ -37,7 +37,7 @@ public class ArticleContentModel extends BaseModuleEntity<Long> {
     @SerializedName("ScoreSumPercent")
     public long ScoreSumPercent;
     @SerializedName("ViewCount")
-    public long ViewCount;
+    public int ViewCount;
     @SerializedName("Favorited")
     public boolean Favorited;
     @SerializedName("MainImageSrc")

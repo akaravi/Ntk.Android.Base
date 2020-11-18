@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.android.base.entitymodel.coremodulemain.CoreModuleSiteModel;
+import ntk.android.base.entitymodel.coremain.CoreModuleSiteModel;
 import ntk.android.base.entitymodel.enums.EnumSiteStatus;
 
 public class CoreSiteModel {

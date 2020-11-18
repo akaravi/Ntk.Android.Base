@@ -4,17 +4,18 @@ import com.google.gson.annotations.SerializedName;
 
 public class BaseEntityCategory<TKey> extends BaseModuleEntity<TKey> {
     @SerializedName("Title")
+    public
     String Title;
     @SerializedName("LinkMainImageId")
-    long LinkMainImageId;
+    public long LinkMainImageId;
     @SerializedName("Description")
-    String Description;
+    public String Description;
     @SerializedName("FontIcon")
-    String FontIcon;
+    public String FontIcon;
     @SerializedName("LinkParentId")
-    TKey LinkParentId;
+    public TKey LinkParentId;
     @SerializedName("LinkParentIdNode")
-    String LinkParentIdNode;
+    public String LinkParentIdNode;
     @SerializedName("LinkMainImageSrc")
-    String LinkMainImageSrc;
+    public String LinkMainImageSrc;
 }

@@ -24,7 +24,6 @@ public interface ICmsApiServerBase<TEntity,TKey> {
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-
     Observable<ErrorException> getAll(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterDataModel request);
 
     @GET("{cpath}")

@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.android.base.entitymodel.base.BaseEntity;
-import ntk.android.base.entitymodel.coremodulemain.CoreCpMainMenuCmsUserGroupModel;
+import ntk.android.base.entitymodel.coremain.CoreCpMainMenuCmsUserGroupModel;
 import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
 
 public class CoreUserGroupModel extends BaseEntity<Long> {

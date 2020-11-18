@@ -1,4 +1,4 @@
-package ntk.android.base.entitymodel.coremodulemain;
+package ntk.android.base.entitymodel.coremain;
 
 import com.google.gson.annotations.SerializedName;
 

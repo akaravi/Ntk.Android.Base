@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class ArticleCommentModel extends BaseModuleEntity<Long> {
-    @SerializedName("LinkContentid")
-    public long LinkContentid;
+    @SerializedName("LinkContentId")
+    public long LinkContentId;
     @SerializedName("LinkParentId")
     public Long LinkParentId;
     @SerializedName("Writer")

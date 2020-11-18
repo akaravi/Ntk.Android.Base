@@ -31,6 +31,7 @@ public class ArticleContentService extends CmsApiServerBase<ArticleContentModel,
     public ArticleContentService(Context context) {
         super(context, "ArticleContent", ArticleContentModel.class);
     }
+
     public Observable<ErrorExceptionBase> addFavorite(long Id) {
         return new CmsApiFavoriteBase<ArticleContentModel, Long>(context, "ArticleContent", ArticleContentModel.class).addFavorite(Id);
     }
@@ -42,14 +43,15 @@ public class ArticleContentService extends CmsApiServerBase<ArticleContentModel,
     public Observable<ErrorException<ArticleContentModel>> getFavoriteList(FilterDataModel request) {
         return new CmsApiFavoriteBase<ArticleContentModel, Long>(context, "ArticleContent", ArticleContentModel.class).getFavoriteList(request);
     }
-    public  Observable<ErrorExceptionBase> scoreClick(ScoreClickDtoModel model){
-        return new CmsApiScoreApi<ArticleContentModel,Long>(context,"ArticleContent", ArticleContentModel.class)  .scoreClick(model);
+
+    public Observable<ErrorExceptionBase> scoreClick(ScoreClickDtoModel model) {
+        return new CmsApiScoreApi<ArticleContentModel, Long>(context, "ArticleContent", ArticleContentModel.class).scoreClick(model);
     }
 
-    public Observable<ErrorException<ArticleContentModel>> getAllWithCategoryUsedInContent(FilterDataModel request) {
+    public Observable<ErrorException<ArticleContentModel>> getAllWithCategoryUsedInContent(long id, FilterDataModel request) {
         BehaviorSubject<ErrorException<ArticleContentModel>> mMovieCache = BehaviorSubject.create();
 
-        ICmsApiServerBase().getAll(baseUrl+controlerUrl+"GetAllWithCategoryUseInContentId",headers,request)
+        ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/GetAllWithCategoryUseInContentId/" + id, headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(new Observer<ErrorException>() {
@@ -67,7 +69,7 @@ public class ArticleContentService extends CmsApiServerBase<ArticleContentModel,
                                 .setExclusionStrategies()
                                 .create();
                         o.Item = gson.fromJson(gson.toJson(o.Item), NewsCommentModel.class);
-                        o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<NewsCommentModel>(NewsCommentModel.class));
+                        o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<ArticleContentModel>(ArticleContentModel.class));
                         mMovieCache.onNext(o);
                     }
 
