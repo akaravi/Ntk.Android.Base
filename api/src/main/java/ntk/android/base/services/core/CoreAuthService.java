@@ -18,6 +18,7 @@ import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.RetrofitManager;
 import ntk.android.base.dtomodel.core.AuthEmailConfirmDtoModel;
 import ntk.android.base.dtomodel.core.AuthMobileConfirmDtoModel;
+import ntk.android.base.dtomodel.core.AuthUserForgetPasswordModel;
 import ntk.android.base.dtomodel.core.AuthUserSignInModel;
 import ntk.android.base.dtomodel.core.AuthUserSignUpModel;
 import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
@@ -240,4 +241,31 @@ public class CoreAuthService {
         });
         return mMovieCache;
     }
+
+    public Observable<ErrorException<TokenInfoModel>> forgetPassword(AuthUserForgetPasswordModel req) {
+        BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
+        Icore().ForgetPassword(baseUrl + controlerUrl + "/forgetPassword", headers, req)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<TokenInfoModel>>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException<TokenInfoModel> o) {
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+            }
+        });
+        return mMovieCache;
+    }
+
 }

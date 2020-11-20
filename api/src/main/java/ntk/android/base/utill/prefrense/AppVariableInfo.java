@@ -22,11 +22,11 @@ public class AppVariableInfo {
     }
 
     public boolean IntroSeen() {
-        return EasyPreference.with(c).getBoolean("Registered", false);
+        return EasyPreference.with(c).getBoolean("Intro", false);
     }
 
     public void setIntroSeen(boolean b) {
-        EasyPreference.with(c).addBoolean("Registered", b);
+        EasyPreference.with(c).addBoolean("Intro", b);
     }
 
     public String notificationId() {

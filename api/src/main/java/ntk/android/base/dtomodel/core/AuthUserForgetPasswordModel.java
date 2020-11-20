@@ -6,7 +6,9 @@ public class AuthUserForgetPasswordModel {
     @SerializedName("CaptchaKey")
     public String CaptchaKey;
     @SerializedName("CaptchaText")
-    public  String CaptchaText;
+    public String CaptchaText;
     @SerializedName("Email")
-    public   String Email;
+    public String Email;
+    @SerializedName("Mobile")
+    public String Mobile;
 }

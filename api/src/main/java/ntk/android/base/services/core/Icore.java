@@ -51,8 +51,9 @@ interface Icore {
     Observable<ErrorException<TokenInfoModel>> renewToken(AuthRenewTokenModel model);
 
     Observable<ErrorException<TokenInfoModel>> changePassword(AuthUserChangePasswordModel model);
-
-    Observable<ErrorException<TokenInfoModel>> forgetPassword(AuthUserForgetPasswordModel model);
+    @POST("{cpath}")
+    @Headers({"content-type: application/json"})
+    Observable<ErrorException<TokenInfoModel>> ForgetPassword(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthUserForgetPasswordModel model);
 
     Observable<ErrorExceptionBase> logout(AuthUserSignOutModel model);
 
