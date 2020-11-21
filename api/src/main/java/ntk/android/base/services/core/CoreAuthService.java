@@ -19,6 +19,7 @@ import ntk.android.base.config.RetrofitManager;
 import ntk.android.base.dtomodel.core.AuthEmailConfirmDtoModel;
 import ntk.android.base.dtomodel.core.AuthMobileConfirmDtoModel;
 import ntk.android.base.dtomodel.core.AuthUserForgetPasswordModel;
+import ntk.android.base.dtomodel.core.AuthUserSignInBySmsDtoModel;
 import ntk.android.base.dtomodel.core.AuthUserSignInModel;
 import ntk.android.base.dtomodel.core.AuthUserSignUpModel;
 import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
@@ -268,4 +269,33 @@ public class CoreAuthService {
         return mMovieCache;
     }
 
+    public Observable<ErrorException<TokenInfoModel>> signInUserBySMS(AuthUserSignInBySmsDtoModel req) {
+        BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
+        Icore().SignInUserBySMS(baseUrl + controlerUrl + "/signInBySms", headers, req)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<TokenInfoModel>>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException<TokenInfoModel> o) {
+                if (o.IsSuccess) {
+                    Preferences.with(context).tokenInfo().setDeviceToken(o.Item.DeviceToken);
+                    Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
+                }
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+            }
+        });
+        return mMovieCache;
+    }
 }

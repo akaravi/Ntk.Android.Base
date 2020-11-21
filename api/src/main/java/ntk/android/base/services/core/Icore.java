@@ -9,6 +9,7 @@ import ntk.android.base.dtomodel.core.AuthMobileConfirmDtoModel;
 import ntk.android.base.dtomodel.core.AuthRenewTokenModel;
 import ntk.android.base.dtomodel.core.AuthUserChangePasswordModel;
 import ntk.android.base.dtomodel.core.AuthUserForgetPasswordModel;
+import ntk.android.base.dtomodel.core.AuthUserSignInBySmsDtoModel;
 import ntk.android.base.dtomodel.core.AuthUserSignInModel;
 import ntk.android.base.dtomodel.core.AuthUserSignOutModel;
 import ntk.android.base.dtomodel.core.AuthUserSignUpModel;
@@ -41,9 +42,11 @@ interface Icore {
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
     Observable<ErrorExceptionBase> EmailConfirm(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthEmailConfirmDtoModel model);
+
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
     Observable<ErrorException<CoreUserModel>> SignUpUser(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthUserSignUpModel model);
+
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
     Observable<ErrorException<TokenInfoModel>> SignInUser(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthUserSignInModel model);
@@ -51,9 +54,14 @@ interface Icore {
     Observable<ErrorException<TokenInfoModel>> renewToken(AuthRenewTokenModel model);
 
     Observable<ErrorException<TokenInfoModel>> changePassword(AuthUserChangePasswordModel model);
+
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
     Observable<ErrorException<TokenInfoModel>> ForgetPassword(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthUserForgetPasswordModel model);
+
+    @POST("{cpath}")
+    @Headers({"content-type: application/json"})
+    Observable<ErrorException<TokenInfoModel>> SignInUserBySMS(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body AuthUserSignInBySmsDtoModel model);
 
     Observable<ErrorExceptionBase> logout(AuthUserSignOutModel model);
 

@@ -1,4 +1,4 @@
-package ntk.android.base.dtomodel.hypershop;
+package ntk.android.base.entitymodel.hypershop;
 
 import com.google.gson.annotations.SerializedName;
 

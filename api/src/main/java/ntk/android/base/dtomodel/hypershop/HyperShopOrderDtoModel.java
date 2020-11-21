@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class HyperShopOrderModel {
+public class HyperShopOrderDtoModel {
     @SerializedName("OrderId")
     public String OrderId;
     @SerializedName("AcceptSystem")
@@ -20,5 +20,5 @@ public class HyperShopOrderModel {
     @SerializedName("Amount")
     public float Amount;
     @SerializedName("Products")
-    public List<HyperShopOrderContentModel> Products;
+    public List<HyperShopOrderContentDtoModel> Products;
 }
