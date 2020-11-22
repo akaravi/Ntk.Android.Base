@@ -12,8 +12,10 @@ public class AppVariableInfo {
     public void set_registerNotInterested(boolean b) {
         EasyPreference.with(c).addBoolean("register_not_interested", b);
     }
-
-    public boolean isRegistered() {
+    public boolean isRegisterNotInterested() {
+        return EasyPreference.with(c).getBoolean("register_not_interested", false);
+    }
+    private boolean isRegistered() {
         return EasyPreference.with(c).getBoolean("Registered", false);
     }
 

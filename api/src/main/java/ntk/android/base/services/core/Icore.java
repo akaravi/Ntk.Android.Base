@@ -31,6 +31,10 @@ interface Icore {
     @Headers({"content-type: application/json"})
     Observable<ErrorException<CaptchaModel>> Captcha();
 
+    @GET("api/v1/auth/CorrectToken")
+    @Headers({"content-type: application/json"})
+    Observable<ErrorException<CaptchaModel>>  CorrectTokenInfo();
+
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
     Observable<ErrorException<TokenInfoModel>> GetTokenDevice(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body TokenDeviceClientInfoDtoModel request);

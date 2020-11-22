@@ -77,6 +77,24 @@ public class CoreAuthService {
         });
         return mMovieCache;
     }
+    public Observable<ErrorException<TokenInfoModel>> getTokenDevice() {
+        TokenDeviceClientInfoDtoModel request = new TokenDeviceClientInfoDtoModel();
+        request.OSType = EnumOperatingSystemType.GoogleAndroid.index();
+        request.DeviceType = EnumDeviceType.Android.index();
+        request.PackageName = BaseNtkApplication.get().getPackageName();
+        request.SecurityKey = "";
+        request.LocationLat = "0";
+        request.LocationLong = "0";
+        request.DeviceBrand = AppUtill.GetDeviceName();
+        request.Country = "IR";
+        request.Language = "FA";
+        request.SimCard = ((TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE)).getSimOperatorName();
+        request.AppBuildVer = Integer.parseInt(String.valueOf(BaseNtkApplication.get().getApplicationParameter().VERSION_CODE()));//String.valueOf(BuildConfig.VERSION_CODE));
+        request.AppSourceVer = BaseNtkApplication.get().getApplicationParameter().VERSION_NAME();
+        request.NotificationId = Preferences.with(context).appVariableInfo().notificationId();
+        request.ClientMACAddress = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
+        return getTokenDevice(request);
+    }
 
     public Observable<ErrorException<TokenInfoModel>> getTokenDevice(TokenDeviceClientInfoDtoModel request) {
         BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
@@ -111,25 +129,33 @@ public class CoreAuthService {
         return mMovieCache;
     }
 
-    public Observable<ErrorException<TokenInfoModel>> getTokenDevice() {
-        TokenDeviceClientInfoDtoModel request = new TokenDeviceClientInfoDtoModel();
-        request.OSType = EnumOperatingSystemType.GoogleAndroid.index();
-        request.DeviceType = EnumDeviceType.Android.index();
-        request.PackageName = BaseNtkApplication.get().getPackageName();
-        request.SecurityKey = "";
-        request.LocationLat = "0";
-        request.LocationLong = "0";
-        request.DeviceBrand = AppUtill.GetDeviceName();
-        request.Country = "IR";
-        request.Language = "FA";
-        request.SimCard = ((TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE)).getSimOperatorName();
-        request.AppBuildVer = Integer.parseInt(String.valueOf(BaseNtkApplication.get().getApplicationParameter().VERSION_CODE()));//String.valueOf(BuildConfig.VERSION_CODE));
-        request.AppSourceVer = BaseNtkApplication.get().getApplicationParameter().VERSION_NAME();
-        request.NotificationId = Preferences.with(context).appVariableInfo().notificationId();
-        request.ClientMACAddress = Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID);
-        return getTokenDevice(request);
-    }
+    public Observable<Boolean> correctTokenInfo(){
+        BehaviorSubject<Boolean> mMovieCache = BehaviorSubject.create();
+        Icore().CorrectTokenInfo()  .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<CaptchaModel>>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
 
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException<CaptchaModel> captchaModelErrorException) {
+                if(captchaModelErrorException.IsSuccess)
+                    mMovieCache.onNext(true);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
+    }
     public Observable<ErrorException<CoreUserModel>> signUpUser(AuthUserSignUpModel model) {
         BehaviorSubject<ErrorException<CoreUserModel>> mMovieCache = BehaviorSubject.create();
         Icore().SignUpUser(baseUrl + controlerUrl + "/signup", headers, model)
