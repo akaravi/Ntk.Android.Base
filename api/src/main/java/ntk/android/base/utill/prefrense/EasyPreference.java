@@ -9,7 +9,7 @@ import ntk.android.base.BaseNtkApplication;
 
 //import ntk.android.base.BuildConfig;
 
-  class EasyPreference {
+  public class EasyPreference {
 
     public EasyPreference(Context context) {
     }
