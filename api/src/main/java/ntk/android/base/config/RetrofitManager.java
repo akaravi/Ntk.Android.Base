@@ -27,6 +27,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -47,13 +48,23 @@ public class RetrofitManager {
     public RetrofitManager(Context context) {
         mContext = context;
         String staticUrl = BaseNtkApplication.get().staticConfig().URL;
-        if(!staticUrl.equalsIgnoreCase(""))
-            BASE_URL= staticUrl;
+        if (!staticUrl.equalsIgnoreCase(""))
+            BASE_URL = staticUrl;
     }
 
     public Retrofit getRetrofit() {
         getRetrofit("");//new ConfigStaticValue(mContext).GetApiBaseUrl());
         return mRetrofit;
+    }
+
+    HttpLoggingInterceptor getLogInterceptor() {
+        if (BaseNtkApplication.DEBUG)
+            if (BaseNtkApplication.get().getApplicationParameter().APPLICATION_ID().contains("APPNTK")) {
+                HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+                interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+                return interceptor;
+            }
+        return null;
     }
 
     public Retrofit getCachedRetrofit() {
@@ -72,6 +83,10 @@ public class RetrofitManager {
                     .addInterceptor(provideOfflineCacheInterceptor())
                     .addNetworkInterceptor(provideCacheInterceptor())
                     .cache(provideCache());
+            //get debug interceptor;
+            HttpLoggingInterceptor logInterceptor = getLogInterceptor();
+            if (logInterceptor != null)
+                httpClient.addInterceptor(logInterceptor);
 
             mOkHttpClient = httpClient.build();
             String BaseUrl = BASE_URL;
@@ -97,6 +112,10 @@ public class RetrofitManager {
                     // Add all interceptors you want (headers, URL, logging)
                     .addInterceptor(provideForcedOfflineCacheInterceptor())
                     .cache(provideCache());
+            //get debug interceptor;
+            HttpLoggingInterceptor logInterceptor = getLogInterceptor();
+            if (logInterceptor != null)
+                httpClient.addInterceptor(logInterceptor);
 
             mCachedOkHttpClient = httpClient.build();
 //            if(NTKBASEApplication.DEBUG){
@@ -123,6 +142,10 @@ public class RetrofitManager {
         if (mRetrofit == null) {
             OkHttpClient.Builder httpClient = new OkHttpClient.Builder()
                     .addInterceptor(provideInterceptor());
+            //get debug interceptor;
+            HttpLoggingInterceptor logInterceptor = getLogInterceptor();
+            if (logInterceptor != null)
+                httpClient.addInterceptor(logInterceptor);
 
             mOkHttpClient = httpClient.build();
 

@@ -60,7 +60,7 @@ public class HyperShopContentService {
         return mMovieCache;
     }
 
-    public Observable<ErrorException<HyperShopContentModel>> getOne(Long Id) {
+    public Observable<ErrorException<HyperShopContentModel>> getOne(String Id) {
         BehaviorSubject<ErrorException<HyperShopContentModel>> mMovieCache = BehaviorSubject.create();
         Observable<ErrorException<HyperShopContentModel>> getone = HyperShopContentService().GetOne(baseUrl + controlerUrl + "/" + Id, headers);
         getone.observeOn(AndroidSchedulers.mainThread())
