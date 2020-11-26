@@ -51,4 +51,8 @@ public class UserModelPref {
         EasyPreference.with(c).addString("Theme", s);
     }
 
+    public Object linkMemberId() {
+        return EasyPreference.with(c).getLong("Ntk_linkMemberId", 0);
+    }
+
 }
