@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import ntk.android.base.api.baseModel.FilterModelPrev;
 
-public class FileContentRequest extends FilterModelPrev {
+public class FileContentRequestPrev extends FilterModelPrev {
 
     @SerializedName("TagId")
     public long TagId;

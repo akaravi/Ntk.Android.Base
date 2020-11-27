@@ -7,7 +7,7 @@ import java.util.List;
 import ntk.android.base.api.baseModel.ErrorExceptionPrev;
 import ntk.android.base.api.core.entity.CoreLocationPrev;
 
-public class CoreLocationResponse extends ErrorExceptionPrev {
+public class CoreLocationResponsePrev extends ErrorExceptionPrev {
     @SerializedName("ListItems")
     public List<CoreLocationPrev> ListItems;
 

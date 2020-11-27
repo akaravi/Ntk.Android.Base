@@ -2,7 +2,7 @@ package ntk.android.base.api.core.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class CoreUserConfirmMobileRequest {
+public class CoreUserConfirmMobileRequestPrev {
     @SerializedName("CaptchaKey")
     public String CaptchaKey ;
     @SerializedName("CaptchaText")

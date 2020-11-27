@@ -12,7 +12,7 @@ import retrofit2.http.HeaderMap;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
-public interface IApplication {
+ interface IApplication {
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: ApplicationScoreActSubmit"})

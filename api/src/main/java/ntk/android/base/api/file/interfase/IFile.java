@@ -3,10 +3,10 @@ package ntk.android.base.api.file.interfase;
 import java.util.Map;
 
 import io.reactivex.Observable;
-import ntk.android.base.api.file.model.FileCategoryRequest;
-import ntk.android.base.api.file.model.FileCategoryResponse;
-import ntk.android.base.api.file.model.FileContentRequest;
-import ntk.android.base.api.file.model.FileContentResponse;
+import ntk.android.base.api.file.model.FileCategoryRequestPrev;
+import ntk.android.base.api.file.model.FileCategoryResponsePrev;
+import ntk.android.base.api.file.model.FileContentRequestPrev;
+import ntk.android.base.api.file.model.FileContentResponsePrev;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
@@ -18,7 +18,7 @@ import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.PartMap;
 
-public interface IFile {
+ interface IFile {
 
 
 //    @POST("api/upload/")
@@ -37,13 +37,13 @@ public interface IFile {
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: FileContentActList"})
-    Observable<FileContentResponse> GetContentList(@HeaderMap Map<String, String> headers, @Body FileContentRequest request);
+    Observable<FileContentResponsePrev> GetContentList(@HeaderMap Map<String, String> headers, @Body FileContentRequestPrev request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: FileContentActView"})
-    Observable<FileContentResponse> GetContentView(@HeaderMap Map<String, String> headers, @Body FileContentRequest request);
+    Observable<FileContentResponsePrev> GetContentView(@HeaderMap Map<String, String> headers, @Body FileContentRequestPrev request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: FileCategoryActList"})
-    Observable<FileCategoryResponse> GetCategoryList(@HeaderMap Map<String, String> headers, @Body FileCategoryRequest request);
+    Observable<FileCategoryResponsePrev> GetCategoryList(@HeaderMap Map<String, String> headers, @Body FileCategoryRequestPrev request);
 }

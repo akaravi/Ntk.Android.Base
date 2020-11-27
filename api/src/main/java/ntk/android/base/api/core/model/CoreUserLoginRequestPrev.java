@@ -2,7 +2,7 @@ package ntk.android.base.api.core.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class CoreUserRegisterRequest {
+public class CoreUserLoginRequestPrev {
 
     @SerializedName("CaptchaKey")
     public String CaptchaKey ;
@@ -15,18 +15,6 @@ public class CoreUserRegisterRequest {
     @SerializedName("Password")
     public String Password;
 
-    @SerializedName("Name")
-    public String Name;
-
-    @SerializedName("Phone")
-    public String Phone;
-
-    @SerializedName("RePassword")
-    public String RePassword;
-
-    @SerializedName("FullName")
-    public String FullName;
-
-    @SerializedName("LastName")
-    public String LastName;
+    @SerializedName("lang")
+    public String lang;
 }

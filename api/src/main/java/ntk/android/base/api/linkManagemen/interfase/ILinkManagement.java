@@ -12,7 +12,7 @@ import retrofit2.http.HeaderMap;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
-public interface ILinkManagement {
+ interface ILinkManagement {
 
     @POST("/api/v1/LinkManagementTarget/ShortLinkSet")
     @Headers({"content-type: application/json", "layout: LinkManagementTargetActShortLinkSet"})

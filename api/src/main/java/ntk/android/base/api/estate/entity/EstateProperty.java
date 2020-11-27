@@ -79,7 +79,7 @@ public class EstateProperty extends BaseEntityPrev {
     public List<String> LinkFileIdsSrc;
 
     @SerializedName("Contracts")
-    public List<EstateContract> Contracts;
+    public List<EstateContractPrev> Contracts;
 
     @SerializedName("PropertyDetailValues")
     public  List<EstatePropertyDetailValue>  PropertyDetailValues;

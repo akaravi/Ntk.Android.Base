@@ -2,7 +2,7 @@ package ntk.android.base.api.estate.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-public class EstateContract  {
+public class EstateContractPrev {
     @SerializedName("Id")
     public String Id;
 

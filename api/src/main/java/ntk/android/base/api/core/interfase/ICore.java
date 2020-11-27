@@ -4,78 +4,78 @@ import java.util.Map;
 
 import io.reactivex.Observable;
 import ntk.android.base.api.core.entity.CoreThemePrev;
-import ntk.android.base.api.core.model.ButtonResponse;
-import ntk.android.base.api.core.model.CoreAboutUsResponse;
-import ntk.android.base.api.core.model.CoreLocationRequest;
-import ntk.android.base.api.core.model.CoreLocationResponse;
-import ntk.android.base.api.core.model.CoreUserChangePasswordRequest;
-import ntk.android.base.api.core.model.CoreUserConfirmEmailRequest;
-import ntk.android.base.api.core.model.CoreUserConfirmMobileRequest;
-import ntk.android.base.api.core.model.CoreUserConfirmResponse;
-import ntk.android.base.api.core.model.CoreUserForgetPasswordRequest;
-import ntk.android.base.api.core.model.CoreUserLoginRequest;
-import ntk.android.base.api.core.model.CoreUserRegisterByMobileRequest;
-import ntk.android.base.api.core.model.CoreUserRegisterRequest;
-import ntk.android.base.api.core.model.CoreUserResponse;
-import ntk.android.base.api.core.model.ImageResponse;
-import ntk.android.base.api.core.model.MainCoreResponse;
+import ntk.android.base.api.core.model.ButtonResponsePrev;
+import ntk.android.base.api.core.model.CoreAboutUsResponsePrev;
+import ntk.android.base.api.core.model.CoreLocationRequestPrev;
+import ntk.android.base.api.core.model.CoreLocationResponsePrev;
+import ntk.android.base.api.core.model.CoreUserChangePasswordRequestPrev;
+import ntk.android.base.api.core.model.CoreUserConfirmEmailRequestPrev;
+import ntk.android.base.api.core.model.CoreUserConfirmMobileRequestPrev;
+import ntk.android.base.api.core.model.CoreUserConfirmResponsePrev;
+import ntk.android.base.api.core.model.CoreUserForgetPasswordRequestPrev;
+import ntk.android.base.api.core.model.CoreUserLoginRequestPrev;
+import ntk.android.base.api.core.model.CoreUserRegisterByMobileRequestPrev;
+import ntk.android.base.api.core.model.CoreUserRegisterRequestPrev;
+import ntk.android.base.api.core.model.CoreUserResponsePrev;
+import ntk.android.base.api.core.model.ImageResponsePrev;
+import ntk.android.base.api.core.model.MainCoreResponsePrev;
 import retrofit2.http.Body;
 import retrofit2.http.HeaderMap;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
-public interface ICore {
+ interface ICore {
 
 
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: Main"})
-    Observable<MainCoreResponse> GetResponseMain(@HeaderMap Map<String, String> headers);
+    Observable<MainCoreResponsePrev> GetResponseMain(@HeaderMap Map<String, String> headers);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreBotton"})
-    Observable<ButtonResponse> GetButtons(@HeaderMap Map<String, String> headers);
+    Observable<ButtonResponsePrev> GetButtons(@HeaderMap Map<String, String> headers);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreImage"})
-    Observable<ImageResponse> GetImage(@HeaderMap Map<String, String> headers);
+    Observable<ImageResponsePrev> GetImage(@HeaderMap Map<String, String> headers);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreAboutUs"})
-    Observable<CoreAboutUsResponse> GetAbout(@HeaderMap Map<String, String> headers);
+    Observable<CoreAboutUsResponsePrev> GetAbout(@HeaderMap Map<String, String> headers);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActRegisterByMobile"})
-    Observable<CoreUserResponse> RegisterWithMobile(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterByMobileRequest request);
+    Observable<CoreUserResponsePrev> RegisterWithMobile(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterByMobileRequestPrev request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreLocationActList"})
-    Observable<CoreLocationResponse> GetLocation(@HeaderMap Map<String, String> headers, @Body CoreLocationRequest request);
+    Observable<CoreLocationResponsePrev> GetLocation(@HeaderMap Map<String, String> headers, @Body CoreLocationRequestPrev request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActChangePassword"})
-    Observable<CoreUserResponse> SetUserNewPassword(@HeaderMap Map<String, String> headers, @Body CoreUserChangePasswordRequest request);
+    Observable<CoreUserResponsePrev> SetUserNewPassword(@HeaderMap Map<String, String> headers, @Body CoreUserChangePasswordRequestPrev request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActEmailConfirm"})
-    Observable<CoreUserConfirmResponse> userEmailConfirm(@HeaderMap Map<String, String> headers, @Body CoreUserConfirmEmailRequest request);
+    Observable<CoreUserConfirmResponsePrev> userEmailConfirm(@HeaderMap Map<String, String> headers, @Body CoreUserConfirmEmailRequestPrev request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActForgetPassword"})
-    Observable<CoreUserResponse> userForgetPassword(@HeaderMap Map<String, String> headers, @Body CoreUserForgetPasswordRequest request);
+    Observable<CoreUserResponsePrev> userForgetPassword(@HeaderMap Map<String, String> headers, @Body CoreUserForgetPasswordRequestPrev request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActLogin"})
-    Observable<CoreUserResponse> userLogin(@HeaderMap Map<String, String> headers, @Body CoreUserLoginRequest request);
+    Observable<CoreUserResponsePrev> userLogin(@HeaderMap Map<String, String> headers, @Body CoreUserLoginRequestPrev request);
 
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActMobileConfirm"})
-    Observable<CoreUserConfirmResponse> userMobileConfirm(@HeaderMap Map<String, String> headers, @Body CoreUserConfirmMobileRequest request);
+    Observable<CoreUserConfirmResponsePrev> userMobileConfirm(@HeaderMap Map<String, String> headers, @Body CoreUserConfirmMobileRequestPrev request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: CoreUserActRegister"})
-    Observable<CoreUserResponse> setUserRegister(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterRequest request);
+    Observable<CoreUserResponsePrev> setUserRegister(@HeaderMap Map<String, String> headers, @Body CoreUserRegisterRequestPrev request);
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: Theme"})

@@ -3,10 +3,10 @@ package ntk.android.base.api.core.model;
 import com.google.gson.annotations.SerializedName;
 
 import ntk.android.base.api.baseModel.ErrorExceptionPrev;
-import ntk.android.base.api.core.entity.ActivateCodeModelPrev;
+import ntk.android.base.api.core.entity.TokenInfoModelPrev;
 
-public class CoreUserConfirmResponse extends ErrorExceptionPrev {
+public class CoreUserRegisterByMobileResponsePrev extends ErrorExceptionPrev {
 
     @SerializedName("Item")
-    public ActivateCodeModelPrev Item;
+    public TokenInfoModelPrev Item;
 }

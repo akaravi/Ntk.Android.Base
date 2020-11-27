@@ -7,7 +7,7 @@ import java.util.List;
 import ntk.android.base.api.baseModel.ErrorExceptionPrev;
 import ntk.android.base.api.core.entity.ImageInfoPrev;
 
-public class ImageResponse extends ErrorExceptionPrev {
+public class ImageResponsePrev extends ErrorExceptionPrev {
 
     @SerializedName("Images")
     public List<ImageInfoPrev> Images;

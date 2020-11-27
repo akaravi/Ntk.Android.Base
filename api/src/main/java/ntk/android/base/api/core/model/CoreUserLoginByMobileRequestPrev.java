@@ -1,8 +1,8 @@
-//package ntk.android.base.api.core.model;
+package ntk.android.base.api.core.model;
 //
 //import com.google.gson.annotations.SerializedName;
 //
-//public class CoreUserLoginByMobileRequest {
+public class CoreUserLoginByMobileRequestPrev {
 //
 //    @SerializedName("lang")
 //    public String lang;
@@ -12,4 +12,4 @@
 //
 //    @SerializedName("Code")
 //    public String Code;
-//}
+}

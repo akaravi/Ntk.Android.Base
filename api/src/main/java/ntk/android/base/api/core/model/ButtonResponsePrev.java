@@ -7,7 +7,7 @@ import java.util.List;
 import ntk.android.base.api.baseModel.ErrorExceptionPrev;
 import ntk.android.base.api.core.entity.ButtonInfoPrev;
 
-public class ButtonResponse extends ErrorExceptionPrev {
+public class ButtonResponsePrev extends ErrorExceptionPrev {
 
     @SerializedName("Buttons")
     public List<ButtonInfoPrev> Buttons;
