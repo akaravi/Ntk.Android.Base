@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.Observable;
 import ntk.android.base.BaseNtkApplication;
 import ntk.android.base.api.file.entity.FileUploadModelPrev;
-import ntk.android.base.api.file.interfase.IFile;
+
 import ntk.android.base.api.utill.NTKUtill;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
@@ -192,8 +192,9 @@ public class RetrofitManager {
         map.put("RelativePath", RequestBody.create(MediaType.parse(MULTIPART_FORM_DATA), model.RelativePath + ""));
 
 
-        IFile upload = getRetrofitUnCached(Url).create(IFile.class);
-        return upload.uploadFileWithPartMap(headers, map, body);
+//        IFile upload = getRetrofitUnCached(Url).create(IFile.class);
+//        return upload.uploadFileWithPartMap(headers, map, body);
+        return null;
     }
 
     private Cache provideCache() {
