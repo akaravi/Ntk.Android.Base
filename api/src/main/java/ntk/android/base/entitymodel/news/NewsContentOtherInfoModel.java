@@ -2,7 +2,6 @@ package ntk.android.base.entitymodel.news;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.api.news.entity.NewsContent;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class NewsContentOtherInfoModel extends BaseModuleEntity<Long> {

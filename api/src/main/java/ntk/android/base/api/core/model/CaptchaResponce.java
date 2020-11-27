@@ -2,11 +2,11 @@ package ntk.android.base.api.core.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.api.baseModel.ErrorException;
-import ntk.android.base.api.core.entity.CaptchaModel;
+import ntk.android.base.api.baseModel.ErrorExceptionPrev;
+import ntk.android.base.api.core.entity.CaptchaModelPrev;
 
-public class CaptchaResponce  extends ErrorException {
+public class CaptchaResponce  extends ErrorExceptionPrev {
 
     @SerializedName("Item")
-    public CaptchaModel Item;
+    public CaptchaModelPrev Item;
 }

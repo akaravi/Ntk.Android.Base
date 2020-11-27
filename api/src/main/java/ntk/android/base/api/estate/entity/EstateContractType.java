@@ -2,9 +2,9 @@ package ntk.android.base.api.estate.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.api.baseModel.BaseEntity;
+import ntk.android.base.api.baseModel.BaseEntityPrev;
 
-public class EstateContractType extends BaseEntity {
+public class EstateContractType extends BaseEntityPrev {
 //    نوع معامله (اجاره رهن فروش)
 
     @SerializedName("Id")

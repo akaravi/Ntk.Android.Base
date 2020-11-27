@@ -16,6 +16,6 @@ public class BaseEntityCategory<TKey> extends BaseModuleEntity<TKey> {
     public TKey LinkParentId;
     @SerializedName("LinkParentIdNode")
     public String LinkParentIdNode;
-    @SerializedName("LinkMainImageSrc")
-    public String LinkMainImageSrc;
+    @SerializedName("LinkMainImageIdSrc")
+    public String LinkMainImageIdSrc;
 }

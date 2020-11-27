@@ -1,8 +1,8 @@
 package ntk.android.base.api.hyperShop.model;
 
 
-import ntk.android.base.api.hyperShop.entity.HyperShopOrder;
+import ntk.android.base.api.hyperShop.entity.HyperShopOrderPrev;
 
-public class HyperShopOrderAddRequest extends HyperShopOrder {
+public class HyperShopOrderAddRequest extends HyperShopOrderPrev {
 
 }

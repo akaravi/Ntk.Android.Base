@@ -2,11 +2,11 @@ package ntk.android.base.api.core.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.api.baseModel.ErrorException;
-import ntk.android.base.api.core.entity.TokenInfoModel;
+import ntk.android.base.api.baseModel.ErrorExceptionPrev;
+import ntk.android.base.api.core.entity.TokenInfoModelPrev;
 
-public class CoreUserResponse extends ErrorException {
+public class CoreUserResponse extends ErrorExceptionPrev {
 
     @SerializedName("Item")
-    public TokenInfoModel Item;
+    public TokenInfoModelPrev Item;
 }

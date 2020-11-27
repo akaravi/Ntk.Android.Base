@@ -1,6 +1,6 @@
 package ntk.android.base.api.estate.model;
 
-import ntk.android.base.api.baseModel.FilterModel;
+import ntk.android.base.api.baseModel.FilterModelPrev;
 
-public class EstatePropertyFavoriteListRequest extends FilterModel {
+public class EstatePropertyFavoriteListRequest extends FilterModelPrev {
 }

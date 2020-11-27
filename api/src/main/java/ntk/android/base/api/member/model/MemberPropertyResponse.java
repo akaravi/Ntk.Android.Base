@@ -4,13 +4,13 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.android.base.api.baseModel.ErrorException;
-import ntk.android.base.api.member.entity.MemberProperty;
+import ntk.android.base.api.baseModel.ErrorExceptionPrev;
+import ntk.android.base.api.member.entity.MemberPropertyPrev;
 
-public class MemberPropertyResponse extends ErrorException {
+public class MemberPropertyResponse extends ErrorExceptionPrev {
     @SerializedName("ListItems")
-    public List<MemberProperty> ListItems;
+    public List<MemberPropertyPrev> ListItems;
 
     @SerializedName("Item")
-    public MemberProperty Item;
+    public MemberPropertyPrev Item;
 }

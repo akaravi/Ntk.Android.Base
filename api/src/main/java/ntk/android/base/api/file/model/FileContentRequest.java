@@ -2,9 +2,9 @@ package ntk.android.base.api.file.model;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.api.baseModel.FilterModel;
+import ntk.android.base.api.baseModel.FilterModelPrev;
 
-public class FileContentRequest extends FilterModel {
+public class FileContentRequest extends FilterModelPrev {
 
     @SerializedName("TagId")
     public long TagId;

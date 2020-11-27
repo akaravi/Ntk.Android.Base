@@ -2,7 +2,6 @@ package ntk.android.base.entitymodel.article;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.api.article.entity.ArticleContent;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class ArticleContentOtherInfoModel extends BaseModuleEntity<Long> {
@@ -20,5 +19,5 @@ public class ArticleContentOtherInfoModel extends BaseModuleEntity<Long> {
     @SerializedName(" virtual_Content")
     public ArticleContentModel  virtual_Content;
     @SerializedName("Content")
-    public ArticleContent Content;
+    public ArticleContentModel Content;
 }

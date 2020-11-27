@@ -4,13 +4,13 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.android.base.api.baseModel.ErrorException;
-import ntk.android.base.api.hyperShop.entity.HyperShopOrder;
+import ntk.android.base.api.baseModel.ErrorExceptionPrev;
+import ntk.android.base.api.hyperShop.entity.HyperShopOrderPrev;
 
-public class HyperShopOrderAddResponse extends ErrorException {
+public class HyperShopOrderAddResponse extends ErrorExceptionPrev {
     @SerializedName("ListItems")
-    public List<HyperShopOrder> ListItems;
+    public List<HyperShopOrderPrev> ListItems;
 
     @SerializedName("Item")
-    public HyperShopOrder Item;
+    public HyperShopOrderPrev Item;
 }

@@ -3,7 +3,7 @@ package ntk.android.base.api.core.interfase;
 import java.util.Map;
 
 import io.reactivex.Observable;
-import ntk.android.base.api.core.entity.CoreTheme;
+import ntk.android.base.api.core.entity.CoreThemePrev;
 import ntk.android.base.api.core.model.ButtonResponse;
 import ntk.android.base.api.core.model.CoreAboutUsResponse;
 import ntk.android.base.api.core.model.CoreLocationRequest;
@@ -79,6 +79,6 @@ public interface ICore {
 
     @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: Theme"})
-    Observable<CoreTheme> GetThemeCore(@HeaderMap Map<String, String> headers);
+    Observable<CoreThemePrev> GetThemeCore(@HeaderMap Map<String, String> headers);
 
 }

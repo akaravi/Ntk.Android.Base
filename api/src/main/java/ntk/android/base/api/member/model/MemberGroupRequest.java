@@ -1,6 +1,6 @@
 package ntk.android.base.api.member.model;
 
-import ntk.android.base.api.baseModel.FilterModel;
+import ntk.android.base.api.baseModel.FilterModelPrev;
 
-public class MemberGroupRequest extends FilterModel {
+public class MemberGroupRequest extends FilterModelPrev {
 }

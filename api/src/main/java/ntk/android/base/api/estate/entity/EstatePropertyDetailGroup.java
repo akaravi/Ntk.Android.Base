@@ -2,9 +2,9 @@ package ntk.android.base.api.estate.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.api.baseModel.BaseEntity;
+import ntk.android.base.api.baseModel.BaseEntityPrev;
 
-public class EstatePropertyDetailGroup extends BaseEntity {
+public class EstatePropertyDetailGroup extends BaseEntityPrev {
 
     @SerializedName("Id")
     public String Id;

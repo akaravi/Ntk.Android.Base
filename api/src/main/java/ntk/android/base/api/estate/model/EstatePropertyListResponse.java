@@ -1,6 +1,6 @@
 package ntk.android.base.api.estate.model;
 
-import ntk.android.base.api.baseModel.ErrorException;
+import ntk.android.base.api.baseModel.ErrorExceptionPrev;
 
-public class EstatePropertyListResponse extends ErrorException {
+public class EstatePropertyListResponse extends ErrorExceptionPrev {
 }

@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.android.base.api.baseModel.BaseEntity;
+import ntk.android.base.api.baseModel.BaseEntityPrev;
 
-public class EstatePropertyType extends BaseEntity {
+public class EstatePropertyType extends BaseEntityPrev {
 
     //    نوع ملک
     @SerializedName("Id")

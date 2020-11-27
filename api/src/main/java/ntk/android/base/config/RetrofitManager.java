@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import ntk.android.base.BaseNtkApplication;
-import ntk.android.base.api.file.entity.FileUploadModel;
+import ntk.android.base.api.file.entity.FileUploadModelPrev;
 import ntk.android.base.api.file.interfase.IFile;
 import ntk.android.base.api.utill.NTKUtill;
 import okhttp3.Cache;
@@ -175,7 +175,7 @@ public class RetrofitManager {
         MultipartBody.Part body = MultipartBody.Part.createFormData("file", file.getName(), requestFile);
 
 
-        FileUploadModel model = new FileUploadModel();
+        FileUploadModelPrev model = new FileUploadModelPrev();
         model.FileName = file.getName();
         model.Identifier = "abcd";
         model.ChunkNumber = 1;

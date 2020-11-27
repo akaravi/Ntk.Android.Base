@@ -2,7 +2,6 @@ package ntk.android.base.entitymodel.blog;
 
 import com.google.gson.annotations.SerializedName;
 
-import ntk.android.base.api.blog.entity.BlogContent;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class BlogContentOtherInfoModel extends BaseModuleEntity<Long> {
@@ -20,5 +19,5 @@ public class BlogContentOtherInfoModel extends BaseModuleEntity<Long> {
     @SerializedName(" virtual_Content")
     public BlogContentModel  virtual_Content;
     @SerializedName("Content")
-    public BlogContent Content;
+    public BlogContentModel Content;
 }

@@ -4,14 +4,14 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.android.base.api.baseModel.ErrorException;
-import ntk.android.base.api.file.entity.FileCategory;
+import ntk.android.base.api.baseModel.ErrorExceptionPrev;
+import ntk.android.base.api.file.entity.FileCategoryPrev;
 
-public class FileCategoryResponse extends ErrorException {
+public class FileCategoryResponse extends ErrorExceptionPrev {
 
     @SerializedName("ListItems")
-    public List<FileCategory> ListItems;
+    public List<FileCategoryPrev> ListItems;
 
     @SerializedName("Item")
-    public FileCategory Item;
+    public FileCategoryPrev Item;
 }

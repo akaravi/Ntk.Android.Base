@@ -1,6 +1,6 @@
 package ntk.android.base.api.member.model;
 
-import ntk.android.base.api.member.entity.MemberProperty;
+import ntk.android.base.api.member.entity.MemberPropertyPrev;
 
-public class MemberPropertyActAddRequest extends MemberProperty {
+public class MemberPropertyActAddRequest extends MemberPropertyPrev {
 }

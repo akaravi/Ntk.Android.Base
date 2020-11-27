@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.android.base.api.baseModel.ThemeConfigLayoutModel;
+import ntk.android.base.api.baseModel.ThemeConfigLayoutModelPrev;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class ApplicationThemeConfigModel extends BaseModuleEntity<Long> {
@@ -30,7 +30,7 @@ public class ApplicationThemeConfigModel extends BaseModuleEntity<Long> {
     @SerializedName("ThemeConfigJsonValues")
     public String ThemeConfigJsonValues;
     @SerializedName("ThemeConfigLayouts")
-    public List<ThemeConfigLayoutModel> ThemeConfigLayouts;
+    public List<ThemeConfigLayoutModelPrev> ThemeConfigLayouts;
     @SerializedName("Applications")
     public List<ApplicationAppModel> Applications;
 

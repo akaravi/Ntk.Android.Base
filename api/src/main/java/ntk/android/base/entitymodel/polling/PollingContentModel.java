@@ -35,8 +35,8 @@ public class PollingContentModel extends BaseModuleEntity<Long> {
     public String Keyword;
     @SerializedName("LinkCategoryId")
     public Long LinkCategoryId;
-    @SerializedName("LinkFileIds")
-    public String LinkFileIds;
+//    @SerializedName("LinkFileIds")//todo ask karavi must be array
+//    public String LinkFileIds;
     @SerializedName("LinkFilePodcastId")
     public Long LinkFilePodcastId;
     @SerializedName("LinkFileMovieId")
@@ -59,8 +59,8 @@ public class PollingContentModel extends BaseModuleEntity<Long> {
     public String LinkFilePodcastIdSrc;
     @SerializedName("LinkFileMovieIdSrc")
     public String LinkFileMovieIdSrc;
-    @SerializedName("LinkFileIdsSrc")
-    public String LinkFileIdsSrc;
+//    @SerializedName("LinkFileIdsSrc")//todo ask karavi must be array
+//    public String LinkFileIdsSrc;
     @SerializedName("Question")
     public String Question;
     @SerializedName("MaxVoteForThisContent")
