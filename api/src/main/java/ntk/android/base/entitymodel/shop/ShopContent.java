@@ -31,8 +31,8 @@ public class ShopContent extends BaseModuleEntity<Long> {
     @SerializedName("LinkFileIds")
     public String LinkFileIds;
 
-    @SerializedName("MainImageSrc")
-    public String MainImageSrc;
+    @SerializedName("LinkMainImageIdSrc")
+    public String LinkMainImageIdSrc;
 
     @SerializedName("MostSaleSerial")
     public Boolean MostSaleSerial;

@@ -10,8 +10,8 @@ import ntk.android.base.entitymodel.enums.EnumSiteStatus;
 public class CoreSiteModel {
     public @SerializedName("CurrentSiteDomainUrl")
     String CurrentSiteDomainUrl;
-    public @SerializedName("MainImageSrc")
-    String MainImageSrc;
+    public @SerializedName("LinkMainImageIdSrc")
+    String LinkMainImageIdSrc;
 
     public @SerializedName("ExpireDate")
     String ExpireDate;

@@ -64,8 +64,8 @@ public class MemberPropertyPrev extends BaseEntityPrev {
     @SerializedName("PropertyDetailValue")
     public List<MemberPropertyDetailValuePrev> PropertyDetailValue;
 
-    @SerializedName("MainImageSrc")
-    public String MainImageSrc;
+    @SerializedName("LinkMainImageIdSrc")
+    public String LinkMainImageIdSrc;
 
     @SerializedName("LinkExtraImageIdsSrc")
     public List<String> LinkExtraImageIdsSrc;

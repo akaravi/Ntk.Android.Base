@@ -17,6 +17,6 @@ public class ApplicationIntroModel extends BaseModuleEntity<Long> {
     public long LinkApplicationId;
     @SerializedName("Application")
     public ApplicationAppModel Application;
-    @SerializedName("MainImageSrc")
-    public String MainImageSrc;
+    @SerializedName("LinkMainImageIdSrc")
+    public String LinkMainImageIdSrc;
 }

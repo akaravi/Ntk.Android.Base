@@ -17,14 +17,14 @@ public class FileCategoryPrev extends BaseEntityPrev {
     @SerializedName("Title")
     public String Title;
 
-    @SerializedName("MainImageSrc")
+    @SerializedName("LinkMainImageIdSrc")
     public String imageSrc;
 
     @SerializedName("LinkMainImageId")
     public String LinkMainImageId;
 
-    @SerializedName("LinkMainImageSrc")
-    public String LinkMainImageSrc;
+    @SerializedName("LinkLinkMainImageIdSrc")
+    public String LinkLinkMainImageIdSrc;
 
     @SerializedName("Children")
     public List<FileCategoryPrev> Children;

@@ -16,7 +16,7 @@ public class PrevApplicationIntro {
     @SerializedName("LinkMainImageId")
     public String LinkMainImageId;
 
-    @SerializedName("MainImageSrc")
-    public String MainImageSrc;
+    @SerializedName("LinkMainImageIdSrc")
+    public String LinkMainImageIdSrc;
 
 }

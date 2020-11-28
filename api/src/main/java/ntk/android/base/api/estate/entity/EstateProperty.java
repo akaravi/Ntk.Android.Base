@@ -71,8 +71,8 @@ public class EstateProperty extends BaseEntityPrev {
     @SerializedName("ViewCount")
     public int ViewCount;
 
-    @SerializedName("MainImageSrc")
-    public String MainImageSrc;
+    @SerializedName("LinkMainImageIdSrc")
+    public String LinkMainImageIdSrc;
     @SerializedName("LinkExtraImageIdsSrc")
     public List<String> LinkExtraImageIdsSrc;
     @SerializedName("LinkFileIdsSrc")

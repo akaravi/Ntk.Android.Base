@@ -40,8 +40,8 @@ public class NewsContentModel extends BaseModuleEntity<Long> {
     public int ViewCount;
     @SerializedName("Favorited")
     public boolean Favorited;
-    @SerializedName("MainImageSrc")
-    public String MainImageSrc;
+    @SerializedName("LinkMainImageIdSrc")
+    public String LinkMainImageIdSrc;
     @SerializedName("ExpireDate")
     public String ExpireDate;
     @SerializedName("ModuleCoreCreatedBy")
