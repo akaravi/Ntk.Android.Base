@@ -27,7 +27,7 @@ public class TicketVariableInfo {
     }
 
     public void setEmail(String toString) {
-        EasyPreference.with(c).addString("mobile", toString);
+        EasyPreference.with(c).addString("email", toString);
     }
 
 
