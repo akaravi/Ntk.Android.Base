@@ -13,6 +13,8 @@ public class HyperShopOrderContentDtoModel {
     public float Price;
     @SerializedName("Count")
     public int Count;
+    @SerializedName("TotalCount")
+    public int TotalCount;
     @SerializedName("Image")
     public String Image;
 }
