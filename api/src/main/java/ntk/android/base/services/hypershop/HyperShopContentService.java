@@ -32,9 +32,9 @@ public class HyperShopContentService {
         return new RetrofitManager(context).getRetrofitUnCached().create(IHyperShopContentService.class);
     }
 
-    public Observable<ErrorException<HyperShopContentModel>> getAll(FilterDataModel request) {
+    public Observable<ErrorException<HyperShopContentModel>> getAllMicroService(FilterDataModel request) {
         BehaviorSubject<ErrorException<HyperShopContentModel>> mMovieCache = BehaviorSubject.create();
-        Observable<ErrorException<HyperShopContentModel>> all = HyperShopContentService().GetAll(baseUrl + controlerUrl + "/GetAll", headers, request);
+        Observable<ErrorException<HyperShopContentModel>> all = HyperShopContentService().GetAll(baseUrl + controlerUrl + "/GetAllMicroService", headers, request);
         all.observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<HyperShopContentModel>>() {
             @Override
@@ -60,9 +60,9 @@ public class HyperShopContentService {
         return mMovieCache;
     }
 
-    public Observable<ErrorException<HyperShopContentModel>> getOne(String Id) {
+    public Observable<ErrorException<HyperShopContentModel>> getOneMicroService(String Id) {
         BehaviorSubject<ErrorException<HyperShopContentModel>> mMovieCache = BehaviorSubject.create();
-        Observable<ErrorException<HyperShopContentModel>> getone = HyperShopContentService().GetOne(baseUrl + controlerUrl + "/" + Id, headers);
+        Observable<ErrorException<HyperShopContentModel>> getone = HyperShopContentService().GetOne(baseUrl + controlerUrl + "/GetOneMicroService/" + Id, headers);
         getone.observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<HyperShopContentModel>>() {
             @Override

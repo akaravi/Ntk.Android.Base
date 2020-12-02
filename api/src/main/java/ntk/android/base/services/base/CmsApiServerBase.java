@@ -32,7 +32,7 @@ public class CmsApiServerBase<TEntity, TKey> {
 
     public CmsApiServerBase(Context context, String controlerUrl, Class<TEntity> teClass) {
         this.controlerUrl = controlerUrl;
-        this.context=context;
+        this.context = context;
         headers = new ConfigRestHeader().GetHeaders(context);
         this.teClass = teClass;
     }
@@ -133,7 +133,7 @@ public class CmsApiServerBase<TEntity, TKey> {
 
             @Override
             public void onNext(@NonNull ErrorException o) {
-                ErrorException a=new ErrorException();
+                ErrorException a = new ErrorException();
                 Gson gson = new GsonBuilder()
                         .enableComplexMapKeySerialization()
                         .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
