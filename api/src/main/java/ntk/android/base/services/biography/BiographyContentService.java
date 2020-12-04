@@ -14,6 +14,8 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.config.ListOfJson;
+import ntk.android.base.dtomodel.biography.BiographyContentWithDatePeriodEndDtoModel;
+import ntk.android.base.dtomodel.biography.BiographyContentWithSimilarDatePeriodStartDayAndMonthOfYearDtoModel;
 import ntk.android.base.dtomodel.core.ScoreClickDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
@@ -90,4 +92,65 @@ public class BiographyContentService extends CmsApiServerBase<BiographyContentMo
                 });
         return mMovieCache;
     }
+
+    public Observable<ErrorException<BiographyContentModel>> getAllGetAllWithDatePeriodEnd(BiographyContentWithDatePeriodEndDtoModel model) {
+        BehaviorSubject<ErrorException<BiographyContentModel>> mMovieCache = BehaviorSubject.create();
+
+        getRetrofit(IBiographyContentService.class).GetAllGetAllWithDatePeriodEnd(baseUrl + controlerUrl + "/GetAllWithDatePeriodEnd", headers, model)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(new Observer<ErrorException<BiographyContentModel>>() {
+                    @Override
+                    public void onSubscribe(@NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(@NonNull ErrorException<BiographyContentModel> o) {
+                        mMovieCache.onNext(o);
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+                        mMovieCache.onError(e);
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+        return mMovieCache;
+    }
+
+    public Observable<ErrorException<BiographyContentModel>> getAllWithSimilarDatePeriodStartDayAndMonthOfYear(BiographyContentWithSimilarDatePeriodStartDayAndMonthOfYearDtoModel model) {
+        BehaviorSubject<ErrorException<BiographyContentModel>> mMovieCache = BehaviorSubject.create();
+
+        getRetrofit(IBiographyContentService.class).GetAllWithSimilarDatePeriodStartDayAndMonthOfYear(baseUrl + controlerUrl + "/GetAllWithSimilarDatePeriodStartDayAndMonthOfYear", headers, model)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(new Observer<ErrorException<BiographyContentModel>>() {
+                    @Override
+                    public void onSubscribe(@NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(@NonNull ErrorException<BiographyContentModel> o) {
+                        mMovieCache.onNext(o);
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+                        mMovieCache.onError(e);
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+        return mMovieCache;
+    }
+    
 }
