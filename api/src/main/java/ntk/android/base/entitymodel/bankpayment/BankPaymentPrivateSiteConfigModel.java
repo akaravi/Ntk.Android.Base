@@ -6,33 +6,33 @@ import java.util.List;
 
 import ntk.android.base.entitymodel.base.BaseEntity;
 
-class BankPaymentPrivateSiteConfigModel extends BaseEntity<Long> {
+public class BankPaymentPrivateSiteConfigModel extends BaseEntity<Long> {
     @SerializedName("Title")
-    String Title;
+    public String Title;
     @SerializedName("CurrencyUnitRatioByShop")
-    long CurrencyUnitRatioByShop;
+    public long CurrencyUnitRatioByShop;
     @SerializedName("MaxTransactionAmount")
-    long MaxTransactionAmount;
+    public long MaxTransactionAmount;
     @SerializedName("MinTransactionAmount")
-    long MinTransactionAmount;
+    public long MinTransactionAmount;
     @SerializedName("FixFeeTransactionAmount")
-    long FixFeeTransactionAmount;
+    public long FixFeeTransactionAmount;
     @SerializedName("PercentFeeTransactionAmount")
-    long PercentFeeTransactionAmount;
+    public long PercentFeeTransactionAmount;
     @SerializedName("LinkPublicConfigId")
-    long LinkPublicConfigId;
+    public long LinkPublicConfigId;
     // tslint:disable-next-line: variable-name
     @SerializedName(" virtual_PublicConfig")
-    BankPaymentPublicConfigModel  virtual_PublicConfig;
+    public BankPaymentPublicConfigModel virtual_PublicConfig;
     @SerializedName("PublicConfig")
-    BankPaymentPublicConfigModel PublicConfig;
+    public BankPaymentPublicConfigModel PublicConfig;
 
     @SerializedName("PrivateConfigJsonValues")
-    String PrivateConfigJsonValues;
+    public String PrivateConfigJsonValues;
     @SerializedName("Memo")
-    String Memo;
+    public String Memo;
     @SerializedName("Transactions")
-    List<BankPaymentTransactionModel> Transactions;
+    public List<BankPaymentTransactionModel> Transactions;
     @SerializedName("LinkModuleFileLogoIdSrc")
-    String LinkModuleFileLogoIdSrc;
+    public String LinkModuleFileLogoIdSrc;
 }

@@ -9,10 +9,10 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
-import ntk.android.base.dtomodel.application.ApplicationScoreDtoModel;
 import ntk.android.base.dtomodel.application.AboutUsDtoModel;
-import ntk.android.base.dtomodel.application.MainResponseDtoModel;
 import ntk.android.base.dtomodel.application.AppThemeDtoModel;
+import ntk.android.base.dtomodel.application.ApplicationScoreDtoModel;
+import ntk.android.base.dtomodel.application.MainResponseDtoModel;
 import ntk.android.base.entitymodel.application.ApplicationAppModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
@@ -84,7 +84,7 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
         return mMovieCache;
     }
 
-    public  Observable<ErrorException<AboutUsDtoModel>>  getAboutUs() {
+    public Observable<ErrorException<AboutUsDtoModel>> getAboutUs() {
         BehaviorSubject<ErrorException<AboutUsDtoModel>> mMovieCache = BehaviorSubject.create();
 
         getRetrofit(ICmsApiApplication.class).GetAbout(headers)
@@ -142,4 +142,34 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
         });
         return mMovieCache;
     }
+
+    public Observable<ErrorException<ApplicationAppModel>> currentDevice() {
+        BehaviorSubject<ErrorException<ApplicationAppModel>> mMovieCache = BehaviorSubject.create();
+
+        getRetrofit(ICmsApiApplication.class).CurrentDevice(baseUrl + controlerUrl + "/CorrentDevice", headers)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<ApplicationAppModel>>() {
+
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException<ApplicationAppModel> errorExceptionBase) {
+                mMovieCache.onNext(errorExceptionBase);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
+    }
+
 }

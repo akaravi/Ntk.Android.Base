@@ -12,7 +12,7 @@ public class BiographyContentOtherInfoModel {
     @SerializedName("LinkContentId")
     public long LinkContentId;
     @SerializedName("TypeId")
-    public Long TypeId;
+    public Integer TypeId;
     @SerializedName("virtual_Content")
     public BiographyContentModel virtual_Content;
     @SerializedName("Content")
