@@ -14,8 +14,11 @@ import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.RetrofitManager;
 import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.entitymodel.base.FilterDataModel;
 import ntk.android.base.entitymodel.hypershop.HyperShopContentModel;
+import ntk.android.base.entitymodel.news.NewsContentModel;
+import ntk.android.base.services.base.CmsApiFavoriteBase;
 
 public class HyperShopContentService {
     private final Map<String, String> headers;
@@ -86,6 +89,18 @@ public class HyperShopContentService {
             }
         });
         return mMovieCache;
+    }
+
+    public Observable<ErrorExceptionBase> addFavorite(long Id) {
+        return new CmsApiFavoriteBase<HyperShopContentModel, Long>(context, "HyperShopContent", HyperShopContentModel.class).addFavorite(Id);
+    }
+
+    public Observable<ErrorExceptionBase> removeFavorite(long Id) {
+        return new CmsApiFavoriteBase<HyperShopContentModel, Long>(context, "HyperShopContent", HyperShopContentModel.class).removeFavorite(Id);
+    }
+
+    public Observable<ErrorException<HyperShopContentModel>> getFavoriteList(FilterDataModel request) {
+        return new CmsApiFavoriteBase<HyperShopContentModel, Long>(context, "HyperShopContent", HyperShopContentModel.class).getFavoriteList(request);
     }
 
 }

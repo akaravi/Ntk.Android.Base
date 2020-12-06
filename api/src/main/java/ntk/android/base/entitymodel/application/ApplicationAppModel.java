@@ -115,4 +115,23 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     @SerializedName("FilePathOnServer")
     public String FilePathOnServer;
 
+    @SerializedName("AboutUsTitle")
+    public String AboutUsTitle;
+    @SerializedName("AboutUsDescription")
+    public String AboutUsDescription;
+    @SerializedName("AboutUsTel")
+    public String AboutUsTel;
+    @SerializedName("AboutUsFax")
+    public String AboutUsFax;
+    @SerializedName("AboutUsEmail")
+    public String AboutUsEmail;
+    @SerializedName("AboutUsAddress")
+    public String AboutUsAddress;
+    @SerializedName("AboutUsLinkImageId")
+    public String AboutUsLinkImageId;
+    @SerializedName("AboutUsGeolocationlatetitude")
+    public String AboutUsGeolocationlatetitude;
+    @SerializedName("AboutUsGeolocationlongitude")
+    public String AboutUsGeolocationlongitude;
+
 }
