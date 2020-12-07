@@ -21,7 +21,7 @@ import ntk.android.base.services.base.CmsApiServerBase;
 public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel, Long> {
 
     public ApplicationAppService(Context context) {
-        super(context, "ApplicationApp", ApplicationAppModel.class);
+        super(context, "Application", ApplicationAppModel.class);
     }
 
     public Observable<ErrorExceptionBase> submitAppScore(ApplicationScoreDtoModel model) {
@@ -146,7 +146,7 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
     public Observable<ErrorException<ApplicationAppModel>> currentDevice() {
         BehaviorSubject<ErrorException<ApplicationAppModel>> mMovieCache = BehaviorSubject.create();
 
-        getRetrofit(ICmsApiApplication.class).CurrentDevice(baseUrl + controlerUrl + "/CorrentDevice", headers)
+        getRetrofit(ICmsApiApplication.class).CurrentDevice(baseUrl + controlerUrl + "/CurrentDevice", headers)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<ApplicationAppModel>>() {
 
