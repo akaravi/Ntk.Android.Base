@@ -21,4 +21,7 @@ public class HyperShopOrderDtoModel {
     public float Amount;
     @SerializedName("Products")
     public List<HyperShopOrderContentDtoModel> Products;
+    @SerializedName("PaymentType")
+    public int PaymentType;
+
 }

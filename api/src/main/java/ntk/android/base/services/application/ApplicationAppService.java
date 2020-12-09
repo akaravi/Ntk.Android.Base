@@ -143,10 +143,10 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
         return mMovieCache;
     }
 
-    public Observable<ErrorException<ApplicationAppModel>> currentDevice() {
+    public Observable<ErrorException<ApplicationAppModel>> currentApp() {
         BehaviorSubject<ErrorException<ApplicationAppModel>> mMovieCache = BehaviorSubject.create();
 
-        getRetrofit(ICmsApiApplication.class).CurrentDevice(baseUrl + controlerUrl + "/CurrentDevice", headers)
+        getRetrofit(ICmsApiApplication.class).CurrentDevice(baseUrl + controlerUrl + "/CurrentApp", headers)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<ApplicationAppModel>>() {
 
