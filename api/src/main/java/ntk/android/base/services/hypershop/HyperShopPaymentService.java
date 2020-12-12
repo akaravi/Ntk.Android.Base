@@ -18,22 +18,5 @@ class HyperShopPaymentService extends CmsApiServerBase<HyperShopPaymentModel, Lo
         super(context, "HyperShopPayment", HyperShopPaymentModel.class);
     }
 
-    public Observable<ErrorException<HyperShopPaymentDtoModel>> paymentAdd(HyperShopPaymentDtoModel model) {
-        BehaviorSubject<ErrorException<HyperShopPaymentDtoModel>> mMovieCache = BehaviorSubject.create();
-        getRetrofit(IHyperShopPaymentService.class).PaymentAdd(baseUrl + controlerUrl + "/PaymentAdd", headers, model)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io()).subscribe(new NtkObserver<ErrorException<HyperShopPaymentDtoModel>>() {
-            @Override
-            public void onNext(@NonNull ErrorException<HyperShopPaymentDtoModel> hyperShopOrderDtoModelErrorException) {
-                mMovieCache.onNext(hyperShopOrderDtoModelErrorException);
-            }
-
-            @Override
-            public void onError(@NonNull Throwable e) {
-                mMovieCache.onError(e);
-            }
-        });
-        return mMovieCache;
-    }
 
 }

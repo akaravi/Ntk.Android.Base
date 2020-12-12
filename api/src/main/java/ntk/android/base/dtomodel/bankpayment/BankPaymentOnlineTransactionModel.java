@@ -7,6 +7,6 @@ public class BankPaymentOnlineTransactionModel {
     public long LinkOrderId;
     @SerializedName("BankPaymentPrivateId")
     public long BankPaymentPrivateId;
-    @SerializedName("LastUrlAddressInUse")
-    public String LastUrlAddressInUse;
+    @SerializedName("UrlToPay")
+    public String UrlToPay;
 }

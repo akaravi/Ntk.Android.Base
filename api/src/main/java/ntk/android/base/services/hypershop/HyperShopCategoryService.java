@@ -17,13 +17,13 @@ import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.FilterDataModel;
 import ntk.android.base.entitymodel.hypershop.HyperShopCategoryModel;
 
-class HyperShopCategoryService {
+public class HyperShopCategoryService {
     private final Map<String, String> headers;
     String baseUrl = "api/v1/";
     String controlerUrl = "HyperShopCategory";
     Context context;
 
-    HyperShopCategoryService(Context context) {
+    public HyperShopCategoryService(Context context) {
         this.context = context;
         headers = new ConfigRestHeader().GetHeaders(context);
     }
