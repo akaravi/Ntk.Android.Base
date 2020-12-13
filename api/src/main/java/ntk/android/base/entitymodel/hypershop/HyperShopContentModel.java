@@ -9,8 +9,8 @@ public class HyperShopContentModel {
     public String Code;
     @SerializedName("Name")
     public String Name;
-    @SerializedName("Cat")
-    public String Cat;
+    @SerializedName("Category")
+    public String Category;
     @SerializedName("Status")
     public boolean Status;
 
