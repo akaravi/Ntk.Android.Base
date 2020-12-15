@@ -9,27 +9,26 @@ import ntk.android.base.entitymodel.base.feildinfo.GetPropertiesInfoModel;
 import ntk.android.base.entitymodel.enums.EnumBuildStatusType;
 
 public class ApplicationAppModel extends BaseModuleEntity<Long> {
-
+    @SerializedName("Title")
+    public String Title;
     @SerializedName("AppKey")
     public String AppKey;
     @SerializedName("ExpireDate")
     public String ExpireDate;
+    @SerializedName("IsPublic")
+    public boolean IsPublic;
     @SerializedName("LinkFileIdIcon")
     public Long LinkFileIdIcon;
     @SerializedName("LinkFileIdLogo")
     public Long LinkFileIdLogo;
     @SerializedName("LinkFileIdSplashScreen")
     public Long LinkFileIdSplashScreen;
-    @SerializedName("Title")
-    public String Title;
     @SerializedName("AppVersion")
     public int AppVersion;
-    @SerializedName("IsPublished")
-    public boolean IsPublished;
     @SerializedName("LinkSourceId")
     public Long LinkSourceId;
     @SerializedName(" virtual_Source")
-    public ApplicationSourceModel  virtual_Source;
+    public ApplicationSourceModel virtual_Source;
     @SerializedName("Source")
     public ApplicationSourceModel Source;
     @SerializedName("DownloadCount")
@@ -65,7 +64,7 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     @SerializedName("LinkThemeConfigId")
     public Long LinkThemeConfigId;
     @SerializedName(" virtual_ThemeConfig")
-    public ApplicationThemeConfigModel  virtual_ThemeConfig;
+    public ApplicationThemeConfigModel virtual_ThemeConfig;
     @SerializedName("ThemeConfig")
     public ApplicationThemeConfigModel ThemeConfig;
     @SerializedName("ConfigBuilderAdminJsonValues")
@@ -109,9 +108,16 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     @SerializedName("DownloadLinkSrcCustomize")
     public String DownloadLinkSrcCustomize;
     @SerializedName("DownloadLinksrc")
-    public String DownloadLinksrc;
-    @SerializedName("DownloadLinksrcByDomain")
-    public String DownloadLinksrcByDomain;
+    public String DownloadLinkSrc;
+    @SerializedName("DownloadLinkUpdateSrc")
+    public String DownloadLinkUpdateSrc;
+    @SerializedName("DownloadLinkSrcByDomain")
+    public String DownloadLinkSrcByDomain;
+    @SerializedName("DownloadLinkUpdateSrcByDomain")
+    public String DownloadLinkUpdateSrcByDomain;
+   @SerializedName("DownloadLinkSrcByDomainQRCodeBase64")
+    public String DownloadLinkSrcByDomainQRCodeBase64;
+
     @SerializedName("FilePathOnServer")
     public String FilePathOnServer;
 

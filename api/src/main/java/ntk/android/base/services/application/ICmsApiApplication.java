@@ -1,5 +1,7 @@
 package ntk.android.base.services.application;
 
+import com.google.gson.JsonObject;
+
 import java.util.Map;
 
 import io.reactivex.Observable;
@@ -39,6 +41,10 @@ interface ICmsApiApplication {
 
     @GET("{cpath}")
     @Headers({"content-type: application/json", "layout: Main"})
-    Observable<ErrorException<ApplicationAppModel>> CurrentDevice(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers);
+    Observable<ErrorException<ApplicationAppModel>> CurrentDevice(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers);
+
+    @GET("{cpath}")
+    @Headers({"content-type: application/json"})
+    Observable<JsonObject> CurrentDeviceTest(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers);
 
 }

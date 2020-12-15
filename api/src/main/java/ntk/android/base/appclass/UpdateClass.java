@@ -15,6 +15,6 @@ public class UpdateClass {
     public UpdateClass(ApplicationAppModel item) {
         this.isForced=item.ForceUpdate;
         this.version=item.AppVersion;
-        this.url=item.DownloadLinksrcByDomain;
+        this.url=item.DownloadLinkUpdateSrcByDomain;
     }
 }

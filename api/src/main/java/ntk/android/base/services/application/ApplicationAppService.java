@@ -2,6 +2,8 @@ package ntk.android.base.services.application;
 
 import android.content.Context;
 
+import com.google.gson.JsonObject;
+
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -171,5 +173,35 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
         });
         return mMovieCache;
     }
+    public Observable<JsonObject> currentAppTest() {
+        BehaviorSubject<JsonObject> mMovieCache = BehaviorSubject.create();
+
+        getRetrofit(ICmsApiApplication.class).CurrentDeviceTest(baseUrl + controlerUrl + "/CurrentApp", headers)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<JsonObject>() {
+
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+            }
+
+            @Override
+            public void onNext(@NonNull JsonObject errorExceptionBase) {
+                 mMovieCache.onNext(errorExceptionBase);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
+    }
+
+
 
 }

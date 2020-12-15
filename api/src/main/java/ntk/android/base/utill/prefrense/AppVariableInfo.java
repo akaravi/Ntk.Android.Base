@@ -45,12 +45,10 @@ public class AppVariableInfo {
         EasyPreference.with(c).addString("NotificationId", mToken);
     }
 
-    public String configapp() {
-        return EasyPreference.with(c).getString("configapp", "");
-    }
 
-    public void setConfigapp(String configApp) {
-        EasyPreference.with(c).addString("configapp", configApp);
+
+    public void setApplicationAppModel(String configApp) {
+        EasyPreference.with(c).addString("setApplicationAppModel", configApp);
     }
 
     public boolean isLogin() {
@@ -69,5 +67,12 @@ public class AppVariableInfo {
     public UpdateClass updateInfo() {
         String updateModel = EasyPreference.with(c).getString("updateModel", "");
         return new Gson().fromJson(updateModel, UpdateClass.class);
+    }
+
+    public void setQRCode(String downloadLinkSrcByDomainQRCodeBase64) {
+        EasyPreference.with(c).addString("downloadLinkSrcByDomainQRCodeBase64", downloadLinkSrcByDomainQRCodeBase64);
+    }
+    public String qrCode(){
+        return EasyPreference.with(c).getString("downloadLinkSrcByDomainQRCodeBase64","");
     }
 }
