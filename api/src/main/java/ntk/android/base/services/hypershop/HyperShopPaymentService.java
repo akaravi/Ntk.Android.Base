@@ -13,8 +13,8 @@ import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.hypershop.HyperShopPaymentModel;
 import ntk.android.base.services.base.CmsApiServerBase;
 
-class HyperShopPaymentService extends CmsApiServerBase<HyperShopPaymentModel, Long> {
-    public HyperShopPaymentService(Context context, String controlerUrl, Class<HyperShopPaymentModel> teClass) {
+public class HyperShopPaymentService extends CmsApiServerBase<HyperShopPaymentModel, Long> {
+    public HyperShopPaymentService(Context context) {
         super(context, "HyperShopPayment", HyperShopPaymentModel.class);
     }
 

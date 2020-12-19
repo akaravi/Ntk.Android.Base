@@ -1,6 +1,7 @@
 package ntk.android.base;
 
 public class Extras {
-    public static final String EXTRA_FIRST_ARG ="fir st_arg";
-    public static final String EXTRA_SECOND_ARG ="Second_arg";
+    public static  String EXTRA_FIRST_ARG = "first_arg";
+    public static  String EXTRA_SECOND_ARG = "Second_arg";
+    public static String Extra_THIRD_ARG = "third_arg";
 }

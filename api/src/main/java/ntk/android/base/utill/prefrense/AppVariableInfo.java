@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.google.gson.Gson;
 
+import ntk.android.base.appclass.AboutUsClass;
 import ntk.android.base.appclass.UpdateClass;
 
 public class AppVariableInfo {
@@ -46,7 +47,6 @@ public class AppVariableInfo {
     }
 
 
-
     public void setApplicationAppModel(String configApp) {
         EasyPreference.with(c).addString("setApplicationAppModel", configApp);
     }
@@ -72,7 +72,26 @@ public class AppVariableInfo {
     public void setQRCode(String downloadLinkSrcByDomainQRCodeBase64) {
         EasyPreference.with(c).addString("downloadLinkSrcByDomainQRCodeBase64", downloadLinkSrcByDomainQRCodeBase64);
     }
-    public String qrCode(){
-        return EasyPreference.with(c).getString("downloadLinkSrcByDomainQRCodeBase64","");
+
+    public String qrCode() {
+        return EasyPreference.with(c).getString("downloadLinkSrcByDomainQRCodeBase64", "");
+    }
+
+    public void setAboutUs(AboutUsClass aboutUsClass) {
+        EasyPreference.with(c).addString("aboutUsClass", new Gson().toJson(aboutUsClass));
+
+    }
+
+    public AboutUsClass aboutUs() {
+        String title = EasyPreference.with(c).getString("aboutUsClass", "");
+        return new Gson().fromJson(title, AboutUsClass.class);
+    }
+
+    public void setAppId(long id) {
+        EasyPreference.with(c).addLong("Variable_AppID", id);
+    }
+
+    public long appId() {
+        return EasyPreference.with(c).getLong("Variable_AppID", 0);
     }
 }

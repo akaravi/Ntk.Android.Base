@@ -3,7 +3,7 @@ package ntk.android.base.dtomodel.hypershop;
 import com.google.gson.annotations.SerializedName;
 
 public class HyperShopOrderContentDtoModel {
-    public static String CURRENCY_UNIT = "تومان";
+    public static String CURRENCY_UNIT = "ریال";
 
     @SerializedName("Code")
     public String Code;

@@ -31,11 +31,6 @@ interface ICmsApiApplication {
 
     //notice : this api moved from prev api implementation
     @POST("api/v1/app/")
-    @Headers({"content-type: application/json", "layout: CoreAboutUs"})
-    Observable<ErrorException<AboutUsDtoModel>> GetAbout(@HeaderMap Map<String, String> headers);
-
-    //notice : this api moved from prev api implementation
-    @POST("api/v1/app/")
     @Headers({"content-type: application/json", "layout: Main"})
     Observable<ErrorException<MainResponseDtoModel>> GetResponseMain(@HeaderMap Map<String, String> headers);
 

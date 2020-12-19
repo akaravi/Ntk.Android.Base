@@ -9,7 +9,7 @@ import ntk.android.base.BaseNtkApplication;
 
 //import ntk.android.base.BuildConfig;
 
-  public class EasyPreference {
+public class EasyPreference {
 
     public EasyPreference(Context context) {
     }
@@ -37,41 +37,44 @@ import ntk.android.base.BaseNtkApplication;
         }
 
         public Builder addBoolean(String key, boolean value) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             editor.putBoolean(key, value);
             save();
             return this;
         }
 
         public Builder addString(String key, String value) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             editor.putString(key, value);
             save();
             return this;
         }
 
         public Builder addInt(String key, int value) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             editor.putInt(key, value);
             save();
             return this;
         }
 
         public Builder addFloat(String key, float value) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             editor.putFloat(key, value);
+            save();
             return this;
         }
 
         public Builder addLong(String key, long value) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             editor.putLong(key, value);
+            save();
             return this;
         }
 
         public Builder addStringSet(String key, Set<String> value) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             editor.putStringSet(key, value);
+            save();
             return this;
         }
 
@@ -81,37 +84,37 @@ import ntk.android.base.BaseNtkApplication;
         }
 
         public boolean getBoolean(String key, boolean defalutValue) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             return preferences.getBoolean(key, defalutValue);
         }
 
         public String getString(String key, String defalutValue) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             return preferences.getString(key, defalutValue);
         }
 
         public int getInt(String key, int defalutValue) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             return preferences.getInt(key, defalutValue);
         }
 
         public float getFloat(String key, float defalutValue) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             return preferences.getFloat(key, defalutValue);
         }
 
         public long getLong(String key, long defalutValue) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             return preferences.getLong(key, defalutValue);
         }
 
         public Set<String> getStringSet(String key, Set<String> defalutValue) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             return preferences.getStringSet(key, defalutValue);
         }
 
         public Builder remove(String key) {
-            key=key.toLowerCase();
+            key = key.toLowerCase();
             editor.remove(key);
             return this;
         }

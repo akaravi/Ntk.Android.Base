@@ -36,7 +36,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitManager {
     public static final String TAG = "RetrofitManager";
-    public static String BASE_URL = "https://apicms.ir/";
+    public static String BASE_URL ;
     public static final String HEADER_CACHE_CONTROL = "Cache-Control";
     public static final String HEADER_PRAGMA = "Pragma";
 
@@ -48,12 +48,19 @@ public class RetrofitManager {
     private OkHttpClient mOkHttpClient, mCachedOkHttpClient;
 
     public RetrofitManager(Context context) {
+        BASE_URL="https://apicms.ir/";
         mContext = context;
         String staticUrl = BaseNtkApplication.get().staticConfig().URL;
         if (!staticUrl.equalsIgnoreCase(""))
             BASE_URL = staticUrl;
     }
-
+    public RetrofitManager(Context context,String urls) {
+        mContext = context;
+        String staticUrl = BaseNtkApplication.get().staticConfig().URL;
+        if (!staticUrl.equalsIgnoreCase(""))
+            BASE_URL = staticUrl;
+        BASE_URL=urls;
+    }
     public Retrofit getRetrofit() {
         getRetrofit("");//new ConfigStaticValue(mContext).GetApiBaseUrl());
         return mRetrofit;

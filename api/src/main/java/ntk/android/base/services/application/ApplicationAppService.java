@@ -86,35 +86,35 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
         return mMovieCache;
     }
 
-    public Observable<ErrorException<AboutUsDtoModel>> getAboutUs() {
-        BehaviorSubject<ErrorException<AboutUsDtoModel>> mMovieCache = BehaviorSubject.create();
-
-        getRetrofit(ICmsApiApplication.class).GetAbout(headers)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<AboutUsDtoModel>>() {
-
-            @Override
-            public void onSubscribe(@NonNull Disposable d) {
-
-            }
-
-            @Override
-            public void onNext(@NonNull ErrorException<AboutUsDtoModel> errorExceptionBase) {
-                mMovieCache.onNext(errorExceptionBase);
-            }
-
-            @Override
-            public void onError(@NonNull Throwable e) {
-                mMovieCache.onError(e);
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
-        return mMovieCache;
-    }
+//    public Observable<ErrorException<AboutUsDtoModel>> getAboutUs() {
+//        BehaviorSubject<ErrorException<AboutUsDtoModel>> mMovieCache = BehaviorSubject.create();
+//
+//        getRetrofit(ICmsApiApplication.class).GetAbout(headers)
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<AboutUsDtoModel>>() {
+//
+//            @Override
+//            public void onSubscribe(@NonNull Disposable d) {
+//
+//            }
+//
+//            @Override
+//            public void onNext(@NonNull ErrorException<AboutUsDtoModel> errorExceptionBase) {
+//                mMovieCache.onNext(errorExceptionBase);
+//            }
+//
+//            @Override
+//            public void onError(@NonNull Throwable e) {
+//                mMovieCache.onError(e);
+//            }
+//
+//            @Override
+//            public void onComplete() {
+//
+//            }
+//        });
+//        return mMovieCache;
+//    }
 
     public Observable<ErrorException<MainResponseDtoModel>> getResponseMain() {
         BehaviorSubject<ErrorException<MainResponseDtoModel>> mMovieCache = BehaviorSubject.create();

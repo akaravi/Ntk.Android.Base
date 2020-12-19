@@ -8,8 +8,8 @@ import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class TicketingAnswerModel extends BaseModuleEntity<Long> {
 
-    @SerializedName("LinkTicketId")
-    public long LinkTicketId;
+    @SerializedName("LinkTaskId")
+    public long LinkTaskId;
     @SerializedName("HtmlBody")
     public String HtmlBody;
     @SerializedName(" virtual_Ticket")
@@ -32,4 +32,6 @@ public class TicketingAnswerModel extends BaseModuleEntity<Long> {
     public String LinkFileIds;
     @SerializedName("LinkFileIdsSrc")
     public List<String> LinkFileIdsSrc;
+    @SerializedName("UploadFileGUID")
+    public List<String> UploadFileGUID;
 }

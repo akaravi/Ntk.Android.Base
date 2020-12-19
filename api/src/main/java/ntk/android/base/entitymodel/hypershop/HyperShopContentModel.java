@@ -3,7 +3,7 @@ package ntk.android.base.entitymodel.hypershop;
 import com.google.gson.annotations.SerializedName;
 
 public class HyperShopContentModel {
-    public static String CURRENCY_UNIT = "تومان";
+    public static String CURRENCY_UNIT = "ریال";
 
     @SerializedName("Code")
     public String Code;
@@ -11,6 +11,8 @@ public class HyperShopContentModel {
     public String Name;
     @SerializedName("Category")
     public String Category;
+    @SerializedName("CategoryCode")
+    public int CategoryCode;
     @SerializedName("Status")
     public boolean Status;
 

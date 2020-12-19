@@ -47,5 +47,7 @@ public class TicketingTaskModel extends BaseModuleEntity<Long> {
     public String LinkFileIds;
     @SerializedName("LinkFileIdsSrc")
     public List<String> LinkFileIdsSrc;
+    @SerializedName("UploadFileGUID")
+    public List<String> UploadFileGUID;
 }
 
