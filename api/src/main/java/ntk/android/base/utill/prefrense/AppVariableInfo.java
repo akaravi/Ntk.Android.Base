@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 
 import ntk.android.base.appclass.AboutUsClass;
 import ntk.android.base.appclass.UpdateClass;
+import ntk.android.base.dtomodel.application.ApplicationScoreDtoModel;
 
 public class AppVariableInfo {
     Context c;
@@ -93,5 +94,16 @@ public class AppVariableInfo {
 
     public long appId() {
         return EasyPreference.with(c).getLong("Variable_AppID", 0);
+    }
+
+    public void setFeedback(ApplicationScoreDtoModel request) {
+        EasyPreference.with(c).addString("Variable_feedback", new Gson().toJson(request));
+    }
+
+    public ApplicationScoreDtoModel feedback() {
+        String updateModel = EasyPreference.with(c).getString("Variable_feedback", "");
+        if (updateModel.equalsIgnoreCase(""))
+            return null;
+        else return new Gson().fromJson(updateModel, ApplicationScoreDtoModel.class);
     }
 }
