@@ -36,4 +36,6 @@ public class HyperShopOrderModel extends BaseModuleEntity<Long> {
     @SerializedName("Products")
     public List<HyperShopOrderContentModel> Products;
 
+    public String ProducsSumPrice;
+    public String DelivaryPrice;
 }

@@ -11,56 +11,56 @@ import ntk.android.base.entitymodel.enums.EnumTransactionRecordStatus;
 
 public class BankPaymentTransactionModel extends BaseEntity<Long> {
     @SerializedName("TransactionStatus")
-    EnumTransactionRecordStatus TransactionStatus;
+    public int TransactionStatus; //as EnumTransactionRecordStatus
     @SerializedName("BankStatus")
-    EnumTransactionBankStatus BankStatus;
+    public int BankStatus;//as EnumTransactionBankStatus
     @SerializedName("CurrencyUnit")
-    String CurrencyUnit;
+    public String CurrencyUnit;
     @SerializedName("CurrencyUnitRatioByShop")
-    long CurrencyUnitRatioByShop;
+    public long CurrencyUnitRatioByShop;
     @SerializedName("SuccessStatusMessage")
-    String SuccessStatusMessage;
+    public String SuccessStatusMessage;
     @SerializedName("LastStatusMessage")
-    String LastStatusMessage;
+    public String LastStatusMessage;
     @SerializedName("LastTransactionCheckMessage")
-    String LastTransactionCheckMessage;
+    public String LastTransactionCheckMessage;
     @SerializedName("BackedFromBank")
-    boolean BackedFromBank;
+    public boolean BackedFromBank;
     @SerializedName("LinkPrivateSiteConfigId")
-    long LinkPrivateSiteConfigId;
+    public long LinkPrivateSiteConfigId;
     @SerializedName("LinkUserId")
-    long LinkUserId;
+    public long LinkUserId;
     @SerializedName("Amount")
-    long Amount;
+    public long Amount;
     @SerializedName("AmountPure")
-    long AmountPure;
+    public long AmountPure;
     @SerializedName("StampJsonValues")
-    String StampJsonValues;
+    public String StampJsonValues;
     @SerializedName("StampJsonFormatter")
-    List<GetPropertiesInfoModel> StampJsonFormatter;
+    public List<GetPropertiesInfoModel> StampJsonFormatter;
     @SerializedName("RequestBackUserFromBankJsonValues")
-    String RequestBackUserFromBankJsonValues;
+    public String RequestBackUserFromBankJsonValues;
     @SerializedName("RequestBackUserFromBankJsonFormatter")
-    List<GetPropertiesInfoModel> RequestBackUserFromBankJsonFormatter;
+    public List<GetPropertiesInfoModel> RequestBackUserFromBankJsonFormatter;
 
     @SerializedName("OnlineDateLock")
-    String OnlineDateLock;
+    public String OnlineDateLock;
     @SerializedName("OnlineDateUnlock")
-    String OnlineDateUnlock;
+    public String OnlineDateUnlock;
     @SerializedName("LastUrlAddressInUse")
-    String LastUrlAddressInUse;
+    public String LastUrlAddressInUse;
     // tslintdisable-next-line variable-name
     @SerializedName(" virtual_PrivateSiteConfig")
-    BankPaymentPrivateSiteConfigModel  virtual_PrivateSiteConfig;
+    public BankPaymentPrivateSiteConfigModel virtual_PrivateSiteConfig;
     @SerializedName("PrivateSiteConfig")
-    BankPaymentPrivateSiteConfigModel PrivateSiteConfig;
+    public BankPaymentPrivateSiteConfigModel PrivateSiteConfig;
 
     @SerializedName("LinkModelShopCartId")
     long LinkModelShopCartId;
     @SerializedName("ModelShopInvoiceSaleRelease")
     boolean ModelShopInvoiceSaleRelease;
     @SerializedName("ModelShopInvoiceSaleReleaseDate")
-    String ModelShopInvoiceSaleReleaseDate;
+    public String ModelShopInvoiceSaleReleaseDate;
     @SerializedName("TransactionLogs")
-    BankPaymentTransactionLogModel TransactionLogs;
+    public BankPaymentTransactionLogModel TransactionLogs;
 }
