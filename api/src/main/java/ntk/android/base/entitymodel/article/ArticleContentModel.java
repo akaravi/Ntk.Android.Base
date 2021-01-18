@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
+import ntk.android.base.entitymodel.core.CoreUserModel;
 
 public class ArticleContentModel extends BaseModuleEntity<Long> {
 
@@ -45,9 +46,9 @@ public class ArticleContentModel extends BaseModuleEntity<Long> {
     @SerializedName("ExpireDate")
     public String ExpireDate;
     @SerializedName("ModuleCoreCreatedBy")
-    public String ModuleCoreCreatedBy;
+    public CoreUserModel ModuleCoreCreatedBy;
     @SerializedName("ModuleCoreUpdatedBy")
-    public String ModuleCoreUpdatedBy;
+    public CoreUserModel ModuleCoreUpdatedBy;
     @SerializedName("Source")
     public String Source;
     @SerializedName("Comments")
