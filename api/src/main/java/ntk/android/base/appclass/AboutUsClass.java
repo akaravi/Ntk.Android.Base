@@ -23,6 +23,10 @@ public class AboutUsClass {
     public String AboutUsGeolocationlatetitude;
     @SerializedName("AboutUsGeolocationlongitude")
     public String AboutUsGeolocationlongitude;
+    @SerializedName("AboutUsScoreClick")
+    public int AboutUsScoreClick;
+    @SerializedName("AboutUsScoreSum")
+    public Long AboutUsScoreSum;
 
     public AboutUsClass(ApplicationAppModel item) {
         this.AboutUsTitle = item.AboutUsTitle;
@@ -34,5 +38,7 @@ public class AboutUsClass {
         this.AboutUsGeolocationlatetitude = item.AboutUsGeolocationlatetitude;
         this.AboutUsGeolocationlongitude = item.AboutUsGeolocationlongitude;
         this.AboutUsLinkImageId = item.AboutUsLinkImageId;
+        this.AboutUsScoreClick = item.ScoreClick;
+        this.AboutUsScoreSum = item.ScoreSumPercent;
     }
 }
