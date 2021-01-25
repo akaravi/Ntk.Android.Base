@@ -12,7 +12,8 @@ public class TokenInfoModel {
     public String DeviceToken;
     @SerializedName("RefreshToken")
     public String RefreshToken;
-
+    @SerializedName("MemberId")
+    public Long MemberId;
     @SerializedName("UserId")
     public long UserId;
     @SerializedName("SiteId")

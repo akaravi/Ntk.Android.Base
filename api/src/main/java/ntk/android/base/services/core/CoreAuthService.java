@@ -77,6 +77,7 @@ public class CoreAuthService {
         });
         return mMovieCache;
     }
+
     public Observable<ErrorException<TokenInfoModel>> getTokenDevice() {
         TokenDeviceClientInfoDtoModel request = new TokenDeviceClientInfoDtoModel();
         request.OSType = EnumOperatingSystemType.GoogleAndroid.index();
@@ -111,6 +112,7 @@ public class CoreAuthService {
                     Preferences.with(context).tokenInfo().setDeviceToken(o.Item.DeviceToken);
                     Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
                     Preferences.with(context).UserInfo().setSiteId(o.Item.SiteId);
+                    Preferences.with(context).UserInfo().setMemberUserId(o.Item.MemberId);
                     mMovieCache.onNext(o);
                 } else
 
@@ -129,9 +131,9 @@ public class CoreAuthService {
         return mMovieCache;
     }
 
-    public Observable<Boolean> correctTokenInfo(){
+    public Observable<Boolean> correctTokenInfo() {
         BehaviorSubject<Boolean> mMovieCache = BehaviorSubject.create();
-        Icore().CorrectTokenInfo()  .observeOn(AndroidSchedulers.mainThread())
+        Icore().CorrectTokenInfo().observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<CaptchaModel>>() {
             @Override
             public void onSubscribe(@NonNull Disposable d) {
@@ -140,7 +142,7 @@ public class CoreAuthService {
 
             @Override
             public void onNext(@NonNull ErrorException<CaptchaModel> captchaModelErrorException) {
-                if(captchaModelErrorException.IsSuccess)
+                if (captchaModelErrorException.IsSuccess)
                     mMovieCache.onNext(true);
             }
 
@@ -156,6 +158,7 @@ public class CoreAuthService {
         });
         return mMovieCache;
     }
+
     public Observable<ErrorException<CoreUserModel>> signUpUser(AuthUserSignUpModel model) {
         BehaviorSubject<ErrorException<CoreUserModel>> mMovieCache = BehaviorSubject.create();
         Icore().SignUpUser(baseUrl + controlerUrl + "/signup", headers, model)

@@ -10,6 +10,8 @@ public class TicketingAnswerModel extends BaseModuleEntity<Long> {
 
     @SerializedName("LinkTaskId")
     public long LinkTaskId;
+    @SerializedName("LinkMemberUserId")
+    public long LinkMemberUserId;
     @SerializedName("HtmlBody")
     public String HtmlBody;
     @SerializedName(" virtual_Ticket")
