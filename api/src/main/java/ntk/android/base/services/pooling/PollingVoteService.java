@@ -15,7 +15,7 @@ import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.polling.PollingVoteModel;
 import ntk.android.base.services.base.CmsApiServerBase;
 
-public class PollingVoteService extends CmsApiServerBase<PollingVoteModel, Long> {
+public class PollingVoteService extends CmsApiServerBase<PollingVoteModel, String> {
 
 
     public PollingVoteService(Context context) {
