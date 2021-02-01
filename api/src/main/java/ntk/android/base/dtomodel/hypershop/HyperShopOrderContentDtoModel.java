@@ -12,7 +12,7 @@ public class HyperShopOrderContentDtoModel {
     @SerializedName("Memo")
     public String Memo;
     @SerializedName("Price")
-    public float Price;
+    public double Price;
     @SerializedName("Count")
     public int Count;
     @SerializedName("TotalCount")

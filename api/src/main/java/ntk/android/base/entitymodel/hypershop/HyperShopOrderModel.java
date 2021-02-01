@@ -7,6 +7,7 @@ import java.util.List;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class HyperShopOrderModel extends BaseModuleEntity<Long> {
+    int OrderType;
     @SerializedName("PaymentType")
     public int PaymentType;//as
     @SerializedName("SystemTransactionId")
@@ -31,11 +32,17 @@ public class HyperShopOrderModel extends BaseModuleEntity<Long> {
     public String Mobile;
     @SerializedName("Address")
     public String Address;
-    @SerializedName("Amount")
-    public long Amount;
+
     @SerializedName("Products")
     public List<HyperShopOrderContentModel> Products;
-
-    public String ProducsSumPrice;
-    public String DelivaryPrice;
+    @SerializedName("Amount")
+    public long Amount;
+    @SerializedName("FeeTax")
+    public Float FeeTax;
+    @SerializedName("FeeTransport")
+    public Float FeeTransport;
+    @SerializedName("AmountPure")
+    public Float AmountPure;
+    @SerializedName("DelivaryPrice")
+    public Float DelivaryPrice;
 }

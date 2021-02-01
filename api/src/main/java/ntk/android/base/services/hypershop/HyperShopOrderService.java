@@ -38,7 +38,7 @@ public class HyperShopOrderService extends CmsApiServerBase<HyperShopOrderModel,
         return mMovieCache;
     }
 
-  public   Observable<ErrorException<BankPaymentOnlineTransactionModel>> orderPayment(HyperShopOrderPaymentDtoModel model) {
+    public Observable<ErrorException<BankPaymentOnlineTransactionModel>> orderPayment(HyperShopOrderPaymentDtoModel model) {
         BehaviorSubject<ErrorException<BankPaymentOnlineTransactionModel>> mMovieCache = BehaviorSubject.create();
         getRetrofit(IHyperShopOrderService.class).OrderPayment(baseUrl + controlerUrl + "/OrderPayment", headers, model)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -59,4 +59,23 @@ public class HyperShopOrderService extends CmsApiServerBase<HyperShopOrderModel,
                 );
         return mMovieCache;
     }
+
+    public Observable<ErrorException<HyperShopOrderModel>> ServiceOrderAdd() {
+        BehaviorSubject<ErrorException<HyperShopOrderModel>> mMovieCache = BehaviorSubject.create();
+        getRetrofit(IHyperShopOrderService.class).LastOrder(baseUrl + controlerUrl + "/LastOrder", headers)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new NtkObserver<ErrorException<HyperShopOrderModel>>() {
+            @Override
+            public void onNext(@NonNull ErrorException<HyperShopOrderModel> hyperShopOrderDtoModelErrorException) {
+                mMovieCache.onNext(hyperShopOrderDtoModelErrorException);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+        });
+        return mMovieCache;
+    }
+
 }
