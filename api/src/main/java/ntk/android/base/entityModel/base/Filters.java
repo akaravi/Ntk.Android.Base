@@ -30,26 +30,21 @@ public class Filters {
     @SerializedName("SearchType")
     public int SearchType;
 
-    @SerializedName("StringValue")
+    @SerializedName("StringValue1")
     public String StringValue;
 
     @SerializedName("StringContainValues")
     public List<String> StringContainValues;
 
-    @SerializedName("IntValue1")
+    @SerializedName("IntValue")
     public Long IntValue1 = null;
-
-    @SerializedName("IntValue2")
-    public Long IntValue2 = null;
 
     @SerializedName("IntContainValues")
     public List<Long> IntContainValues;
 
-    @SerializedName("DateTimeValue1")
+    @SerializedName("DateTimeValue")
     public String DateTimeValue1;
 
-    @SerializedName("DateTimeValue2")
-    public String DateTimeValue2;
 
     @SerializedName("BooleanValue")
     public Boolean BooleanValue = null;
@@ -60,17 +55,11 @@ public class Filters {
     @SerializedName("ObjectIdValue")
     public String ObjectIdValue;
 
-    @SerializedName("SingleValue1")
+    @SerializedName("SingleValue")
     public Float SingleValue1 = null;
 
-    @SerializedName("SingleValue2")
-    public Float SingleValue2 = null;
-
-    @SerializedName("DecimalValue1")
-    public Integer DecimalValue1 = null;
-
-    @SerializedName("DecimalValue2")
-    public Integer DecimalValue2 = null;
+    @SerializedName("DecimalValue")
+    public Integer DecimalValue = null;
 
     @SerializedName("LatitudeValue")
     public Double LatitudeValue = null;
@@ -78,14 +67,20 @@ public class Filters {
     @SerializedName("LongitudeValue")
     public Double LongitudeValue = null;
 
-    @SerializedName("LatitudeLongitudeDistanceValue1")
-    public Double LatitudeLongitudeDistanceValue1 = null;
-
-    @SerializedName("LatitudeLongitudeDistanceValue2")
-    public Double LatitudeLongitudeDistanceValue2 = null;
+    @SerializedName("LatitudeLongitudeDistanceValue")
+    public Double LatitudeLongitudeDistanceValue = null;
 
     @SerializedName("LatitudeLongitudeSortType")
     public String LatitudeLongitudeSortType;
+
+    @SerializedName("HierarchyIdLevel")
+    public Long HierarchyIdLevel;
+
+    @SerializedName("ObjectIdContainValues")
+    public List<String> ObjectIdContainValues;
+
+    @SerializedName("ObjectIdValue1")
+    public String ObjectIdValue1;
 
     public Filters setStringForceNullSearch(Boolean stringForceNullSearch) {
         StringForceNullSearch = stringForceNullSearch;
@@ -142,10 +137,6 @@ public class Filters {
         return this;
     }
 
-    public Filters setIntValue2(Long intValue2) {
-        IntValue2 = intValue2;
-        return this;
-    }
 
     public Filters setIntContainValues(List<Long> intContainValues) {
         IntContainValues = intContainValues;
@@ -157,10 +148,6 @@ public class Filters {
         return this;
     }
 
-    public Filters setDateTimeValue2(String dateTimeValue2) {
-        DateTimeValue2 = dateTimeValue2;
-        return this;
-    }
 
     public Filters setBooleanValue(Boolean booleanValue) {
         BooleanValue = booleanValue;
@@ -182,21 +169,6 @@ public class Filters {
         return this;
     }
 
-    public Filters setSingleValue2(Float singleValue2) {
-        SingleValue2 = singleValue2;
-        return this;
-    }
-
-    public Filters setDecimalValue1(Integer decimalValue1) {
-        DecimalValue1 = decimalValue1;
-        return this;
-    }
-
-    public Filters setDecimalValue2(Integer decimalValue2) {
-        DecimalValue2 = decimalValue2;
-        return this;
-    }
-
     public Filters setLatitudeValue(Double latitudeValue) {
         LatitudeValue = latitudeValue;
         return this;
@@ -204,16 +176,6 @@ public class Filters {
 
     public Filters setLongitudeValue(Double longitudeValue) {
         LongitudeValue = longitudeValue;
-        return this;
-    }
-
-    public Filters setLatitudeLongitudeDistanceValue1(Double latitudeLongitudeDistanceValue1) {
-        LatitudeLongitudeDistanceValue1 = latitudeLongitudeDistanceValue1;
-        return this;
-    }
-
-    public Filters setLatitudeLongitudeDistanceValue2(Double latitudeLongitudeDistanceValue2) {
-        LatitudeLongitudeDistanceValue2 = latitudeLongitudeDistanceValue2;
         return this;
     }
 
