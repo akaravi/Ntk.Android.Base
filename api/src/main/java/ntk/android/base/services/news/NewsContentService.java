@@ -17,7 +17,7 @@ import ntk.android.base.config.ListOfJson;
 import ntk.android.base.dtomodel.core.ScoreClickDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
-import ntk.android.base.entitymodel.base.FilterDataModel;
+import ntk.android.base.entitymodel.base.FilterModel;
 import ntk.android.base.entitymodel.news.NewsCommentModel;
 import ntk.android.base.entitymodel.news.NewsContentModel;
 import ntk.android.base.services.base.CmsApiFavoriteBase;
@@ -41,7 +41,7 @@ public class NewsContentService extends CmsApiServerBase<NewsContentModel, Long>
         return new CmsApiFavoriteBase<NewsContentModel, Long>(context, "NewsContent", NewsContentModel.class).removeFavorite(Id);
     }
 
-    public Observable<ErrorException<NewsContentModel>> getFavoriteList(FilterDataModel request) {
+    public Observable<ErrorException<NewsContentModel>> getFavoriteList(FilterModel request) {
         return new CmsApiFavoriteBase<NewsContentModel, Long>(context, "NewsContent", NewsContentModel.class).getFavoriteList(request);
     }
 
@@ -49,10 +49,10 @@ public class NewsContentService extends CmsApiServerBase<NewsContentModel, Long>
         return new CmsApiScoreApi<NewsContentModel, Long>(context, "NewsContent", NewsContentModel.class).scoreClick(model);
     }
 
-    public Observable<ErrorException<NewsContentModel>> getAllWithSimilarsId(Long id, FilterDataModel filter){
+    public Observable<ErrorException<NewsContentModel>> getAllWithSimilarsId(Long id, FilterModel filter){
         return new CmsApiSimilar<NewsContentModel,Long>(context,"NewsContent", NewsContentModel.class).GetAllWithSimilarsId(id,filter);
     }
-    public Observable<ErrorException<NewsContentModel>> getAllWithCategoryUsedInContent(long Id, FilterDataModel request) {
+    public Observable<ErrorException<NewsContentModel>> getAllWithCategoryUsedInContent(long Id, FilterModel request) {
         BehaviorSubject<ErrorException<NewsContentModel>> mMovieCache = BehaviorSubject.create();
 
         ICmsApiServerBase().getAll(baseUrl + controlerUrl + "GetAllWithCategoryUseInContentId/" + Id, headers, request)

@@ -20,7 +20,7 @@ import ntk.android.base.config.ListOfJson;
 import ntk.android.base.config.RetrofitManager;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 import ntk.android.base.entitymodel.base.ErrorException;
-import ntk.android.base.entitymodel.base.FilterDataModel;
+import ntk.android.base.entitymodel.base.FilterModel;
 
 public class CmsApiSimilar<TEntity extends BaseModuleEntity<Long>, Long> {
 
@@ -40,7 +40,7 @@ public class CmsApiSimilar<TEntity extends BaseModuleEntity<Long>, Long> {
         ICmsApiSimilar iCmsApiServerBase = new RetrofitManager(context).getRetrofitUnCached().create(ICmsApiSimilar.class);
         return iCmsApiServerBase;
     }
-    public Observable<ErrorException<TEntity>> GetAllWithSimilarsId(Long id,FilterDataModel request) {
+    public Observable<ErrorException<TEntity>> GetAllWithSimilarsId(Long id, FilterModel request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
         Observable<ErrorException> all = ICmsApiSimilar().GetAllSimilar(baseUrl + controlerUrl + "/GetAllWithSimilarsId", headers, request);
         all.observeOn(AndroidSchedulers.mainThread())

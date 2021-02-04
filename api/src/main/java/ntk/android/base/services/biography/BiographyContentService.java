@@ -19,7 +19,7 @@ import ntk.android.base.dtomodel.biography.BiographyContentWithSimilarDatePeriod
 import ntk.android.base.dtomodel.core.ScoreClickDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
-import ntk.android.base.entitymodel.base.FilterDataModel;
+import ntk.android.base.entitymodel.base.FilterModel;
 import ntk.android.base.entitymodel.biography.BiographyCommentModel;
 import ntk.android.base.entitymodel.biography.BiographyContentModel;
 import ntk.android.base.services.base.CmsApiFavoriteBase;
@@ -43,7 +43,7 @@ public class BiographyContentService extends CmsApiServerBase<BiographyContentMo
         return new CmsApiFavoriteBase<BiographyContentModel, Long>(context, "BiographyContent", BiographyContentModel.class).removeFavorite(Id);
     }
 
-    public Observable<ErrorException<BiographyContentModel>> getFavoriteList(FilterDataModel request) {
+    public Observable<ErrorException<BiographyContentModel>> getFavoriteList(FilterModel request) {
         return new CmsApiFavoriteBase<BiographyContentModel, Long>(context, "BiographyContent", BiographyContentModel.class).getFavoriteList(request);
     }
 
@@ -51,11 +51,11 @@ public class BiographyContentService extends CmsApiServerBase<BiographyContentMo
         return new CmsApiScoreApi<BiographyContentModel, Long>(context, "BiographyContent", BiographyContentModel.class).scoreClick(model);
     }
 
-    public Observable<ErrorException<BiographyContentModel>> getAllWithSimilarsId(Long id, FilterDataModel filter) {
+    public Observable<ErrorException<BiographyContentModel>> getAllWithSimilarsId(Long id, FilterModel filter) {
         return new CmsApiSimilar<BiographyContentModel, Long>(context, "BiographyContent", BiographyContentModel.class).GetAllWithSimilarsId(id, filter);
     }
 
-    public Observable<ErrorException<BiographyContentModel>> getAllWithCategoryUsedInContent(long Id, FilterDataModel request) {
+    public Observable<ErrorException<BiographyContentModel>> getAllWithCategoryUsedInContent(long Id, FilterModel request) {
         BehaviorSubject<ErrorException<BiographyContentModel>> mMovieCache = BehaviorSubject.create();
 
         ICmsApiServerBase().getAll(baseUrl + controlerUrl + "GetAllWithCategoryUseInContentId/" + Id, headers, request)

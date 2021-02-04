@@ -6,7 +6,7 @@ import io.reactivex.Observable;
 import ntk.android.base.dtomodel.core.ScoreClickDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
-import ntk.android.base.entitymodel.base.FilterDataModel;
+import ntk.android.base.entitymodel.base.FilterModel;
 import ntk.android.base.entitymodel.blog.BlogContentModel;
 import ntk.android.base.services.base.CmsApiFavoriteBase;
 import ntk.android.base.services.base.CmsApiScoreApi;
@@ -28,7 +28,7 @@ public class BlogContentService extends CmsApiServerBase<BlogContentModel, Long>
         return new CmsApiFavoriteBase<BlogContentModel, Long>(context, "BlogContent", BlogContentModel.class).removeFavorite(Id);
     }
 
-    public Observable<ErrorException<BlogContentModel>> getFavoriteList(FilterDataModel request) {
+    public Observable<ErrorException<BlogContentModel>> getFavoriteList(FilterModel request) {
         return new CmsApiFavoriteBase<BlogContentModel, Long>(context, "BlogContent", BlogContentModel.class).getFavoriteList(request);
     }
     public  Observable<ErrorExceptionBase> scoreClick(ScoreClickDtoModel model){
