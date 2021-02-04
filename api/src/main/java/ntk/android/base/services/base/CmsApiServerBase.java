@@ -21,7 +21,7 @@ import ntk.android.base.config.ListOfJson;
 import ntk.android.base.config.RetrofitManager;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
-import ntk.android.base.entitymodel.base.FilterDataModel;
+import ntk.android.base.entitymodel.base.FilterModel;
 
 public class CmsApiServerBase<TEntity, TKey> {
     protected final String baseUrl = "api/v1/";
@@ -48,7 +48,7 @@ public class CmsApiServerBase<TEntity, TKey> {
 
     }
 
-    public Observable<ErrorException<TEntity>> getAll(FilterDataModel request) {
+    public Observable<ErrorException<TEntity>> getAll(FilterModel request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
         Observable<ErrorException> all = ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/getAll", headers, request);
         all.observeOn(AndroidSchedulers.mainThread())
@@ -157,7 +157,7 @@ public class CmsApiServerBase<TEntity, TKey> {
         return mMovieCache;
     }
 
-    public Observable<ErrorExceptionBase> exist(FilterDataModel request) {
+    public Observable<ErrorExceptionBase> exist(FilterModel request) {
         BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
         ICmsApiServerBase().Exist(baseUrl + controlerUrl + "/Exist", headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -185,7 +185,7 @@ public class CmsApiServerBase<TEntity, TKey> {
         return mMovieCache;
     }
 
-    public Observable<ErrorExceptionBase> count(FilterDataModel request) {
+    public Observable<ErrorExceptionBase> count(FilterModel request) {
         BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
         ICmsApiServerBase().Count(baseUrl + controlerUrl + "/Count", headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -213,7 +213,7 @@ public class CmsApiServerBase<TEntity, TKey> {
         return mMovieCache;
     }
 
-    public Observable<ErrorExceptionBase> exportFile(FilterDataModel request) {
+    public Observable<ErrorExceptionBase> exportFile(FilterModel request) {
         BehaviorSubject<ErrorExceptionBase> mMovieCache = BehaviorSubject.create();
         ICmsApiServerBase().ExportFile(baseUrl + controlerUrl + "/ExportFile", headers, request)
                 .observeOn(AndroidSchedulers.mainThread())

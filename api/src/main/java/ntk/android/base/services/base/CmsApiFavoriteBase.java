@@ -20,7 +20,7 @@ import ntk.android.base.config.ListOfJson;
 import ntk.android.base.config.RetrofitManager;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
-import ntk.android.base.entitymodel.base.FilterDataModel;
+import ntk.android.base.entitymodel.base.FilterModel;
 
 public class CmsApiFavoriteBase<TEntity, TKey> {
     String baseUrl = "api/v1/";
@@ -97,7 +97,7 @@ public class CmsApiFavoriteBase<TEntity, TKey> {
         return mMovieCache;
     }
 
-    public Observable<ErrorException<TEntity>> getFavoriteList(FilterDataModel request) {
+    public Observable<ErrorException<TEntity>> getFavoriteList(FilterModel request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
         Observable<ErrorException> all = ICmsApiFavorite().GetFavoriteList(baseUrl + controlerUrl + "/FavoriteList", headers, request);
         all.observeOn(AndroidSchedulers.mainThread())

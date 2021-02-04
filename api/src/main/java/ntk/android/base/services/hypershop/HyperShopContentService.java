@@ -15,9 +15,8 @@ import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.RetrofitManager;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
-import ntk.android.base.entitymodel.base.FilterDataModel;
+import ntk.android.base.entitymodel.base.FilterModel;
 import ntk.android.base.entitymodel.hypershop.HyperShopContentModel;
-import ntk.android.base.entitymodel.news.NewsContentModel;
 import ntk.android.base.services.base.CmsApiFavoriteBase;
 
 public class HyperShopContentService {
@@ -35,7 +34,7 @@ public class HyperShopContentService {
         return new RetrofitManager(context).getRetrofitUnCached().create(IHyperShopContentService.class);
     }
 
-    public Observable<ErrorException<HyperShopContentModel>> getAllMicroService(FilterDataModel request) {
+    public Observable<ErrorException<HyperShopContentModel>> getAllMicroService(FilterModel request) {
         BehaviorSubject<ErrorException<HyperShopContentModel>> mMovieCache = BehaviorSubject.create();
         Observable<ErrorException<HyperShopContentModel>> all = HyperShopContentService().GetAll(baseUrl + controlerUrl + "/GetAllMicroService", headers, request);
         all.observeOn(AndroidSchedulers.mainThread())
@@ -99,7 +98,7 @@ public class HyperShopContentService {
         return new CmsApiFavoriteBase<HyperShopContentModel, Long>(context, "HyperShopContent", HyperShopContentModel.class).removeFavorite(Id);
     }
 
-    public Observable<ErrorException<HyperShopContentModel>> getFavoriteList(FilterDataModel request) {
+    public Observable<ErrorException<HyperShopContentModel>> getFavoriteList(FilterModel request) {
         return new CmsApiFavoriteBase<HyperShopContentModel, Long>(context, "HyperShopContent", HyperShopContentModel.class).getFavoriteList(request);
     }
 

@@ -14,7 +14,7 @@ import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.RetrofitManager;
 import ntk.android.base.entitymodel.base.ErrorException;
-import ntk.android.base.entitymodel.base.FilterDataModel;
+import ntk.android.base.entitymodel.base.FilterModel;
 import ntk.android.base.entitymodel.hypershop.HyperShopCategoryModel;
 
 public class HyperShopCategoryService {
@@ -32,7 +32,7 @@ public class HyperShopCategoryService {
         return new RetrofitManager(context).getRetrofitUnCached().create(IHyperShopCategoryService.class);
     }
 
-    public Observable<ErrorException<HyperShopCategoryModel>> getAllMicroService(FilterDataModel request) {
+    public Observable<ErrorException<HyperShopCategoryModel>> getAllMicroService(FilterModel request) {
         BehaviorSubject<ErrorException<HyperShopCategoryModel>> mMovieCache = BehaviorSubject.create();
         Observable<ErrorException<HyperShopCategoryModel>> all = HyperShopContentService().GetAll(baseUrl + controlerUrl + "/GetAllMicroService", headers, request);
         all.observeOn(AndroidSchedulers.mainThread())
