@@ -32,7 +32,6 @@ public class FilterModel {
     public List<FilterDataModel> Filters;
 
 
-
     public FilterModel addFilter(FilterDataModel f) {
         if (Filters == null)
             Filters = new ArrayList<>();

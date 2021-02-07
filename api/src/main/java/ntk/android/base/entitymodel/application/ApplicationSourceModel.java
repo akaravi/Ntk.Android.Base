@@ -76,8 +76,7 @@ class ApplicationSourceModel extends BaseModuleEntity<Long> {
     public Boolean UpdateSourceByGit;
     @SerializedName("IsAbilityGradleBuild")
     public boolean IsAbilityGradleBuild;
-    @SerializedName("FilePathOnServer")
-    public String FilePathOnServer;
+
 
 
 }

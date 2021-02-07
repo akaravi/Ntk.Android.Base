@@ -9,22 +9,24 @@ import ntk.android.base.entitymodel.base.feildinfo.GetPropertiesInfoModel;
 import ntk.android.base.entitymodel.enums.EnumBuildStatusType;
 
 public class ApplicationAppModel extends BaseModuleEntity<Long> {
-    @SerializedName("Title")
-    public String Title;
     @SerializedName("AppKey")
     public String AppKey;
     @SerializedName("ExpireDate")
     public String ExpireDate;
-    @SerializedName("IsPublic")
-    public boolean IsPublic;
     @SerializedName("LinkFileIdIcon")
     public Long LinkFileIdIcon;
     @SerializedName("LinkFileIdLogo")
     public Long LinkFileIdLogo;
     @SerializedName("LinkFileIdSplashScreen")
     public Long LinkFileIdSplashScreen;
+      @SerializedName("LinkMainImageId")
+    public Long LinkMainImageId;
+    @SerializedName("Title")
+    public String Title;
     @SerializedName("AppVersion")
     public int AppVersion;
+    @SerializedName("IsPublic")
+    public boolean IsPublic;
     @SerializedName("LinkSourceId")
     public Long LinkSourceId;
     @SerializedName(" virtual_Source")
@@ -107,7 +109,7 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public String BuildKey5Value;
     @SerializedName("DownloadLinkSrcCustomize")
     public String DownloadLinkSrcCustomize;
-    @SerializedName("DownloadLinksrc")
+    @SerializedName("DownloadLinkSrc")
     public String DownloadLinkSrc;
     @SerializedName("DownloadLinkUpdateSrc")
     public String DownloadLinkUpdateSrc;
@@ -115,7 +117,7 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public String DownloadLinkSrcByDomain;
     @SerializedName("DownloadLinkUpdateSrcByDomain")
     public String DownloadLinkUpdateSrcByDomain;
-   @SerializedName("DownloadLinkSrcByDomainQRCodeBase64")
+    @SerializedName("DownloadLinkSrcByDomainQRCodeBase64")
     public String DownloadLinkSrcByDomainQRCodeBase64;
 
     @SerializedName("FilePathOnServer")

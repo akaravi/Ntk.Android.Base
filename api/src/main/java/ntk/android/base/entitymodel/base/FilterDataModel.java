@@ -30,33 +30,33 @@ public class FilterDataModel {
     @SerializedName("SearchType")
     public int SearchType;
 
-    @SerializedName("StringValue1")
+    @SerializedName("StringValue")
     public String StringValue;
 
     @SerializedName("StringContainValues")
     public List<String> StringContainValues;
 
     @SerializedName("IntValue")
-    public Long IntValue1 = null;
+    public Long IntValue = null;
 
     @SerializedName("IntContainValues")
     public List<Long> IntContainValues;
 
     @SerializedName("DateTimeValue")
-    public String DateTimeValue1;
+    public String DateTimeValue;
 
 
     @SerializedName("BooleanValue")
     public Boolean BooleanValue = null;
 
     @SerializedName("EnumValue")
-    public String EnumValue1;
+    public String EnumValue;
 
     @SerializedName("ObjectIdValue")
     public String ObjectIdValue;
 
     @SerializedName("SingleValue")
-    public Float SingleValue1 = null;
+    public Float SingleValue = null;
 
     @SerializedName("DecimalValue")
     public Integer DecimalValue = null;
@@ -132,8 +132,8 @@ public class FilterDataModel {
         return this;
     }
 
-    public FilterDataModel setIntValue1(Long intValue1) {
-        IntValue1 = intValue1;
+    public FilterDataModel setIntValue(Long intValue) {
+        IntValue = intValue;
         return this;
     }
 
@@ -143,8 +143,8 @@ public class FilterDataModel {
         return this;
     }
 
-    public FilterDataModel setDateTimeValue1(String dateTimeValue1) {
-        DateTimeValue1 = dateTimeValue1;
+    public FilterDataModel setDateTimeValue(String dateTimeValue) {
+        DateTimeValue = dateTimeValue;
         return this;
     }
 
@@ -154,8 +154,8 @@ public class FilterDataModel {
         return this;
     }
 
-    public FilterDataModel setEnumValue1(String enumValue1) {
-        EnumValue1 = enumValue1;
+    public FilterDataModel setEnumValue(String enumValue) {
+        EnumValue = enumValue;
         return this;
     }
 
@@ -164,8 +164,8 @@ public class FilterDataModel {
         return this;
     }
 
-    public FilterDataModel setSingleValue1(Float singleValue1) {
-        SingleValue1 = singleValue1;
+    public FilterDataModel setSingleValue(Float singleValue) {
+        SingleValue = singleValue;
         return this;
     }
 
