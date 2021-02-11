@@ -9,7 +9,6 @@ import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.config.NtkObserver;
 import ntk.android.base.dtomodel.bankpayment.BankPaymentOnlineTransactionModel;
-import ntk.android.base.dtomodel.hypershop.HyperShopOrderDtoModel;
 import ntk.android.base.dtomodel.hypershop.HyperShopOrderPaymentDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.hypershop.HyperShopOrderModel;
@@ -20,7 +19,7 @@ public class HyperShopOrderService extends CmsApiServerBase<HyperShopOrderModel,
         super(context, "HyperShopOrder", HyperShopOrderModel.class);
     }
 
-    public Observable<ErrorException<HyperShopOrderModel>> orderAdd(HyperShopOrderDtoModel model) {
+    public Observable<ErrorException<HyperShopOrderModel>> orderAdd(HyperShopOrderModel model) {
         BehaviorSubject<ErrorException<HyperShopOrderModel>> mMovieCache = BehaviorSubject.create();
         getRetrofit(IHyperShopOrderService.class).OrderAdd(baseUrl + controlerUrl + "/OrderAdd", headers, model)
                 .observeOn(AndroidSchedulers.mainThread())

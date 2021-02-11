@@ -36,7 +36,7 @@ public class HyperShopOrderModel extends BaseModuleEntity<Long> {
     @SerializedName("Products")
     public List<HyperShopOrderContentModel> Products;
     @SerializedName("Amount")
-    public long Amount;
+    public float Amount;
     @SerializedName("FeeTax")
     public Float FeeTax;
     @SerializedName("FeeTransport")

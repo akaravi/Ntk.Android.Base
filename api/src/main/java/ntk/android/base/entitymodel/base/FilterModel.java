@@ -31,7 +31,6 @@ public class FilterModel {
     @SerializedName("Filters")
     public List<FilterDataModel> Filters;
 
-
     public FilterModel addFilter(FilterDataModel f) {
         if (Filters == null)
             Filters = new ArrayList<>();

@@ -5,62 +5,59 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class FilterDataModel {
-
-    @SerializedName("StringForceNullSearch")
-    public Boolean StringForceNullSearch = null;
-
-    @SerializedName("DecimalForceNullSearch")
-    public Boolean DecimalForceNullSearch = null;
-
-    @SerializedName("LatitudeLongitudeForceNullSearch")
-    public Boolean LatitudeLongitudeForceNullSearch = null;
-
-    @SerializedName("IntValueForceNullSearch")
-    public Boolean IntValueForceNullSearch = null;
-
     @SerializedName("PropertyName")
     public String PropertyName;
-
-    @SerializedName("PropertyAnyName")
-    public String PropertyAnyName;
-
     @SerializedName("ClauseType")
     public int ClauseType;
-
+    @SerializedName("PropertyAnyName")
+    public String PropertyAnyName;
     @SerializedName("SearchType")
     public int SearchType;
+    List<FilterDataModel> Filters;
+    Object Value;
+    List<Object> Values;
+//    @SerializedName("StringForceNullSearch")
+//    public Boolean StringForceNullSearch = null;
 
-    @SerializedName("StringValue")
-    public String StringValue;
-
-    @SerializedName("StringContainValues")
-    public List<String> StringContainValues;
-
-    @SerializedName("IntValue")
-    public Long IntValue = null;
-
-    @SerializedName("IntContainValues")
-    public List<Long> IntContainValues;
-
-    @SerializedName("DateTimeValue")
-    public String DateTimeValue;
-
-
-    @SerializedName("BooleanValue")
-    public Boolean BooleanValue = null;
-
-    @SerializedName("EnumValue")
-    public String EnumValue;
-
-    @SerializedName("ObjectIdValue")
-    public String ObjectIdValue;
-
-    @SerializedName("SingleValue")
-    public Float SingleValue = null;
-
-    @SerializedName("DecimalValue")
-    public Integer DecimalValue = null;
-
+    //    @SerializedName("DecimalForceNullSearch")
+//    public Boolean DecimalForceNullSearch = null;
+//
+//    @SerializedName("LatitudeLongitudeForceNullSearch")
+//    public Boolean LatitudeLongitudeForceNullSearch = null;
+//
+//    @SerializedName("IntValueForceNullSearch")
+//    public Boolean IntValueForceNullSearch = null;
+//
+//    @SerializedName("StringValue")
+//    public String StringValue;
+//
+//    @SerializedName("StringContainValues")
+//    public List<String> StringContainValues;
+//
+//    @SerializedName("IntValue")
+//    public Long IntValue = null;
+//
+//    @SerializedName("IntContainValues")
+//    public List<Long> IntContainValues;
+//
+//    @SerializedName("DateTimeValue")
+//    public String DateTimeValue;
+//
+//    @SerializedName("BooleanValue")
+//    public Boolean BooleanValue = null;
+//
+//    @SerializedName("EnumValue")
+//    public String EnumValue;
+//
+//    @SerializedName("ObjectIdValue")
+//    public String ObjectIdValue;
+//
+//    @SerializedName("SingleValue")
+//    public Float SingleValue = null;
+//
+//    @SerializedName("DecimalValue")
+//    public Integer DecimalValue = null;
+//
     @SerializedName("LatitudeValue")
     public Double LatitudeValue = null;
 
@@ -70,35 +67,35 @@ public class FilterDataModel {
     @SerializedName("LatitudeLongitudeDistanceValue")
     public Double LatitudeLongitudeDistanceValue = null;
 
-    @SerializedName("LatitudeLongitudeSortType")
-    public String LatitudeLongitudeSortType;
-
-    @SerializedName("HierarchyIdLevel")
-    public Long HierarchyIdLevel;
-
-    @SerializedName("ObjectIdContainValues")
-    public List<String> ObjectIdContainValues;
-
-    @SerializedName("ObjectIdValue1")
-    public String ObjectIdValue1;
-
-    public FilterDataModel setStringForceNullSearch(Boolean stringForceNullSearch) {
-        StringForceNullSearch = stringForceNullSearch;
-        return this;
-    }
+//    @SerializedName("LatitudeLongitudeSortType")
+//    public String LatitudeLongitudeSortType;
+//
+//    @SerializedName("HierarchyIdLevel")
+//    public Long HierarchyIdLevel;
+//
+//    @SerializedName("ObjectIdContainValues")
+//    public List<String> ObjectIdContainValues;
+//
+//    @SerializedName("ObjectIdValue1")
+//    public String ObjectIdValue1;
+//
+//    public FilterDataModel setStringForceNullSearch(Boolean stringForceNullSearch) {
+//        StringForceNullSearch = stringForceNullSearch;
+//        return this;
+//    }
 
     public FilterDataModel setDecimalForceNullSearch(Boolean decimalForceNullSearch) {
-        DecimalForceNullSearch = decimalForceNullSearch;
+        Value = decimalForceNullSearch;
         return this;
     }
 
     public FilterDataModel setLatitudeLongitudeForceNullSearch(Boolean latitudeLongitudeForceNullSearch) {
-        LatitudeLongitudeForceNullSearch = latitudeLongitudeForceNullSearch;
+        Value = latitudeLongitudeForceNullSearch;
         return this;
     }
 
     public FilterDataModel setIntValueForceNullSearch(Boolean intValueForceNullSearch) {
-        IntValueForceNullSearch = intValueForceNullSearch;
+        Value = intValueForceNullSearch;
         return this;
     }
 
@@ -123,49 +120,49 @@ public class FilterDataModel {
     }
 
     public FilterDataModel setStringValue(String stringValue) {
-        StringValue = stringValue;
+        Value = stringValue;
         return this;
     }
 
     public FilterDataModel setStringContainValues(List<String> stringContainValues) {
-        StringContainValues = stringContainValues;
+        Value = stringContainValues;
         return this;
     }
 
     public FilterDataModel setIntValue(Long intValue) {
-        IntValue = intValue;
+        Value = intValue;
         return this;
     }
 
 
     public FilterDataModel setIntContainValues(List<Long> intContainValues) {
-        IntContainValues = intContainValues;
+        Value = intContainValues;
         return this;
     }
 
     public FilterDataModel setDateTimeValue(String dateTimeValue) {
-        DateTimeValue = dateTimeValue;
+        Value = dateTimeValue;
         return this;
     }
 
 
     public FilterDataModel setBooleanValue(Boolean booleanValue) {
-        BooleanValue = booleanValue;
+        Value = booleanValue;
         return this;
     }
 
     public FilterDataModel setEnumValue(String enumValue) {
-        EnumValue = enumValue;
+        Value = enumValue;
         return this;
     }
 
     public FilterDataModel setObjectIdValue(String objectIdValue) {
-        ObjectIdValue = objectIdValue;
+        Value = objectIdValue;
         return this;
     }
 
     public FilterDataModel setSingleValue(Float singleValue) {
-        SingleValue = singleValue;
+        Value = singleValue;
         return this;
     }
 
@@ -180,9 +177,8 @@ public class FilterDataModel {
     }
 
     public FilterDataModel setLatitudeLongitudeSortType(String latitudeLongitudeSortType) {
-        LatitudeLongitudeSortType = latitudeLongitudeSortType;
+        Value = latitudeLongitudeSortType;
         return this;
     }
 
-    ;
 }

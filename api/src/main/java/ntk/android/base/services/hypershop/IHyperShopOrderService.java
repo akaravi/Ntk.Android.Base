@@ -18,7 +18,7 @@ import retrofit2.http.Path;
 interface IHyperShopOrderService {
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<HyperShopOrderModel>> OrderAdd(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body HyperShopOrderDtoModel model);
+    Observable<ErrorException<HyperShopOrderModel>> OrderAdd(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body HyperShopOrderModel model);
 
     @GET("{cpath}")
     @Headers({"content-type: application/json"})
