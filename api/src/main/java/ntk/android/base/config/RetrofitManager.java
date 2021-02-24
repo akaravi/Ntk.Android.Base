@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.Log;
 
 import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
@@ -17,7 +16,6 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.Observable;
 import ntk.android.base.BaseNtkApplication;
 import ntk.android.base.api.file.entity.FileUploadModelPrev;
-
 import ntk.android.base.api.utill.NTKUtill;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
@@ -36,7 +34,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitManager {
     public static final String TAG = "RetrofitManager";
-    public static String BASE_URL ;
+    public static String BASE_URL;
     public static final String HEADER_CACHE_CONTROL = "Cache-Control";
     public static final String HEADER_PRAGMA = "Pragma";
 
@@ -48,19 +46,22 @@ public class RetrofitManager {
     private OkHttpClient mOkHttpClient, mCachedOkHttpClient;
 
     public RetrofitManager(Context context) {
-        BASE_URL="https://apicms.ir/";
+        BASE_URL = "https://apicms.ir/";
         mContext = context;
         String staticUrl = BaseNtkApplication.get().staticConfig().URL;
         if (!staticUrl.equalsIgnoreCase(""))
             BASE_URL = staticUrl;
     }
-    public RetrofitManager(Context context,String urls) {
+
+    public RetrofitManager(Context context, String urls) {
         mContext = context;
         String staticUrl = BaseNtkApplication.get().staticConfig().URL;
+        BASE_URL = urls;
         if (!staticUrl.equalsIgnoreCase(""))
             BASE_URL = staticUrl;
-        BASE_URL=urls;
+
     }
+
     public Retrofit getRetrofit() {
         getRetrofit("");//new ConfigStaticValue(mContext).GetApiBaseUrl());
         return mRetrofit;
@@ -107,11 +108,11 @@ public class RetrofitManager {
             mRetrofit = new Retrofit.Builder()
                     .baseUrl(BaseUrl)
                     .addConverterFactory(GsonConverterFactory.create(new GsonBuilder()
-                    .enableComplexMapKeySerialization()
-                    .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
-                    .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
-                    .setExclusionStrategies()
-                    .create()))
+                            .enableComplexMapKeySerialization()
+                            .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                            .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                            .setExclusionStrategies()
+                            .create()))
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .client(mOkHttpClient)
                     .build();

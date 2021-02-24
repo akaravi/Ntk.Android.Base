@@ -45,4 +45,8 @@ public class HyperShopOrderModel extends BaseModuleEntity<Long> {
     public Float AmountPure;
     @SerializedName("DelivaryPrice")
     public Float DelivaryPrice;
+    @SerializedName("GeoLocationLatitude")
+    public String GeoLocationLatitude;
+    @SerializedName("GeoLocationLongitude")
+    public String GeoLocationLongitude;
 }
