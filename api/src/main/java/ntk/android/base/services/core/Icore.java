@@ -31,7 +31,7 @@ interface Icore {
     @Headers({"content-type: application/json"})
     Observable<ErrorException<CaptchaModel>> Captcha();
 
-    @GET("api/v1/auth/CorrectToken")
+    @GET("api/v1/auth/CurrectToken")
     @Headers({"content-type: application/json"})
     Observable<ErrorException<CaptchaModel>>  CorrectTokenInfo();
 
