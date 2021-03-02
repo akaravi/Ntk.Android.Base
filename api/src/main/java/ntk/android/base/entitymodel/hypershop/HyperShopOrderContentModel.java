@@ -2,11 +2,9 @@ package ntk.android.base.entitymodel.hypershop;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
 public class HyperShopOrderContentModel {
     public static String CURRENCY_UNIT = "ریال";
-  
+
     @SerializedName("LinkOrderId")
     public Long LinkOrderId;
     @SerializedName("Order")
@@ -25,4 +23,13 @@ public class HyperShopOrderContentModel {
     public int TotalCount;
     @SerializedName("Image")
     public String Image;
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof HyperShopOrderContentModel)
+            if (((HyperShopOrderContentModel) obj).Code.equals(this.Code))
+                return true;
+        return false;
+    }
+
 }
