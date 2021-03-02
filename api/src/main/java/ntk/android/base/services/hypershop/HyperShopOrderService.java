@@ -11,6 +11,8 @@ import ntk.android.base.config.NtkObserver;
 import ntk.android.base.dtomodel.bankpayment.BankPaymentOnlineTransactionModel;
 import ntk.android.base.dtomodel.hypershop.HyperShopOrderPaymentDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.hypershop.BankPaymentInjectCalculateModel;
+import ntk.android.base.entitymodel.hypershop.HyperShopOrderCalculateModel;
 import ntk.android.base.entitymodel.hypershop.HyperShopOrderModel;
 import ntk.android.base.services.base.CmsApiServerBase;
 
@@ -59,7 +61,7 @@ public class HyperShopOrderService extends CmsApiServerBase<HyperShopOrderModel,
         return mMovieCache;
     }
 
-    public Observable<ErrorException<HyperShopOrderModel>> ServiceOrderAdd() {
+    public Observable<ErrorException<HyperShopOrderModel>> lastOrder() {
         BehaviorSubject<ErrorException<HyperShopOrderModel>> mMovieCache = BehaviorSubject.create();
         getRetrofit(IHyperShopOrderService.class).LastOrder(baseUrl + controlerUrl + "/LastOrder", headers)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -67,6 +69,24 @@ public class HyperShopOrderService extends CmsApiServerBase<HyperShopOrderModel,
             @Override
             public void onNext(@NonNull ErrorException<HyperShopOrderModel> hyperShopOrderDtoModelErrorException) {
                 mMovieCache.onNext(hyperShopOrderDtoModelErrorException);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+        });
+        return mMovieCache;
+    }
+
+ public Observable<ErrorException<BankPaymentInjectCalculateModel>> orderCalculate(HyperShopOrderCalculateModel req) {
+        BehaviorSubject<ErrorException<BankPaymentInjectCalculateModel>> mMovieCache = BehaviorSubject.create();
+        getRetrofit(IHyperShopOrderService.class).OrderCalculate(baseUrl + controlerUrl + "/OrderCalculate", headers,req)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new NtkObserver<ErrorException<BankPaymentInjectCalculateModel>>() {
+            @Override
+            public void onNext(@NonNull ErrorException<BankPaymentInjectCalculateModel> req) {
+                mMovieCache.onNext(req);
             }
 
             @Override

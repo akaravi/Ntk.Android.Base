@@ -283,7 +283,7 @@ public class CmsApiServerBase<TEntity, TKey> {
 
     public Observable<ErrorException<TEntity>> edit(TEntity request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
-        ICmsApiServerBase().Edit(baseUrl + controlerUrl + "/1", headers, request)
+        ICmsApiServerBase().Edit(baseUrl + controlerUrl , headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
             @Override

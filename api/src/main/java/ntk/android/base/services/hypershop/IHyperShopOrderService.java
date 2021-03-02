@@ -4,9 +4,10 @@ import java.util.Map;
 
 import io.reactivex.Observable;
 import ntk.android.base.dtomodel.bankpayment.BankPaymentOnlineTransactionModel;
-import ntk.android.base.dtomodel.hypershop.HyperShopOrderDtoModel;
 import ntk.android.base.dtomodel.hypershop.HyperShopOrderPaymentDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.hypershop.BankPaymentInjectCalculateModel;
+import ntk.android.base.entitymodel.hypershop.HyperShopOrderCalculateModel;
 import ntk.android.base.entitymodel.hypershop.HyperShopOrderModel;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -27,5 +28,9 @@ interface IHyperShopOrderService {
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
     Observable<ErrorException<BankPaymentOnlineTransactionModel>> OrderPayment(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body HyperShopOrderPaymentDtoModel model);
+
+    @POST("{cpath}")
+    @Headers({"content-type: application/json"})
+    Observable<ErrorException<BankPaymentInjectCalculateModel>> OrderCalculate(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body HyperShopOrderCalculateModel model);
 
 }

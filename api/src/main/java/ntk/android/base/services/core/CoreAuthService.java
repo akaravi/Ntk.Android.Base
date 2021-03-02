@@ -133,7 +133,7 @@ public class CoreAuthService {
 
     public Observable<Boolean> correctTokenInfo() {
         BehaviorSubject<Boolean> mMovieCache = BehaviorSubject.create();
-        Icore().CorrectTokenInfo().observeOn(AndroidSchedulers.mainThread())
+        Icore().CorrectTokenInfo(headers).observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<CaptchaModel>>() {
             @Override
             public void onSubscribe(@NonNull Disposable d) {
