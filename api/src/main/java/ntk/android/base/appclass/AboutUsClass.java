@@ -29,7 +29,7 @@ public class AboutUsClass {
     public Long AboutUsScoreSum;
 
     public AboutUsClass(ApplicationAppModel item) {
-        this.AboutUsTitle = item.AboutUsTitle;
+        this.AboutUsTitle = item.Title;
         this.AboutUsAddress = item.AboutUsAddress;
         this.AboutUsDescription = item.AboutUsDescription;
         this.AboutUsEmail = item.AboutUsEmail;

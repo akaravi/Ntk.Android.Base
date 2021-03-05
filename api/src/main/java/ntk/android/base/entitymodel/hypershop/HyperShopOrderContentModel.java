@@ -23,6 +23,8 @@ public class HyperShopOrderContentModel {
     public int TotalCount;
     @SerializedName("Image")
     public String Image;
+    @SerializedName("Unit")
+    public String Unit;
 
     @Override
     public boolean equals(Object obj) {

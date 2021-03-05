@@ -24,4 +24,6 @@ public class HyperShopContentModel {
     public float Price;
     @SerializedName("Count")
     public int Count;
+    @SerializedName("Unit")
+    public String Unit;
 }
