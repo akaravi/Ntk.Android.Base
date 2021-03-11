@@ -15,4 +15,31 @@ public class DrawerChildThemeDtoModel {
     @SerializedName("Icon")
     public String Icon;
 
+    @SerializedName("Icon")
+    public int drawableIcon;
+
+    public DrawerChildThemeDtoModel setId(int id) {
+        Id = id;
+        return this;
+    }
+
+    public DrawerChildThemeDtoModel setType(int type) {
+        Type = type;
+        return this;
+    }
+
+    public DrawerChildThemeDtoModel setTitle(String title) {
+        Title = title;
+        return this;
+    }
+
+    public DrawerChildThemeDtoModel setIcon(String icon) {
+        Icon = icon;
+        return this;
+    }
+
+    public DrawerChildThemeDtoModel setDrawableIcon(int drawableIcon) {
+        this.drawableIcon = drawableIcon;
+        return this;
+    }
 }
