@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-class BiographyContentWithSimilarDatePeriodStartMonthOfYearListDtoModel {
+public class BiographyContentWithSimilarDatePeriodStartMonthOfYearListDtoModel {
     @SerializedName("TagIds")
     public List<Long> TagIds;
     @SerializedName("MonthOfYear")

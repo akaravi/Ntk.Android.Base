@@ -74,4 +74,6 @@ public abstract class BaseNtkApplication extends MultiDexApplication implements 
 
         return config;
     }
+
+    public abstract String getLanguage();
 }

@@ -16,6 +16,7 @@ import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.config.ListOfJson;
 import ntk.android.base.dtomodel.biography.BiographyContentWithDatePeriodEndDtoModel;
 import ntk.android.base.dtomodel.biography.BiographyContentWithSimilarDatePeriodStartDayAndMonthOfYearDtoModel;
+import ntk.android.base.dtomodel.biography.BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel;
 import ntk.android.base.dtomodel.core.ScoreClickDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
@@ -152,5 +153,35 @@ public class BiographyContentService extends CmsApiServerBase<BiographyContentMo
                 });
         return mMovieCache;
     }
-    
+
+    public Observable<ErrorException<BiographyContentModel>> getAllWithSimilarDatePeriodStartDayOfYear(BiographyContentWithSimilarDatePeriodStartDayOfYearDtoModel model) {
+        BehaviorSubject<ErrorException<BiographyContentModel>> mMovieCache = BehaviorSubject.create();
+
+        getRetrofit(IBiographyContentService.class).GetAllWithSimilarDatePeriodStartDayOfYear(baseUrl + controlerUrl + "/GetAllWithSimilarDatePeriodStartDayOfYear", headers, model)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(new Observer<ErrorException<BiographyContentModel>>() {
+                    @Override
+                    public void onSubscribe(@NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(@NonNull ErrorException<BiographyContentModel> o) {
+                        mMovieCache.onNext(o);
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+                        mMovieCache.onError(e);
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+        return mMovieCache;
+    }
+
 }

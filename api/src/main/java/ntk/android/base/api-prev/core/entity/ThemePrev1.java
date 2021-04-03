@@ -4,8 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.android.base.api.baseModel.theme.ThemePrev;
-
 public class ThemePrev1 {
 
     @SerializedName("AppThemeId")
