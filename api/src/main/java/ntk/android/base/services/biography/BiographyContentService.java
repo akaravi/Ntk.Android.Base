@@ -59,7 +59,7 @@ public class BiographyContentService extends CmsApiServerBase<BiographyContentMo
     public Observable<ErrorException<BiographyContentModel>> getAllWithCategoryUsedInContent(long Id, FilterModel request) {
         BehaviorSubject<ErrorException<BiographyContentModel>> mMovieCache = BehaviorSubject.create();
 
-        ICmsApiServerBase().getAll(baseUrl + controlerUrl + "GetAllWithCategoryUseInContentId/" + Id, headers, request)
+        ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/GetAllWithCategoryUseInContentId/" + Id, headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(new Observer<ErrorException>() {

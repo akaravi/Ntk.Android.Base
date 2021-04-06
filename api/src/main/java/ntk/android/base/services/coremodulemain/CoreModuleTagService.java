@@ -7,6 +7,6 @@ import ntk.android.base.services.base.CmsApiServerBase;
 
 public class CoreModuleTagService extends CmsApiServerBase<CoreModuleTagModel, Long> {
     public CoreModuleTagService(Context context) {
-        super(context, "'CoreModuleTag'", CoreModuleTagModel.class);
+        super(context, "CoreModuleTag", CoreModuleTagModel.class);
     }
 }

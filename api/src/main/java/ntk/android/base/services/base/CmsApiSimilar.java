@@ -42,7 +42,7 @@ public class CmsApiSimilar<TEntity extends BaseModuleEntity<Long>, Long> {
     }
     public Observable<ErrorException<TEntity>> GetAllWithSimilarsId(Long id, FilterModel request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
-        Observable<ErrorException> all = ICmsApiSimilar().GetAllSimilar(baseUrl + controlerUrl + "/GetAllWithSimilarsId", headers, request);
+        Observable<ErrorException> all = ICmsApiSimilar().GetAllSimilar(baseUrl + controlerUrl + "/GetAllWithSimilarsId/"+id, headers, request);
         all.observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
             @Override

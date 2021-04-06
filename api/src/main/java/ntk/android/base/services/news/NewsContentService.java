@@ -55,7 +55,7 @@ public class NewsContentService extends CmsApiServerBase<NewsContentModel, Long>
     public Observable<ErrorException<NewsContentModel>> getAllWithCategoryUsedInContent(long Id, FilterModel request) {
         BehaviorSubject<ErrorException<NewsContentModel>> mMovieCache = BehaviorSubject.create();
 
-        ICmsApiServerBase().getAll(baseUrl + controlerUrl + "GetAllWithCategoryUseInContentId/" + Id, headers, request)
+        ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/GetAllWithCategoryUseInContentId/" + Id, headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(new Observer<ErrorException>() {
