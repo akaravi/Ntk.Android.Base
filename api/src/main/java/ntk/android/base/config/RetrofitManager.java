@@ -97,7 +97,12 @@ public class RetrofitManager {
             HttpLoggingInterceptor logInterceptor = getLogInterceptor();
             if (logInterceptor != null)
                 httpClient.addInterceptor(logInterceptor);
-
+            //add timeout
+            httpClient.
+                    callTimeout(30, TimeUnit.SECONDS)
+                    .connectTimeout(30, TimeUnit.SECONDS)
+                    .writeTimeout(50, TimeUnit.SECONDS)
+                    .readTimeout(50, TimeUnit.SECONDS);
             mOkHttpClient = httpClient.build();
             String BaseUrl = BASE_URL;
             if (Url != null && !Url.isEmpty()) {
@@ -166,7 +171,12 @@ public class RetrofitManager {
             HttpLoggingInterceptor logInterceptor = getLogInterceptor();
             if (logInterceptor != null)
                 httpClient.addInterceptor(logInterceptor);
-
+            //add timeout
+            httpClient.
+                    callTimeout(30, TimeUnit.SECONDS)
+                    .connectTimeout(30, TimeUnit.SECONDS)
+                    .writeTimeout(50, TimeUnit.SECONDS)
+                    .readTimeout(50, TimeUnit.SECONDS);
             mOkHttpClient = httpClient.build();
 
             String BaseUrl = BASE_URL;
