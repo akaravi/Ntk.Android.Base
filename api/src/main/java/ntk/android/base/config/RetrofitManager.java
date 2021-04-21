@@ -62,6 +62,17 @@ public class RetrofitManager {
 
     }
 
+    /**
+     * this constructor pervent to set defualt custom Url to apiCmc e.q when hasannat Url is set
+     * @param context
+     * @param fundUrl
+     * @param customizeDefualt
+     */
+    public RetrofitManager(Context context, String fundUrl, boolean customizeDefualt) {
+        mContext = context;
+        BASE_URL = fundUrl;
+    }
+
     public Retrofit getRetrofit() {
         getRetrofit("");//new ConfigStaticValue(mContext).GetApiBaseUrl());
         return mRetrofit;
