@@ -21,7 +21,6 @@ import ntk.android.base.dtomodel.core.ScoreClickDtoModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.entitymodel.base.FilterModel;
-import ntk.android.base.entitymodel.biography.BiographyCommentModel;
 import ntk.android.base.entitymodel.biography.BiographyContentModel;
 import ntk.android.base.services.base.CmsApiFavoriteBase;
 import ntk.android.base.services.base.CmsApiScoreApi;
@@ -76,8 +75,8 @@ public class BiographyContentService extends CmsApiServerBase<BiographyContentMo
                                 .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
                                 .setExclusionStrategies()
                                 .create();
-                        o.Item = gson.fromJson(gson.toJson(o.Item), BiographyCommentModel.class);
-                        o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<BiographyCommentModel>(BiographyCommentModel.class));
+                        o.Item = gson.fromJson(gson.toJson(o.Item), BiographyContentModel.class);
+                        o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<BiographyContentModel>(BiographyContentModel.class));
                         mMovieCache.onNext(o);
                     }
 
