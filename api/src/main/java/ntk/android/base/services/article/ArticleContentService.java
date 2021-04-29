@@ -69,7 +69,7 @@ public class ArticleContentService extends CmsApiServerBase<ArticleContentModel,
                                 .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
                                 .setExclusionStrategies()
                                 .create();
-                        o.Item = gson.fromJson(gson.toJson(o.Item), NewsCommentModel.class);
+                        o.Item = gson.fromJson(gson.toJson(o.Item), ArticleContentModel.class);
                         o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<ArticleContentModel>(ArticleContentModel.class));
                         mMovieCache.onNext(o);
                     }

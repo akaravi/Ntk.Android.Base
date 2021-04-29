@@ -72,8 +72,8 @@ public class NewsContentService extends CmsApiServerBase<NewsContentModel, Long>
                                 .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
                                 .setExclusionStrategies()
                                 .create();
-                        o.Item = gson.fromJson(gson.toJson(o.Item), NewsCommentModel.class);
-                        o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<NewsCommentModel>(NewsCommentModel.class));
+                        o.Item = gson.fromJson(gson.toJson(o.Item), NewsContentModel.class);
+                        o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<NewsContentModel>(NewsContentModel.class));
                         mMovieCache.onNext(o);
                     }
 

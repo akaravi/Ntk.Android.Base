@@ -11,6 +11,8 @@ import ntk.android.base.entitymodel.enums.EnumBuildStatusType;
 public class ApplicationAppModel extends BaseModuleEntity<Long> {
     @SerializedName("AppKey")
     public String AppKey;
+    @SerializedName("Lang")
+    public int Lang;
     @SerializedName("ExpireDate")
     public String ExpireDate;
     @SerializedName("LinkFileIdIcon")
