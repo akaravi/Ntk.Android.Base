@@ -88,7 +88,7 @@ public class CoreAuthService {
         request.LocationLong = "0";
         request.DeviceBrand = AppUtill.GetDeviceName();
         request.Country = "IR";
-        request.Language = "FA";
+        request.Language = BaseNtkApplication.get().getLanguage();
         request.SimCard = ((TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE)).getSimOperatorName();
         request.AppBuildVer = Integer.parseInt(String.valueOf(BaseNtkApplication.get().getApplicationParameter().VERSION_CODE()));//String.valueOf(BuildConfig.VERSION_CODE));
         request.AppSourceVer = BaseNtkApplication.get().getApplicationParameter().VERSION_NAME();
@@ -240,6 +240,7 @@ public class CoreAuthService {
     }
 
     public Observable<ErrorException<TokenInfoModel>> signInUser(AuthUserSignInModel request) {
+        request.lang = BaseNtkApplication.get().getLanguage();
         BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
         Icore().SignInUser(baseUrl + controlerUrl + "/signin", headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
@@ -299,6 +300,7 @@ public class CoreAuthService {
     }
 
     public Observable<ErrorException<TokenInfoModel>> signInUserBySMS(AuthUserSignInBySmsDtoModel req) {
+        req.lang = BaseNtkApplication.get().getLanguage();
         BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
         Icore().SignInUserBySMS(baseUrl + controlerUrl + "/signInBySms", headers, req)
                 .observeOn(AndroidSchedulers.mainThread())

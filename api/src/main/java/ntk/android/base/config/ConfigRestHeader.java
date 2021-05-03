@@ -47,7 +47,7 @@ public class ConfigRestHeader {
         headers.put("DeviceId", Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID));
         headers.put("DeviceBrand", AppUtill.GetDeviceName());
         headers.put("Country", "IR");
-        headers.put("Language", "Fa");
+        headers.put("Language",  BaseNtkApplication.get().getLanguage());
         headers.put("SimCard", manager.getSimOperatorName());
         headers.put("AppBuildVer", String.valueOf(BaseNtkApplication.get().getApplicationParameter().VERSION_CODE()));//String.valueOf(BuildConfig.VERSION_CODE));
         headers.put("AppSourceVer", BaseNtkApplication.get().getApplicationParameter().VERSION_NAME());
