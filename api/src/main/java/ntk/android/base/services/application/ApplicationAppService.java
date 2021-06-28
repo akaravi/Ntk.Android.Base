@@ -59,7 +59,7 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
     public Observable<ErrorException<ApplicationThemeConfigModel>> getAppTheme() {
         BehaviorSubject<ErrorException<ApplicationThemeConfigModel>> mMovieCache = BehaviorSubject.create();
 
-        getRetrofit(ICmsApiApplication.class).GetThemeCore(headers)
+        getRetrofit(ICmsApiApplication.class).GetThemeCore(baseUrl + controlerUrl + "/CurrentTheme",headers)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<ApplicationThemeConfigModel>>() {
 
