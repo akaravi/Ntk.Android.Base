@@ -11,11 +11,11 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
-import ntk.android.base.dtomodel.application.AboutUsDtoModel;
 import ntk.android.base.dtomodel.application.AppThemeDtoModel;
 import ntk.android.base.dtomodel.application.ApplicationScoreDtoModel;
 import ntk.android.base.dtomodel.application.MainResponseDtoModel;
 import ntk.android.base.entitymodel.application.ApplicationAppModel;
+import ntk.android.base.entitymodel.application.ApplicationThemeConfigModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.services.base.CmsApiServerBase;
@@ -56,12 +56,12 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
         return mMovieCache;
     }
 
-    public Observable<ErrorException<AppThemeDtoModel>> getAppTheme() {
-        BehaviorSubject<ErrorException<AppThemeDtoModel>> mMovieCache = BehaviorSubject.create();
+    public Observable<ErrorException<ApplicationThemeConfigModel>> getAppTheme() {
+        BehaviorSubject<ErrorException<ApplicationThemeConfigModel>> mMovieCache = BehaviorSubject.create();
 
         getRetrofit(ICmsApiApplication.class).GetThemeCore(headers)
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<AppThemeDtoModel>>() {
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<ApplicationThemeConfigModel>>() {
 
             @Override
             public void onSubscribe(@NonNull Disposable d) {
@@ -69,7 +69,7 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
             }
 
             @Override
-            public void onNext(@NonNull ErrorException<AppThemeDtoModel> errorExceptionBase) {
+            public void onNext(@NonNull ErrorException<ApplicationThemeConfigModel> errorExceptionBase) {
                 mMovieCache.onNext(errorExceptionBase);
             }
 
