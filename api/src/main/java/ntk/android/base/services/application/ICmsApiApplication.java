@@ -10,7 +10,6 @@ import ntk.android.base.dtomodel.application.AppThemeDtoModel;
 import ntk.android.base.dtomodel.application.ApplicationScoreDtoModel;
 import ntk.android.base.dtomodel.application.MainResponseDtoModel;
 import ntk.android.base.entitymodel.application.ApplicationAppModel;
-import ntk.android.base.entitymodel.application.ApplicationThemeConfigModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import retrofit2.http.Body;
@@ -24,10 +23,11 @@ interface ICmsApiApplication {
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
     public Observable<ErrorExceptionBase> ScoreClick(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body ApplicationScoreDtoModel request);
-    
-    @GET("{cpath}")
-    @Headers({"content-type: application/json"})
-    Observable<ErrorException<ApplicationThemeConfigModel>> GetThemeCore(@HeaderMap Map<String, String> headers);
+
+    //notice : this api moved from prev api implementation
+    @POST("api/v1/app/")
+    @Headers({"content-type: application/json", "layout: Theme"})
+    Observable<ErrorException<AppThemeDtoModel>> GetThemeCore(@HeaderMap Map<String, String> headers);
 
     //notice : this api moved from prev api implementation
     @POST("api/v1/app/")

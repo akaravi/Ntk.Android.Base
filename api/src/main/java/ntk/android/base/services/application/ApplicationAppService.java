@@ -16,7 +16,6 @@ import ntk.android.base.dtomodel.application.AppThemeDtoModel;
 import ntk.android.base.dtomodel.application.ApplicationScoreDtoModel;
 import ntk.android.base.dtomodel.application.MainResponseDtoModel;
 import ntk.android.base.entitymodel.application.ApplicationAppModel;
-import ntk.android.base.entitymodel.application.ApplicationThemeConfigModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
 import ntk.android.base.services.base.CmsApiServerBase;
@@ -57,12 +56,12 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
         return mMovieCache;
     }
 
-    public Observable<ErrorException<ApplicationThemeConfigModel>> getAppTheme() {
-        BehaviorSubject<ErrorException<ApplicationThemeConfigModel>> mMovieCache = BehaviorSubject.create();
+    public Observable<ErrorException<AppThemeDtoModel>> getAppTheme() {
+        BehaviorSubject<ErrorException<AppThemeDtoModel>> mMovieCache = BehaviorSubject.create();
 
         getRetrofit(ICmsApiApplication.class).GetThemeCore(headers)
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<ApplicationThemeConfigModel>>() {
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<AppThemeDtoModel>>() {
 
             @Override
             public void onSubscribe(@NonNull Disposable d) {
@@ -70,7 +69,7 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
             }
 
             @Override
-            public void onNext(@NonNull ErrorException<ApplicationThemeConfigModel> errorExceptionBase) {
+            public void onNext(@NonNull ErrorException<AppThemeDtoModel> errorExceptionBase) {
                 mMovieCache.onNext(errorExceptionBase);
             }
 
