@@ -56,35 +56,7 @@ public class ApplicationAppService extends CmsApiServerBase<ApplicationAppModel,
         return mMovieCache;
     }
 
-    public Observable<ErrorException<ApplicationThemeConfigModel>> getAppTheme() {
-        BehaviorSubject<ErrorException<ApplicationThemeConfigModel>> mMovieCache = BehaviorSubject.create();
 
-        getRetrofit(ICmsApiApplication.class).GetThemeCore(baseUrl + controlerUrl + "/CurrentTheme",headers)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<ApplicationThemeConfigModel>>() {
-
-            @Override
-            public void onSubscribe(@NonNull Disposable d) {
-
-            }
-
-            @Override
-            public void onNext(@NonNull ErrorException<ApplicationThemeConfigModel> errorExceptionBase) {
-                mMovieCache.onNext(errorExceptionBase);
-            }
-
-            @Override
-            public void onError(@NonNull Throwable e) {
-                mMovieCache.onError(e);
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
-        return mMovieCache;
-    }
 
 //    public Observable<ErrorException<AboutUsDtoModel>> getAboutUs() {
 //        BehaviorSubject<ErrorException<AboutUsDtoModel>> mMovieCache = BehaviorSubject.create();
