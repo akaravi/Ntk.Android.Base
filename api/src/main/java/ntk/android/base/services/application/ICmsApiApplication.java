@@ -25,10 +25,6 @@ interface ICmsApiApplication {
     @Headers({"content-type: application/json"})
     public Observable<ErrorExceptionBase> ScoreClick(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body ApplicationScoreDtoModel request);
 
-    //
-    @GET("{cpath}")
-    @Headers({"content-type: application/json"})
-    Observable<ErrorException<ApplicationThemeConfigModel>> GetThemeCore(@Path(value = "cpath", encoded = true) String cpath,@HeaderMap Map<String, String> headers);
 
     //notice : this api moved from prev api implementation
     @POST("api/v1/app/")

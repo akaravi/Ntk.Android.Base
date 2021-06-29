@@ -13,7 +13,7 @@ import ntk.android.base.entitymodel.application.ApplicationThemeConfigModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.services.base.CmsApiServerBase;
 
-class ApplicationThemeService extends CmsApiServerBase<ApplicationThemeConfigModel, Long> {
+public class ApplicationThemeService extends CmsApiServerBase<ApplicationThemeConfigModel, Long> {
 
     public ApplicationThemeService(Context context) {
         super(context, "ApplicationThemeConfig", ApplicationThemeConfigModel.class);
@@ -22,7 +22,7 @@ class ApplicationThemeService extends CmsApiServerBase<ApplicationThemeConfigMod
     public Observable<ErrorException<ApplicationThemeConfigModel>> getAppTheme() {
         BehaviorSubject<ErrorException<ApplicationThemeConfigModel>> mMovieCache = BehaviorSubject.create();
 
-        getRetrofit(ICmsApiApplication.class).GetThemeCore(baseUrl + controlerUrl + "/CurrentTheme", headers)
+        getRetrofit(IApplicationTheme.class).GetThemeCore(baseUrl + controlerUrl + "/CurrentTheme", headers)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<ApplicationThemeConfigModel>>() {
 
