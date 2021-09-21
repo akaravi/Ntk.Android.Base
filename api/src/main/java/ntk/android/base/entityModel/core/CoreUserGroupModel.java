@@ -10,24 +10,24 @@ import ntk.android.base.entitymodel.enums.EnumManageUserAccessControllerTypes;
 
 public class CoreUserGroupModel extends BaseEntity<Long> {
 
-    public @SerializedName("TitleML")
-    String TitleML;
-    public @SerializedName("Title")
-    String Title;
-    public @SerializedName("TitleResourceLanguage")
-    String TitleResourceLanguage;
-    public @SerializedName("Description")
-    String Description;
-    public @SerializedName("UserType")
-    EnumManageUserAccessControllerTypes UserType;
-    public @SerializedName("UserTypeTitle")
-    String UserTypeTitle;
-    public @SerializedName("UserTypeDescription")
-    String UserTypeDescription;
-    public @SerializedName("CmsSiteUsers")
-    List<CoreSiteUserModel> CmsSiteUsers;
-    public @SerializedName("CmsCpMainMenuCmsUserGroup")
-    List<CoreCpMainMenuCmsUserGroupModel> CmsCpMainMenuCmsUserGroup;
+    @SerializedName("TitleML")
+    public   String TitleML;
+    @SerializedName("Title")
+    public   String Title;
+    @SerializedName("TitleResourceLanguage")
+    public   String TitleResourceLanguage;
+    @SerializedName("Description")
+    public   String Description;
+    @SerializedName("UserType")
+    public   EnumManageUserAccessControllerTypes UserType;
+    @SerializedName("UserTypeTitle")
+    public  String UserTypeTitle;
+    @SerializedName("UserTypeDescription")
+    public String UserTypeDescription;
+    @SerializedName("CmsSiteUsers")
+    public  List<CoreSiteUserModel> CmsSiteUsers;
+    @SerializedName("CmsCpMainMenuCmsUserGroup")
+    public  List<CoreCpMainMenuCmsUserGroupModel> CmsCpMainMenuCmsUserGroup;
 }
 
 

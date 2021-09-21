@@ -5,10 +5,10 @@ import com.google.gson.annotations.SerializedName;
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
 public class TicketingTemplateModel extends BaseModuleEntity<Long> {
-    public @SerializedName("Title")
-    String Title;
-    public @SerializedName("HtmlBody")
-    String HtmlBody;
-    public @SerializedName("LinkTicketingDepartemenId")
-    long LinkTicketingDepartemenId;
+    @SerializedName("Title")
+    public  String Title;
+    @SerializedName("HtmlBody")
+    public  String HtmlBody;
+    @SerializedName("LinkTicketingDepartemenId")
+    public long LinkTicketingDepartemenId;
 }

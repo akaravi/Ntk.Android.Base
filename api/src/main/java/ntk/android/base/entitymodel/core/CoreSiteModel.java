@@ -8,69 +8,69 @@ import ntk.android.base.entitymodel.coremain.CoreModuleSiteModel;
 import ntk.android.base.entitymodel.enums.EnumSiteStatus;
 
 public class CoreSiteModel {
-    public @SerializedName("CurrentSiteDomainUrl")
-    String CurrentSiteDomainUrl;
-    public @SerializedName("LinkMainImageIdSrc")
-    String LinkMainImageIdSrc;
+    @SerializedName("CurrentSiteDomainUrl")
+    public String CurrentSiteDomainUrl;
+    @SerializedName("LinkMainImageIdSrc")
+    public String LinkMainImageIdSrc;
 
-    public @SerializedName("ExpireDate")
-    String ExpireDate;
-    public @SerializedName("LinkCreatedBySiteId")
-    Long LinkCreatedBySiteId;
+    @SerializedName("ExpireDate")
+    public String ExpireDate;
+    @SerializedName("LinkCreatedBySiteId")
+    public Long LinkCreatedBySiteId;
     // tslint:disable-next-line: variable-name
-    public @SerializedName(" virtual_ParentCreator")
-    CoreSiteModel  virtual_ParentCreator;
-    public @SerializedName("ParentCreator")
-    CoreSiteModel ParentCreator;
-    public @SerializedName("Title")
-    String Title;
-    public @SerializedName("OwnerSiteSetStatus")
-    EnumSiteStatus OwnerSiteSetStatus;
-    public @SerializedName("UserLanguage")
-    int UserLanguage;
-    public @SerializedName("SubDomain")
-    String SubDomain;
-    public @SerializedName("Domain")
-    String Domain;
-    public @SerializedName("Redirect")
-    String Redirect;
-    public @SerializedName("Keyword")
-    String Keyword;
-    public @SerializedName("Description")
-    String Description;
-    public @SerializedName("LinkFavIconId")
-    Long LinkFavIconId;
-    public @SerializedName("LinkSiteCategoryId")
-    long LinkSiteCategoryId;
+    @SerializedName(" virtual_ParentCreator")
+    public CoreSiteModel virtual_ParentCreator;
+    @SerializedName("ParentCreator")
+    public CoreSiteModel ParentCreator;
+    @SerializedName("Title")
+    public String Title;
+    @SerializedName("OwnerSiteSetStatus")
+    public EnumSiteStatus OwnerSiteSetStatus;
+    @SerializedName("UserLanguage")
+    public int UserLanguage;
+    @SerializedName("SubDomain")
+    public String SubDomain;
+    @SerializedName("Domain")
+    public String Domain;
+    @SerializedName("Redirect")
+    public String Redirect;
+    @SerializedName("Keyword")
+    public String Keyword;
+    @SerializedName("Description")
+    public String Description;
+    @SerializedName("LinkFavIconId")
+    public Long LinkFavIconId;
+    @SerializedName("LinkSiteCategoryId")
+    public long LinkSiteCategoryId;
 
-    public @SerializedName(" virtual_CmsSiteCategory")
-    CoreSiteCategoryModel  virtual_CmsSiteCategory;
-    public @SerializedName("CmsSiteCategory")
-    CoreSiteCategoryModel CmsSiteCategory;
-    public @SerializedName("HasAccountingForm")
-    boolean HasAccountingForm;
-    public @SerializedName("ViewInCmsSiteLIst")
-    boolean ViewInCmsSiteLIst;
-    public @SerializedName("AccountingFormNo")
-    long AccountingFormNo;
-    public @SerializedName("AccountingFormCreatedDate")
-    String AccountingFormCreatedDate;
-    public @SerializedName("AccountingFormUpdatedDate")
-    String AccountingFormUpdatedDate;
-    public @SerializedName("SiteUsers")
-    List<CoreSiteUserModel> SiteUsers;
-    public @SerializedName("ModuleSites")
-    List<CoreModuleSiteModel> ModuleSites;
-    public @SerializedName("DomainAliases")
-    List<CoreSiteDomainAliasModel> DomainAliases;
-    public @SerializedName("ChildernCreateds")
-    List<CoreSiteModel> ChildernCreateds;
-    public @SerializedName("Devices")
-    List<CoreDeviceModel> Devices;
-    public @SerializedName("Copyright")
-    String Copyright;
-    public @SerializedName("WebMasterEmail")
-    String WebMasterEmail;
-    public @SerializedName("WebEditorEmail")
+    @SerializedName(" virtual_CmsSiteCategory")
+    public CoreSiteCategoryModel virtual_CmsSiteCategory;
+     @SerializedName("CmsSiteCategory")
+     public CoreSiteCategoryModel CmsSiteCategory;
+    @SerializedName("HasAccountingForm")
+    public boolean HasAccountingForm;
+    @SerializedName("ViewInCmsSiteLIst")
+    public boolean ViewInCmsSiteLIst;
+    @SerializedName("AccountingFormNo")
+    public long AccountingFormNo;
+    @SerializedName("AccountingFormCreatedDate")
+    public String AccountingFormCreatedDate;
+    @SerializedName("AccountingFormUpdatedDate")
+    public String AccountingFormUpdatedDate;
+    @SerializedName("SiteUsers")
+    public List<CoreSiteUserModel> SiteUsers;
+    @SerializedName("ModuleSites")
+    public List<CoreModuleSiteModel> ModuleSites;
+    @SerializedName("DomainAliases")
+    public List<CoreSiteDomainAliasModel> DomainAliases;
+    @SerializedName("ChildernCreateds")
+    public List<CoreSiteModel> ChildernCreateds;
+    @SerializedName("Devices")
+    public List<CoreDeviceModel> Devices;
+    @SerializedName("Copyright")
+    public String Copyright;
+    @SerializedName("WebMasterEmail")
+    public String WebMasterEmail;
+    @SerializedName("WebEditorEmail")
     String WebEditorEmail;
 }

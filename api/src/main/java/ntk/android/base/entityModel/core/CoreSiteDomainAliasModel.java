@@ -5,16 +5,16 @@ import com.google.gson.annotations.SerializedName;
 import ntk.android.base.entitymodel.base.BaseEntity;
 
 public class CoreSiteDomainAliasModel extends BaseEntity<Long> {
-    public @SerializedName("CmsSite")
-    CoreSiteModel CmsSite;
-    public @SerializedName("SubDomain")
-    String DubDomain;
-    public @SerializedName("Domain")
-    String Domain;
-    public @SerializedName("Redirect")
-    String Redirect;
-    public @SerializedName("LinkCmsSiteId")
-    Long LinkCmsSiteId;
-    public @SerializedName(" virtual_CmsSite")
-    CoreSiteModel  virtual_CmsSite;
+    @SerializedName("CmsSite")
+    public    CoreSiteModel CmsSite;
+    @SerializedName("SubDomain")
+    public   String DubDomain;
+    @SerializedName("Domain")
+    public  String Domain;
+    @SerializedName("Redirect")
+    public  String Redirect;
+    @SerializedName("LinkCmsSiteId")
+    public Long LinkCmsSiteId;
+    @SerializedName(" virtual_CmsSite")
+    public  CoreSiteModel  virtual_CmsSite;
 }
