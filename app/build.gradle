@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 30
     defaultConfig {
         applicationId "ntk.base.app"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.body.runner.AndroidJUnitRunner"
@@ -16,18 +16,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    repositories {
-        maven { url "https://jitpack.io" }
-        maven {
-            url 'https://dl.bintray.com/omnivirt/OmniVirtSDK'
-        }
-        maven { url 'https://dl.bintray.com/drummer-aidan/maven' }
-        google()
-        jcenter()
-        maven {
-            url "http://dl.bintray.com/lukaville/maven"
-        }
-    }
+ 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
