@@ -32,8 +32,8 @@ public class BiographyContentModel extends BaseModuleEntity<Long> {
     public long LinkFileMovieId;
     @SerializedName("LinkMainImageId")
     public long LinkMainImageId;
-    @SerializedName("LinkFileIds")
-    public String LinkFileIds;
+    @SerializedName("ScoreClick")
+    public long ScoreClick;
     @SerializedName("ScoreSumPercent")
     public long ScoreSumPercent;
     @SerializedName("ViewCount")
