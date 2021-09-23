@@ -34,7 +34,7 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = group
+                groupId = "ntk.android.base"
                 artifactId = 'base'
                 version = version
             }
