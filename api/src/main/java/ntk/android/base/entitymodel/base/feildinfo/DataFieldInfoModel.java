@@ -4,8 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-import ntk.android.base.api.baseModel.FieldInfoModelPrev;
-
 public class DataFieldInfoModel {
     @SerializedName("FieldName")
     public    String FieldName;
@@ -34,5 +32,5 @@ public class DataFieldInfoModel {
     @SerializedName("AccessAddField")
     public    boolean AccessAddField = false;
     @SerializedName("fieldsInfo")
-    public  List<FieldInfoModelPrev> fieldsInfo;
+    public  List<FieldInfoModel> fieldsInfo;
 }

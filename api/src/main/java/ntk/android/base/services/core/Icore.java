@@ -3,7 +3,6 @@ package ntk.android.base.services.core;
 import java.util.Map;
 
 import io.reactivex.Observable;
-import ntk.android.base.api.baseModel.FilterModelPrev;
 import ntk.android.base.dtomodel.core.AuthEmailConfirmDtoModel;
 import ntk.android.base.dtomodel.core.AuthMobileConfirmDtoModel;
 import ntk.android.base.dtomodel.core.AuthRenewTokenModel;
@@ -17,6 +16,7 @@ import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
 import ntk.android.base.entitymodel.base.CaptchaModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
+import ntk.android.base.entitymodel.base.FilterDataModel;
 import ntk.android.base.entitymodel.base.TokenInfoModel;
 import ntk.android.base.entitymodel.core.CoreUserModel;
 import retrofit2.http.Body;
@@ -69,5 +69,5 @@ interface Icore {
 
     Observable<ErrorExceptionBase> logout(AuthUserSignOutModel model);
 
-    Observable<ErrorExceptionBase> existToken(FilterModelPrev model);
+    Observable<ErrorExceptionBase> existToken(FilterDataModel model);
 }
