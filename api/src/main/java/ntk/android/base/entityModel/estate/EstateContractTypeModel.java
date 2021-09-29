@@ -9,7 +9,7 @@ public class EstateContractTypeModel extends BaseModuleEntity<String> {
     public String Title;
     @SerializedName("Description")
     public String Description;
-    @SerializedName("HasRentPrice")
+    @SerializedName("HasSalePrice")
     public boolean HasSalePrice;
     @SerializedName("HasRentPrice")
     public boolean HasRentPrice;
