@@ -10,6 +10,7 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -119,6 +120,54 @@ public class AppUtill {
         }
 
         return result;
+    }
+
+    public static Date Now(){
+        return  new Date(System.currentTimeMillis());
+    }
+    public static String DateDifference(String startDate, String endDate) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/M/yyyy hh:mm:ss");
+        Date date1 = null, date2 = null;
+        try {
+            date1 = simpleDateFormat.parse(startDate);
+            date2 = simpleDateFormat.parse(startDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return DateDifference(date1, date2);
+
+    }
+
+
+    public static String DateDifference(Date startDate, Date endDate) {
+        //milliseconds
+        if (startDate != null && endDate != null) {
+            long different = endDate.getTime() - startDate.getTime();
+
+            long secondsInMilli = 1000;
+            long minutesInMilli = secondsInMilli * 60;
+            long hoursInMilli = minutesInMilli * 60;
+            long daysInMilli = hoursInMilli * 24;
+
+            long elapsedDays = different / daysInMilli;
+            different = different % daysInMilli;
+
+            long elapsedHours = different / hoursInMilli;
+            different = different % hoursInMilli;
+
+            long elapsedMinutes = different / minutesInMilli;
+            different = different % minutesInMilli;
+
+            long elapsedSeconds = different / secondsInMilli;
+            if (elapsedDays > 0)
+                return elapsedDays + "روز قبل";
+            if (elapsedHours > 0)
+                return elapsedHours + "ساعت قبل";
+            if (elapsedMinutes > 0)
+                return elapsedMinutes + "دقیقه قبل";
+            else return "لحظاتی قبل";
+        } else
+            return "نامشخص";
     }
 }
 

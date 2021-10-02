@@ -25,4 +25,6 @@ public class EstateContractModel extends BaseModuleEntity<String> {
     public boolean DepositPriceByAgreement;
     @SerializedName("DepositPrice")
     public Long DepositPrice;
+
+    public String UnitPrice = "تومان";
 }
