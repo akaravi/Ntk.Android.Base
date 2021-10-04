@@ -160,11 +160,11 @@ public class AppUtill {
 
             long elapsedSeconds = different / secondsInMilli;
             if (elapsedDays > 0)
-                return elapsedDays + "روز قبل";
+                return elapsedDays + " روز قبل ";
             if (elapsedHours > 0)
-                return elapsedHours + "ساعت قبل";
+                return elapsedHours + " ساعت قبل ";
             if (elapsedMinutes > 0)
-                return elapsedMinutes + "دقیقه قبل";
+                return elapsedMinutes + " دقیقه قبل ";
             else return "لحظاتی قبل";
         } else
             return "نامشخص";
