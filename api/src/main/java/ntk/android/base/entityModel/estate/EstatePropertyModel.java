@@ -32,8 +32,10 @@ public class EstatePropertyModel extends BaseModuleEntity<String> {
     public String LinkPropertyTypeLanduseId;
     @SerializedName("LinkPropertyTypeUsageId")
     public String LinkPropertyTypeUsageId;
-    @SerializedName("PropertyType")
-    public EstatePropertyTypeModel PropertyType;
+    @SerializedName("PropertyTypeLanduse")
+    EstatePropertyTypeLanduseModel PropertyTypeLanduse;
+    @SerializedName("PropertyTypeUsage")
+    EstatePropertyTypeUsageModel PropertyTypeUsage;
 
 
     /// <summary>@NOTIC must be integer
