@@ -6,6 +6,7 @@ import ntk.android.base.entitymodel.estate.EstatePropertyDetailModel;
 import ntk.android.base.services.base.CmsApiServerBase;
 
 public class EstatePropertyDetailService extends CmsApiServerBase<EstatePropertyDetailModel, String> {
+
     public EstatePropertyDetailService(Context context) {
         super(context, "EstatePropertyDetail", EstatePropertyDetailModel.class);
     }
