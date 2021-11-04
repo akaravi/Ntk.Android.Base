@@ -122,9 +122,10 @@ public class AppUtill {
         return result;
     }
 
-    public static Date Now(){
-        return  new Date(System.currentTimeMillis());
+    public static Date Now() {
+        return new Date(System.currentTimeMillis());
     }
+
     public static String DateDifference(String startDate, String endDate) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/M/yyyy hh:mm:ss");
         Date date1 = null, date2 = null;
@@ -168,6 +169,10 @@ public class AppUtill {
             else return "لحظاتی قبل";
         } else
             return "نامشخص";
+    }
+
+    public static String DateDifferenceNow(Date createdDate) {
+        return DateDifference(createdDate, Now());
     }
 }
 
