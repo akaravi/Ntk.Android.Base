@@ -24,5 +24,6 @@ public class EstatePropertyDetailGroupModel extends BaseModuleEntity<String> {
     @SerializedName("LinkPropertyTypeLanduseId")
     public String LinkPropertyTypeLanduseId;
     @SerializedName("PropertyDetails")
-    List<EstatePropertyDetailModel> PropertyDetails;
+    public List<EstatePropertyDetailModel> PropertyDetails;
+    public List<EstatePropertyDetailValueModel> PropertyValues;
 }
