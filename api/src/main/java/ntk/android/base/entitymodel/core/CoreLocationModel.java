@@ -4,21 +4,21 @@ import com.google.gson.annotations.SerializedName;
 
 public class CoreLocationModel {
     @SerializedName("Title")
-    String Title;
+  public   String Title;
     @SerializedName("LinkParentId")
-    Integer LinkParentId;
+    public  Integer LinkParentId;
     @SerializedName("LinkParentIdNode")
-    Long LinkParentIdNode;
+    public  Long LinkParentIdNode;
     @SerializedName("GeoLocationLatitude")
-    Double GeoLocationLatitude;
+    public Double GeoLocationLatitude;
     @SerializedName("GeoLocationLongitude")
-    Double GeoLocationLongitude;
+    public  Double GeoLocationLongitude;
     @SerializedName("LocationType")
-    Integer LocationType;
+    public   Integer LocationType;
     @SerializedName(" virtual_Parent")
-    Object  virtual_Parent;
+    public   Object  virtual_Parent;
     @SerializedName("Prent")
-    Object Parent;
+    public   Object Parent;
     @SerializedName("Children")
-    Object Children;
+    public  Object Children;
 }
