@@ -8,7 +8,7 @@ public class CoreLocationModel {
     @SerializedName("LinkParentId")
     public  Integer LinkParentId;
     @SerializedName("LinkParentIdNode")
-    public  Long LinkParentIdNode;
+    public  String LinkParentIdNode;
     @SerializedName("GeoLocationLatitude")
     public Double GeoLocationLatitude;
     @SerializedName("GeoLocationLongitude")
