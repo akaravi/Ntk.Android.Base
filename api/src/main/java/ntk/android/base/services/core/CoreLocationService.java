@@ -80,7 +80,7 @@ public class CoreLocationService extends CmsApiServerBase<CoreLocationModel, Lon
     public Observable<ErrorException<CoreLocationModel>> getAllProvinces(FilterModel model) {
         BehaviorSubject<ErrorException<CoreLocationModel>> mMovieCache = BehaviorSubject.create();
 
-        getRetrofit(ILocation.class).GetAllProvinces(baseUrl + controlerUrl + "/GetAllCities", headers, model)
+        getRetrofit(ILocation.class).GetAllProvinces(baseUrl + controlerUrl + "/GetAllProvinces", headers, model)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<>() {
             @Override
