@@ -14,6 +14,7 @@ public class FilterDataModel {
     @SerializedName("SearchType")
     public int SearchType;
     List<FilterDataModel> Filters;
+    @SerializedName("Value")
     Object Value;
     List<Object> Values;
 //    @SerializedName("StringForceNullSearch")

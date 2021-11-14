@@ -37,4 +37,39 @@ public class FilterModel {
         Filters.add(f);
         return this;
     }
+
+    public FilterModel setCount(boolean count) {
+        Count = count;
+        return this;
+    }
+
+    public FilterModel setTotalRowData(int totalRowData) {
+        TotalRowData = totalRowData;
+        return this;
+    }
+
+    public FilterModel setSkipRowData(int skipRowData) {
+        SkipRowData = skipRowData;
+        return this;
+    }
+
+    public FilterModel setCurrentPageNumber(int currentPageNumber) {
+        CurrentPageNumber = currentPageNumber;
+        return this;
+    }
+
+    public FilterModel setRowPerPage(int rowPerPage) {
+        RowPerPage = rowPerPage;
+        return this;
+    }
+
+    public FilterModel setSortType(int sortType) {
+        SortType = sortType;
+        return this;
+    }
+
+    public FilterModel setSortColumn(String sortColumn) {
+        SortColumn = sortColumn;
+        return this;
+    }
 }

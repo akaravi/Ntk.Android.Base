@@ -18,7 +18,7 @@ public class EstatePropertyDetailModel {
     public String IconFont;
     @SerializedName("IconColor")
     public String IconColor;
-    @SerializedName("InputDataType")
+    @SerializedName("InputDataType")//0 string //1 int //2 is boolean ,3 is float,4 is date,5 is area
     public int InputDataType;
     public EnumInputDataType InputDataTypeEnum;
 
