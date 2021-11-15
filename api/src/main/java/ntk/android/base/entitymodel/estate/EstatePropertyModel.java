@@ -20,7 +20,7 @@ public class EstatePropertyModel extends BaseModuleEntity<String> {
     @SerializedName("Area")
     public int Area;
     @SerializedName("LinkEstateUserId")
-    public Integer LinkEstateUserId;
+    public String LinkEstateUserId;
 
     @SerializedName("LinkLocationId")
     public int LinkLocationId;
