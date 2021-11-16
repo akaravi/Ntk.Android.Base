@@ -16,11 +16,11 @@ public class EstateContractModel extends BaseModuleEntity<String> {
     @SerializedName("SalePriceByAgreement")
     public boolean SalePriceByAgreement;
     @SerializedName("SalePrice")
-    public Long SalePrice;
+    public Double SalePrice;
     @SerializedName("RentPriceByAgreement")
     public Boolean RentPriceByAgreement;
     @SerializedName("RentPrice")
-    public Long RentPrice;
+    public Double RentPrice;
     @SerializedName("DepositPriceByAgreement")
     public boolean DepositPriceByAgreement;
     @SerializedName("DepositPrice")
