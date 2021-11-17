@@ -4,7 +4,6 @@ import android.content.Context;
 import android.net.Uri;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.Map;
 
 import io.reactivex.Observable;
@@ -49,9 +48,10 @@ public class FileUploaderService {
         RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
         FileUploadModel fileuplaod = new FileUploadModel();
         fileuplaod.FileName = file.getName();
-        headers.put("fileanme",file.getName());
+        fileuplaod.RelativePath = file.getPath();
+        headers.put("fileanme", file.getName());
 
-        ICmsApiFileUploader().UploadFileWithPartMap(headers, RequestBody.create(MediaType.parse("text/plain"),file.getName()), MultipartBody.Part.createFormData("file", file.getName(), requestFile))
+        ICmsApiFileUploader().UploadFileWithPartMap(headers, RequestBody.create(MediaType.parse("text/plain"), file.getName()), MultipartBody.Part.createFormData("file", file.getName(), requestFile))
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(new Observer<ErrorException<FileUploadModel>>() {
