@@ -48,7 +48,7 @@ public class FileUploaderService {
         RequestBody requestFile = RequestBody.create(MediaType.parse("multipart/form-data"), file);
         FileUploadModel fileuplaod = new FileUploadModel();
         fileuplaod.FileName = file.getName();
-        fileuplaod.RelativePath = file.getPath();
+        final String FileName = file.getPath();
         headers.put("fileanme", file.getName());
 
         ICmsApiFileUploader().UploadFileWithPartMap(headers, RequestBody.create(MediaType.parse("text/plain"), file.getName()), MultipartBody.Part.createFormData("file", file.getName(), requestFile))
@@ -62,9 +62,10 @@ public class FileUploaderService {
 
                     @Override
                     public void onNext(@NonNull ErrorException<FileUploadModel> fileUploadModelErrorException) {
-                        if (fileUploadModelErrorException.IsSuccess)
+                        if (fileUploadModelErrorException.IsSuccess) {
+                            fileUploadModelErrorException.Item.RelativePath = FileName;
                             mMovieCache.onNext(fileUploadModelErrorException.Item);
-                        else
+                        } else
                             mMovieCache.onError(new Exception("خطا در سرور اپلود فایل" + fileUploadModelErrorException.ErrorMessage));
                     }
 
