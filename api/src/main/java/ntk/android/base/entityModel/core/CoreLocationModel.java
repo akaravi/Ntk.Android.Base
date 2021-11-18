@@ -2,7 +2,9 @@ package ntk.android.base.entitymodel.core;
 
 import com.google.gson.annotations.SerializedName;
 
-public class CoreLocationModel {
+import ntk.android.base.entitymodel.base.BaseEntity;
+
+public class CoreLocationModel extends BaseEntity<Integer> {
     @SerializedName("Title")
   public   String Title;
     @SerializedName("LinkParentId")
