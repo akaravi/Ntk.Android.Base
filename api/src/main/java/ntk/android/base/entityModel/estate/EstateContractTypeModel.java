@@ -43,4 +43,11 @@ public class EstateContractTypeModel extends BaseModuleEntity<String> {
     public Long DepositPriceMin;
     @SerializedName("DepositPriceMax")
     public Long DepositPriceMax;
+
+    @SerializedName("TitleSalePrice")
+    public String TitleSalePrice;
+    @SerializedName("TitleDepositPrice")
+    public String TitleDepositPrice;
+    @SerializedName("TitleRentPrice")
+    public String TitleRentPrice;
 }
