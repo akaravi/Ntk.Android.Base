@@ -37,7 +37,7 @@ public class EstatePropertyModel extends BaseModuleEntity<String> {
     @SerializedName("PropertyTypeUsage")
     public EstatePropertyTypeUsageModel PropertyTypeUsage;
 
-
+    public boolean IsFavorite;
     /// <summary>@NOTIC must be integer
     /// موقعیت جغرافیایی
     /// </summary>
@@ -102,4 +102,9 @@ public class EstatePropertyModel extends BaseModuleEntity<String> {
      */
     @SerializedName("UploadFileGUID")
     public List<String> UploadFileGUID;
+
+    @SerializedName("LinkLocationIdTitle")
+    public  String LinkLocationIdTitle;
+    @SerializedName("LinkLocationIdParentTitle")
+    public   String LinkLocationIdParentTitle;
 }

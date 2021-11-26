@@ -36,4 +36,8 @@ public class EstateAccountUserModel extends BaseModuleEntity<String> {
     public Long LinkMainImageId;
     @SerializedName("LinkMainImageIdSrc")
     public String LinkMainImageIdSrc;
+    @SerializedName("LinkLocationIdTitle")
+    public  String LinkLocationIdTitle;
+    @SerializedName("LinkLocationIdParentTitle")
+    public  String LinkLocationIdParentTitle;
 }

@@ -21,12 +21,15 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public Long LinkFileIdLogo;
     @SerializedName("LinkFileIdSplashScreen")
     public Long LinkFileIdSplashScreen;
-      @SerializedName("LinkMainImageId")
+    @SerializedName("LinkMainImageId")
     public Long LinkMainImageId;
     @SerializedName("Title")
     public String Title;
     @SerializedName("AppVersion")
     public int AppVersion;
+    @SerializedName("IsPublished")
+    public String IsPublished;
+
     @SerializedName("IsPublic")
     public boolean IsPublic;
     @SerializedName("LinkSourceId")
@@ -131,6 +134,10 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public String AboutUsDescription;
     @SerializedName("AboutUsTel")
     public String AboutUsTel;
+    @SerializedName("AboutUsMobile")
+    public String AboutUsMobile;
+    @SerializedName("AboutUsLinkImageIdSrc")
+    public String AboutUsLinkImageIdSrc;
     @SerializedName("AboutUsFax")
     public String AboutUsFax;
     @SerializedName("AboutUsEmail")
@@ -143,5 +150,31 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public String AboutUsGeolocationlatetitude;
     @SerializedName("AboutUsGeolocationlongitude")
     public String AboutUsGeolocationlongitude;
+    @SerializedName("AboutUsLinkFacebook")
+    public String AboutUsLinkFacebook;
+    @SerializedName("AboutUsLinkTwitter")
+    public String AboutUsLinkTwitter;
+    @SerializedName("AboutUsLinkGooglePlus")
+    public String AboutUsLinkGooglePlus;
+    @SerializedName("AboutUsLinkInstagram")
+    public String AboutUsLinkInstagram;
+    @SerializedName("AboutUsLinklinkedin")
+    public String AboutUsLinklinkedin;
+    @SerializedName("AboutUsLinkYahoo")
+    public String AboutUsLinkYahoo;
+    @SerializedName("AboutUsLinkYoutube")
+    public String AboutUsLinkYoutube;
+    @SerializedName("AboutUsLinkTelegram")
+    public String AboutUsLinkTelegram;
+    @SerializedName("AboutUsLinkPinterest")
+    public String AboutUsLinkPinterest;
+    @SerializedName("AboutUsLinkRss")
+    public String AboutUsLinkRss;
+    @SerializedName("AboutUsLinkTelegram")
+    public String LinkFileIdIconSrc;
+    @SerializedName("LinkFileIdLogoSrc")
+    public String LinkFileIdLogoSrc;
+    @SerializedName("LinkMainImageIdSrc")
+    public String LinkMainImageIdSrc;
 
 }

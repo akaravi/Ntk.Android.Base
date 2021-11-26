@@ -44,4 +44,8 @@ public class CoreUserModel extends BaseEntity<Long> {
     long LinkLocationId;
     @SerializedName("FirewallAllowIP")
     String FirewallAllowIP;
+    @SerializedName("LinkLocationIdTitle")
+   public String LinkLocationIdTitle;
+    @SerializedName("LinkLocationIdParentTitle")
+    public  String LinkLocationIdParentTitle;
 }

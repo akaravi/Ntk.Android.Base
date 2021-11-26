@@ -15,15 +15,15 @@ public class EstatePropertyService extends CmsApiServerBase<EstatePropertyModel,
         super(context, "EstateProperty", EstatePropertyModel.class);
     }
 
-    public Observable<ErrorExceptionBase> addFavorite(long Id) {
-        return new CmsApiFavoriteBase<EstatePropertyModel, Long>(context, "EstateProperty", EstatePropertyModel.class).addFavorite(Id);
+    public Observable<ErrorExceptionBase> addFavorite(String Id) {
+        return new CmsApiFavoriteBase<EstatePropertyModel, String>(context, "EstateProperty", EstatePropertyModel.class).addFavorite(Id);
     }
 
-    public Observable<ErrorExceptionBase> removeFavorite(long Id) {
-        return new CmsApiFavoriteBase<EstatePropertyModel, Long>(context, "EstateProperty", EstatePropertyModel.class).removeFavorite(Id);
+    public Observable<ErrorExceptionBase> removeFavorite(String Id) {
+        return new CmsApiFavoriteBase<EstatePropertyModel, String>(context, "EstateProperty", EstatePropertyModel.class).removeFavorite(Id);
     }
 
     public Observable<ErrorException<EstatePropertyModel>> getFavoriteList(FilterModel request) {
-        return new CmsApiFavoriteBase<EstatePropertyModel, Long>(context, "EstateProperty", EstatePropertyModel.class).getFavoriteList(request);
+        return new CmsApiFavoriteBase<EstatePropertyModel, String>(context, "EstateProperty", EstatePropertyModel.class).getFavoriteList(request);
     }
 }
