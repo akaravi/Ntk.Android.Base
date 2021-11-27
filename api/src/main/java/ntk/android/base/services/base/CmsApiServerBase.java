@@ -391,6 +391,40 @@ public class CmsApiServerBase<TEntity, TKey> {
 
         return mMovieCache;
     }
+    public Observable<ErrorException<TEntity>> getAllEditor(FilterModel request) {
+        BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
+        Observable<ErrorException> all = ICmsApiServerBase().getAllEditor(baseUrl + controlerUrl + "/getAllEditor", headers, request);
+        all.observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
 
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException o) {
+                Gson gson = new GsonBuilder()
+                        .enableComplexMapKeySerialization()
+                        .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                        .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                        .setExclusionStrategies()
+                        .create();
+                o.Item = gson.fromJson(gson.toJson(o.Item), teClass);
+                o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<TEntity>(teClass));
+                mMovieCache.onNext(o);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
+    }
 
 }

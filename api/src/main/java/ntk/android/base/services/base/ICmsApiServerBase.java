@@ -15,46 +15,51 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
-public interface ICmsApiServerBase<TEntity,TKey> {
+
+public interface ICmsApiServerBase<TEntity, TKey> {
 
 
     @GET("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> getViewModel(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers);
+    Observable<ErrorException> getViewModel(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> getAll(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorException> getAll(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+
+    @POST("{cpath}")
+    @Headers({"content-type: application/json"})
+    Observable<ErrorException> getAllEditor(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
     @GET("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> getOne(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers);
+    Observable<ErrorException> getOne(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> Exist(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorExceptionBase> Exist(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorExceptionBase> Count(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorExceptionBase> Count(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> ExportFile(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
+    Observable<ErrorException> ExportFile(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body FilterModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> Add(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body Object request);
+    Observable<ErrorException> Add(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body Object request);
 
     @PUT("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> Edit(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body Object request);
+    Observable<ErrorException> Edit(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body Object request);
 
     @DELETE("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> Delete(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers);
+    Observable<ErrorException> Delete(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException> Delete(@Path(value = "cpath",encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body List<Object> request);
+    Observable<ErrorException> Delete(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body List<Object> request);
 }
