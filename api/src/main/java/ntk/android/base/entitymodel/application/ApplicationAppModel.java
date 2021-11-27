@@ -170,7 +170,7 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public String AboutUsLinkPinterest;
     @SerializedName("AboutUsLinkRss")
     public String AboutUsLinkRss;
-    @SerializedName("AboutUsLinkTelegram")
+    @SerializedName("LinkFileIdIconSrc")
     public String LinkFileIdIconSrc;
     @SerializedName("LinkFileIdLogoSrc")
     public String LinkFileIdLogoSrc;
