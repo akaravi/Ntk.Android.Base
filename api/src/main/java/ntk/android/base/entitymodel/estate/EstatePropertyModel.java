@@ -36,7 +36,7 @@ public class EstatePropertyModel extends BaseModuleEntity<String> {
     public  EstatePropertyTypeLanduseModel PropertyTypeLanduse;
     @SerializedName("PropertyTypeUsage")
     public EstatePropertyTypeUsageModel PropertyTypeUsage;
-
+    @SerializedName("Favorited")
     public boolean IsFavorite;
     /// <summary>@NOTIC must be integer
     /// موقعیت جغرافیایی
