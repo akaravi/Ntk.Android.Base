@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import ntk.android.base.BaseNtkApplication;
-import ntk.android.base.api.utill.NTKUtill;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
 import okhttp3.Interceptor;
@@ -254,7 +253,7 @@ public class RetrofitManager {
 
             CacheControl cacheControl;
 
-            if (NTKUtill.isNetworkAvailable(mContext)) {
+            if (NetworkDiscovery.isNetworkAvailable(mContext)) {
                 cacheControl = new CacheControl.Builder()
                         .maxAge(0, TimeUnit.SECONDS)
                         .build();
@@ -290,7 +289,7 @@ public class RetrofitManager {
         return chain -> {
             Request request = chain.request();
 
-            if (!NTKUtill.isNetworkAvailable(mContext)) {
+            if (!NetworkDiscovery.isNetworkAvailable(mContext)) {
                 CacheControl cacheControl = new CacheControl.Builder()
                         .maxStale(7, TimeUnit.DAYS)
                         .build();
