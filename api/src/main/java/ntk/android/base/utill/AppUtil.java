@@ -3,54 +3,19 @@ package ntk.android.base.utill;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.net.ConnectivityManager;
-import android.net.NetworkCapabilities;
-import android.net.NetworkInfo;
 import android.os.Build;
 import android.text.TextUtils;
-import android.util.Log;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class AppUtill {
+import ntk.android.base.config.NetworkDiscovery;
+
+public class AppUtil {
 
     public static boolean isNetworkAvailable(Context context) {
-        if (context == null) return false;
-
-
-        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-
-        if (connectivityManager != null) {
-
-
-            if (android.os.Build.VERSION.SDK_INT >= 29) {
-                NetworkCapabilities capabilities = connectivityManager.getNetworkCapabilities(connectivityManager.getActiveNetwork());
-                if (capabilities != null) {
-                    if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)) {
-                        return true;
-                    } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
-                        return true;
-                    } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
-                        return true;
-                    }
-                }
-            } else {
-
-                try {
-                    NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-                    if (activeNetworkInfo != null && activeNetworkInfo.isConnected()) {
-                        Log.i("update_statut", "Network is available : true");
-                        return true;
-                    }
-                } catch (Exception e) {
-                    Log.i("update_statut", "" + e.getMessage());
-                }
-            }
-        }
-        Log.i("update_statut", "Network is available : FALSE ");
-        return false;
+        return NetworkDiscovery.isNetworkAvailable(context);
     }
 
     public static String GetDeviceName() {

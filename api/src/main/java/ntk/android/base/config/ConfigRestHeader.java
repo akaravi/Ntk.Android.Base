@@ -9,7 +9,7 @@ import java.util.Map;
 
 import ntk.android.base.ApplicationStaticParameter;
 import ntk.android.base.BaseNtkApplication;
-import ntk.android.base.utill.AppUtill;
+import ntk.android.base.utill.AppUtil;
 import ntk.android.base.utill.prefrense.Preferences;
 
 public class ConfigRestHeader {
@@ -45,7 +45,7 @@ public class ConfigRestHeader {
         headers.put("LocationLong", "0");
         headers.put("LocationLat", "0");
         headers.put("DeviceId", Settings.Secure.getString(context.getContentResolver(), Settings.Secure.ANDROID_ID));
-        headers.put("DeviceBrand", AppUtill.GetDeviceName());
+        headers.put("DeviceBrand", AppUtil.GetDeviceName());
         headers.put("Country", "IR");
         headers.put("Language",  BaseNtkApplication.get().getLanguage());
         headers.put("SimCard", manager.getSimOperatorName());

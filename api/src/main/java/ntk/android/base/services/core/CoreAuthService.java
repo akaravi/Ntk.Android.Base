@@ -30,7 +30,7 @@ import ntk.android.base.entitymodel.base.TokenInfoModel;
 import ntk.android.base.entitymodel.core.CoreUserModel;
 import ntk.android.base.entitymodel.enums.EnumDeviceType;
 import ntk.android.base.entitymodel.enums.EnumOperatingSystemType;
-import ntk.android.base.utill.AppUtill;
+import ntk.android.base.utill.AppUtil;
 import ntk.android.base.utill.prefrense.Preferences;
 
 public class CoreAuthService {
@@ -86,7 +86,7 @@ public class CoreAuthService {
         request.SecurityKey = "";
         request.LocationLat = "0";
         request.LocationLong = "0";
-        request.DeviceBrand = AppUtill.GetDeviceName();
+        request.DeviceBrand = AppUtil.GetDeviceName();
         request.Country = "IR";
         request.Language = BaseNtkApplication.get().getLanguage();
         request.SimCard = ((TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE)).getSimOperatorName();
