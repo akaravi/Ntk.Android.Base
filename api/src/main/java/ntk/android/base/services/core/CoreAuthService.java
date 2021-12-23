@@ -110,7 +110,7 @@ public class CoreAuthService {
             public void onNext(@NonNull ErrorException<TokenInfoModel> o) {
                 if (o.IsSuccess) {
                     Preferences.with(context).tokenInfo().setDeviceToken(o.Item.DeviceToken);
-                    Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
+//                    Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
                     Preferences.with(context).UserInfo().setSiteId(o.Item.SiteId);
                     Preferences.with(context).UserInfo().setMemberUserId(o.Item.MemberId);
                     mMovieCache.onNext(o);
