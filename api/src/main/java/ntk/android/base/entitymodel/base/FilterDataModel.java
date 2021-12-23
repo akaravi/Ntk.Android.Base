@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+import ntk.android.base.entitymodel.enums.EnumClauseType;
+import ntk.android.base.entitymodel.enums.EnumSearchType;
+
 public class FilterDataModel {
     @SerializedName("PropertyName")
     public String PropertyName;
@@ -114,9 +117,16 @@ public class FilterDataModel {
         ClauseType = clauseType;
         return this;
     }
-
+    public FilterDataModel setClauseType(EnumClauseType clauseType) {
+        ClauseType = clauseType.index();
+        return this;
+    }
     public FilterDataModel setSearchType(int searchType) {
         SearchType = searchType;
+        return this;
+    }
+    public FilterDataModel setSearchType(EnumSearchType searchType) {
+        SearchType = searchType.index();
         return this;
     }
 
@@ -181,5 +191,6 @@ public class FilterDataModel {
         Value = latitudeLongitudeSortType;
         return this;
     }
+
 
 }
