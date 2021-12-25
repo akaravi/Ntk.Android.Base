@@ -10,8 +10,10 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.entitymodel.base.ErrorException;
+import ntk.android.base.entitymodel.base.FilterDataModel;
 import ntk.android.base.entitymodel.base.FilterModel;
 import ntk.android.base.entitymodel.core.CoreLocationModel;
+import ntk.android.base.entitymodel.enums.EnumSearchType;
 import ntk.android.base.services.base.CmsApiServerBase;
 
 public class CoreLocationService extends CmsApiServerBase<CoreLocationModel, Long> {
@@ -19,7 +21,12 @@ public class CoreLocationService extends CmsApiServerBase<CoreLocationModel, Lon
     public CoreLocationService(Context context) {
         super(context, "CoreLocation", CoreLocationModel.class);
     }
-
+    public Observable<ErrorException<CoreLocationModel>> getAllTree(String  s) {
+        FilterModel f = new FilterModel();
+        f.setRowPerPage(100).addFilter(new FilterDataModel().setPropertyName("Title")
+                .setSearchType(EnumSearchType.BeginsWith).setStringValue(s));
+        return getRetrofit(ILocation.class).GetAllCities(baseUrl + controlerUrl + "/GetAllCities", headers, f);
+    }
     public Observable<ErrorException<CoreLocationModel>> getAllTree(FilterModel model) {
         BehaviorSubject<ErrorException<CoreLocationModel>> mMovieCache = BehaviorSubject.create();
 
