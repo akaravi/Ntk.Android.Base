@@ -13,6 +13,7 @@ import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.FilterDataModel;
 import ntk.android.base.entitymodel.base.FilterModel;
 import ntk.android.base.entitymodel.core.CoreLocationModel;
+import ntk.android.base.entitymodel.enums.EnumClauseType;
 import ntk.android.base.entitymodel.enums.EnumSearchType;
 import ntk.android.base.services.base.CmsApiServerBase;
 
@@ -23,8 +24,8 @@ public class CoreLocationService extends CmsApiServerBase<CoreLocationModel, Lon
     }
     public Observable<ErrorException<CoreLocationModel>> getAll(String  s) {
         FilterModel f = new FilterModel();
-        f.setRowPerPage(100).addFilter(new FilterDataModel().setPropertyName("Title")
-                .setSearchType(EnumSearchType.BeginsWith).setStringValue(s));
+        f.setCurrentPageNumber(1).setRowPerPage(100).addFilter(new FilterDataModel().setPropertyName("Title")
+                .setSearchType(EnumSearchType.Contains).setStringValue(s).setClauseType(EnumClauseType.Or));
         return getAll( f);
     }
     public Observable<ErrorException<CoreLocationModel>> getAllTree(FilterModel model) {
