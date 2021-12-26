@@ -21,11 +21,11 @@ public class CoreLocationService extends CmsApiServerBase<CoreLocationModel, Lon
     public CoreLocationService(Context context) {
         super(context, "CoreLocation", CoreLocationModel.class);
     }
-    public Observable<ErrorException<CoreLocationModel>> getAllTree(String  s) {
+    public Observable<ErrorException<CoreLocationModel>> getAll(String  s) {
         FilterModel f = new FilterModel();
         f.setRowPerPage(100).addFilter(new FilterDataModel().setPropertyName("Title")
                 .setSearchType(EnumSearchType.BeginsWith).setStringValue(s));
-        return getRetrofit(ILocation.class).GetAllCities(baseUrl + controlerUrl + "/GetAllCities", headers, f);
+        return getAll( f);
     }
     public Observable<ErrorException<CoreLocationModel>> getAllTree(FilterModel model) {
         BehaviorSubject<ErrorException<CoreLocationModel>> mMovieCache = BehaviorSubject.create();
@@ -141,6 +141,7 @@ public class CoreLocationService extends CmsApiServerBase<CoreLocationModel, Lon
         });
         return mMovieCache;
     }
+
 
 
 }
