@@ -2,6 +2,7 @@ package ntk.android.base.entitymodel.base;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import ntk.android.base.entitymodel.enums.EnumClauseType;
@@ -16,6 +17,7 @@ public class FilterDataModel {
     public String PropertyAnyName;
     @SerializedName("SearchType")
     public int SearchType;
+    @SerializedName("Filters")
     List<FilterDataModel> Filters;
     @SerializedName("Value")
     Object Value;
@@ -117,14 +119,17 @@ public class FilterDataModel {
         ClauseType = clauseType;
         return this;
     }
+
     public FilterDataModel setClauseType(EnumClauseType clauseType) {
         ClauseType = clauseType.index();
         return this;
     }
+
     public FilterDataModel setSearchType(int searchType) {
         SearchType = searchType;
         return this;
     }
+
     public FilterDataModel setSearchType(EnumSearchType searchType) {
         SearchType = searchType.index();
         return this;
@@ -192,5 +197,10 @@ public class FilterDataModel {
         return this;
     }
 
-
+    public FilterDataModel addInnerFilter(FilterDataModel d) {
+        if (Filters == null)
+            Filters = new ArrayList<>();
+        Filters.add(d);
+        return this;
+    }
 }
