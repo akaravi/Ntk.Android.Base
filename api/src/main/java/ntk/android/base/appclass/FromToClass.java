@@ -11,4 +11,12 @@ public class FromToClass {
     public void setTo(Object f) {
         to = f;
     }
+
+    public Object getFrom() {
+        return from;
+    }
+
+    public Object getTo() {
+        return to;
+    }
 }
