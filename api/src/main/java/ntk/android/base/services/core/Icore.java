@@ -13,6 +13,7 @@ import ntk.android.base.dtomodel.core.AuthUserSignInModel;
 import ntk.android.base.dtomodel.core.AuthUserSignOutModel;
 import ntk.android.base.dtomodel.core.AuthUserSignUpModel;
 import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
+import ntk.android.base.dtomodel.core.TokenDeviceModel;
 import ntk.android.base.entitymodel.base.CaptchaModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
@@ -33,11 +34,11 @@ interface Icore {
 
     @GET("api/v1/Auth/CurrentToken")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<CaptchaModel>>  CorrectTokenInfo(@HeaderMap Map<String, String> headers);
+    Observable<ErrorException<TokenInfoModel>>  CorrectTokenInfo(@HeaderMap Map<String, String> headers);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})
-    Observable<ErrorException<TokenInfoModel>> GetTokenDevice(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body TokenDeviceClientInfoDtoModel request);
+    Observable<ErrorException<TokenDeviceModel>> GetTokenDevice(@Path(value = "cpath", encoded = true) String cpath, @HeaderMap Map<String, String> headers, @Body TokenDeviceClientInfoDtoModel request);
 
     @POST("{cpath}")
     @Headers({"content-type: application/json"})

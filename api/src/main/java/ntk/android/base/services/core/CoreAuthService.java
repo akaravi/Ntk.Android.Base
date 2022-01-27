@@ -23,6 +23,7 @@ import ntk.android.base.dtomodel.core.AuthUserSignInBySmsDtoModel;
 import ntk.android.base.dtomodel.core.AuthUserSignInModel;
 import ntk.android.base.dtomodel.core.AuthUserSignUpModel;
 import ntk.android.base.dtomodel.core.TokenDeviceClientInfoDtoModel;
+import ntk.android.base.dtomodel.core.TokenDeviceModel;
 import ntk.android.base.entitymodel.base.CaptchaModel;
 import ntk.android.base.entitymodel.base.ErrorException;
 import ntk.android.base.entitymodel.base.ErrorExceptionBase;
@@ -78,7 +79,7 @@ public class CoreAuthService {
         return mMovieCache;
     }
 
-    public Observable<ErrorException<TokenInfoModel>> getTokenDevice() {
+    public Observable<ErrorException<TokenDeviceModel>> getTokenDevice() {
         TokenDeviceClientInfoDtoModel request = new TokenDeviceClientInfoDtoModel();
         request.OSType = EnumOperatingSystemType.GoogleAndroid.index();
         request.DeviceType = EnumDeviceType.Android.index();
@@ -97,22 +98,22 @@ public class CoreAuthService {
         return getTokenDevice(request);
     }
 
-    public Observable<ErrorException<TokenInfoModel>> getTokenDevice(TokenDeviceClientInfoDtoModel request) {
-        BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
+    public Observable<ErrorException<TokenDeviceModel>> getTokenDevice(TokenDeviceClientInfoDtoModel request) {
+        BehaviorSubject<ErrorException<TokenDeviceModel>> mMovieCache = BehaviorSubject.create();
         Icore().GetTokenDevice(baseUrl + controlerUrl + "/GetTokenDevice", headers, request)
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<TokenInfoModel>>() {
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<TokenDeviceModel>>() {
             @Override
             public void onSubscribe(@NonNull Disposable d) {
             }
 
             @Override
-            public void onNext(@NonNull ErrorException<TokenInfoModel> o) {
+            public void onNext(@NonNull ErrorException<TokenDeviceModel> o) {
                 if (o.IsSuccess) {
                     Preferences.with(context).tokenInfo().setDeviceToken(o.Item.DeviceToken);
-                    Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
-                    Preferences.with(context).UserInfo().setSiteId(o.Item.SiteId);
-                    Preferences.with(context).UserInfo().setMemberUserId(o.Item.MemberId);
+//                    Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
+                    Preferences.with(context).UserInfo().setSiteId(o.Item.LinkSiteId);
+//                    Preferences.with(context).UserInfo().setMemberUserId(o.Item.MemberId);
                     mMovieCache.onNext(o);
                 } else
 
@@ -131,19 +132,23 @@ public class CoreAuthService {
         return mMovieCache;
     }
 
-    public Observable<Boolean> correctTokenInfo() {
-        BehaviorSubject<Boolean> mMovieCache = BehaviorSubject.create();
+    public Observable<ErrorException<TokenInfoModel>> correctTokenInfo() {
+        BehaviorSubject<ErrorException<TokenInfoModel>> mMovieCache = BehaviorSubject.create();
         Icore().CorrectTokenInfo(headers).observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<CaptchaModel>>() {
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException<TokenInfoModel>>() {
             @Override
             public void onSubscribe(@NonNull Disposable d) {
 
             }
 
             @Override
-            public void onNext(@NonNull ErrorException<CaptchaModel> captchaModelErrorException) {
-                if (captchaModelErrorException.IsSuccess)
-                    mMovieCache.onNext(true);
+            public void onNext(@NonNull ErrorException<TokenInfoModel> tokenInfoModel) {
+                if (tokenInfoModel.IsSuccess) {
+                    Preferences.with(context).tokenInfo().setAuthorizationToken(tokenInfoModel.Item.Token);
+                    Preferences.with(context).UserInfo().setMemberUserId(tokenInfoModel.Item.MemberId);
+                    mMovieCache.onNext(tokenInfoModel);
+                } else
+                    mMovieCache.onError(new Exception("Ntk Exepction:" + tokenInfoModel.ErrorMessage));
             }
 
             @Override
