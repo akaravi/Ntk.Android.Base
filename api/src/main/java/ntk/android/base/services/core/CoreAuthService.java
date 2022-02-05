@@ -4,6 +4,8 @@ import android.content.Context;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 
+import com.jakewharton.retrofit2.adapter.rxjava2.HttpException;
+
 import java.util.Map;
 
 import io.reactivex.Observable;
@@ -16,6 +18,7 @@ import io.reactivex.subjects.BehaviorSubject;
 import ntk.android.base.BaseNtkApplication;
 import ntk.android.base.config.ConfigRestHeader;
 import ntk.android.base.config.RetrofitManager;
+import ntk.android.base.config.TokenDeviceExp;
 import ntk.android.base.dtomodel.core.AuthEmailConfirmDtoModel;
 import ntk.android.base.dtomodel.core.AuthMobileConfirmDtoModel;
 import ntk.android.base.dtomodel.core.AuthUserForgetPasswordModel;
@@ -33,7 +36,7 @@ import ntk.android.base.entitymodel.enums.EnumDeviceType;
 import ntk.android.base.entitymodel.enums.EnumOperatingSystemType;
 import ntk.android.base.utill.AppUtil;
 import ntk.android.base.utill.prefrense.Preferences;
-import retrofit2.HttpException;
+
 
 public class CoreAuthService {
     private final Map<String, String> headers;
@@ -123,6 +126,16 @@ public class CoreAuthService {
 
             @Override
             public void onError(@NonNull Throwable e) {
+                if (e instanceof HttpException) {
+                    if (((HttpException) e).code() == 401) {
+                        Preferences.with(context).tokenInfo().setDeviceToken("");
+                        Preferences.with(context).tokenInfo().setAuthorizationToken("");
+                        Preferences.with(context).UserInfo().setMemberUserId(0);
+                        Preferences.with(context).appVariableInfo().setIsLogin(false);
+                        mMovieCache.onError(new TokenDeviceExp());
+                        return;
+                    }
+                }
                 mMovieCache.onError(e);
             }
 
@@ -160,6 +173,8 @@ public class CoreAuthService {
                         Preferences.with(context).tokenInfo().setAuthorizationToken("");
                         Preferences.with(context).UserInfo().setMemberUserId(0);
                        Preferences.with(context).appVariableInfo().setIsLogin(false);
+                       mMovieCache.onError(new TokenDeviceExp());
+                       return;
                     }
                 }
                 mMovieCache.onError(e);
@@ -269,6 +284,7 @@ public class CoreAuthService {
                     Preferences.with(context).tokenInfo().setDeviceToken(o.Item.DeviceToken);
                     Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
                     Preferences.with(context).UserInfo().setSiteId(o.Item.SiteId);
+                    Preferences.with(context).appVariableInfo().setIsLogin(true);
                     mMovieCache.onNext(o);
                 } else
 
