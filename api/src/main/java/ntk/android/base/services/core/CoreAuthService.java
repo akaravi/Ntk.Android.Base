@@ -33,6 +33,7 @@ import ntk.android.base.entitymodel.enums.EnumDeviceType;
 import ntk.android.base.entitymodel.enums.EnumOperatingSystemType;
 import ntk.android.base.utill.AppUtil;
 import ntk.android.base.utill.prefrense.Preferences;
+import retrofit2.HttpException;
 
 public class CoreAuthService {
     private final Map<String, String> headers;
@@ -153,6 +154,14 @@ public class CoreAuthService {
 
             @Override
             public void onError(@NonNull Throwable e) {
+                if (e instanceof HttpException) {
+                    if (((HttpException) e).code() == 401) {
+                        Preferences.with(context).tokenInfo().setDeviceToken("");
+                        Preferences.with(context).tokenInfo().setAuthorizationToken("");
+                        Preferences.with(context).UserInfo().setMemberUserId(0);
+                       Preferences.with(context).appVariableInfo().setIsLogin(false);
+                    }
+                }
                 mMovieCache.onError(e);
             }
 
