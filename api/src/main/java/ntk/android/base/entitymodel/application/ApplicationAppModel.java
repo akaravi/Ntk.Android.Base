@@ -32,6 +32,8 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
 
     @SerializedName("IsPublic")
     public boolean IsPublic;
+    @SerializedName("AllowDirectShareApp")
+    public boolean AllowDirectShareApp;
     @SerializedName("LinkSourceId")
     public Long LinkSourceId;
     @SerializedName(" virtual_Source")
@@ -118,12 +120,10 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public String DownloadLinkSrc;
     @SerializedName("DownloadLinkUpdateSrc")
     public String DownloadLinkUpdateSrc;
-    @SerializedName("DownloadLinkSrcByDomain")
-    public String DownloadLinkSrcByDomain;
     @SerializedName("DownloadLinkUpdateSrcByDomain")
     public String DownloadLinkUpdateSrcByDomain;
-    @SerializedName("DownloadLinkSrcByDomainQRCodeBase64")
-    public String DownloadLinkSrcByDomainQRCodeBase64;
+    @SerializedName("DownloadLinkSrcQRCodeBase64")
+    public String DownloadLinkSrcQRCodeBase64;
 
     @SerializedName("FilePathOnServer")
     public String FilePathOnServer;
