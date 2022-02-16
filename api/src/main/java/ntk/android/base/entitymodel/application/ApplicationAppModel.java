@@ -120,8 +120,6 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public String DownloadLinkSrc;
     @SerializedName("DownloadLinkUpdateSrc")
     public String DownloadLinkUpdateSrc;
-    @SerializedName("DownloadLinkUpdateSrcByDomain")
-    public String DownloadLinkUpdateSrcByDomain;
     @SerializedName("DownloadLinkSrcQRCodeBase64")
     public String DownloadLinkSrcQRCodeBase64;
 
