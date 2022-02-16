@@ -70,12 +70,12 @@ public class AppVariableInfo {
         return new Gson().fromJson(updateModel, UpdateClass.class);
     }
 
-    public void setQRCode(String downloadLinkSrcByDomainQRCodeBase64) {
-        EasyPreference.with(c).addString("downloadLinkSrcByDomainQRCodeBase64", downloadLinkSrcByDomainQRCodeBase64);
+    public void setQRCode(String downloadLinkSrcQRCodeBase64) {
+        EasyPreference.with(c).addString("downloadLinkSrcQRCodeBase64", downloadLinkSrcQRCodeBase64);
     }
 
     public String qrCode() {
-        return EasyPreference.with(c).getString("downloadLinkSrcByDomainQRCodeBase64", "");
+        return EasyPreference.with(c).getString("downloadLinkSrcQRCodeBase64", "");
     }
 
     public void setAboutUs(AboutUsClass aboutUsClass) {

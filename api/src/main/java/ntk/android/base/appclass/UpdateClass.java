@@ -18,6 +18,6 @@ public class UpdateClass {
         this.isForced=item.ForceUpdate;
         this.version=item.AppVersion;
         this.checkUpdate=item.CheckUpdate;
-        this.url=item.DownloadLinkUpdateSrcByDomain;
+        this.url=item.DownloadLinkUpdateSrc;
     }
 }
