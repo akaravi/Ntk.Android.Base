@@ -174,5 +174,7 @@ public class ApplicationAppModel extends BaseModuleEntity<Long> {
     public String LinkFileIdLogoSrc;
     @SerializedName("LinkMainImageIdSrc")
     public String LinkMainImageIdSrc;
+    @SerializedName("AboutUsPrivacyPolicyHtmlBody")
+    public String AboutUsPrivacyPolicyHtmlBody;
 
 }

@@ -27,6 +27,8 @@ public class AboutUsClass {
     public int AboutUsScoreClick;
     @SerializedName("AboutUsScoreSum")
     public Long AboutUsScoreSum;
+    @SerializedName("AboutUsPrivacyPolicyHtmlBody")
+    public String AboutUsPrivacyPolicyHtmlBody;
 
     public AboutUsClass(ApplicationAppModel item) {
         this.AboutUsTitle = item.Title;
@@ -40,5 +42,8 @@ public class AboutUsClass {
         this.AboutUsLinkImageId = item.AboutUsLinkImageId;
         this.AboutUsScoreClick = item.ScoreClick;
         this.AboutUsScoreSum = item.ScoreSumPercent;
+        this.AboutUsPrivacyPolicyHtmlBody = item.AboutUsPrivacyPolicyHtmlBody;
+        if (this.AboutUsPrivacyPolicyHtmlBody == null)
+            this.AboutUsPrivacyPolicyHtmlBody = "";
     }
 }
