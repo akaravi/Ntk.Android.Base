@@ -18,7 +18,7 @@ public class EstatePropertyModel extends BaseModuleEntity<String> {
     @SerializedName("Partition")
     public int Partition;
     @SerializedName("Area")
-    public int Area;
+    public double Area;
     @SerializedName("LinkEstateUserId")
     public String LinkEstateUserId;
 
