@@ -25,6 +25,16 @@ public class EstateContractModel extends BaseModuleEntity<String> {
     public boolean DepositPriceByAgreement;
     @SerializedName("DepositPrice")
     public Double DepositPrice;
-    @SerializedName(" UnitSalePrice")
+    @SerializedName("currencyTitle")
     public String UnitSalePrice = "تومان";
+    @SerializedName("CurrencySymbol")
+    public String CurrencySymbol = "ت";
+    @SerializedName("PeriodPriceByAgreement")
+    public boolean PeriodPriceByAgreement;
+    @SerializedName("PeriodPrice")
+    public Double PeriodPrice;
+    @SerializedName("PeriodCount")
+    public int PeriodCount;
+    @SerializedName("LinkCoreCurrencyId")
+    public long LinkCoreCurrencyId;
 }
