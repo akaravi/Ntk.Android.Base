@@ -85,10 +85,40 @@ public class CoreLocationService extends CmsApiServerBase<CoreLocationModel, Lon
         });
         return mMovieCache;
     }
+
     public Observable<ErrorException<CoreLocationModel>> getAllProvinces(FilterModel model) {
         BehaviorSubject<ErrorException<CoreLocationModel>> mMovieCache = BehaviorSubject.create();
 
         getRetrofit(ILocation.class).GetAllProvinces(baseUrl + controlerUrl + "/GetAllProvinces", headers, model)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io()).subscribe(new Observer<>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NonNull ErrorException<CoreLocationModel> coreLocationModelErrorException) {
+                mMovieCache.onNext(coreLocationModelErrorException);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+                mMovieCache.onError(e);
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        return mMovieCache;
+    }
+
+    public Observable<ErrorException<CoreLocationModel>> getAllCountry(FilterModel model) {
+        BehaviorSubject<ErrorException<CoreLocationModel>> mMovieCache = BehaviorSubject.create();
+
+        getRetrofit(ILocation.class).GetAllProvinces(baseUrl + controlerUrl + "/GetAllCountry", headers, model)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<>() {
             @Override
