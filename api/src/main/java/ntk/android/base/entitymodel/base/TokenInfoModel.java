@@ -14,6 +14,8 @@ public class TokenInfoModel {
     public String RefreshToken;
     @SerializedName("MemberId")
     public Long MemberId;
+    @SerializedName("MemberUserId")
+    public String MemberUserId;
     @SerializedName("UserId")
     public long UserId;
     @SerializedName("SiteId")

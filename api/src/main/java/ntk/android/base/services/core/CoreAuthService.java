@@ -115,9 +115,7 @@ public class CoreAuthService {
             public void onNext(@NonNull ErrorException<TokenDeviceModel> o) {
                 if (o.IsSuccess) {
                     Preferences.with(context).tokenInfo().setDeviceToken(o.Item.DeviceToken);
-//                    Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
                     Preferences.with(context).UserInfo().setSiteId(o.Item.LinkSiteId);
-//                    Preferences.with(context).UserInfo().setMemberUserId(o.Item.MemberId);
                     mMovieCache.onNext(o);
                 } else
 
@@ -130,7 +128,7 @@ public class CoreAuthService {
                     if (((HttpException) e).code() == 401) {
                         Preferences.with(context).tokenInfo().setDeviceToken("");
                         Preferences.with(context).tokenInfo().setAuthorizationToken("");
-                        Preferences.with(context).UserInfo().setMemberUserId(0);
+                        Preferences.with(context).UserInfo().setMemberId(0);
                         Preferences.with(context).appVariableInfo().setIsLogin(false);
                         mMovieCache.onError(new TokenDeviceExp());
                         return;
@@ -159,7 +157,8 @@ public class CoreAuthService {
             public void onNext(@NonNull ErrorException<TokenInfoModel> tokenInfoModel) {
                 if (tokenInfoModel.IsSuccess) {
                     Preferences.with(context).tokenInfo().setAuthorizationToken(tokenInfoModel.Item.Token);
-                    Preferences.with(context).UserInfo().setMemberUserId(tokenInfoModel.Item.MemberId);
+                    Preferences.with(context).UserInfo().setMemberId(tokenInfoModel.Item.MemberId);
+                    Preferences.with(context).UserInfo().setUserId(tokenInfoModel.Item.UserId);
                     mMovieCache.onNext(tokenInfoModel);
                 } else
                     mMovieCache.onError(new Exception("Ntk Exepction:" + tokenInfoModel.ErrorMessage));
@@ -171,7 +170,8 @@ public class CoreAuthService {
                     if (((HttpException) e).code() == 401) {
                         Preferences.with(context).tokenInfo().setDeviceToken("");
                         Preferences.with(context).tokenInfo().setAuthorizationToken("");
-                        Preferences.with(context).UserInfo().setMemberUserId(0);
+                        Preferences.with(context).UserInfo().setMemberId(0);
+                        Preferences.with(context).UserInfo().setUserId(0);
                        Preferences.with(context).appVariableInfo().setIsLogin(false);
                        mMovieCache.onError(new TokenDeviceExp());
                        return;
@@ -284,6 +284,7 @@ public class CoreAuthService {
                     Preferences.with(context).tokenInfo().setDeviceToken(o.Item.DeviceToken);
                     Preferences.with(context).tokenInfo().setAuthorizationToken(o.Item.Token);
                     Preferences.with(context).UserInfo().setSiteId(o.Item.SiteId);
+                    Preferences.with(context).UserInfo().setUserId(o.Item.UserId);
                     Preferences.with(context).appVariableInfo().setIsLogin(true);
                     mMovieCache.onNext(o);
                 } else

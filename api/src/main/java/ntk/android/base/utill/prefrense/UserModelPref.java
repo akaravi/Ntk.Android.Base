@@ -17,16 +17,10 @@ public class UserModelPref {
         EasyPreference.with(c).addString("Ntk_mobile_key", s);
     }
 
-    public Long linkUserId() {
-        return EasyPreference.with(c).getLong("Ntk_linkUser_key", 0);
-    }
-
-    public void setLinkUserId(Long userID) {
-         EasyPreference.with(c).addLong("Ntk_linkUser_key", userID);
-    }
     public Long userId() {
         return EasyPreference.with(c).getLong("Ntk_userId", 0);
     }
+
     public void setUserId(long userId) {
         EasyPreference.with(c).addLong("Ntk_userId", userId);
     }
@@ -36,10 +30,10 @@ public class UserModelPref {
     public void setSiteId(long siteId) {
         EasyPreference.with(c).addLong("Ntk_siteId", siteId);
     }
-    public void setMemberUserId(long memberUserId) {
+    public void setMemberId(long memberUserId) {
         EasyPreference.with(c).addLong("MemberUserId", memberUserId);
     }
-    public Long memberUserId() {
+    public Long memberId() {
         return EasyPreference.with(c).getLong("MemberUserId", 0);
     }
 
