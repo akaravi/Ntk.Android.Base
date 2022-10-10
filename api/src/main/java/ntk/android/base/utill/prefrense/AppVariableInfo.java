@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 import ntk.android.base.appclass.AboutUsClass;
 import ntk.android.base.appclass.UpdateClass;
 import ntk.android.base.dtomodel.application.ApplicationScoreDtoModel;
+import ntk.android.base.entitymodel.application.ApplicationAppModel;
 
 public class AppVariableInfo {
     Context c;
@@ -50,6 +51,10 @@ public class AppVariableInfo {
 
     public void setApplicationAppModel(String configApp) {
         EasyPreference.with(c).addString("setApplicationAppModel", configApp);
+    }
+
+    public ApplicationAppModel applicationAppModel() {
+        return new Gson().fromJson(EasyPreference.with(c).getString("setApplicationAppModel", ""), ApplicationAppModel.class);
     }
 
     public boolean isLogin() {
