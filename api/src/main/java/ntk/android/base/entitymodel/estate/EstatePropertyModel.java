@@ -26,6 +26,8 @@ public class EstatePropertyModel extends BaseModuleEntity<String> {
     public int LinkLocationId;
     @SerializedName("Description")
     public String Description;
+   @SerializedName("ViewConfigHiddenInList")
+    public boolean ViewConfigHiddenInList;
     @SerializedName("LinkCmsUserId")
     public Long LinkCmsUserId;
     @SerializedName("LinkPropertyTypeLanduseId")
