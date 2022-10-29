@@ -49,10 +49,11 @@ public class NewsContentService extends CmsApiServerBase<NewsContentModel, Long>
         return new CmsApiScoreApi<NewsContentModel, Long>(context, "NewsContent", NewsContentModel.class).scoreClick(model);
     }
 
-    public Observable<ErrorException<NewsContentModel>> getAllWithSimilarsId(Long id, FilterModel filter){
-        return new CmsApiSimilar<NewsContentModel,Long>(context,"NewsContent", NewsContentModel.class).GetAllWithSimilarsId(id,filter);
+    public Observable<ErrorException<NewsContentModel>> getAllWithSimilarsId(Long id, FilterModel filter) {
+        return new CmsApiSimilar<NewsContentModel, Long>(context, "NewsContent", NewsContentModel.class).GetAllWithSimilarsId(id, filter);
     }
-    public Observable<ErrorException<NewsContentModel>> getAllWithCategoryUsedInContent(long Id, FilterModel request) {
+
+    public Observable<ErrorException<NewsContentModel>> getAllWithCategoryUsedInContent(Long Id, FilterModel request) {
         BehaviorSubject<ErrorException<NewsContentModel>> mMovieCache = BehaviorSubject.create();
 
         ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/GetAllWithCategoryUseInContentId/" + Id, headers, request)
