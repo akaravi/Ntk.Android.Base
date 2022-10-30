@@ -34,9 +34,9 @@ public class TokenInfoModel {
     @SerializedName("UserAccessAdminAllowToAllData")
     public boolean UserAccessAdminAllowToAllData;
     @SerializedName("UserAccessUserType")//as EnumManageUserAccessUserTypes
-    int UserAccessUserType;
+    public int UserAccessUserType;
     @SerializedName("UserAccessAreaType")//as EnumManageUserAccessAreaTypes
-    int UserAccessAreaType;
+    public int UserAccessAreaType;
     @SerializedName("UserAccessUserTypeTitle")
     public String UserAccessUserTypeTitle;
     @SerializedName("UserAccessUserAreaTitle")

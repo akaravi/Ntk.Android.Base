@@ -2,6 +2,10 @@ package ntk.android.base.utill.prefrense;
 
 import android.content.Context;
 
+import com.google.gson.Gson;
+
+import ntk.android.base.entitymodel.base.TokenInfoModel;
+
 public class UserModelPref {
     private final Context c;
 
@@ -24,15 +28,19 @@ public class UserModelPref {
     public void setUserId(long userId) {
         EasyPreference.with(c).addLong("Ntk_userId", userId);
     }
+
     public Long siteId() {
         return EasyPreference.with(c).getLong("Ntk_siteId", 0);
     }
+
     public void setSiteId(long siteId) {
         EasyPreference.with(c).addLong("Ntk_siteId", siteId);
     }
+
     public void setMemberId(long memberUserId) {
         EasyPreference.with(c).addLong("MemberUserId", memberUserId);
     }
+
     public Long memberId() {
         return EasyPreference.with(c).getLong("MemberUserId", 0);
     }
@@ -49,4 +57,15 @@ public class UserModelPref {
         return EasyPreference.with(c).getLong("Ntk_linkMemberId", 0);
     }
 
+    public void setTokenInfo(TokenInfoModel item) {
+        EasyPreference.with(c).addString("Ntk_User_TokenInfoModel", new Gson().toJson(item));
+    }
+
+    public TokenInfoModel getTokenInfo() {
+        String s = EasyPreference.with(c).getString("Ntk_User_TokenInfoModel", "");
+        if (s.equals(""))
+            return new TokenInfoModel();
+        else
+            return new Gson().fromJson(s, TokenInfoModel.class);
+    }
 }

@@ -31,4 +31,13 @@ public enum EnumManageUserAccessUserTypes {
     public int index() {
         return index;
     }
+    public static boolean isAdmin(int i) {
+        if (i == AdminCpSite.index() ||
+              i == SupportMainCms.index() ||
+               i == AdminMainCms.index() ||
+               i == SupportCpSite.index())
+            return true;
+
+        return false;
+    }
 }
