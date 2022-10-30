@@ -11,7 +11,7 @@ import ntk.android.base.entitymodel.enums.EnumSearchType;
 public class FilterDataModel {
     @SerializedName("PropertyName")
     public String PropertyName;
-    @SerializedName("ClauseType")
+    @SerializedName("ClauseType")//as EnumClauseType
     public int ClauseType;
     @SerializedName("PropertyAnyName")
     public String PropertyAnyName;

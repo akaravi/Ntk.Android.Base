@@ -1,6 +1,6 @@
 package ntk.android.base.entitymodel.enums;
 
-public enum EnumManageUserAccessAreaTypes {
+public enum EnumManageUserAccessUserTypes {
     AccessDenay(0),
     //////////////////////////////////////////////// مدیریت سی ام اس
     AdminMainCms(1),
@@ -21,16 +21,14 @@ public enum EnumManageUserAccessAreaTypes {
     GuestViewerWebSite(21),
     UserLoginWebSite(22),
     DemoUserLoginWebSite(23);
-
-
+    ////////////////////////////////////////////////
     private final int index;
 
-    EnumManageUserAccessAreaTypes(int index) {
+    EnumManageUserAccessUserTypes(int index) {
         this.index = index;
     }
 
     public int index() {
         return index;
     }
-
 }
