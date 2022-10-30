@@ -90,4 +90,42 @@ public class NewsContentService extends CmsApiServerBase<NewsContentModel, Long>
                 });
         return mMovieCache;
     }
+
+    public Observable<ErrorException<NewsContentModel>> getAllWithHierarchyCategoryId(Long Id, FilterModel request) {
+        BehaviorSubject<ErrorException<NewsContentModel>> mMovieCache = BehaviorSubject.create();
+
+        ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/GetAllWithHierarchyCategoryId/" + Id, headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(new Observer<ErrorException>() {
+                    @Override
+                    public void onSubscribe(@NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(@NonNull ErrorException o) {
+                        Gson gson = new GsonBuilder()
+                                .enableComplexMapKeySerialization()
+                                .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                                .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                                .setExclusionStrategies()
+                                .create();
+                        o.Item = gson.fromJson(gson.toJson(o.Item), NewsContentModel.class);
+                        o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<NewsContentModel>(NewsContentModel.class));
+                        mMovieCache.onNext(o);
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+                        mMovieCache.onError(e);
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+        return mMovieCache;
+    }
 }

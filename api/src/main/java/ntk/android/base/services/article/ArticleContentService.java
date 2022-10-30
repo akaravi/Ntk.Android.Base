@@ -86,6 +86,44 @@ public class ArticleContentService extends CmsApiServerBase<ArticleContentModel,
                 });
         return mMovieCache;
     }
+
+    public Observable<ErrorException<ArticleContentModel>> getAllWithHierarchyCategoryId(long id, FilterModel request) {
+        BehaviorSubject<ErrorException<ArticleContentModel>> mMovieCache = BehaviorSubject.create();
+
+        ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/GetAllWithHierarchyCategoryId/" + id, headers, request)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(new Observer<ErrorException>() {
+                    @Override
+                    public void onSubscribe(@NonNull Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(@NonNull ErrorException o) {
+                        Gson gson = new GsonBuilder()
+                                .enableComplexMapKeySerialization()
+                                .setDateFormat("yyyy-MM-dd'T'hh:mm:ss").serializeNulls()
+                                .setFieldNamingPolicy(FieldNamingPolicy.IDENTITY)
+                                .setExclusionStrategies()
+                                .create();
+                        o.Item = gson.fromJson(gson.toJson(o.Item), ArticleContentModel.class);
+                        o.ListItems = gson.fromJson(gson.toJson(o.ListItems), new ListOfJson<ArticleContentModel>(ArticleContentModel.class));
+                        mMovieCache.onNext(o);
+                    }
+
+                    @Override
+                    public void onError(@NonNull Throwable e) {
+                        mMovieCache.onError(e);
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
+        return mMovieCache;
+    }
     public Observable<ErrorException<ArticleContentModel>> getAllWithSimilarsId(Long id, FilterModel filter){
         return new CmsApiSimilar<ArticleContentModel,Long>(context,"ArticleContent", ArticleContentModel.class).GetAllWithSimilarsId(id,filter);
     }
