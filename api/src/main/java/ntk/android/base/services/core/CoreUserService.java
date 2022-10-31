@@ -6,7 +6,7 @@ import ntk.android.base.entitymodel.coremain.CoreUserModel;
 import ntk.android.base.services.base.CmsApiServerBase;
 
 public class CoreUserService extends CmsApiServerBase<CoreUserModel, Long> {
-    public CoreUserService(Context context, String controlerUrl, Class teClass) {
+    public CoreUserService(Context context) {
         super(context, "CoreUser", CoreUserModel.class);
     }
 }
