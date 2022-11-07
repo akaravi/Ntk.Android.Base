@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin:'maven-publish'
+apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 33
@@ -30,25 +30,25 @@ android {
     }
 }
 afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = "ntk.android.base"
-                artifactId = 'base'
-                version = version
-            }
-        }
+    afterEvaluate {
+        println("Components: " + components*.name)
     }
 }
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.squareup.retrofit2:converter-gson:2.12.0'
-    implementation("com.squareup.retrofit2:retrofit:2.12.0")
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.9'
-    implementation("com.squareup.okhttp3:okhttp:3.12.9") {
-        force = true
-        //strictly 3.12.8
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation("com.squareup.retrofit2:retrofit:2.5.0")
+    implementation("com.squareup.okhttp3:logging-interceptor") {
+        version {
+            strictly("3.12.9")
+        }
+    }
+    implementation("com.squareup.okhttp3:okhttp") {
+        version {
+            strictly("3.12.9")
+        }
+//        force = true
+//        //strictly 3.12.8
     }
 
     implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
