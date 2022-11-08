@@ -100,8 +100,9 @@ public class RetrofitManager {
             if (logInterceptor != null)
                 httpClient.addInterceptor(logInterceptor);
             //add timeout
-            httpClient.
-                    callTimeout(30, TimeUnit.SECONDS)
+            httpClient
+//                    .
+//                    callTimeout(30, TimeUnit.SECONDS)
                     .connectTimeout(30, TimeUnit.SECONDS)
                     .writeTimeout(50, TimeUnit.SECONDS)
                     .readTimeout(50, TimeUnit.SECONDS);
@@ -174,8 +175,9 @@ public class RetrofitManager {
             if (logInterceptor != null)
                 httpClient.addInterceptor(logInterceptor);
             //add timeout
-            httpClient.
-                    callTimeout(30, TimeUnit.SECONDS)
+            httpClient
+//                    .
+//                    callTimeout(30, TimeUnit.SECONDS)
                     .connectTimeout(30, TimeUnit.SECONDS)
                     .writeTimeout(50, TimeUnit.SECONDS)
                     .readTimeout(50, TimeUnit.SECONDS);
