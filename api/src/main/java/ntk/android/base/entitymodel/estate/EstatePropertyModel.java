@@ -26,7 +26,7 @@ public class EstatePropertyModel extends BaseModuleEntity<String> {
     public int LinkLocationId;
     @SerializedName("Description")
     public String Description;
-   @SerializedName("ViewConfigHiddenInList")
+    @SerializedName("ViewConfigHiddenInList")
     public boolean ViewConfigHiddenInList;
     @SerializedName("LinkCmsUserId")
     public Long LinkCmsUserId;
@@ -35,7 +35,7 @@ public class EstatePropertyModel extends BaseModuleEntity<String> {
     @SerializedName("LinkPropertyTypeUsageId")
     public String LinkPropertyTypeUsageId;
     @SerializedName("PropertyTypeLanduse")
-    public  EstatePropertyTypeLanduseModel PropertyTypeLanduse;
+    public EstatePropertyTypeLanduseModel PropertyTypeLanduse;
     @SerializedName("PropertyTypeUsage")
     public EstatePropertyTypeUsageModel PropertyTypeUsage;
     @SerializedName("Favorited")
@@ -104,9 +104,12 @@ public class EstatePropertyModel extends BaseModuleEntity<String> {
      */
     @SerializedName("UploadFileGUID")
     public List<String> UploadFileGUID;
-
+    @SerializedName("UrlViewContent")
+    public String UrlViewContent;
+    @SerializedName("UrlViewContentQRCodeBase64")
+    public String UrlViewContentQRCodeBase64;
     @SerializedName("LinkLocationIdTitle")
-    public  String LinkLocationIdTitle;
+    public String LinkLocationIdTitle;
     @SerializedName("LinkLocationIdParentTitle")
-    public   String LinkLocationIdParentTitle;
+    public String LinkLocationIdParentTitle;
 }
