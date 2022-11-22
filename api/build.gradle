@@ -30,9 +30,8 @@ android {
     }
 }
 afterEvaluate {
-    afterEvaluate {
-        println("Components: " + components*.name)
-    }
+    println("Components: " + components*.name)
+
 }
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
