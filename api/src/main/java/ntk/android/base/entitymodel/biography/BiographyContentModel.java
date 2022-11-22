@@ -78,4 +78,8 @@ public class BiographyContentModel extends BaseModuleEntity<Long> {
     public String DatePeriodStart;
     @SerializedName("DatePeriodEnd")
     public String DatePeriodEnd;
+    @SerializedName("UrlViewContent")
+    public String UrlViewContent;
+    @SerializedName("UrlViewContentQRCodeBase64")
+    public String UrlViewContentQRCodeBase64;
 }

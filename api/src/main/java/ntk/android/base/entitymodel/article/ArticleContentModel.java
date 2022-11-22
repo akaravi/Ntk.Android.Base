@@ -71,4 +71,9 @@ public class ArticleContentModel extends BaseModuleEntity<Long> {
     public String LinkFileMovieIdSrc;
     @SerializedName("LinkFileIdsSrc")
     public List<String> LinkFileIdsSrc;
+
+    @SerializedName("UrlViewContent")
+    public String UrlViewContent;
+    @SerializedName("UrlViewContentQRCodeBase64")
+    public String UrlViewContentQRCodeBase64;
 }
