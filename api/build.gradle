@@ -30,7 +30,15 @@ android {
     }
 }
 afterEvaluate {
-    println("Components: " + components*.name)
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = "ntk.android.base"
+                artifactId = 'base'
+                version = version
+            }
+        }
 
 }
 dependencies {
