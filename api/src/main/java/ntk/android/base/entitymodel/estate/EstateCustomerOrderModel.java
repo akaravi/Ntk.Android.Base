@@ -6,7 +6,7 @@ import java.util.List;
 
 import ntk.android.base.entitymodel.base.BaseModuleEntity;
 
-class EstateCustomerOrderModel extends BaseModuleEntity<String> {
+public class EstateCustomerOrderModel extends BaseModuleEntity<String> {
     @SerializedName("Title")
     public String Title;
     @SerializedName("Description")
