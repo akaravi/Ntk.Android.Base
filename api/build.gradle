@@ -30,17 +30,25 @@ android {
     }
 }
 afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = "ntk.android.base"
-                artifactId = 'base'
-                version = version
+    if (!plugins.hasPlugin("android")) {
+        publishing {
+            publications {
+                release(MavenPublication) {
+                    from components.release
+                    groupId = "ntk.android.base"
+                    artifactId = 'base'
+                    version = version
+                }
             }
         }
     }
 }
+//note uncomment for debug 
+//afterEvaluate {
+//    afterEvaluate {
+//        println("Components: " + components*.name)
+//    }
+//}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
