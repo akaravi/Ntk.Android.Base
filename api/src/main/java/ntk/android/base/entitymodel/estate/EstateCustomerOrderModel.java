@@ -72,4 +72,7 @@ public class EstateCustomerOrderModel extends BaseModuleEntity<String> {
     public List<String> ContactMobileList;
     @SerializedName("LastResultRowCount")
     public int LastResultRowCount;
+    //as helper to select
+    public EstatePropertyTypeLanduseModel PropertyTypeLanduse;
+    public EstatePropertyTypeUsageModel PropertyTypeUsage;
 }
