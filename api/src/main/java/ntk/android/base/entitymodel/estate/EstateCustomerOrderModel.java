@@ -75,4 +75,5 @@ public class EstateCustomerOrderModel extends BaseModuleEntity<String> {
     //as helper to select
     public EstatePropertyTypeLanduseModel PropertyTypeLanduse;
     public EstatePropertyTypeUsageModel PropertyTypeUsage;
+    public List<String> LocationTitles;
 }
