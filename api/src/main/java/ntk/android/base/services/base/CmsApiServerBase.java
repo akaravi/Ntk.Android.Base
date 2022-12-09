@@ -429,7 +429,7 @@ public class CmsApiServerBase<TEntity, TKey> {
                 });
         return mMovieCache;
     }
-    
+
     public Observable<ErrorException<TEntity>> getOneByEdit(TKey Id) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
         Map<String, String> editHeaders = new HashMap<>();
