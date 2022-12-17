@@ -9,6 +9,25 @@ public class EstatePropertyHistoryModel extends BaseModuleEntity<String> {
     public String Title;
     @SerializedName("LinkPropertyId")
     public String LinkPropertyId;
+    @SerializedName("LinkCustomerOrderId")
+    public String LinkCustomerOrderId;
+    @SerializedName("LinkAgentId")
+    public String LinkAgentId;
+    @SerializedName("LinkActivityTypeId")
+    public String LinkActivityTypeId;
     @SerializedName("LinkFileIds")
     public String LinkFileIds;
+    @SerializedName("ActivityType")
+    public EstateActivityTypeModel ActivityType;
+    @SerializedName("ActivityStatus")
+    public int ActivityStatus;
+    @SerializedName("AppointmentDateFrom")
+    public String  AppointmentDateFrom;
+    @SerializedName("AppointmentDateTo")
+    public String  AppointmentDateTo;
+  @SerializedName("Description")
+    public String  Description;
+    @SerializedName("DescriptionHidden")
+    public String DescriptionHidden;
+
 }
