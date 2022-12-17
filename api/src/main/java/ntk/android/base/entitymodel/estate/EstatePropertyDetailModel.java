@@ -59,4 +59,5 @@ public class EstatePropertyDetailModel {
 
     @SerializedName("ConfigValueIntValueMax")
     public int ConfigValueIntValueMax;
+    public String Value;
 }
