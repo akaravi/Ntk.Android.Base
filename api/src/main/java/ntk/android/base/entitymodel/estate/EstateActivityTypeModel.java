@@ -2,7 +2,9 @@ package ntk.android.base.entitymodel.estate;
 
 import com.google.gson.annotations.SerializedName;
 
-public class EstateActivityTypeModel {
+import ntk.android.base.entitymodel.base.BaseModuleEntity;
+
+public class EstateActivityTypeModel extends BaseModuleEntity<String> {
     @SerializedName("Title")
     public String Title;
     @SerializedName("TitleML")

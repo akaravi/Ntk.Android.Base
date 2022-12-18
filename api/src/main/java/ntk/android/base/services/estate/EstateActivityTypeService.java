@@ -8,6 +8,6 @@ import ntk.android.base.services.base.CmsApiServerBase;
 
 public class EstateActivityTypeService extends CmsApiServerBase<EstateActivityTypeModel, String> {
     public EstateActivityTypeService(Context context) {
-        super(context, "EstateActivityTypeModel", EstateActivityTypeModel.class);
+        super(context, "EstateActivityType", EstateActivityTypeModel.class);
     }
 }

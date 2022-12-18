@@ -22,11 +22,11 @@ public class EstatePropertyHistoryModel extends BaseModuleEntity<String> {
     @SerializedName("ActivityStatus")
     public int ActivityStatus;
     @SerializedName("AppointmentDateFrom")
-    public String  AppointmentDateFrom;
+    public String AppointmentDateFrom;
     @SerializedName("AppointmentDateTo")
-    public String  AppointmentDateTo;
-  @SerializedName("Description")
-    public String  Description;
+    public String AppointmentDateTo;
+    @SerializedName("Description")
+    public String Description;
     @SerializedName("DescriptionHidden")
     public String DescriptionHidden;
 
