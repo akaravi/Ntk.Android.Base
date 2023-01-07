@@ -53,7 +53,7 @@ public class EstatePropertyService extends CmsApiServerBase<EstatePropertyModel,
 
     public Observable<ErrorException<EstatePropertyModel>> getAllWithCustomerOrderId(String CustomerOrderId,FilterModel request){
         BehaviorSubject<ErrorException<EstatePropertyModel>> mMovieCache = BehaviorSubject.create();
-        Observable<ErrorException> all = ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/GetAllWithCustomerOrderId"+ CustomerOrderId, headers, request);
+        Observable<ErrorException> all = ICmsApiServerBase().getAll(baseUrl + controlerUrl + "/GetAllWithCustomerOrderId/"+ CustomerOrderId, headers, request);
         all.observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
                     @Override
