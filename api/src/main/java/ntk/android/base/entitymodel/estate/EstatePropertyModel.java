@@ -112,8 +112,8 @@ public class EstatePropertyModel extends BaseModuleEntity<String> {
     public String LinkLocationIdTitle;
     @SerializedName("LinkLocationIdParentTitle")
     public String LinkLocationIdParentTitle;
-   @SerializedName("SharingKey")
+    @SerializedName("SharingKey")
     public String SharingKey;
-   @SerializedName("SharingId")
+    @SerializedName("SharingId")
     public Long SharingId;
 }
