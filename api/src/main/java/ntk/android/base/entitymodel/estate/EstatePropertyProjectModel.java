@@ -23,9 +23,9 @@ public class EstatePropertyProjectModel {
     @SerializedName("Body")
     public String Body;
     @SerializedName("Geolocationlatitude")
-    public Long Geolocationlatitude;
+    public Double Geolocationlatitude;
     @SerializedName("Geolocationlongitude")
-    public Long Geolocationlongitude;
+    public Double Geolocationlongitude;
     @SerializedName("LinkLocationId")
     public Integer LinkLocationId;
     @SerializedName("Keyword")
