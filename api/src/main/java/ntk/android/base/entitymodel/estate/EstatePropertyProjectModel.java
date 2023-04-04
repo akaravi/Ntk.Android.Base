@@ -4,10 +4,11 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+import ntk.android.base.entitymodel.base.BaseEntity;
 import ntk.android.base.entitymodel.core.File360ViewModel;
 import ntk.android.base.entitymodel.enums.EnumRecordStatus;
 
-public class EstatePropertyProjectModel {
+public class EstatePropertyProjectModel extends BaseEntity<String> {
     @SerializedName("Title")
     public String Title;
     @SerializedName("LinkCmsUserId")
@@ -41,7 +42,7 @@ public class EstatePropertyProjectModel {
     @SerializedName("LinkMainImageId")
     public Long LinkMainImageId;
     @SerializedName("File360Views")
-    public List<File360ViewModel>File360Views;
+    public List<File360ViewModel> File360Views;
     @SerializedName("ScoreClick")
     public long ScoreClick;
     @SerializedName("ScoreSumPercent")
