@@ -26,7 +26,7 @@ import ntk.android.base.entitymodel.base.FilterModel;
 import ntk.android.base.entitymodel.estate.EstatePropertyModel;
 
 public class CmsApiServerBase<TEntity, TKey> {
-    protected final String baseUrl = "api/v1/";
+    protected final String baseUrl = "api/v1/";//todo:
     protected final String controlerUrl;
     protected Context context;
     protected Map<String, String> headers;

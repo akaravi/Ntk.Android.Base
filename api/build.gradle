@@ -2,14 +2,12 @@ apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion 33
-
+    compileSdkVersion 35
+    namespace 'ntk.android.base.api'
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 33
-
         testInstrumentationRunner "android.support.body.runner.AndroidJUnitRunner"
-
     }
 
     buildTypes {
@@ -25,12 +23,19 @@ android {
     }
     allprojects {
         repositories {
+            gradlePluginPortal()
+            google()
+            mavenCentral()
             maven { url "https://jitpack.io" }
+            //jcenter() //y
+            maven { url "https://jcenter.bintray.com"}
         }
     }
 }
+
+
 afterEvaluate {
-    if (!plugins.hasPlugin("android")) {
+    if (!plugins.hasPlugin("com.android.application") && !plugins.hasPlugin("com.android.library")) {
         publishing {
             publications {
                 release(MavenPublication) {
@@ -60,14 +65,10 @@ dependencies {
     }
     implementation("com.squareup.okhttp3:okhttp") {
         version {
-            strictly("3.12.9")
+            strictly("4.10.0")
         }
-//        force = true
-//        //strictly 3.12.8
     }
-
     implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
-
     implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
