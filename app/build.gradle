@@ -35,7 +35,8 @@ publishing {
 //            artifact sourcesJar
 //            artifact javadocJar
 
-            from components.release
+            artifact("$buildDir/outputs/aar/${project.name}-release.aar")
+
         }
     }
 }
