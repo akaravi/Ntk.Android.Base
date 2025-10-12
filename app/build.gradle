@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
 }
 
 android {
@@ -8,7 +9,7 @@ android {
     compileSdk 35 // به 35 ارتقا یافت
 
     defaultConfig {
-        applicationId "ntk.android.base" // به مقدار جدید تغییر یافت
+       
         minSdk 23
         targetSdk 35 // به 35 ارتقا یافت
         versionCode 1
