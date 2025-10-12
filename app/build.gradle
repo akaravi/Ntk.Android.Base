@@ -30,7 +30,7 @@ android {
 publishing {
     publications {
         maven(MavenPublication) {
-            from components.release
+
             groupId = 'com.github.akaravi'
             artifactId = 'Ntk.Android.Base'
         }
