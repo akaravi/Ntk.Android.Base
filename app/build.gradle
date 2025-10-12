@@ -27,6 +27,18 @@ android {
     }
 }
 
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.github.akaravi'
+            artifactId 'Ntk.Android.Base'
+            artifact sourcesJar
+            artifact javadocJar
+
+            from components.release
+        }
+    }
+}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
