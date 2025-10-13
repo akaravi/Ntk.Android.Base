@@ -12,12 +12,6 @@ buildscript {
     }
 }
 
-// این بلاک برای تعریف پلاگین ها در ساختار جدید Gradle (از نسخه 8 به بعد) استفاده می شود.
-// اگر پروژه شما از این ساختار استفاده می کند، مطمئن می شویم که نسخه AGP در اینجا نیز تعریف شده است.
-plugins {
-    id 'com.android.library' version '8.3.2' apply false
-}
-
 
 
 tasks.register('clean', Delete) {

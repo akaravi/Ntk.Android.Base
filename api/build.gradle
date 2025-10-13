@@ -1,6 +1,5 @@
 plugins {
     id 'com.android.library'
-    id 'maven-publish'
 }
 
 android {
@@ -8,16 +7,14 @@ android {
     compileSdk 35
 
     defaultConfig {
-        minSdk 16
+        minSdk 21
         targetSdk 35
         multiDexEnabled true
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
@@ -43,17 +40,4 @@ dependencies {
 
     // Multidex
     implementation 'androidx.multidex:multidex:2.0.1'
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            create("ntkRelease", MavenPublication) {
-                groupId = 'com.github.akaravi'
-                artifactId = 'Ntk.Android.Base'
-                version = '3.2'
-                from components.getByName("release")
-            }
-        }
-    }
 }
