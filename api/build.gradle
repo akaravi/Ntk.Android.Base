@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdk 16
         targetSdk 35
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -27,30 +27,33 @@ android {
     }
 }
 
-publishing {
-    publications {
-        maven(MavenPublication) {
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-            groupId = 'com.github.akaravi'
-            artifactId = 'Ntk.Android.Base'
-            version = '3.2'
+    // Networking
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.8'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.8'
 
-            afterEvaluate {
-                from components.release
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+
+    // Multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create("ntkRelease", MavenPublication) {
+                groupId = 'com.github.akaravi'
+                artifactId = 'Ntk.Android.Base'
+                version = '3.2'
+                from components.getByName("release")
             }
         }
     }
 }
-
-dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.8'
-    implementation 'com.squareup.okhttp3:okhttp:3.12.8'
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
-    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
-    implementation 'androidx.multidex:multidex:2.0.1'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
-}
-

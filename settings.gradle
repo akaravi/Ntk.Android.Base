@@ -20,4 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Ntk.Android.Base"
-include ':app'
+include 'api'
