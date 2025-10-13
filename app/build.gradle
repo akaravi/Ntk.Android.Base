@@ -33,11 +33,12 @@ publishing {
 
             groupId = 'com.github.akaravi'
             artifactId = 'Ntk.Android.Base'
-            version = '3.1'
+            version = '3.2'
 
             afterEvaluate {
                 from components.release
             }
+        }
     }
 }
 
