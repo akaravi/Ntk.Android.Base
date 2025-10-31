@@ -359,7 +359,7 @@ public class CmsApiServerBase<TEntity, TKey> {
 
     public Observable<ErrorException<TEntity>> delete(List<TKey> request) {
         BehaviorSubject<ErrorException<TEntity>> mMovieCache = BehaviorSubject.create();
-        ICmsApiServerBase().Delete(baseUrl + controlerUrl + "/DeleteList", headers, request)
+        ICmsApiServerBase().Delete(baseUrl + controlerUrl + "/DeleteList", headers, (List<Object>) request)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io()).subscribe(new Observer<ErrorException>() {
                     @Override
